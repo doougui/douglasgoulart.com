@@ -3,15 +3,11 @@ import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from 'styles/global';
 import NextNProgress from 'nextjs-progressbar';
-import light from 'styles/themes/light';
-import dark from 'styles/themes/dark';
-import { useDarkMode } from 'hooks/shared/useDarkMode';
+import defaultTheme from 'styles/themes/default';
 
 function App({ Component, pageProps }: AppProps) {
-  const { isDarkMode } = useDarkMode();
-
   return (
-    <ThemeProvider theme={isDarkMode ? dark : light}>
+    <ThemeProvider theme={defaultTheme}>
       <Head>
         <title>Home | Douglas Pinheiro Goulart</title>
         <link rel="icon" href="/img/icon-512.png" />
