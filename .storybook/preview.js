@@ -2,6 +2,8 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyles from 'styles/global';
 import * as NextImage from 'next/image';
 import theme from 'styles/themes/default';
+import dark from 'styles/themes/dark';
+import light from 'styles/themes/light';
 
 const OriginalNextImage = NextImage.default;
 
@@ -18,11 +20,11 @@ export const parameters = {
     values: [
       {
         name: 'light',
-        value: theme.colors.lightBg,
+        value: light.colors.mainBg,
       },
       {
         name: 'dark',
-        value: theme.colors.mainBg,
+        value: dark.colors.mainBg,
       },
     ],
   },

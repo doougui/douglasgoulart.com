@@ -1,6 +1,10 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
-const GlobalStyles = createGlobalStyle`
+type GlobalStylesProps = {
+  removeBg?: boolean;
+};
+
+const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
   * {
     margin: 0;
     padding: 0;
@@ -15,9 +19,18 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
   }
 
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  }
+  ${({ theme, removeBg }) => css`
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+      ${!removeBg &&
+      css`
+        background-color: ${theme.colors.mainBg};
+      `}
+    }
+  `}
+
 `;
 
 export default GlobalStyles;
