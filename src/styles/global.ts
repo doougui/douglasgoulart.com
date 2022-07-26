@@ -5,10 +5,41 @@ type GlobalStylesProps = {
 };
 
 const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local(''), url('/fonts/Poppins-Bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local(''), url('/fonts/Inter-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local(''), url('/fonts/Poppins-Bold.ttf') format('truetype');
+  }
+
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &::before,
+    &::after {
+      box-sizing: inherit;
+    }
   }
 
   html {
@@ -21,8 +52,7 @@ const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
 
   ${({ theme, removeBg }) => css`
     body {
-      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      font-family: ${theme.font.family};
 
       ${!removeBg &&
       css`

@@ -20,7 +20,7 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       <GlobalStyles />
       <NextNProgress
-        color="#F231A5"
+        color="#107BEB"
         startPosition={0.3}
         stopDelayMs={200}
         height={5}

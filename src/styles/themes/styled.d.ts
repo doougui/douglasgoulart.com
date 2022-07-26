@@ -35,26 +35,16 @@ declare module 'styled-components' {
         huge: string;
       };
     };
-    spacings: {
-      xxsmall: string;
-      xsmall: string;
-      small: string;
-      medium: string;
-      large: string;
-      xlarge: string;
-      xxlarge: string;
-    };
     colors: {
       primary: string;
       secondary: string;
+      tertiary: string;
+
       mainBg: string;
-      lightBg: string;
-      white: string;
-      black: string;
-      lightGray: string;
-      gray: string;
-      darkGray: string;
-      red: string;
+
+      textDarker: string;
+      textDark: string;
+      text: string;
     };
   }
 }

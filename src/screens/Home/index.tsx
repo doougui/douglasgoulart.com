@@ -1,12 +1,12 @@
-import { Container } from 'components/Container';
+import { Base } from 'layouts/Base';
 import * as S from './styles';
 
 export function Home() {
   return (
-    <Container>
+    <Base>
       <S.Wrapper>
         <h1>Home</h1>
       </S.Wrapper>
-    </Container>
+    </Base>
   );
 }
