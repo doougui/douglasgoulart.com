@@ -1,9 +1,9 @@
 import { render } from 'utils/tests';
 
-import { Header } from '.';
+import { Menu } from '.';
 
-describe('<Header />', () => {
+describe('<Menu />', () => {
   it('should render correctly', () => {
-    render(<Header />);
+    render(<Menu />);
   });
 });

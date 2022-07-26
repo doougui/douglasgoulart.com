@@ -4,9 +4,9 @@ import * as S from './styles';
 export function Home() {
   return (
     <Base>
-      <S.Wrapper>
+      <S.Container>
         <h1>Home</h1>
-      </S.Wrapper>
+      </S.Container>
     </Base>
   );
 }

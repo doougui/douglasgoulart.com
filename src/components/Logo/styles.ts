@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const Wrapper = styled.h1`
+export const Container = styled.h1`
   ${({ theme }) => css`
     font-family: Poppins;
     font-size: ${theme.font.sizes.xxlarge};

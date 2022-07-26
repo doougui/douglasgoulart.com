@@ -1,5 +1,5 @@
 import { Container } from 'components/Container';
-import { Header } from 'components/Header';
+import { Menu } from 'components/Menu';
 import * as S from './styles';
 
 type BaseProps = {
@@ -8,9 +8,11 @@ type BaseProps = {
 
 export function Base({ children }: BaseProps) {
   return (
-    <Container>
-      <Header />
-      <S.Wrapper>{children}</S.Wrapper>
-    </Container>
+    <S.Container>
+      <Container>
+        <Menu />
+        <S.Content>{children}</S.Content>
+      </Container>
+    </S.Container>
   );
 }

@@ -40,7 +40,7 @@ declare module 'styled-components' {
       secondary: string;
       tertiary: string;
 
-      mainBg: string;
+      background: string;
 
       textDarker: string;
       textDark: string;

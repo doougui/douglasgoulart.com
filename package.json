@@ -12,8 +12,8 @@
     "test": "jest",
     "test:watch": "yarn test --watch",
     "generate": "yarn plop --plopfile ./generators/plopfile.js",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build-storybook": "build-storybook -s ./public"
   },
   "dependencies": {
     "next": "12.2.2",

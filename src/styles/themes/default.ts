@@ -38,7 +38,7 @@ export default {
     secondary: '#1C1C1C',
     tertiary: '#2D2D2F',
 
-    mainBg: '#151718',
+    background: '#151718',
 
     textDarker: '#504F57',
     textDark: '#888888',

@@ -42,21 +42,22 @@ const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
     }
   }
 
-  html {
-    font-size: 62.5%;
-  }
-
   html, body, #__next {
     height: 100%;
   }
 
   ${({ theme, removeBg }) => css`
+    html {
+      font-size: 62.5%;
+      color: ${theme.colors.text};
+    }
+
     body {
       font-family: ${theme.font.family};
 
       ${!removeBg &&
       css`
-        background-color: ${theme.colors.mainBg};
+        background-color: ${theme.colors.background};
       `}
     }
   `}

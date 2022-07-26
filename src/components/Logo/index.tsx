@@ -2,8 +2,8 @@ import * as S from './styles';
 
 export function Logo() {
   return (
-    <S.Wrapper>
+    <S.Container>
       Douglas<S.Dot>.</S.Dot>
-    </S.Wrapper>
+    </S.Container>
   );
 }
