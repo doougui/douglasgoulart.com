@@ -1,28 +1,32 @@
 import { Logo } from 'components/Logo';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import * as S from './styles';
 
 export function Menu() {
+  const items = [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Writings', href: '/writings' },
+    { label: 'Guestbook', href: '/guestbook' },
+  ];
+
+  const router = useRouter();
+
+  function is(href: string) {
+    return router.pathname === href;
+  }
+
   return (
     <S.Container>
       <Logo />
 
       <S.MenuNav>
-        <Link href="/" passHref>
-          <S.MenuLink>Home</S.MenuLink>
-        </Link>
-
-        <Link href="/about" passHref>
-          <S.MenuLink>About</S.MenuLink>
-        </Link>
-
-        <Link href="/writings" passHref>
-          <S.MenuLink>Writings</S.MenuLink>
-        </Link>
-
-        <Link href="/guestbook" passHref>
-          <S.MenuLink>Guestbook</S.MenuLink>
-        </Link>
+        {items.map((item) => (
+          <Link key={item.href} href={item.href} passHref>
+            <S.MenuLink active={is(item.href)}>{item.label}</S.MenuLink>
+          </Link>
+        ))}
       </S.MenuNav>
     </S.Container>
   );
