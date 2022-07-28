@@ -20,12 +20,24 @@ declare module 'styled-components' {
       default: string;
       fast: string;
     };
+
     font: {
       family: string;
-      light: number;
-      normal: number;
-      bold: number;
+      weights: {
+        light: number;
+        normal: number;
+        bold: number;
+      };
       sizes: {
+        xsmall: string;
+        small: string;
+        medium: string;
+        large: string;
+        xlarge: string;
+        xxlarge: string;
+        huge: string;
+      };
+      heights: {
         xsmall: string;
         small: string;
         medium: string;

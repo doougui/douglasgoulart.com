@@ -20,9 +20,11 @@ export default {
   font: {
     family:
       "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
-    light: 300,
-    normal: 400,
-    bold: 600,
+    weights: {
+      light: 300,
+      normal: 400,
+      bold: 600,
+    },
     sizes: {
       xsmall: '1.2rem',
       small: '1.4rem',
@@ -31,6 +33,15 @@ export default {
       xlarge: '2.4rem',
       xxlarge: '3.2rem',
       huge: '5.2rem',
+    },
+    heights: {
+      xsmall: '1.4rem',
+      small: '1.6rem',
+      medium: '1.8rem',
+      large: '2rem',
+      xlarge: '3rem',
+      xxlarge: '4.2rem',
+      huge: '6rem',
     },
   },
   colors: {
