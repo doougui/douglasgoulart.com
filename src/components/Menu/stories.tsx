@@ -4,6 +4,9 @@ import { Menu } from '.';
 export default {
   title: 'Menu',
   component: Menu,
+  nextRouter: {
+    pathname: '/',
+  },
 } as Meta;
 
 export const Default: Story = () => <Menu />;

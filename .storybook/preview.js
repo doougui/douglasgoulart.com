@@ -4,6 +4,8 @@ import * as NextImage from 'next/image';
 import theme from 'styles/themes/default';
 import dark from 'styles/themes/dark';
 import light from 'styles/themes/light';
+import { themes } from '@storybook/theming';
+import { RouterContext } from "next/dist/shared/lib/router-context";
 
 const OriginalNextImage = NextImage.default;
 
@@ -27,6 +29,13 @@ export const parameters = {
         value: dark.colors.background,
       },
     ],
+  },
+  darkMode: {
+    dark: { ...themes.dark, appBg: 'black' },
+    light: { ...themes.normal, appBg: 'red' }
+  },
+  nextRouter: {
+    Provider: RouterContext.Provider,
   },
 };
 
