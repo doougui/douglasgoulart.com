@@ -11,3 +11,13 @@ export const Container = styled.div`
     }
   `}
 `;
+
+export const Footer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const SocialMedia = styled.div`
+  display: flex;
+  gap: 1rem;
+`;

@@ -62,6 +62,11 @@
     "react/function-component-definition": "off",
     "react/jsx-props-no-spreading": "off",
     "no-console": ["warn", { "allow": ["error", "warn"] }],
-    "react/jsx-boolean-value": "off"
+    "react/jsx-boolean-value": "off",
+    "jsx-a11y/anchor-is-valid": ["error", {
+      "components": ["Link"],
+      "specialLink": ["hrefLeft", "hrefRight"],
+      "aspects": ["invalidHref", "preferButton"]
+    }]
   }
 }

@@ -1,6 +1,12 @@
+import { Link } from 'components/Link';
+import NextLink from 'next/link';
+import { RiGithubFill, RiLinkedinBoxFill, RiTwitterFill } from 'react-icons/ri';
+import { useTheme } from 'styled-components';
 import * as S from './styles';
 
 export function About() {
+  const theme = useTheme();
+
   return (
     <S.Container>
       <p>
@@ -15,6 +21,35 @@ export function About() {
         Previously, I worked at Modulz. Where I co-created Radix, designed the
         Stitches API and led the developer community.
       </p>
+
+      <S.Footer>
+        <NextLink href="/about" passHref>
+          <Link>More about me</Link>
+        </NextLink>
+
+        <S.SocialMedia>
+          <NextLink href="https://github.com/doougui" passHref>
+            <a target="_blank">
+              <RiGithubFill size={24} color={theme.colors.textDark} />
+            </a>
+          </NextLink>
+
+          <NextLink
+            href="https://www.linkedin.com/in/douglaspigoulart/"
+            passHref
+          >
+            <a target="_blank">
+              <RiLinkedinBoxFill size={24} color={theme.colors.textDark} />
+            </a>
+          </NextLink>
+
+          <NextLink href="https://twitter.com/oDougui" passHref>
+            <a target="_blank">
+              <RiTwitterFill size={24} color={theme.colors.textDark} />
+            </a>
+          </NextLink>
+        </S.SocialMedia>
+      </S.Footer>
     </S.Container>
   );
 }
