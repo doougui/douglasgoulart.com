@@ -6,9 +6,7 @@ describe('<Logo />', () => {
   it('should render correctly', () => {
     const { container } = render(<Logo />);
 
-    expect(
-      screen.getByRole('heading', { name: /Douglas./i }),
-    ).toBeInTheDocument();
+    expect(screen.getByTestId('logo')).toBeInTheDocument();
 
     expect(container.firstChild).toMatchSnapshot();
   });

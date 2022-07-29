@@ -11,8 +11,9 @@ exports[`<Logo /> should render correctly 1`] = `
   color: #107BEB;
 }
 
-<h1
+<div
   class="c0"
+  data-testid="logo"
 >
   Douglas
   <span
@@ -20,5 +21,5 @@ exports[`<Logo /> should render correctly 1`] = `
   >
     .
   </span>
-</h1>
+</div>
 `;

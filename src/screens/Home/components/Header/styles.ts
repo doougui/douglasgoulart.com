@@ -8,7 +8,7 @@ export const Introduction = styled.div`
   `}
 `;
 
-export const Role = styled.h2`
+export const Role = styled.h1`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.xxlarge};
     line-height: ${theme.font.heights.xxlarge};

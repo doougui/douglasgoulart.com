@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.section`
   ${({ theme }) => css`
     line-height: ${theme.font.heights.medium};
 
