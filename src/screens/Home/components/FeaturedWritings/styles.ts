@@ -7,3 +7,7 @@ export const Heading = styled.header`
   justify-content: space-between;
   align-items: center;
 `;
+
+export const Content = styled.div`
+  margin-top: 1.5rem;
+`;

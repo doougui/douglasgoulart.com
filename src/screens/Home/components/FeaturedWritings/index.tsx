@@ -14,7 +14,11 @@ export function FeaturedWritings() {
         </NextLink>
       </S.Heading>
 
-      <Writing />
+      <S.Content>
+        <Writing />
+        <Writing />
+        <Writing />
+      </S.Content>
     </S.Container>
   );
 }
