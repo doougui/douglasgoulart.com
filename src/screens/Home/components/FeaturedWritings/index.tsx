@@ -6,7 +6,7 @@ import * as S from './styles';
 
 export function FeaturedWritings() {
   return (
-    <S.Container>
+    <section>
       <S.Heading>
         <SectionTitle>Featured writings</SectionTitle>
         <NextLink href="/writings" passHref>
@@ -19,6 +19,6 @@ export function FeaturedWritings() {
         <Writing />
         <Writing />
       </S.Content>
-    </S.Container>
+    </section>
   );
 }

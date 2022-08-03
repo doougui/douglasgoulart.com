@@ -1,6 +1,7 @@
 import { Stack } from 'components/Stack';
 import { Base } from 'layouts/Base';
 import { About } from './components/About';
+import { Contact } from './components/Contact';
 import { FeaturedWritings } from './components/FeaturedWritings';
 import { Header } from './components/Header';
 
@@ -11,6 +12,7 @@ export function Home() {
         <Header />
         <About />
         <FeaturedWritings />
+        <Contact />
       </Stack>
     </Base>
   );
