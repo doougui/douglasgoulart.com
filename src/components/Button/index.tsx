@@ -1,9 +1,22 @@
+import React from 'react';
 import * as S from './styles';
 
-export function Button() {
-  return (
-    <S.Container>
-      <h1>Button</h1>
-    </S.Container>
-  );
-}
+type ButtonTypes =
+  | React.AnchorHTMLAttributes<HTMLAnchorElement>
+  | React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+export type ButtonProps = {
+  children: React.ReactNode;
+  fullWidth?: boolean;
+  as?: React.ElementType;
+} & ButtonTypes;
+
+export const Button = React.forwardRef<S.ContainerProps, ButtonProps>(
+  ({ children, fullWidth, as, ...props }, ref) => {
+    return (
+      <S.Container ref={ref} as={as} fullWidth={fullWidth} {...props}>
+        {children}
+      </S.Container>
+    );
+  },
+);

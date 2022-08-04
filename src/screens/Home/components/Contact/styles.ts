@@ -9,5 +9,6 @@ export const Text = styled.p`
     font-size: ${theme.font.sizes.medium};
     line-height: ${theme.font.heights.large};
     color: ${theme.colors.text};
+    margin-bottom: 1.5rem;
   `}
 `;
