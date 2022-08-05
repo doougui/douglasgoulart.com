@@ -14,7 +14,7 @@ export function Contact() {
           I’ll try my best to get back to you!
         </S.Text>
 
-        <Button as="a" href="/link">
+        <Button as="a" href="mailto:douglaspigoulart@gmail.com">
           Say hello
         </Button>
       </S.Content>
