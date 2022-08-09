@@ -8,11 +8,11 @@ export function Contact() {
       <SectionTitle>Don’t be shy, say hi</SectionTitle>
 
       <S.Content>
-        <S.Text>
+        <S.Description>
           Although I’m not currently looking for any new opportunities, my inbox
           is always open. Whether you have a question or just want to say hi,
           I’ll try my best to get back to you!
-        </S.Text>
+        </S.Description>
 
         <Button as="a" href="mailto:douglaspigoulart@gmail.com">
           Say hello

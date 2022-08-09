@@ -1,3 +1,4 @@
+import { Button } from 'components/Button';
 import Link from 'next/link';
 import { RiSpotifyFill } from 'react-icons/ri';
 import { useTheme } from 'styled-components';
@@ -59,7 +60,43 @@ export function Footer() {
             </Link>
           </S.Nav>
         </section>
+
+        <section>
+          <S.Title>Extras</S.Title>
+
+          <S.Nav>
+            <Link href="./" passHref>
+              <S.Link target="_blank">Newsletter</S.Link>
+            </Link>
+
+            <Link href="./" passHref>
+              <S.Link target="_blank">Resume</S.Link>
+            </Link>
+
+            <Link href="./" passHref>
+              <S.Link target="_blank">Snippets</S.Link>
+            </Link>
+
+            <Link href="https://gitlab.com/douglaspigoulart" passHref>
+              <S.Link target="_blank">GitLab</S.Link>
+            </Link>
+          </S.Nav>
+        </section>
+
+        <S.Newsletter>
+          <S.Title>Newsletter</S.Title>
+          <S.Description>
+            Get new articles delivered to your inbox!
+          </S.Description>
+
+          <S.InputWrapper>
+            <S.Input placeholder="johndoe@email.com" />
+            <Button>Subscribe</Button>
+          </S.InputWrapper>
+        </S.Newsletter>
       </S.Links>
+
+      <S.Copyright>© 2022 Douglas Pinheiro Goulart</S.Copyright>
     </S.Container>
   );
 }

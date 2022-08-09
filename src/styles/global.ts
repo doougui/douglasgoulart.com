@@ -42,10 +42,6 @@ const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
     }
   }
 
-  html, body, #__next {
-    height: 100%;
-  }
-
   ${({ theme, removeBg }) => css`
     html {
       font-size: 62.5%;

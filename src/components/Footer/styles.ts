@@ -36,15 +36,23 @@ export const Title = styled.h3`
   ${({ theme }) => css`
     color: ${theme.colors.text};
     font-size: ${theme.font.sizes.medium};
+    line-height: ${theme.font.heights.large};
     font-weight: ${theme.font.weights.normal};
-    margin-bottom: 1.5rem;
+  `}
+`;
+
+export const Description = styled.p`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.medium};
+    color: ${theme.colors.textDark};
   `}
 `;
 
 export const Nav = styled.nav`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 `;
 
 export const Link = styled.a`
@@ -55,6 +63,47 @@ export const Link = styled.a`
 
     &:hover {
       text-decoration: underline;
+    }
+  `}
+`;
+
+export const Copyright = styled.p`
+  ${({ theme }) => css`
+    color: ${theme.colors.text};
+    font-size: ${theme.font.sizes.medium};
+    line-height: ${theme.font.heights.large};
+    margin-top: 3rem;
+  `}
+`;
+
+export const Newsletter = styled.section`
+  flex: 1;
+`;
+
+export const InputWrapper = styled.div`
+  display: flex;
+  margin-top: 1rem;
+
+  button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+`;
+
+export const Input = styled.input`
+  ${({ theme }) => css`
+    all: unset;
+    width: 100%;
+    font-size: ${theme.font.sizes.medium};
+    background: ${theme.colors.tertiary};
+    padding: 1.2rem 1.5rem;
+    border-radius: ${theme.border.radius};
+    color: ${theme.colors.text};
+
+    &::placeholder {
+      color: ${theme.colors.textDark};
     }
   `}
 `;
