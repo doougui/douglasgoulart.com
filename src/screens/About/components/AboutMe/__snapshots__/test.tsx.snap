@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AboutMe /> should render correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.c1 {
+  max-width: 20rem;
+  height: 20rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+
+.c1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.c3 {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #EDEDEF;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <div
+      data-testid="meImage"
+    />
+  </div>
+  <div
+    class="c2"
+  >
+    <p
+      class="c3"
+    >
+      I‘m a UI developer based in Barcelona. I‘m interested in design systems, web3, user/dev experience and under engineering.
+    </p>
+    <p
+      class="c3"
+    >
+      I‘m currently doing UI/DX at Rainbow to help create the world‘s friendliest wallet.
+    </p>
+    <p
+      class="c3"
+    >
+      Previously, I worked at Modulz. Where I co-created Radix, designed the Stitches API and led the developer community.
+    </p>
+  </div>
+</div>
+`;
