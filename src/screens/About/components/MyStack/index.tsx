@@ -1,4 +1,5 @@
-import { SectionTitle } from 'components/SectionTitle';
+import { Heading2, Heading3 } from 'components/Headings';
+import { Stack } from 'components/Stack';
 import { Tool, ToolProps } from 'components/Tool';
 import * as S from './styles';
 
@@ -12,15 +13,39 @@ export function MyStack() {
     { color: '#61DAFB', name: 'React Native' },
   ];
 
-  return (
-    <S.Container>
-      <SectionTitle>My stack</SectionTitle>
+  const ecosystem: ToolProps[] = [
+    { color: '#5C49EB', name: 'Expo' },
+    { color: '#4B32C3', name: 'ESLint' },
+    { color: '#F8BC45', name: 'Prettier' },
+    { color: '#C21325', name: 'Jest' },
+    { color: '#FE4646', name: 'Testing Library' },
+    { color: '#059DFD', name: 'Storybook' },
+    { color: '#F05033', name: 'Git' },
+    { color: '#FFFFFF', name: 'Figma' },
+    { color: '#FFFF00', name: 'Linux' },
+  ];
 
-      <S.Tools>
-        {tools.map((tool) => (
-          <Tool key={tool.name} {...tool} />
-        ))}
-      </S.Tools>
-    </S.Container>
+  return (
+    <Stack spacing="2rem">
+      <div>
+        <Heading2>My stack</Heading2>
+
+        <S.Tools>
+          {tools.map((tool) => (
+            <Tool key={tool.name} {...tool} />
+          ))}
+        </S.Tools>
+      </div>
+
+      <div>
+        <Heading3>Ecosystem</Heading3>
+
+        <S.Tools>
+          {ecosystem.map((tool) => (
+            <Tool key={tool.name} {...tool} />
+          ))}
+        </S.Tools>
+      </div>
+    </Stack>
   );
 }

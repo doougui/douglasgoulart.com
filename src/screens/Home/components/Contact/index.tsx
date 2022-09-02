@@ -1,11 +1,11 @@
 import { Button } from 'components/Button';
-import { SectionTitle } from 'components/SectionTitle';
+import { Heading2 } from 'components/Headings';
 import * as S from './styles';
 
 export function Contact() {
   return (
     <section>
-      <SectionTitle>Don’t be shy, say hi</SectionTitle>
+      <Heading2>Don’t be shy, say hi</Heading2>
 
       <S.Content>
         <S.Description>
