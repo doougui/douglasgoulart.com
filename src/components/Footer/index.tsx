@@ -90,7 +90,7 @@ export function Footer() {
           </S.Description>
 
           <S.InputWrapper>
-            <S.Input placeholder="johndoe@email.com" />
+            <S.SubscribeInput placeholder="johndoe@email.com" />
             <Button>Subscribe</Button>
           </S.InputWrapper>
         </S.Newsletter>

@@ -1,3 +1,4 @@
+import { Input } from 'components/Input';
 import styled, { css } from 'styled-components';
 
 export const Container = styled.footer`
@@ -92,18 +93,7 @@ export const InputWrapper = styled.div`
   }
 `;
 
-export const Input = styled.input`
-  ${({ theme }) => css`
-    all: unset;
-    width: 100%;
-    font-size: ${theme.font.sizes.medium};
-    background: ${theme.colors.tertiary};
-    padding: 1.2rem 1.5rem;
-    border-radius: ${theme.border.radius};
-    color: ${theme.colors.text};
-
-    &::placeholder {
-      color: ${theme.colors.textDark};
-    }
-  `}
+export const SubscribeInput = styled(Input)`
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 `;

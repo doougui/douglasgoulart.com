@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> should render the input 1`] = `
+.c0 {
+  all: unset;
+  width: 100%;
+  font-size: 1.6rem;
+  background: #2D2D2F;
+  padding: 1.2rem 1.5rem;
+  border-radius: 0.4rem;
+  color: #EDEDEF;
+}
+
+.c0::-webkit-input-placeholder {
+  color: #888888;
+}
+
+.c0::-moz-placeholder {
+  color: #888888;
+}
+
+.c0:-ms-input-placeholder {
+  color: #888888;
+}
+
+.c0::placeholder {
+  color: #888888;
+}
+
+<input
+  class="c0"
+  placeholder="input"
+/>
+`;

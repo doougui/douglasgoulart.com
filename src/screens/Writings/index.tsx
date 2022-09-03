@@ -1,6 +1,7 @@
 import { Heading1 } from 'components/Headings';
 import { MutedText } from 'components/MutedText';
 import { Base } from 'layouts/Base';
+import { Filter } from './components/Filter';
 
 export function Writings() {
   return (
@@ -11,6 +12,8 @@ export function Writings() {
         topics, such as design system, accessibility, start ups and user/dev
         experience.
       </MutedText>
+
+      <Filter />
     </Base>
   );
 }
