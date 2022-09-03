@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Position /> should render title, company, period and responsabilities 1`] = `
+.c0 {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #EDEDEF;
+  font-weight: 600;
+}
+
+.c2 {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: #888888;
+  margin-top: 2px;
+}
+
+.c1 {
+  color: #107BEB;
+}
+
+.c3 {
+  list-style: none;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.c4 {
+  position: relative;
+  padding-left: 3rem;
+}
+
+.c4::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: block;
+  background: #107BEB;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+<div
+  class=""
+>
+  <h3
+    class="c0"
+  >
+    Software Developer
+     
+    <span
+      class="c1"
+    >
+      at 
+      Tecimob
+    </span>
+  </h3>
+  <small
+    class="c2"
+  >
+    Aug 2021
+     - 
+    Present
+  </small>
+  <ul
+    class="c3"
+  >
+    <li
+      class="c4"
+    >
+      Write modern, performant, maintainable code for a diverse array of client and internal projects
+    </li>
+    <li
+      class="c4"
+    >
+      Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify
+    </li>
+    <li
+      class="c4"
+    >
+      Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis
+    </li>
+  </ul>
+</div>
+`;
