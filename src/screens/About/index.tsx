@@ -3,6 +3,7 @@ import { Stack } from 'components/Stack';
 import { Base } from 'layouts/Base';
 import { AboutMe } from './components/AboutMe';
 import { MyStack } from './components/MyStack';
+import { WorkExperience } from './components/WorkExperience';
 
 export function About() {
   return (
@@ -11,6 +12,7 @@ export function About() {
         <Heading1>Who am I</Heading1>
         <AboutMe />
         <MyStack />
+        <WorkExperience />
       </Stack>
     </Base>
   );

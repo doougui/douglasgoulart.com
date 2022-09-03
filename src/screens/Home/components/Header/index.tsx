@@ -1,3 +1,4 @@
+import { SmallText } from 'components/SmallText';
 import * as S from './styles';
 
 export function Header() {
@@ -7,10 +8,10 @@ export function Header() {
       <S.Role>
         <strong>Front-end and Mobile developer</strong> with an eye for design.
       </S.Role>
-      <S.Description>
+      <SmallText>
         Helping developers build a faster web. Teaching about web development,
         serverless, and React / Next.js.
-      </S.Description>
+      </SmallText>
     </header>
   );
 }
