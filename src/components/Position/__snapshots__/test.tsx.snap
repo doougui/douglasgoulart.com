@@ -9,10 +9,9 @@ exports[`<Position /> should render title, company, period and responsabilities 
 }
 
 .c2 {
-  font-size: 1.4rem;
-  line-height: 1.4rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   color: #888888;
-  margin-top: 2px;
 }
 
 .c1 {
@@ -69,13 +68,13 @@ exports[`<Position /> should render title, company, period and responsabilities 
       Tecimob
     </span>
   </h3>
-  <small
+  <p
     class="c2"
   >
     Aug 2021
      - 
     Present
-  </small>
+  </p>
   <ul
     class="c3"
   >

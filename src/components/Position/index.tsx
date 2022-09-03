@@ -1,5 +1,5 @@
 import { Heading3 } from 'components/Headings';
-import { SmallText } from 'components/SmallText';
+import { MutedText } from 'components/MutedText';
 import * as S from './styles';
 
 export type PositionProps = {
@@ -22,9 +22,9 @@ export function Position({
       <Heading3>
         {title} <S.Company>at {company}</S.Company>
       </Heading3>
-      <SmallText>
+      <MutedText>
         {startDate} - {endDate}
-      </SmallText>
+      </MutedText>
 
       <S.Responsabilities>
         {responsabilities.map((responsability, index) => (

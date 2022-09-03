@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MutedText /> should render correctly 1`] = `
+.c0 {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #888888;
+}
+
+<p
+  class="c0"
+>
+  This is a muted text
+</p>
+`;

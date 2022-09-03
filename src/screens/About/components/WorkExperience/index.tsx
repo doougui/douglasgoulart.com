@@ -1,6 +1,6 @@
 import { Heading2 } from 'components/Headings';
 import { Position, PositionProps } from 'components/Position';
-import { SmallText } from 'components/SmallText';
+import { MutedText } from 'components/MutedText';
 import { Stack } from 'components/Stack';
 import * as S from './styles';
 
@@ -34,10 +34,10 @@ export function WorkExperience() {
   return (
     <section>
       <Heading2>Work Experience</Heading2>
-      <SmallText>
+      <MutedText>
         These are some of the awesome places I have been able to contribute to
         and make things happen
-      </SmallText>
+      </MutedText>
 
       <S.Positions>
         <Stack spacing="3rem">

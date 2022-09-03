@@ -1,3 +1,4 @@
+import { MutedText } from 'components/MutedText';
 import styled, { css } from 'styled-components';
 
 export const Introduction = styled.div`
@@ -17,11 +18,9 @@ export const Role = styled.h1`
   `}
 `;
 
-export const Description = styled.div`
+export const Description = styled(MutedText)`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.small};
-    line-height: ${theme.font.sizes.small};
-    color: ${theme.colors.textDark};
-    margin-top: 2px;
+    line-height: ${theme.font.heights.small};
   `}
 `;
