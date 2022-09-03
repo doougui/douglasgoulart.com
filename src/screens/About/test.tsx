@@ -17,6 +17,16 @@ jest.mock('./components/AboutMe', () => ({
   AboutMe: () => <div data-testid="aboutMe" />,
 }));
 
+jest.mock('./components/MyStack', () => ({
+  __esModule: true,
+  MyStack: () => <div data-testid="myStack" />,
+}));
+
+jest.mock('./components/WorkExperience', () => ({
+  __esModule: true,
+  WorkExperience: () => <div data-testid="workExperience" />,
+}));
+
 describe('<About />', () => {
   it('should render page title', () => {
     render(<About />);
@@ -30,5 +40,7 @@ describe('<About />', () => {
     render(<About />);
 
     expect(screen.getByTestId('aboutMe')).toBeInTheDocument();
+    expect(screen.getByTestId('myStack')).toBeInTheDocument();
+    expect(screen.getByTestId('workExperience')).toBeInTheDocument();
   });
 });
