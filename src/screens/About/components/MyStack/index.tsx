@@ -26,7 +26,7 @@ export function MyStack() {
   ];
 
   return (
-    <Stack spacing="2rem">
+    <Stack as="section" spacing="2rem">
       <div>
         <Heading2>My stack</Heading2>
 

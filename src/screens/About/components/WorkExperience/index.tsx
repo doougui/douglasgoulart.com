@@ -32,7 +32,7 @@ export function WorkExperience() {
   ];
 
   return (
-    <S.Container>
+    <section>
       <Heading2>Work Experience</Heading2>
       <SmallText>
         These are some of the awesome places I have been able to contribute to
@@ -49,6 +49,6 @@ export function WorkExperience() {
           ))}
         </Stack>
       </S.Positions>
-    </S.Container>
+    </section>
   );
 }

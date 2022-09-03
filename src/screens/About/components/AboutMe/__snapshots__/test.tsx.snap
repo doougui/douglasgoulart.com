@@ -43,7 +43,7 @@ exports[`<AboutMe /> should render correctly 1`] = `
   color: #EDEDEF;
 }
 
-<div
+<section
   class="c0"
 >
   <div
@@ -72,5 +72,5 @@ exports[`<AboutMe /> should render correctly 1`] = `
       Previously, I worked at Modulz. Where I co-created Radix, designed the Stitches API and led the developer community.
     </p>
   </div>
-</div>
+</section>
 `;
