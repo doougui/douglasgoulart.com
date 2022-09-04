@@ -1,7 +1,9 @@
 import { Heading1 } from 'components/Headings';
 import { MutedText } from 'components/MutedText';
+import { Writing } from 'components/Writing';
 import { Base } from 'layouts/Base';
 import { Filter } from './components/Filter';
+import * as S from './styles';
 
 export function Writings() {
   return (
@@ -14,6 +16,15 @@ export function Writings() {
       </MutedText>
 
       <Filter />
+
+      <S.Writings spacing="1rem">
+        <Writing />
+        <Writing />
+        <Writing />
+        <Writing />
+        <Writing />
+        <Writing />
+      </S.Writings>
     </Base>
   );
 }

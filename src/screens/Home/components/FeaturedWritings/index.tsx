@@ -14,7 +14,7 @@ export function FeaturedWritings() {
         </NextLink>
       </S.Heading>
 
-      <S.Content>
+      <S.Content spacing="1rem">
         <Writing />
         <Writing />
         <Writing />

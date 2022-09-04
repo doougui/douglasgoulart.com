@@ -1,3 +1,4 @@
+import { Stack } from 'components/Stack';
 import styled from 'styled-components';
 
 export const Heading = styled.header`
@@ -6,6 +7,6 @@ export const Heading = styled.header`
   align-items: center;
 `;
 
-export const Content = styled.div`
+export const Content = styled(Stack)`
   margin-top: 1.5rem;
 `;
