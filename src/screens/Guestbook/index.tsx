@@ -1,9 +1,18 @@
-import * as S from './styles';
+import { Heading1 } from 'components/Headings';
+import { MutedText } from 'components/MutedText';
+import { Base } from 'layouts/Base';
+import { LoginBox } from './components/LoginBox';
 
 export function Guestbook() {
   return (
-    <S.Container>
-      <h1>Guestbook</h1>
-    </S.Container>
+    <Base>
+      <Heading1>Guestbook</Heading1>
+      <MutedText>
+        Leave a comment below. It could be anything – appreciation, information,
+        wisdom, or even humor. Surprise me!
+      </MutedText>
+
+      <LoginBox />
+    </Base>
   );
 }
