@@ -61,6 +61,24 @@ module.exports = (plop) => {
     ],
   });
 
+  plop.setGenerator('page', {
+    description: 'Create a next page',
+    prompts: [
+      {
+        type: 'input',
+        name: 'name',
+        message: 'What is your page name?',
+      },
+    ],
+    actions: [
+      {
+        type: 'add',
+        path: '../src/pages/{{lowerCase name}}.tsx',
+        templateFile: 'templates/page/index.tsx.hbs',
+      },
+    ],
+  });
+
   plop.setGenerator('screen', {
     description: 'Create a screen',
     prompts: [
