@@ -50,7 +50,7 @@ exports[`<AboutMe /> should render correctly 1`] = `
     class="c1"
   >
     <div
-      data-testid="meImage"
+      data-testid="me-image"
     />
   </div>
   <div

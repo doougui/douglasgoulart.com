@@ -4,14 +4,14 @@ import { Writing } from '.';
 
 jest.mock('components/Image', () => ({
   __esModule: true,
-  Image: () => <div data-testid="coverImage" />,
+  Image: () => <div data-testid="cover-image" />,
 }));
 
 describe('<Writing />', () => {
   it('should render correctly', () => {
     render(<Writing />);
 
-    expect(screen.getByTestId('coverImage')).toBeInTheDocument();
+    expect(screen.getByTestId('cover-image')).toBeInTheDocument();
 
     expect(
       screen.getByText('Why I Build Design Systems with Stitches and Radix'),

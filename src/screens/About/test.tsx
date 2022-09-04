@@ -14,17 +14,17 @@ useRouter.mockImplementation(() => ({
 
 jest.mock('./components/AboutMe', () => ({
   __esModule: true,
-  AboutMe: () => <div data-testid="aboutMe" />,
+  AboutMe: () => <div data-testid="about-me" />,
 }));
 
 jest.mock('./components/MyStack', () => ({
   __esModule: true,
-  MyStack: () => <div data-testid="myStack" />,
+  MyStack: () => <div data-testid="my-stack" />,
 }));
 
 jest.mock('./components/WorkExperience', () => ({
   __esModule: true,
-  WorkExperience: () => <div data-testid="workExperience" />,
+  WorkExperience: () => <div data-testid="work-experience" />,
 }));
 
 describe('<About />', () => {
@@ -39,8 +39,8 @@ describe('<About />', () => {
   it('should render the sections', () => {
     render(<About />);
 
-    expect(screen.getByTestId('aboutMe')).toBeInTheDocument();
-    expect(screen.getByTestId('myStack')).toBeInTheDocument();
-    expect(screen.getByTestId('workExperience')).toBeInTheDocument();
+    expect(screen.getByTestId('about-me')).toBeInTheDocument();
+    expect(screen.getByTestId('my-stack')).toBeInTheDocument();
+    expect(screen.getByTestId('work-experience')).toBeInTheDocument();
   });
 });

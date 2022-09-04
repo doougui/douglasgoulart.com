@@ -4,7 +4,7 @@ import { AboutMe } from '.';
 
 jest.mock('components/Image', () => ({
   __esModule: true,
-  Image: () => <div data-testid="meImage" />,
+  Image: () => <div data-testid="me-image" />,
 }));
 
 describe('<AboutMe />', () => {

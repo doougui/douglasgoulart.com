@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Filter /> should render correctly 1`] = `
+.c4 {
+  all: unset;
+  width: 100%;
+  font-size: 1.6rem;
+  background: #2D2D2F;
+  padding: 1.2rem 1.5rem;
+  border-radius: 0.4rem;
+  color: #EDEDEF;
+}
+
+.c4::-webkit-input-placeholder {
+  color: #888888;
+}
+
+.c4::-moz-placeholder {
+  color: #888888;
+}
+
+.c4:-ms-input-placeholder {
+  color: #888888;
+}
+
+.c4::placeholder {
+  color: #888888;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.c1 {
+  background: #1C1C1C;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 5px;
+  padding: 0 1.5rem;
+}
+
+.c2 {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #888888;
+  white-space: nowrap;
+}
+
+.c5 {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.c3 {
+  background: transparent;
+  color: inherit;
+  border: none;
+  font-weight: 600;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <span
+      class="c2"
+    >
+      Order by:
+       
+      <select
+        aria-label="Select order"
+        class="c3"
+        data-testid="select-order"
+        role="listbox"
+      >
+        <option>
+          New
+        </option>
+        <option>
+          Top
+        </option>
+        <option>
+          Hot
+        </option>
+      </select>
+    </span>
+  </div>
+  <input
+    class="c4 c5"
+    placeholder="Search articles"
+  />
+</div>
+`;
