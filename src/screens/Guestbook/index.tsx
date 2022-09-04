@@ -1,7 +1,10 @@
+import { GuestMessage } from 'components/GuestMessage';
 import { Heading1 } from 'components/Headings';
 import { MutedText } from 'components/MutedText';
 import { Base } from 'layouts/Base';
 import { LoginBox } from './components/LoginBox';
+import guestMessagesMock from './mock';
+import * as S from './styles';
 
 export function Guestbook() {
   return (
@@ -13,6 +16,12 @@ export function Guestbook() {
       </MutedText>
 
       <LoginBox />
+
+      <S.GuestMessages spacing="2rem">
+        {guestMessagesMock.map((guestMessage) => (
+          <GuestMessage {...guestMessage} />
+        ))}
+      </S.GuestMessages>
     </Base>
   );
 }

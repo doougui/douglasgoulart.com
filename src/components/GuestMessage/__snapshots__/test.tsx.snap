@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GuestMessage /> should render message, author and date 1`] = `
+.c0 {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #EDEDEF;
+}
+
+.c1 {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c2 {
+  color: #888888;
+}
+
+.c3 {
+  color: #504F57;
+}
+
+<div
+  class=""
+>
+  <p
+    class="c0"
+  >
+    Nice work
+  </p>
+  <div
+    class="c1"
+  >
+    <p
+      class="c2"
+    >
+      Douglas Pinheiro Goulart
+    </p>
+    <p
+      class="c3"
+    >
+      2002-10-22T03:00:00.000Z
+    </p>
+  </div>
+</div>
+`;
