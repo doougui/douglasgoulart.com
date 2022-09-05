@@ -1,5 +1,6 @@
 import { MutedText } from 'components/MutedText';
 import styled, { css } from 'styled-components';
+import media from 'styled-media-query';
 
 export const Introduction = styled.div`
   ${({ theme }) => css`
@@ -18,9 +19,19 @@ export const Role = styled.h1`
   `}
 `;
 
+export const RoleAdditional = styled.span`
+  ${media.lessThan('medium')`
+    display: none;
+  `};
+`;
+
 export const Description = styled(MutedText)`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.small};
     line-height: ${theme.font.heights.small};
+
+    ${media.lessThan('medium')`
+      display: none;
+    `};
   `}
 `;

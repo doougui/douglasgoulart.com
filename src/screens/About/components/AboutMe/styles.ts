@@ -1,9 +1,14 @@
 import styled, { css } from 'styled-components';
+import media from 'styled-media-query';
 
 export const Container = styled.section`
   display: flex;
   align-items: center;
   gap: 3rem;
+
+  ${media.lessThan('medium')`
+    flex-direction: column;
+  `}
 `;
 
 export const ImageBox = styled.div`

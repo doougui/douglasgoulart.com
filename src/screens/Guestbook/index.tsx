@@ -18,8 +18,13 @@ export function Guestbook() {
       <LoginBox />
 
       <S.GuestMessages spacing="2rem">
-        {guestMessagesMock.map((guestMessage) => (
-          <GuestMessage {...guestMessage} />
+        {guestMessagesMock.map((guestMessage, index) => (
+          <GuestMessage
+            key={`${guestMessage.message}-${guestMessage.author}-${String(
+              index,
+            )}`}
+            {...guestMessage}
+          />
         ))}
       </S.GuestMessages>
     </Base>

@@ -43,6 +43,14 @@ exports[`<AboutMe /> should render correctly 1`] = `
   color: #EDEDEF;
 }
 
+@media (max-width:768px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
 <section
   class="c0"
 >

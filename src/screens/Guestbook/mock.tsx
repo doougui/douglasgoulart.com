@@ -4,26 +4,26 @@ export default [
   {
     message: 'Nice work',
     author: 'Douglas Pinheiro Goulart',
-    date: new Date(),
+    date: new Date(2022, 8, 22),
   },
   {
     message: 'Cool stuff, Douglas',
-    author: 'Douglas Pinheiro Goulart',
-    date: new Date(),
+    author: 'Pedro Gomes Antunes',
+    date: new Date(1992, 12, 22),
   },
   {
     message: 'Help Ukraine 🇺🇦 https://www.comebackalive.in.ua/donate',
-    author: 'Douglas Pinheiro Goulart',
-    date: new Date(),
+    author: 'João Vitor Assunção Alves',
+    date: new Date(2022, 1, 12),
   },
   {
     message: 'amazing work!!',
-    author: 'Douglas Pinheiro Goulart',
-    date: new Date(),
+    author: 'Erik Cabana',
+    date: new Date(2021, 3, 7),
   },
   {
-    message: "Nice that's so cool",
-    author: 'Douglas Pinheiro Goulart',
-    date: new Date(),
+    message: "Nice, that's so cool",
+    author: 'Leandro Soares Cardinal Brum',
+    date: new Date(2022, 4, 1),
   },
 ] as GuestMessageProps[];

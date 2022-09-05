@@ -29,6 +29,7 @@ export const NowPlaying = styled.span`
 
 export const Links = styled.menu`
   display: flex;
+  flex-wrap: wrap;
   gap: 8rem;
   margin-top: 2.5rem;
 `;
@@ -96,4 +97,5 @@ export const InputWrapper = styled.div`
 export const SubscribeInput = styled(Input)`
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  min-width: 10rem;
 `;

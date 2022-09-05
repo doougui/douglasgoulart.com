@@ -1,4 +1,5 @@
 import styled, { css, DefaultTheme } from 'styled-components';
+import media from 'styled-media-query';
 
 export const Container = styled.menu`
   display: flex;
@@ -8,6 +9,10 @@ export const Container = styled.menu`
 
 export const MenuNav = styled.nav`
   gap: 3rem;
+
+  ${media.lessThan('medium')`
+    display: none;
+  `}
 `;
 
 type MenuLinkProps = {

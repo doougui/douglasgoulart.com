@@ -5,7 +5,8 @@ export function Header() {
     <header>
       <S.Introduction>Hi there, I’m a...</S.Introduction>
       <S.Role>
-        <strong>Front-end and Mobile developer</strong> with an eye for design.
+        <strong>Front-end and Mobile developer</strong>{' '}
+        <S.RoleAdditional>with an eye for design.</S.RoleAdditional>
       </S.Role>
       <S.Description>
         Helping developers build a faster web. Teaching about web development,

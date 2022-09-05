@@ -1,3 +1,4 @@
+import { formatDistance } from 'date-fns';
 import * as S from './styles';
 
 export type GuestMessageProps = {
@@ -13,7 +14,7 @@ export function GuestMessage({ message, author, date }: GuestMessageProps) {
 
       <S.Infos>
         <S.Author>{author}</S.Author>
-        <S.Date>{date.toISOString()}</S.Date>
+        <S.Date>{formatDistance(date, new Date(), { addSuffix: true })}</S.Date>
       </S.Infos>
     </S.Container>
   );

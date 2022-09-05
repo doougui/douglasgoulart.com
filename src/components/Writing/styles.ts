@@ -42,7 +42,7 @@ export const Title = styled(Text)`
   ${({ theme }) => css`
     color: ${theme.colors.text};
     font-size: ${theme.font.sizes.medium};
-    line-height: ${theme.font.sizes.medium};
+    line-height: ${theme.font.heights.large};
   `}
 `;
 
@@ -50,7 +50,7 @@ export const Excerpt = styled(Text)`
   ${({ theme }) => css`
     color: ${theme.colors.textDark};
     font-size: ${theme.font.sizes.medium};
-    line-height: ${theme.font.sizes.medium};
+    line-height: ${theme.font.heights.large};
   `}
 `;
 
@@ -58,6 +58,6 @@ export const Date = styled(Text)`
   ${({ theme }) => css`
     color: ${theme.colors.textDarker};
     font-size: ${theme.font.sizes.xsmall};
-    line-height: ${theme.font.sizes.medium};
+    line-height: ${theme.font.heights.small};
   `}
 `;

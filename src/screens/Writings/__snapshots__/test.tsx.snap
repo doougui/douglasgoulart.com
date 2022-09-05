@@ -16,11 +16,11 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
 
 .c1 {
   width: 100%;
-  max-width: 93.2rem;
+  max-width: 94rem;
   margin-left: auto;
   margin-right: auto;
-  padding-left: calc(3.2rem / 2);
-  padding-right: calc(3.2rem / 2);
+  padding-left: calc(4rem / 2);
+  padding-right: calc(4rem / 2);
 }
 
 .c25 {
@@ -107,6 +107,9 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 8rem;
   margin-top: 2.5rem;
 }
@@ -178,6 +181,7 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
 .c24 {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  min-width: 10rem;
 }
 
 .c3 {
@@ -247,6 +251,24 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
 
 .c12 {
   margin-top: 3rem;
+}
+
+@media (max-width:768px) {
+  .c5 {
+    display: none;
+  }
+}
+
+@media (max-width:768px) {
+  .c0 {
+    margin: 3rem 0;
+  }
+}
+
+@media (max-width:768px) {
+  .c8 {
+    margin-top: 5rem;
+  }
 }
 
 <div
