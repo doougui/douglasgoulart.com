@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MobileMenuToggle /> should render correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  width: 2.7rem;
+  height: 3px;
+  border-radius: 2px;
+  background-color: white;
+}
+
+@media (min-width:768px) {
+  .c0 {
+    display: none;
+  }
+}
+
+<nav
+  class="c0"
+>
+  <span
+    class="c1"
+  />
+  <span
+    class="c1"
+  />
+</nav>
+`;

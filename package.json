@@ -18,6 +18,7 @@
   "dependencies": {
     "csstype": "^3.1.0",
     "date-fns": "^2.29.2",
+    "framer-motion": "^7.2.1",
     "i18next": "^21.8.14",
     "next": "12.2.2",
     "nextjs-progressbar": "^0.0.14",

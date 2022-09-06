@@ -1,6 +1,7 @@
 import { Logo } from 'components/Logo';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { MobileMenuToggle } from './components/MobileMenuToggle';
 import * as S from './styles';
 
 export function Menu() {
@@ -20,6 +21,8 @@ export function Menu() {
   return (
     <S.Container>
       <Logo />
+
+      <MobileMenuToggle />
 
       <S.MenuNav>
         {items.map((item) => (
