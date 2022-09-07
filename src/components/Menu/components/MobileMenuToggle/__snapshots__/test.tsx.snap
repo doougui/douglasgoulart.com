@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MobileMenuToggle /> should render correctly 1`] = `
-.c0 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,7 +16,11 @@ exports[`<MobileMenuToggle /> should render correctly 1`] = `
   align-items: center;
 }
 
-.c1 {
+.c0 {
+  all: unset;
+}
+
+.c2 {
   width: 2.7rem;
   height: 3px;
   border-radius: 2px;
@@ -24,19 +28,24 @@ exports[`<MobileMenuToggle /> should render correctly 1`] = `
 }
 
 @media (min-width:768px) {
-  .c0 {
+  .c1 {
     display: none;
   }
 }
 
-<nav
+<button
   class="c0"
+  type="button"
 >
-  <span
+  <nav
     class="c1"
-  />
-  <span
-    class="c1"
-  />
-</nav>
+  >
+    <span
+      class="c2"
+    />
+    <span
+      class="c2"
+    />
+  </nav>
+</button>
 `;

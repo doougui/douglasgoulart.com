@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Writings /> should render heading, filter and writings 1`] = `
-.c11 {
+.c12 {
   font-size: 3.2rem;
   line-height: 4.2rem;
   color: #EDEDEF;
   font-weight: 600;
 }
 
-.c12 {
+.c13 {
   font-size: 1.6rem;
   line-height: 2.4rem;
   color: #888888;
@@ -23,7 +23,7 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   padding-right: calc(4rem / 2);
 }
 
-.c27 {
+.c28 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -51,7 +51,7 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   text-decoration: none;
 }
 
-.c25 {
+.c26 {
   all: unset;
   width: 100%;
   font-size: 1.6rem;
@@ -61,29 +61,29 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   color: #EDEDEF;
 }
 
-.c25::-webkit-input-placeholder {
+.c26::-webkit-input-placeholder {
   color: #888888;
 }
 
-.c25::-moz-placeholder {
+.c26::-moz-placeholder {
   color: #888888;
 }
 
-.c25:-ms-input-placeholder {
+.c26:-ms-input-placeholder {
   color: #888888;
 }
 
-.c25::placeholder {
+.c26::placeholder {
   color: #888888;
 }
 
-.c15 {
+.c16 {
   margin-top: 5rem;
   padding-top: 3rem;
   border-top: 1px solid #2D2D2F;
 }
 
-.c16 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -97,12 +97,12 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   font-size: 1.6rem;
 }
 
-.c17 {
+.c18 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif;
   font-weight: 600;
 }
 
-.c18 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -114,19 +114,19 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   margin-top: 2.5rem;
 }
 
-.c19 {
+.c20 {
   color: #EDEDEF;
   font-size: 1.6rem;
   line-height: 2.4rem;
   font-weight: 400;
 }
 
-.c23 {
+.c24 {
   font-size: 1.6rem;
   color: #888888;
 }
 
-.c20 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -138,32 +138,32 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   margin-top: 1.5rem;
 }
 
-.c21 {
+.c22 {
   color: #888888;
   font-size: 1.6rem;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c21:hover {
+.c22:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c28 {
+.c29 {
   color: #EDEDEF;
   font-size: 1.6rem;
   line-height: 2.4rem;
   margin-top: 3rem;
 }
 
-.c22 {
+.c23 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c24 {
+.c25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -171,14 +171,14 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   margin-top: 1rem;
 }
 
-.c24 button {
+.c25 button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
-.c26 {
+.c27 {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   min-width: 10rem;
@@ -194,7 +194,7 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   color: #107BEB;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -209,7 +209,11 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   align-items: center;
 }
 
-.c6 {
+.c5 {
+  all: unset;
+}
+
+.c7 {
   width: 2.7rem;
   height: 3px;
   border-radius: 2px;
@@ -231,11 +235,11 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   align-items: center;
 }
 
-.c7 {
+.c8 {
   gap: 3rem;
 }
 
-.c8 {
+.c9 {
   font-size: 1.6rem;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -244,7 +248,7 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   color: #107BEB;
 }
 
-.c9 {
+.c10 {
   font-size: 1.6rem;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -256,11 +260,11 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   margin: 5rem 0;
 }
 
-.c10 {
+.c11 {
   margin-top: 10rem;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -271,18 +275,18 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   gap: 1rem;
 }
 
-.c14 {
+.c15 {
   margin-top: 3rem;
 }
 
 @media (min-width:768px) {
-  .c5 {
+  .c6 {
     display: none;
   }
 }
 
 @media (max-width:768px) {
-  .c7 {
+  .c8 {
     display: none;
   }
 }
@@ -294,7 +298,7 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
 }
 
 @media (max-width:768px) {
-  .c10 {
+  .c11 {
     margin-top: 5rem;
   }
 }
@@ -319,39 +323,44 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
           .
         </span>
       </div>
-      <nav
+      <button
         class="c5"
+        type="button"
       >
-        <span
+        <nav
           class="c6"
-        />
-        <span
-          class="c6"
-        />
-      </nav>
+        >
+          <span
+            class="c7"
+          />
+          <span
+            class="c7"
+          />
+        </nav>
+      </button>
       <nav
-        class="c7"
+        class="c8"
       >
         <a
-          class="c8"
+          class="c9"
           href="/"
         >
           Home
         </a>
         <a
-          class="c9"
+          class="c10"
           href="/about"
         >
           About
         </a>
         <a
-          class="c9"
+          class="c10"
           href="/writings"
         >
           Writings
         </a>
         <a
-          class="c9"
+          class="c10"
           href="/guestbook"
         >
           Guestbook
@@ -359,15 +368,15 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
       </nav>
     </menu>
     <main
-      class="c10"
+      class="c11"
     >
       <h1
-        class="c11"
+        class="c12"
       >
         Writings
       </h1>
       <p
-        class="c12"
+        class="c13"
       >
         Brain dumps, explorations, and how-to guides. I write about different topics, such as design system, accessibility, start ups and user/dev experience.
       </p>
@@ -375,7 +384,7 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
         data-testid="filter"
       />
       <div
-        class="c13 c14"
+        class="c14 c15"
         spacing="1rem"
       >
         <div
@@ -399,10 +408,10 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
       </div>
     </main>
     <footer
-      class="c15"
+      class="c16"
     >
       <div
-        class="c16"
+        class="c17"
       >
         <svg
           color="#EDEDEF"
@@ -429,44 +438,44 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
         <span>
           Now playing: 
           <span
-            class="c17"
+            class="c18"
           >
             Holy Hell - Architects
           </span>
         </span>
       </div>
       <menu
-        class="c18"
+        class="c19"
       >
         <section>
           <h3
-            class="c19"
+            class="c20"
           >
             Navigation
           </h3>
           <nav
-            class="c20"
+            class="c21"
           >
             <a
-              class="c21"
+              class="c22"
               href="/"
             >
               Home
             </a>
             <a
-              class="c21"
+              class="c22"
               href="/about"
             >
               About
             </a>
             <a
-              class="c21"
+              class="c22"
               href="/writings"
             >
               Writings
             </a>
             <a
-              class="c21"
+              class="c22"
               href="/guestbook"
             >
               Guestbook
@@ -475,36 +484,36 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
         </section>
         <section>
           <h3
-            class="c19"
+            class="c20"
           >
             Social
           </h3>
           <nav
-            class="c20"
+            class="c21"
           >
             <a
-              class="c21"
+              class="c22"
               href="https://github.com/doougui"
               target="_blank"
             >
               GitHub
             </a>
             <a
-              class="c21"
+              class="c22"
               href="https://www.linkedin.com/in/douglaspigoulart/"
               target="_blank"
             >
               Linkedin
             </a>
             <a
-              class="c21"
+              class="c22"
               href="https://twitter.com/oDougui"
               target="_blank"
             >
               Twitter
             </a>
             <a
-              class="c21"
+              class="c22"
               href="mailto:douglaspigoulart@gmail.com"
               target="_blank"
             >
@@ -514,36 +523,36 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
         </section>
         <section>
           <h3
-            class="c19"
+            class="c20"
           >
             Extras
           </h3>
           <nav
-            class="c20"
+            class="c21"
           >
             <a
-              class="c21"
+              class="c22"
               href="/"
               target="_blank"
             >
               Newsletter
             </a>
             <a
-              class="c21"
+              class="c22"
               href="/"
               target="_blank"
             >
               Resume
             </a>
             <a
-              class="c21"
+              class="c22"
               href="/"
               target="_blank"
             >
               Snippets
             </a>
             <a
-              class="c21"
+              class="c22"
               href="https://gitlab.com/douglaspigoulart"
               target="_blank"
             >
@@ -552,27 +561,27 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
           </nav>
         </section>
         <section
-          class="c22"
+          class="c23"
         >
           <h3
-            class="c19"
+            class="c20"
           >
             Newsletter
           </h3>
           <p
-            class="c23"
+            class="c24"
           >
             Get new articles delivered to your inbox!
           </p>
           <div
-            class="c24"
+            class="c25"
           >
             <input
-              class="c25 c26"
+              class="c26 c27"
               placeholder="johndoe@email.com"
             />
             <button
-              class="c27"
+              class="c28"
             >
               Subscribe
             </button>
@@ -580,7 +589,7 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
         </section>
       </menu>
       <p
-        class="c28"
+        class="c29"
       >
         © 2022 Douglas Pinheiro Goulart
       </p>

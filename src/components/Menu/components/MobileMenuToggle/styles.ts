@@ -13,6 +13,10 @@ export const Container = styled(motion.nav)`
   `}
 `;
 
+export const Button = styled.button`
+  all: unset;
+`;
+
 export const BurgerStroke = styled(motion.span)`
   width: 2.7rem;
   height: 3px;
