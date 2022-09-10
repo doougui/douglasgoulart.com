@@ -1,12 +1,13 @@
-import { useCycle } from 'framer-motion';
 import * as S from './styles';
 
-export function MobileMenuToggle() {
-  const [isOpen, toggleOpen] = useCycle(false, true);
+type ToggleProps = {
+  toggle: () => void;
+};
 
+export function Toggle({ toggle }: ToggleProps) {
   return (
-    <S.Button type="button" onClick={() => toggleOpen()}>
-      <S.Container initial={false} animate={isOpen ? 'open' : 'closed'}>
+    <S.Button type="button" onClick={toggle}>
+      <S.Container>
         <S.BurgerStroke
           variants={{
             closed: {},

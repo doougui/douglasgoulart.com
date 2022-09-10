@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navigation /> should render closed state 1`] = `
+.c2 {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  border-bottom: 1px solid #504F57;
+}
+
+.c3 {
+  color: #EDEDEF;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1 {
+  width: 100%;
+  list-style: none;
+  margin-top: 10rem;
+  text-align: right;
+}
+
+.c0 {
+  width: 100vw;
+  height: 100vh;
+  background: #151718;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  padding: 0 calc(4rem / 2);
+  pointer-events: none;
+}
+
+<nav
+  aria-hidden="true"
+  class="c0"
+  data-testid="container"
+>
+  <ul
+    class="c1"
+  >
+    <li
+      class="c2"
+    >
+      <a
+        class="c3"
+        href="/"
+      >
+        Home
+      </a>
+    </li>
+    <li
+      class="c2"
+    >
+      <a
+        class="c3"
+        href="/about"
+      >
+        About
+      </a>
+    </li>
+    <li
+      class="c2"
+    >
+      <a
+        class="c3"
+        href="/writings"
+      >
+        Writings
+      </a>
+    </li>
+    <li
+      class="c2"
+    >
+      <a
+        class="c3"
+        href="/guestbook"
+      >
+        Guestbook
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

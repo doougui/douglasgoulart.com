@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Writings /> should render heading, filter and writings 1`] = `
-.c12 {
+.c18 {
   font-size: 3.2rem;
   line-height: 4.2rem;
   color: #EDEDEF;
   font-weight: 600;
 }
 
-.c13 {
+.c19 {
   font-size: 1.6rem;
   line-height: 2.4rem;
   color: #888888;
@@ -23,7 +23,7 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   padding-right: calc(4rem / 2);
 }
 
-.c28 {
+.c34 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -51,7 +51,7 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   text-decoration: none;
 }
 
-.c26 {
+.c32 {
   all: unset;
   width: 100%;
   font-size: 1.6rem;
@@ -61,29 +61,29 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   color: #EDEDEF;
 }
 
-.c26::-webkit-input-placeholder {
+.c32::-webkit-input-placeholder {
   color: #888888;
 }
 
-.c26::-moz-placeholder {
+.c32::-moz-placeholder {
   color: #888888;
 }
 
-.c26:-ms-input-placeholder {
+.c32:-ms-input-placeholder {
   color: #888888;
 }
 
-.c26::placeholder {
+.c32::placeholder {
   color: #888888;
 }
 
-.c16 {
+.c22 {
   margin-top: 5rem;
   padding-top: 3rem;
   border-top: 1px solid #2D2D2F;
 }
 
-.c17 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -97,12 +97,12 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   font-size: 1.6rem;
 }
 
-.c18 {
+.c24 {
   font-family: Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif;
   font-weight: 600;
 }
 
-.c19 {
+.c25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -114,19 +114,19 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   margin-top: 2.5rem;
 }
 
-.c20 {
+.c26 {
   color: #EDEDEF;
   font-size: 1.6rem;
   line-height: 2.4rem;
   font-weight: 400;
 }
 
-.c24 {
+.c30 {
   font-size: 1.6rem;
   color: #888888;
 }
 
-.c21 {
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -138,32 +138,32 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   margin-top: 1.5rem;
 }
 
-.c22 {
+.c28 {
   color: #888888;
   font-size: 1.6rem;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c22:hover {
+.c28:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c29 {
+.c35 {
   color: #EDEDEF;
   font-size: 1.6rem;
   line-height: 2.4rem;
   margin-top: 3rem;
 }
 
-.c23 {
+.c29 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c25 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -171,14 +171,14 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   margin-top: 1rem;
 }
 
-.c25 button {
+.c31 button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
-.c27 {
+.c33 {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   min-width: 10rem;
@@ -194,30 +194,81 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   color: #107BEB;
 }
 
+.c5 {
+  display: none;
+}
+
+.c9 {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  border-bottom: 1px solid #504F57;
+}
+
+.c10 {
+  color: #EDEDEF;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c8 {
+  width: 100%;
+  list-style: none;
+  margin-top: 10rem;
+  text-align: right;
+}
+
+.c7 {
+  width: 100vw;
+  height: 100vh;
+  background: #151718;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  padding: 0 calc(4rem / 2);
+  pointer-events: none;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.c11 {
+  all: unset;
+  position: fixed;
+  right: calc(4rem / 2);
+  z-index: 50;
+}
+
+.c13 {
+  width: 2.7rem;
+  height: 3px;
+  border-radius: 2px;
+  background-color: white;
+}
+
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.c5 {
-  all: unset;
-}
-
-.c7 {
-  width: 2.7rem;
-  height: 3px;
-  border-radius: 2px;
-  background-color: white;
 }
 
 .c2 {
@@ -235,11 +286,11 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   align-items: center;
 }
 
-.c8 {
+.c14 {
   gap: 3rem;
 }
 
-.c9 {
+.c15 {
   font-size: 1.6rem;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -248,7 +299,7 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   color: #107BEB;
 }
 
-.c10 {
+.c16 {
   font-size: 1.6rem;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -260,11 +311,11 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   margin: 5rem 0;
 }
 
-.c11 {
+.c17 {
   margin-top: 10rem;
 }
 
-.c14 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -275,8 +326,14 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   gap: 1rem;
 }
 
-.c15 {
+.c21 {
   margin-top: 3rem;
+}
+
+@media (max-width:768px) {
+  .c5 {
+    display: block;
+  }
 }
 
 @media (min-width:768px) {
@@ -286,7 +343,7 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
 }
 
 @media (max-width:768px) {
-  .c8 {
+  .c14 {
     display: none;
   }
 }
@@ -298,7 +355,7 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
 }
 
 @media (max-width:768px) {
-  .c11 {
+  .c17 {
     margin-top: 5rem;
   }
 }
@@ -323,44 +380,109 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
           .
         </span>
       </div>
-      <button
+      <div
         class="c5"
-        type="button"
+        data-testid="mobile-menu"
       >
-        <nav
+        <div
           class="c6"
+          data-testid="container"
         >
-          <span
+          <nav
+            aria-hidden="true"
             class="c7"
-          />
-          <span
-            class="c7"
-          />
-        </nav>
-      </button>
+            data-testid="container"
+            style="opacity: 0;"
+          >
+            <ul
+              class="c8"
+            >
+              <li
+                class="c9"
+                style="opacity: 0; transform: translateX(200px) translateZ(0);"
+              >
+                <a
+                  class="c10"
+                  href="/"
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                class="c9"
+                style="opacity: 0; transform: translateX(200px) translateZ(0);"
+              >
+                <a
+                  class="c10"
+                  href="/about"
+                >
+                  About
+                </a>
+              </li>
+              <li
+                class="c9"
+                style="opacity: 0; transform: translateX(200px) translateZ(0);"
+              >
+                <a
+                  class="c10"
+                  href="/writings"
+                >
+                  Writings
+                </a>
+              </li>
+              <li
+                class="c9"
+                style="opacity: 0; transform: translateX(200px) translateZ(0);"
+              >
+                <a
+                  class="c10"
+                  href="/guestbook"
+                >
+                  Guestbook
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <button
+            class="c11"
+            type="button"
+          >
+            <div
+              class="c12"
+            >
+              <span
+                class="c13"
+              />
+              <span
+                class="c13"
+              />
+            </div>
+          </button>
+        </div>
+      </div>
       <nav
-        class="c8"
+        class="c14"
       >
         <a
-          class="c9"
+          class="c15"
           href="/"
         >
           Home
         </a>
         <a
-          class="c10"
+          class="c16"
           href="/about"
         >
           About
         </a>
         <a
-          class="c10"
+          class="c16"
           href="/writings"
         >
           Writings
         </a>
         <a
-          class="c10"
+          class="c16"
           href="/guestbook"
         >
           Guestbook
@@ -368,15 +490,15 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
       </nav>
     </menu>
     <main
-      class="c11"
+      class="c17"
     >
       <h1
-        class="c12"
+        class="c18"
       >
         Writings
       </h1>
       <p
-        class="c13"
+        class="c19"
       >
         Brain dumps, explorations, and how-to guides. I write about different topics, such as design system, accessibility, start ups and user/dev experience.
       </p>
@@ -384,7 +506,7 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
         data-testid="filter"
       />
       <div
-        class="c14 c15"
+        class="c20 c21"
         spacing="1rem"
       >
         <div
@@ -408,10 +530,10 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
       </div>
     </main>
     <footer
-      class="c16"
+      class="c22"
     >
       <div
-        class="c17"
+        class="c23"
       >
         <svg
           color="#EDEDEF"
@@ -438,44 +560,44 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
         <span>
           Now playing: 
           <span
-            class="c18"
+            class="c24"
           >
             Holy Hell - Architects
           </span>
         </span>
       </div>
       <menu
-        class="c19"
+        class="c25"
       >
         <section>
           <h3
-            class="c20"
+            class="c26"
           >
             Navigation
           </h3>
           <nav
-            class="c21"
+            class="c27"
           >
             <a
-              class="c22"
+              class="c28"
               href="/"
             >
               Home
             </a>
             <a
-              class="c22"
+              class="c28"
               href="/about"
             >
               About
             </a>
             <a
-              class="c22"
+              class="c28"
               href="/writings"
             >
               Writings
             </a>
             <a
-              class="c22"
+              class="c28"
               href="/guestbook"
             >
               Guestbook
@@ -484,36 +606,36 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
         </section>
         <section>
           <h3
-            class="c20"
+            class="c26"
           >
             Social
           </h3>
           <nav
-            class="c21"
+            class="c27"
           >
             <a
-              class="c22"
+              class="c28"
               href="https://github.com/doougui"
               target="_blank"
             >
               GitHub
             </a>
             <a
-              class="c22"
+              class="c28"
               href="https://www.linkedin.com/in/douglaspigoulart/"
               target="_blank"
             >
               Linkedin
             </a>
             <a
-              class="c22"
+              class="c28"
               href="https://twitter.com/oDougui"
               target="_blank"
             >
               Twitter
             </a>
             <a
-              class="c22"
+              class="c28"
               href="mailto:douglaspigoulart@gmail.com"
               target="_blank"
             >
@@ -523,36 +645,36 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
         </section>
         <section>
           <h3
-            class="c20"
+            class="c26"
           >
             Extras
           </h3>
           <nav
-            class="c21"
+            class="c27"
           >
             <a
-              class="c22"
+              class="c28"
               href="/"
               target="_blank"
             >
               Newsletter
             </a>
             <a
-              class="c22"
+              class="c28"
               href="/"
               target="_blank"
             >
               Resume
             </a>
             <a
-              class="c22"
+              class="c28"
               href="/"
               target="_blank"
             >
               Snippets
             </a>
             <a
-              class="c22"
+              class="c28"
               href="https://gitlab.com/douglaspigoulart"
               target="_blank"
             >
@@ -561,27 +683,27 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
           </nav>
         </section>
         <section
-          class="c23"
+          class="c29"
         >
           <h3
-            class="c20"
+            class="c26"
           >
             Newsletter
           </h3>
           <p
-            class="c24"
+            class="c30"
           >
             Get new articles delivered to your inbox!
           </p>
           <div
-            class="c25"
+            class="c31"
           >
             <input
-              class="c26 c27"
+              class="c32 c33"
               placeholder="johndoe@email.com"
             />
             <button
-              class="c28"
+              class="c34"
             >
               Subscribe
             </button>
@@ -589,7 +711,7 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
         </section>
       </menu>
       <p
-        class="c29"
+        class="c35"
       >
         © 2022 Douglas Pinheiro Goulart
       </p>

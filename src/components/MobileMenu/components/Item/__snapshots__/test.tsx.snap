@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Item /> should render correctly 1`] = `
+.c0 {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  border-bottom: 1px solid #504F57;
+}
+
+.c1 {
+  color: #EDEDEF;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<li
+  class="c0"
+>
+  <a
+    class="c1"
+    href="/item"
+  >
+    Item
+  </a>
+</li>
+`;

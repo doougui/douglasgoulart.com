@@ -1,10 +1,10 @@
 import { render } from 'utils/tests';
 
-import { MobileMenuToggle } from '.';
+import { Toggle } from '.';
 
-describe('<MobileMenuToggle />', () => {
+describe('<Toggle />', () => {
   it('should render correctly', () => {
-    const { container } = render(<MobileMenuToggle />);
+    const { container } = render(<Toggle toggle={jest.fn()} />);
 
     expect(container.firstChild).toMatchSnapshot();
   });

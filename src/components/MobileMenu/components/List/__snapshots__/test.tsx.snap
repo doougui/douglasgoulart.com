@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List /> should render correctly with children 1`] = `
+.c0 {
+  width: 100%;
+  list-style: none;
+  margin-top: 10rem;
+  text-align: right;
+}
+
+<ul
+  class="c0"
+>
+  <div
+    data-testid="item"
+  />
+  <div
+    data-testid="item"
+  />
+</ul>
+`;

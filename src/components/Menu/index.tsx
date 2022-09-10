@@ -1,7 +1,8 @@
 import { Logo } from 'components/Logo';
+import { MediaMatch } from 'components/MediaMatch';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { MobileMenuToggle } from './components/MobileMenuToggle';
+import { MobileMenu } from '../MobileMenu';
 import * as S from './styles';
 
 export function Menu() {
@@ -22,7 +23,9 @@ export function Menu() {
     <S.Container>
       <Logo />
 
-      <MobileMenuToggle />
+      <MediaMatch lessThan="medium" data-testid="mobile-menu">
+        <MobileMenu />
+      </MediaMatch>
 
       <S.MenuNav>
         {items.map((item) => (
