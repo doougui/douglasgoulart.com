@@ -27,7 +27,7 @@ export function Menu() {
         <MobileMenu />
       </MediaMatch>
 
-      <S.MenuNav>
+      <S.MenuNav data-testid="desktop-menu">
         {items.map((item) => (
           <Link key={item.href} href={item.href} passHref>
             <S.MenuLink active={is(item.href)}>{item.label}</S.MenuLink>

@@ -12,6 +12,11 @@ jest.mock('./components/Toggle', () => ({
   Toggle: () => <div data-testid="toggle" />,
 }));
 
+jest.mock('framer-motion', () => ({
+  ...jest.requireActual('framer-motion'),
+  useReducedMotion: () => true,
+}));
+
 describe('<MobileMenu />', () => {
   it('should render only on mobile devices', () => {
     render(<MobileMenu />);
@@ -34,11 +39,9 @@ describe('<MobileMenu />', () => {
   });
 
   it('should render navigation and toggle button', () => {
-    const { container } = render(<MobileMenu />);
+    render(<MobileMenu />);
 
     expect(screen.getByTestId('navigation')).toBeInTheDocument();
     expect(screen.getByTestId('toggle')).toBeInTheDocument();
-
-    expect(container.firstChild).toMatchSnapshot();
   });
 });

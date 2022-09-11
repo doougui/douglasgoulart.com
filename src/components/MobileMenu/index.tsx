@@ -4,16 +4,12 @@ import { Toggle } from './components/Toggle';
 import * as S from './styles';
 
 export function MobileMenu() {
-  const [isOpen, toggleOpen] = useCycle(false, true);
+  const [isOpen, toggleOpen] = useCycle('closed', 'open');
 
   return (
-    <S.Container
-      data-testid="container"
-      initial="closed"
-      animate={isOpen ? 'open' : 'closed'}
-    >
-      <Navigation isOpen={isOpen} />
-      <Toggle toggle={() => toggleOpen()} />
+    <S.Container initial="closed" animate={isOpen}>
+      <Navigation isOpen={isOpen === 'open'} />
+      <Toggle toggle={toggleOpen} />
     </S.Container>
   );
 }
