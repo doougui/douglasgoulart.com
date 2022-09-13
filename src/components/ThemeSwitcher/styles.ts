@@ -22,8 +22,8 @@ const toggleModifiers = {
 
 export const Toggle = styled.div<ToggleProps>`
   ${({ theme, isActive }) => css`
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3rem;
+    height: 3rem;
     padding: 5px;
     cursor: pointer;
     display: flex;

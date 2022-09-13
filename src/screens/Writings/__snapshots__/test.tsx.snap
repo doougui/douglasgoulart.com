@@ -210,8 +210,8 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
 }
 
 .c18 {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3rem;
+  height: 3rem;
   padding: 5px;
   cursor: pointer;
   display: -webkit-box;
@@ -237,8 +237,8 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
 }
 
 .c19 {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3rem;
+  height: 3rem;
   padding: 5px;
   cursor: pointer;
   display: -webkit-box;

@@ -13,8 +13,8 @@ exports[`<ThemeSwitcher /> should render correctly 1`] = `
 }
 
 .c1 {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3rem;
+  height: 3rem;
   padding: 5px;
   cursor: pointer;
   display: -webkit-box;
@@ -40,8 +40,8 @@ exports[`<ThemeSwitcher /> should render correctly 1`] = `
 }
 
 .c2 {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3rem;
+  height: 3rem;
   padding: 5px;
   cursor: pointer;
   display: -webkit-box;
