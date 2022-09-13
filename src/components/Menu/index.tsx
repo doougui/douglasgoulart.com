@@ -1,5 +1,6 @@
 import { Logo } from 'components/Logo';
 import { MediaMatch } from 'components/MediaMatch';
+import { ThemeSwitcher } from 'components/ThemeSwitcher';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { MobileMenu } from '../MobileMenu';
@@ -33,6 +34,8 @@ export function Menu() {
             <S.MenuLink active={is(item.href)}>{item.label}</S.MenuLink>
           </Link>
         ))}
+
+        <ThemeSwitcher />
       </S.MenuNav>
     </S.Container>
   );

@@ -8,7 +8,8 @@ export const Container = styled.menu`
 `;
 
 export const MenuNav = styled.nav`
-  gap: 3rem;
+  display: flex;
+  align-items: center;
 
   ${media.lessThan('medium')`
     display: none;
