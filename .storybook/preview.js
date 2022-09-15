@@ -1,7 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from 'styles/global';
 import * as NextImage from 'next/image';
-import theme from 'styles/themes/default';
 import dark from 'styles/themes/dark';
 import light from 'styles/themes/light';
 import { themes } from '@storybook/theming';
@@ -39,10 +38,32 @@ export const parameters = {
   },
 };
 
+export const globalTypes = {
+  theme: {
+    name: 'Theme',
+    description: 'Global theme for components',
+    defaultValue: 'light',
+    toolbar: {
+      // The icon for the toolbar item
+      icon: 'circlehollow',
+      // Array of options
+      items: [
+        { value: 'light', icon: 'circlehollow', title: 'light' },
+        { value: 'dark', icon: 'circle', title: 'dark' },
+      ],
+      // Property that specifies if the name of the item will be displayed
+      showName: true,
+    },
+  },
+}
+
 export const decorators = [
-  (Story) => {
+  (Story, context) => {
+    const theme = context.parameters.theme || context.globals.theme;
+    const storyTheme = theme === 'dark' ? dark : light;
+
     return (
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={storyTheme}>
         <GlobalStyles removeBg />
         <Story />
       </ThemeProvider>

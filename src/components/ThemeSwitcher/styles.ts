@@ -2,6 +2,7 @@ import styled, { css, DefaultTheme } from 'styled-components';
 
 export const Container = styled.div`
   ${({ theme }) => css`
+    width: max-content;
     border-radius: ${theme.border.radius};
     background: ${theme.colors.tertiary};
     display: flex;

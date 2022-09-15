@@ -2,6 +2,9 @@
 
 exports[`<ThemeSwitcher /> should render correctly 1`] = `
 .c0 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   border-radius: 0.4rem;
   background: #2D2D2F;
   display: -webkit-box;
