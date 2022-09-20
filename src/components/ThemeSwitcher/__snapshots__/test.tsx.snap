@@ -36,6 +36,7 @@ exports[`<ThemeSwitcher /> should render correctly 1`] = `
   background: #2D2D2F;
   -webkit-transition: background-color 0.1s ease-in-out;
   transition: background-color 0.1s ease-in-out;
+  background: #504F57;
 }
 
 .c1:hover {
@@ -63,7 +64,6 @@ exports[`<ThemeSwitcher /> should render correctly 1`] = `
   background: #2D2D2F;
   -webkit-transition: background-color 0.1s ease-in-out;
   transition: background-color 0.1s ease-in-out;
-  background: #504F57;
 }
 
 .c2:hover {

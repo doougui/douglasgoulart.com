@@ -13,6 +13,7 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   modulePaths: ['<rootDir>/src/', '<rootDir>/.jest'],
   moduleNameMapper: {
-    ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "identity-obj-proxy"
-  }
+    '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$':
+      'identity-obj-proxy',
+  },
 };

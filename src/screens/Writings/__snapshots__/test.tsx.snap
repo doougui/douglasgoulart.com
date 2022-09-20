@@ -233,6 +233,7 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   background: #2D2D2F;
   -webkit-transition: background-color 0.1s ease-in-out;
   transition: background-color 0.1s ease-in-out;
+  background: #504F57;
 }
 
 .c18:hover {
@@ -260,7 +261,6 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   background: #2D2D2F;
   -webkit-transition: background-color 0.1s ease-in-out;
   transition: background-color 0.1s ease-in-out;
-  background: #504F57;
 }
 
 .c19:hover {

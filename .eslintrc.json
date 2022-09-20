@@ -10,7 +10,10 @@
       "version": "detect"
     },
     "import/resolver": {
-      "typescript": {}
+      "typescript": {},
+      "jest": {
+        "jestConfigFile": "./jest.config.js"
+      }
     }
   },
   "extends": [

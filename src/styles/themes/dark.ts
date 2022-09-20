@@ -11,6 +11,8 @@ export default {
 
     textDarker: '#504F57',
     textDark: '#888888',
+
+    highlightText: '#EDEDEF',
     text: '#EDEDEF',
   },
 };

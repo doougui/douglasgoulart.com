@@ -56,6 +56,8 @@ declare module 'styled-components' {
 
       textDarker: string;
       textDark: string;
+
+      highlightText: string;
       text: string;
     };
   }
