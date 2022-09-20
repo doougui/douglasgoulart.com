@@ -15,7 +15,7 @@ export const Container = styled.button<ContainerProps>`
 
     font-size: ${theme.font.sizes.medium};
     line-height: ${theme.font.heights.large};
-    color: ${theme.colors.text};
+    color: ${theme.colors.highlightText};
     background-color: ${theme.colors.primary};
     border-radius: ${theme.border.radius};
 
