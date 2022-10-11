@@ -48,7 +48,7 @@ exports[`<GuestMessage /> should render message, author and date 1`] = `
     <p
       class="c3"
     >
-      almost 20 years ago
+      about 20 years ago
     </p>
   </div>
 </div>
