@@ -1,14 +1,15 @@
+import React from 'react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from 'styles/global';
 import NextNProgress from 'nextjs-progressbar';
 import dark from 'styles/themes/dark';
+import { useDarkMode } from 'usehooks-ts';
 import light from 'styles/themes/light';
-import { useDarkMode } from 'hooks/use-dark-mode';
 
 function App({ Component, pageProps }: AppProps) {
-  const { isDarkMode } = useDarkMode();
+  const { isDarkMode } = useDarkMode(true);
 
   return (
     <ThemeProvider theme={isDarkMode ? dark : light}>

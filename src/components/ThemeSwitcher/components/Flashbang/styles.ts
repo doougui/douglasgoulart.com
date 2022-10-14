@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
 
 type ContainerProps = {
-  isOpen: boolean;
+  $isOpen: boolean;
 };
 
 const containerModifiers = {
@@ -12,7 +12,7 @@ const containerModifiers = {
 };
 
 export const Container = styled(motion.div)<ContainerProps>`
-  ${({ theme, isOpen }) => css`
+  ${({ theme, $isOpen }) => css`
     position: fixed;
     top: 0;
     left: 0;
@@ -26,6 +26,6 @@ export const Container = styled(motion.div)<ContainerProps>`
 
     z-index: ${theme.layers.alwaysOnTop};
 
-    ${isOpen && containerModifiers.isOpen()}
+    ${$isOpen && containerModifiers.isOpen()}
   `}
 `;

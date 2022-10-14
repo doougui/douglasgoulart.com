@@ -1,8 +1,8 @@
 import React from 'react';
-import { useDarkMode } from 'hooks/use-dark-mode';
 import { RiMoonLine, RiSunLine } from 'react-icons/ri';
 import { useTheme } from 'styled-components';
 import { useFlashbang } from 'components/ThemeSwitcher/contexts/FlashbangContext';
+import { useDarkMode } from 'usehooks-ts';
 import { Flashbang } from '../Flashbang';
 import * as S from './styles';
 
@@ -28,14 +28,22 @@ const bangTimes: BangTimes = {
   't_flashbang05.mp3': 2140,
 };
 
+type AvailableThemes = 'dark' | 'light';
+
 export function Themes() {
   const [canPlay, setCanPlay] = React.useState(false);
+  const [selectedTheme, setSelectedTheme] =
+    React.useState<AvailableThemes | null>(null);
+
+  const { isDarkMode, disable, enable } = useDarkMode();
+
+  React.useEffect(() => {
+    setSelectedTheme(isDarkMode ? 'dark' : 'light');
+  }, [isDarkMode]);
 
   const theme = useTheme();
 
   const { setIsOpen } = useFlashbang();
-
-  const { isDarkMode, disable, enable } = useDarkMode();
 
   const audio = React.useMemo(() => {
     return typeof Audio !== 'undefined'
@@ -44,6 +52,8 @@ export function Themes() {
   }, []);
 
   const toggleLightMode = () => {
+    if (selectedTheme === 'light') return;
+
     if (canPlay) audio?.play();
 
     let time = 0;
@@ -78,10 +88,10 @@ export function Themes() {
   return (
     <>
       <Flashbang />
-      <S.Toggle isActive={!isDarkMode} onClick={toggleLightMode}>
+      <S.Toggle isActive={selectedTheme === 'light'} onClick={toggleLightMode}>
         <RiSunLine size={15} color={theme.colors.text} />
       </S.Toggle>
-      <S.Toggle isActive={isDarkMode} onClick={enable}>
+      <S.Toggle isActive={selectedTheme === 'dark'} onClick={enable}>
         <RiMoonLine size={15} color={theme.colors.text} />
       </S.Toggle>
     </>

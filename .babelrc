@@ -15,8 +15,8 @@
         [
           "babel-plugin-styled-components",
           {
-            "ssr": false,
-            "displayName": false
+            "ssr": true,
+            "displayName": true
           }
         ]
       ]

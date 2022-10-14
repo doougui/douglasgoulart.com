@@ -17,7 +17,7 @@ export function Flashbang() {
       {isOpen && (
         <S.Container
           key="flashbang"
-          isOpen={isOpen}
+          $isOpen={isOpen}
           animate={isOpen ? 'open' : 'closed'}
           variants={variants}
           exit="exit"
