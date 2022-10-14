@@ -12,13 +12,16 @@ const variants = {
 export function Flashbang() {
   const { isOpen } = useFlashbang();
 
+  const animate = isOpen ? 'open' : 'closed';
+
   return (
     <AnimatePresence>
       {isOpen && (
         <S.Container
+          data-testid="flashbang-overlay"
           key="flashbang"
           $isOpen={isOpen}
-          animate={isOpen ? 'open' : 'closed'}
+          animate={animate}
           variants={variants}
           exit="exit"
           transition={{ duration: 0.95 }}

@@ -1,9 +1,28 @@
-import { render } from 'utils/tests';
-
+import {
+  FlashbangProvider,
+  useFlashbang,
+} from 'components/ThemeSwitcher/contexts/flashbang-context';
+import { act } from 'react-dom/test-utils';
+import { ThemeProvider } from 'styled-components';
+import theme from 'styles/themes/default';
+import { renderHook } from 'utils/tests';
 import { Flashbang } from '.';
 
 describe('<Flashbang />', () => {
   it('should render correctly', () => {
-    render(<Flashbang />);
+    const wrapper = ({ children }: { children: React.ReactNode }) => (
+      <ThemeProvider theme={theme}>
+        <FlashbangProvider>
+          {children}
+          <Flashbang />
+        </FlashbangProvider>
+      </ThemeProvider>
+    );
+
+    const { result } = renderHook(() => useFlashbang(), { wrapper });
+
+    act(() => result.current.setIsOpen(true));
+
+    expect(result.current.isOpen).toBe(true);
   });
 });

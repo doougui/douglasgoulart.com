@@ -1,5 +1,5 @@
-import { act, renderHook } from '@testing-library/react';
-import { screen, render } from 'utils/tests';
+import { renderHook } from '@testing-library/react';
+import { render, screen } from 'utils/tests';
 import { FlashbangContext, FlashbangProvider, useFlashbang } from '.';
 
 describe('FlashbangContext', () => {
@@ -11,8 +11,6 @@ describe('FlashbangContext', () => {
     const { result } = renderHook(() => useFlashbang(), { wrapper });
 
     expect(result.current.isOpen).toBe(false);
-    act(() => result.current.setIsOpen(true));
-    expect(result.current.isOpen).toBe(true);
   });
 
   it('should be closed by default', () => {
