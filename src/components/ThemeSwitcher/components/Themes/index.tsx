@@ -54,34 +54,46 @@ export function Themes() {
   const toggleLightMode = () => {
     if (selectedTheme === 'light') return;
 
-    if (canPlay) audio?.play();
+    if (!canPlay) {
+      disable();
+      return;
+    }
 
-    let time = 0;
-    (Object.keys(bangTimes) as (keyof typeof bangTimes)[]).forEach(
-      (fileName) => {
-        if (audio?.src?.endsWith(fileName)) time = bangTimes[fileName];
-      },
-    );
+    const getBangTime = () => {
+      let time = 0;
+      (Object.keys(bangTimes) as (keyof typeof bangTimes)[]).forEach(
+        (fileName) => {
+          if (audio?.src?.endsWith(fileName)) time = bangTimes[fileName];
+        },
+      );
+      return time;
+    };
+
+    audio?.play();
+
+    const FADE_OUT_TIME = 500;
+    const time = getBangTime();
 
     setTimeout(() => {
       disable();
       setIsOpen(true);
-
-      setTimeout(() => {
-        setIsOpen(false);
-      }, 500);
+      setTimeout(() => setIsOpen(false), FADE_OUT_TIME);
     }, time);
   };
 
   React.useEffect(() => {
-    function enableAudio() {
-      setCanPlay(true);
-    }
+    const enableAudio = () => setCanPlay(true);
+    const handlePlaying = () => setCanPlay(false);
+    const handleEnded = () => setCanPlay(true);
 
     audio?.addEventListener('canplaythrough', enableAudio);
+    audio?.addEventListener('playing', handlePlaying);
+    audio?.addEventListener('ended', handleEnded);
 
     return () => {
       audio?.removeEventListener('canplaythrough', enableAudio);
+      audio?.removeEventListener('playing', handlePlaying);
+      audio?.removeEventListener('ended', handleEnded);
     };
   }, [audio]);
 
