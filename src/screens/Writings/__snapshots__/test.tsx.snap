@@ -198,20 +198,6 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   display: none;
 }
 
-.c17 {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  border-radius: 0.4rem;
-  background: #2D2D2F;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 5px;
-  gap: 5px;
-}
-
 .c18 {
   width: 3rem;
   height: 3rem;
@@ -265,6 +251,20 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
 
 .c19:hover {
   background: #1C1C1C;
+}
+
+.c17 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 0.4rem;
+  background: #2D2D2F;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  gap: 5px;
 }
 
 .c9 {

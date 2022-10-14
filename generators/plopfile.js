@@ -33,6 +33,31 @@ module.exports = (plop) => {
     ],
   });
 
+  plop.setGenerator('context', {
+    description: 'Create a react context file',
+    prompts: [
+      {
+        type: 'input',
+        name: 'contextName',
+        message: 'What is your context name (ex: NameContext)?',
+      },
+    ],
+    actions(data) {
+      const actions = [];
+
+      const name = data.contextName.replace('Context', '');
+
+      actions.push({
+        type: 'add',
+        path: `../src/contexts/{{pascalCase contextName}}.tsx`,
+        templateFile: 'templates/context/[context].tsx.hbs',
+        data: { name },
+      });
+
+      return actions;
+    },
+  });
+
   plop.setGenerator('layout', {
     description: 'Create a layout',
     prompts: [
