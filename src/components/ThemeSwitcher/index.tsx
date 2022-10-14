@@ -1,5 +1,5 @@
 import { Themes } from './components/Themes';
-import { FlashbangProvider } from './contexts/FlashbangContext';
+import { FlashbangProvider } from './contexts/flashbang-context';
 import * as S from './styles';
 
 export function ThemeSwitcher() {

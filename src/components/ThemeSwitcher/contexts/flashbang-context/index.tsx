@@ -1,5 +1,4 @@
 import React from 'react';
-import { getWrongContextUsageMessage } from 'utils/shared/get-wrong-context-usage-message';
 
 type FlashbangContextData = {
   isOpen: boolean;
@@ -27,14 +26,4 @@ export function FlashbangProvider(props: FlashbangProviderProps) {
   return <FlashbangContext.Provider value={value} {...props} />;
 }
 
-export function useFlashbang() {
-  const context = React.useContext(FlashbangContext);
-
-  if (!context) {
-    throw new Error(
-      getWrongContextUsageMessage('useFlashbang', 'FlashbangProvider'),
-    );
-  }
-
-  return context;
-}
+export const useFlashbang = () => React.useContext(FlashbangContext);

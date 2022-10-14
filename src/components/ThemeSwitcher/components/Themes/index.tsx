@@ -1,7 +1,7 @@
 import React from 'react';
 import { RiMoonLine, RiSunLine } from 'react-icons/ri';
 import { useTheme } from 'styled-components';
-import { useFlashbang } from 'components/ThemeSwitcher/contexts/FlashbangContext';
+import { useFlashbang } from 'components/ThemeSwitcher/contexts/flashbang-context';
 import { useDarkMode } from 'usehooks-ts';
 import { Flashbang } from '../Flashbang';
 import * as S from './styles';

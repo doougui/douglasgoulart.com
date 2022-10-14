@@ -1,4 +1,4 @@
-import { useFlashbang } from 'components/ThemeSwitcher/contexts/FlashbangContext';
+import { useFlashbang } from 'components/ThemeSwitcher/contexts/flashbang-context';
 import { AnimatePresence } from 'framer-motion';
 import React from 'react';
 import * as S from './styles';
