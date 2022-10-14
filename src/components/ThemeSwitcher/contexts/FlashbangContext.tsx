@@ -1,5 +1,5 @@
 import React from 'react';
-import { getWrongContextUsageMessage } from 'utils/shared/getWrongContextUsageMessage';
+import { getWrongContextUsageMessage } from 'utils/shared/get-wrong-context-usage-message';
 
 type FlashbangContextData = {
   isOpen: boolean;
@@ -32,7 +32,7 @@ export function useFlashbang() {
 
   if (!context) {
     throw new Error(
-      getWrongContextUsageMessage('useFlashbang', 'FlashbangContext'),
+      getWrongContextUsageMessage('useFlashbang', 'FlashbangProvider'),
     );
   }
 

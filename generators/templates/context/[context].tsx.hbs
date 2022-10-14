@@ -23,7 +23,7 @@ export function use{{pascalCase name}}() {
   const context = React.useContext({{pascalCase name}}Context);
 
   if (!context) {
-    throw new Error(getWrongContextUsageMessage('use{{pascalCase name}}', '{{pascalCase name}}Context'));
+    throw new Error(getWrongContextUsageMessage('use{{pascalCase name}}', '{{pascalCase name}}Provider'));
   }
 
   return context;
