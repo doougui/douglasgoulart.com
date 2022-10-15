@@ -15,14 +15,12 @@ jest.mock('usehooks-ts', () => ({
 
 describe('<Themes />', () => {
   it('should render correctly', () => {
-    const { container } = render(<Themes />);
+    render(<Themes />);
 
     const lightToggle = screen.getByTestId('light-toggle');
 
     expect(lightToggle).toHaveStyle({
       background: '#504F57',
     });
-
-    expect(container.firstChild).toMatchSnapshot();
   });
 });

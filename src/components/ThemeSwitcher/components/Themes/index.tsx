@@ -38,7 +38,8 @@ export function Themes() {
   const { isDarkMode, disable, enable } = useDarkMode();
 
   React.useEffect(() => {
-    setSelectedTheme(isDarkMode ? 'dark' : 'light');
+    const theme = isDarkMode ? 'dark' : 'light';
+    setSelectedTheme(theme);
   }, [isDarkMode]);
 
   const theme = useTheme();
