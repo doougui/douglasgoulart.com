@@ -7,7 +7,18 @@ export const Heading = styled.header`
 
 export const Title = styled(Heading1)``;
 
-export const Infos = styled.span``;
+export const Caption = styled.span`
+  ${({ theme }) => css`
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: ${theme.font.sizes.small};
+
+    a {
+      color: inherit;
+    }
+  `}
+`;
 
 export const Content = styled.div`
   ${({ theme }) => css`

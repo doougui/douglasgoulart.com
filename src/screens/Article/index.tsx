@@ -15,14 +15,26 @@ export function Article() {
           <MutedText>Published at: April 26, 2021 · 11 min read.</MutedText>
         </S.Heading>
 
-        <Image
-          src="https://picsum.photos/1000"
-          alt="Name"
-          width={1000}
-          height={600}
-          quality={75}
-          // placeholder="blur"
-        />
+        <div>
+          <Image
+            src="https://picsum.photos/1000"
+            alt="Name"
+            width={1000}
+            height={600}
+            quality={75}
+            // placeholder="blur"
+          />
+          <S.Caption>
+            Photo by{' '}
+            <a href="./" target="_blank">
+              Vlad Sargu
+            </a>{' '}
+            on{' '}
+            <a href="./" target="_blank">
+              Unsplash
+            </a>
+          </S.Caption>
+        </div>
 
         <S.Content>
           <p>
