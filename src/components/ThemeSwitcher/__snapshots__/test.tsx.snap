@@ -75,6 +75,7 @@ exports[`<ThemeSwitcher /> should render correctly 1`] = `
 >
   <div
     class="c1"
+    data-testid="light-toggle"
   >
     <svg
       color="#EDEDEF"
@@ -101,6 +102,7 @@ exports[`<ThemeSwitcher /> should render correctly 1`] = `
   </div>
   <div
     class="c2"
+    data-testid="dark-toggle"
   >
     <svg
       color="#EDEDEF"

@@ -100,10 +100,18 @@ export function Themes() {
   return (
     <>
       <Flashbang />
-      <S.Toggle isActive={selectedTheme === 'light'} onClick={toggleLightMode}>
+      <S.Toggle
+        data-testid="light-toggle"
+        isActive={selectedTheme === 'light'}
+        onClick={toggleLightMode}
+      >
         <RiSunLine size={15} color={theme.colors.text} />
       </S.Toggle>
-      <S.Toggle isActive={selectedTheme === 'dark'} onClick={enable}>
+      <S.Toggle
+        data-testid="dark-toggle"
+        isActive={selectedTheme === 'dark'}
+        onClick={enable}
+      >
         <RiMoonLine size={15} color={theme.colors.text} />
       </S.Toggle>
     </>
