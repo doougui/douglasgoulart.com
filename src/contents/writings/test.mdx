@@ -55,6 +55,10 @@ If some error(s) was found, you should see something like this:
 
 Now you can open the files with errors and fix them :)
 
+- First, we execute the `tsc` compiler
+- We pass the --project flag to explicitly tell the compiler that we want to typecheck the entire project using our specified config file, which is the tsconfig.json.
+- Lastly, we pass the --noEmit flag to say that we do not want to output the compiled JS files into our project. If we don't set this flag and, for example, we have a TS file located at `src/utils/boolToText.ts`, there would be created a file called `src/utils/boolToText.js`, which is the JavaScript version of the `src/utils/boolToText.ts` file outputed by the compiler. 
+
 ## Additional configuration you can use
 
 There are also some additional configuration I like to do to make sure my project is safe and sound, free from any errors.

@@ -1,3 +1,4 @@
+import { Heading2, Heading3 } from 'components/Headings';
 import { Image } from 'components/Image';
 import { Link } from 'components/Link';
 import { MutedText } from 'components/MutedText';
@@ -46,7 +47,13 @@ export function Writing({ code, frontmatter }: WritingProps) {
         </div>
 
         <S.Content>
-          <Component components={{}} />
+          <Component
+            components={{
+              a: Link,
+              h2: Heading2,
+              h3: Heading3,
+            }}
+          />
         </S.Content>
 
         <S.RelatedTopics>

@@ -23,17 +23,36 @@ export const Caption = styled.span`
 export const Content = styled.div`
   ${({ theme }) => css`
     margin-top: 2rem;
+    font-size: ${theme.font.sizes.large};
+    line-height: ${theme.font.heights.xlarge};
 
     h2 {
       margin-top: 3rem;
     }
 
     p {
-      font-size: ${theme.font.sizes.large};
-      line-height: ${theme.font.heights.xlarge};
       color: ${theme.colors.text};
       margin-top: 1rem;
       margin-bottom: 2rem;
+    }
+
+    *:not(pre) code {
+      font-size: ${theme.font.sizes.medium};
+      background: ${theme.colors.tertiary};
+    }
+
+    ol,
+    ul {
+      padding-left: 2em;
+
+      li {
+        font-size: ${theme.font.sizes.large};
+        line-height: ${theme.font.heights.xlarge};
+
+        &::marker {
+          color: ${theme.colors.textDark};
+        }
+      }
     }
   `}
 `;
