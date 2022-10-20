@@ -2,6 +2,7 @@ import { Heading2, Heading3 } from 'components/Headings';
 import { Image } from 'components/Image';
 import { Link } from 'components/Link';
 import { MutedText } from 'components/MutedText';
+import { SyntaxHighlighter } from 'components/SyntaxHighlighter';
 import { Base } from 'layouts/Base';
 import { getMDXComponent } from 'mdx-bundler/client';
 import NextLink from 'next/link';
@@ -52,6 +53,7 @@ export function Writing({ code, frontmatter }: WritingProps) {
               a: Link,
               h2: Heading2,
               h3: Heading3,
+              pre: SyntaxHighlighter,
             }}
           />
         </S.Content>
