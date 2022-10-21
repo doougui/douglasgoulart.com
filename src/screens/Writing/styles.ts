@@ -63,6 +63,12 @@ export const Content = styled.div`
       }
     }
   `}
+
+  img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
 `;
 
 export const RelatedTopics = styled.span`
