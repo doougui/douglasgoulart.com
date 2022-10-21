@@ -30,3 +30,27 @@ export const Heading3 = styled.h3`
     ${Heading};
   `}
 `;
+
+export const Heading4 = styled.h4`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.medium};
+    line-height: ${theme.font.heights.medium};
+    ${Heading};
+  `}
+`;
+
+export const Heading5 = styled.h5`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.small};
+    line-height: ${theme.font.heights.small};
+    ${Heading};
+  `}
+`;
+
+export const Heading6 = styled.h6`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.xsmall};
+    line-height: ${theme.font.heights.xsmall};
+    ${Heading};
+  `}
+`;

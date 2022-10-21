@@ -32,8 +32,13 @@ export const Content = styled.div`
       line-height: ${theme.font.heights.xlarge};
     }
 
-    h2 {
-      margin-top: 3rem;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 2rem;
     }
 
     p {
