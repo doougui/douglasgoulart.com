@@ -17,12 +17,12 @@ export function Writing({ code, frontmatter }: WritingProps) {
 
   function renderTags() {
     const joinedTags = frontmatter.tags.split(',').map((tag, index) => (
-      <>
+      <React.Fragment key={tag}>
         {index > 0 && ', '}
         <NextLink href={`./topics/${tag.toLowerCase()}`} passHref>
           <Link>{tag}</Link>
         </NextLink>
-      </>
+      </React.Fragment>
     ));
 
     return joinedTags;
