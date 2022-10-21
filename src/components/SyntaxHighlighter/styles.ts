@@ -1,15 +1,15 @@
-import styled from 'styled-components';
-
-export const Container = styled.div``;
+import styled, { css } from 'styled-components';
 
 export const Pre = styled.pre`
-  text-align: left;
-  margin: 1em 0;
-  padding: 0.5em;
-  overflow: scroll;
+  ${({ theme }) => css`
+    text-align: left;
+    margin: 1em 0;
+    padding: 1rem;
+    overflow-x: auto;
 
-  & .token-line {
-    line-height: 1.3em;
-    height: 1.3em;
-  }
+    & .token-line {
+      font-size: ${theme.font.sizes.large}
+      line-height: ${theme.font.heights.xlarge};
+    }
+  `}
 `;

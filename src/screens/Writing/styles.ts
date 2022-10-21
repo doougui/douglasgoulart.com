@@ -1,4 +1,5 @@
 import { Heading1 } from 'components/Headings';
+import { Link } from 'components/Link';
 import styled, { css } from 'styled-components';
 
 export const Heading = styled.header`
@@ -26,6 +27,11 @@ export const Content = styled.div`
     font-size: ${theme.font.sizes.large};
     line-height: ${theme.font.heights.xlarge};
 
+    ${Link} {
+      font-size: ${theme.font.sizes.large};
+      line-height: ${theme.font.heights.xlarge};
+    }
+
     h2 {
       margin-top: 3rem;
     }
@@ -43,6 +49,8 @@ export const Content = styled.div`
 
     ol,
     ul {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
       padding-left: 2em;
 
       li {
@@ -63,5 +71,10 @@ export const RelatedTopics = styled.span`
     font-size: ${theme.font.sizes.small};
     line-height: ${theme.font.heights.small};
     margin-top: 4rem;
+
+    ${Link} {
+      font-size: ${theme.font.sizes.small};
+      line-height: ${theme.font.heights.small};
+    }
   `}
 `;

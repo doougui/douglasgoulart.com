@@ -15,6 +15,19 @@ type WritingProps = WritingPageProps;
 export function Writing({ code, frontmatter }: WritingProps) {
   const Component = React.useMemo(() => getMDXComponent(code), [code]);
 
+  function renderTags() {
+    const joinedTags = frontmatter.tags.split(',').map((tag, index) => (
+      <>
+        {index > 0 && ', '}
+        <NextLink href={`./topics/${tag.toLowerCase()}`} passHref>
+          <Link>{tag}</Link>
+        </NextLink>
+      </>
+    ));
+
+    return joinedTags;
+  }
+
   return (
     <Base>
       <article>
@@ -59,19 +72,7 @@ export function Writing({ code, frontmatter }: WritingProps) {
         </S.Content>
 
         <S.RelatedTopics>
-          Related topics:{' '}
-          <NextLink href="./" passHref>
-            <Link>React</Link>
-          </NextLink>
-          ,{' '}
-          <NextLink href="./" passHref>
-            <Link>JavaScript</Link>
-          </NextLink>
-          ,{' '}
-          <NextLink href="./" passHref>
-            <Link>TypeScript</Link>
-          </NextLink>
-          .
+          <>Related topics: {renderTags()}.</>
         </S.RelatedTopics>
       </article>
     </Base>

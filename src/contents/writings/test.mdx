@@ -3,7 +3,7 @@ title: 'Avoid TypeScript errors in your project by using the TypeScript compiler
 publishedAt: '2022-05-02'
 description: 'Create React App has always been the default for making a React Application, is there a faster way?'
 banner: 'ansgar-scheffold-_fP6zNOrbZI-unsplash_ixywvw'
-tags: 'react'
+tags: 'React,JavaScript,TypeScript'
 ---
 
 ## Introduction
@@ -106,7 +106,7 @@ To do this:
 1. Open the command palette `(Cmd+Shift+P)` or `(Ctrl+Shift+P)`.
 2. Select `Tasks: Configure Task`.
 3. Select `tsc: watch - tsconfig.json`
-4. Make sure the `"noEmit": true` option is set in the "compilerOptions" section in your tsconfig.json so that `tsc` do not output `js` files all over your project.
+4. Make sure the `"noEmit"  : true` option is set in the "compilerOptions" section in your tsconfig.json so that `tsc` do not output `js` files all over your project.
 
 Now, there will be created a `.vscode/tasks.json` in your project with the following content:
 
@@ -122,7 +122,7 @@ Now, there will be created a `.vscode/tasks.json` in your project with the follo
         "$tsc-watch"
       ],
       "group": "build",
-      "label": "tsc: watch - tsconfig.json"
+      "label": "tsc: watch - tsconfig.json""label": "tsc: watch - tsconfig.json""label": "tsc: watch - tsconfig.json""label": "tsc: watch - tsconfig.json""label": "tsc: watch - tsconfig.json""label": "tsc: watch - tsconfig.json""label": "tsc: watch - tsconfig.json""label": "tsc: watch - tsconfig.json"
     }
   ]
 }
@@ -161,35 +161,3 @@ Have fun coding!
 
 - https://spin.atomicobject.com/2019/11/20/type-checking-typescript-visual-studio-code/
 - https://www.typescriptlang.org/docs/handbook/compiler-options.html it out yourself and feel the difference, to help you I created a vite-react-tailwind starter template, you can [check it out on my github.](https://github.com/theodorusclarence/vite-react-tailwind-starter) Now, open up your terminal and run this code
-
-```bash
-npx degit https://github.com/theodorusclarence/vite-react-tailwind-starter project-name
-```
-
-then, install all dependencies using
-
-```bash
-yarn
-or
-npm install
-```
-
-To start the server run the code
-
-```bash
-yarn dev
-or
-npm run dev
-```
-
-How was that?
-
-Also, the hot reload is really fast too, try to mess up the Landing Page on `/pages/Home.jsx`
-
-## Summary
-
-### Use the starter as a bonus!
-
-Feel free to use that starter on your project. I personally made that starter to free me from setting up react-router, react-helmet, absolute imports, and tailwindcss every single time. Try it out and kindly **[give it a star](https://github.com/theodorusclarence/vite-react-tailwind-starter)!**
-
-With Vite and Next.js, probably I won't use Create React App ever again. I will definitely choose Vite over CRA when building an authentication gated website and use Next.js when I need to build a static site.
