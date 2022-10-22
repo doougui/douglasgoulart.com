@@ -8,6 +8,8 @@ import dark from 'styles/themes/dark';
 import { useDarkMode } from 'usehooks-ts';
 import light from 'styles/themes/light';
 
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 function App({ Component, pageProps }: AppProps) {
   const { isDarkMode } = useDarkMode(true);
 

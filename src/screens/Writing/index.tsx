@@ -15,6 +15,7 @@ import { Base } from 'layouts/Base';
 import { getMDXComponent } from 'mdx-bundler/client';
 import NextLink from 'next/link';
 import { WritingProps as WritingPageProps } from 'pages/writing/[slug]';
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import * as S from './styles';
 
 type WritingProps = WritingPageProps;
@@ -76,6 +77,7 @@ export function Writing({ code, frontmatter }: WritingProps) {
               h5: Heading5,
               h6: Heading6,
               pre: SyntaxHighlighter,
+              LiteYouTubeEmbed,
             }}
           />
         </S.Content>

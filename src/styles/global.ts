@@ -42,6 +42,10 @@ const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
     }
   }
 
+  .yt-lite::before {
+    content: none !important;
+  }
+
   ${({ theme, removeBg }) => css`
     html {
       font-size: 62.5%;
