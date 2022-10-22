@@ -48,12 +48,10 @@ export function Writing({ code, frontmatter }: WritingProps) {
 
         <div>
           <Image
-            src="https://picsum.photos/1000"
-            alt="Name"
-            width={1000}
-            height={600}
-            quality={75}
-            // placeholder="blur"
+            src={frontmatter.banner}
+            width="100%"
+            height="auto"
+            layout="responsive"
           />
           <S.Caption>
             Photo by{' '}
