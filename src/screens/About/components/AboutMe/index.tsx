@@ -1,13 +1,15 @@
-import { Image } from 'components/Image';
 import meImg from 'assets/me.jpg';
 import * as S from './styles';
 
 export function AboutMe() {
   return (
     <S.Container>
-      <S.ImageBox>
-        <Image src={meImg} alt="Douglas Pinheiro Goulart" placeholder="blur" />
-      </S.ImageBox>
+      <S.Image
+        src={meImg}
+        width={200}
+        alt="Douglas Pinheiro Goulart"
+        placeholder="blur"
+      />
 
       <S.AboutText>
         <S.Paragraph>

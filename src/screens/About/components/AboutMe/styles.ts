@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
+import { Image as NextImage } from 'components/Image';
 
 export const Container = styled.section`
   display: flex;
@@ -11,18 +12,9 @@ export const Container = styled.section`
   `}
 `;
 
-export const ImageBox = styled.div`
+export const Image = styled(NextImage)`
   ${({ theme }) => css`
-    max-width: 20rem;
-    height: 20rem;
     border-radius: ${theme.border.radius};
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
   `}
 `;
 

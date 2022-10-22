@@ -14,19 +14,6 @@ exports[`<AboutMe /> should render correctly 1`] = `
 }
 
 .c1 {
-  max-width: 20rem;
-  height: 20rem;
-  border-radius: 0.4rem;
-  overflow: hidden;
-}
-
-.c1 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -37,7 +24,7 @@ exports[`<AboutMe /> should render correctly 1`] = `
   gap: 2rem;
 }
 
-.c3 {
+.c2 {
   font-size: 1.6rem;
   line-height: 2.4rem;
   color: #EDEDEF;
@@ -55,27 +42,23 @@ exports[`<AboutMe /> should render correctly 1`] = `
   class="c0"
 >
   <div
+    data-testid="me-image"
+  />
+  <div
     class="c1"
   >
-    <div
-      data-testid="me-image"
-    />
-  </div>
-  <div
-    class="c2"
-  >
     <p
-      class="c3"
+      class="c2"
     >
       I‘m a UI developer based in Barcelona. I‘m interested in design systems, web3, user/dev experience and under engineering.
     </p>
     <p
-      class="c3"
+      class="c2"
     >
       I‘m currently doing UI/DX at Rainbow to help create the world‘s friendliest wallet.
     </p>
     <p
-      class="c3"
+      class="c2"
     >
       Previously, I worked at Modulz. Where I co-created Radix, designed the Stitches API and led the developer community.
     </p>
