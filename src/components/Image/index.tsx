@@ -3,7 +3,7 @@ import notFound from 'assets/notFound.png';
 import NextImage, {
   StaticImageData,
   ImageProps as NextImageProps,
-} from 'next/image';
+} from 'next/future/image';
 
 type ImageProps = {
   fallback?: string | StaticImageData;

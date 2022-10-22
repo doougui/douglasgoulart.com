@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Heading1,
   Heading2,
@@ -14,7 +15,6 @@ import { Base } from 'layouts/Base';
 import { getMDXComponent } from 'mdx-bundler/client';
 import NextLink from 'next/link';
 import { WritingProps as WritingPageProps } from 'pages/writing/[slug]';
-import React from 'react';
 import * as S from './styles';
 
 type WritingProps = WritingPageProps;
@@ -35,6 +35,8 @@ export function Writing({ code, frontmatter }: WritingProps) {
     return joinedTags;
   }
 
+  const css = { maxWidth: '100%', height: 'auto' };
+
   return (
     <Base>
       <article>
@@ -46,24 +48,22 @@ export function Writing({ code, frontmatter }: WritingProps) {
           </MutedText>
         </S.Heading>
 
-        <div>
-          <Image
-            src={frontmatter.banner}
-            width="100%"
-            height="auto"
-            layout="responsive"
-          />
-          <S.Caption>
-            Photo by{' '}
-            <a href="./" target="_blank">
-              Vlad Sargu
-            </a>{' '}
-            on{' '}
-            <a href="./" target="_blank">
-              Unsplash
-            </a>
-          </S.Caption>
-        </div>
+        {frontmatter.banner && (
+          <div>
+            <Image
+              src={frontmatter.banner.url}
+              alt={frontmatter.banner.alt}
+              width={900}
+              height={0}
+              style={css}
+            />
+            {frontmatter.banner?.caption && (
+              <S.Caption
+                dangerouslySetInnerHTML={{ __html: frontmatter.banner.caption }}
+              />
+            )}
+          </div>
+        )}
 
         <S.Content>
           <Component

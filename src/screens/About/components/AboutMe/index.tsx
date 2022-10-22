@@ -6,7 +6,7 @@ export function AboutMe() {
   return (
     <S.Container>
       <S.ImageBox>
-        <Image src={meImg} placeholder="blur" />
+        <Image src={meImg} alt="Douglas Pinheiro Goulart" placeholder="blur" />
       </S.ImageBox>
 
       <S.AboutText>

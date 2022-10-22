@@ -9,8 +9,8 @@ export default {
 export const Default: Story = () => (
   <Image
     src="https://picsum.photos/400"
+    alt="Picsum image"
     width={80}
     height={80}
-    layout="responsive"
   />
 );

@@ -9,10 +9,13 @@ export type BlogFrontmatter = {
   wordCount: number;
   readingTime: ReadTimeResults;
   slug: string;
-  englishOnly?: boolean;
   title: string;
   description: string;
-  banner: string;
+  banner?: {
+    url: string;
+    alt: string;
+    caption?: string;
+  };
   publishedAt: string;
   lastUpdated?: string;
   tags: string;

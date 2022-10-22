@@ -8,9 +8,9 @@ export function Writing() {
       <S.ImageBox>
         <Image
           src="https://picsum.photos/400"
+          alt="Writing"
           width={80}
           height={80}
-          layout="responsive"
         />
       </S.ImageBox>
 
