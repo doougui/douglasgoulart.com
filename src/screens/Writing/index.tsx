@@ -17,6 +17,7 @@ import NextLink from 'next/link';
 import { WritingProps as WritingPageProps } from 'pages/writing/[slug]';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import * as S from './styles';
+import { Comments } from './components/Comments';
 
 type WritingProps = WritingPageProps;
 
@@ -85,6 +86,8 @@ export function Writing({ code, frontmatter }: WritingProps) {
         <S.RelatedTopics>
           <>Related topics: {renderTags()}.</>
         </S.RelatedTopics>
+
+        <Comments />
       </article>
     </Base>
   );
