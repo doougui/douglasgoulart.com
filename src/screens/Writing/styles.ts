@@ -67,6 +67,7 @@ export const Content = styled.div`
       li {
         font-size: ${theme.font.sizes.large};
         line-height: ${theme.font.heights.xlarge};
+        word-break: break-word;
 
         &::marker {
           color: ${theme.colors.textDark};
