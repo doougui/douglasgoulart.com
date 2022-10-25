@@ -73,6 +73,12 @@ export const Content = styled.div`
         }
       }
     }
+
+    blockquote {
+      padding-left: 2rem;
+      border-left: 0.6rem solid ${theme.colors.textDark};
+      border-radius: ${theme.border.radius};
+    }
   `}
 
   img {
