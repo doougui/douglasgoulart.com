@@ -73,10 +73,6 @@ export function Footer() {
               <S.Link target="_blank">Resume</S.Link>
             </Link>
 
-            <Link href="./" passHref>
-              <S.Link target="_blank">Snippets</S.Link>
-            </Link>
-
             <Link href="https://gitlab.com/douglaspigoulart" passHref>
               <S.Link target="_blank">GitLab</S.Link>
             </Link>

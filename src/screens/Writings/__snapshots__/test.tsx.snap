@@ -812,13 +812,6 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
             </a>
             <a
               class="c32"
-              href="/"
-              target="_blank"
-            >
-              Snippets
-            </a>
-            <a
-              class="c32"
               href="https://gitlab.com/douglaspigoulart"
               target="_blank"
             >

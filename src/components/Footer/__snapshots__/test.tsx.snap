@@ -301,13 +301,6 @@ exports[`<Footer /> should render correctly 1`] = `
         </a>
         <a
           class="c6"
-          href="/"
-          target="_blank"
-        >
-          Snippets
-        </a>
-        <a
-          class="c6"
           href="https://gitlab.com/douglaspigoulart"
           target="_blank"
         >
