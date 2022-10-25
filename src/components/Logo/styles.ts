@@ -13,3 +13,7 @@ export const Dot = styled.span`
     color: ${theme.colors.primary};
   `}
 `;
+
+export const Link = styled.a`
+  text-decoration: none;
+`;
