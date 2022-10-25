@@ -1,9 +1,15 @@
 import { Heading1 } from 'components/Headings';
+import { Image } from 'components/Image';
 import { Link } from 'components/Link';
 import styled, { css } from 'styled-components';
 
 export const Heading = styled.header`
   margin-bottom: 2rem;
+`;
+
+export const Cover = styled(Image)`
+  max-width: 100%;
+  height: auto;
 `;
 
 export const Title = styled(Heading1)``;

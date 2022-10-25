@@ -11,7 +11,7 @@ export type BlogFrontmatter = {
   slug: string;
   title: string;
   description: string;
-  banner?: {
+  cover?: {
     url: string;
     alt: string;
     caption?: string;

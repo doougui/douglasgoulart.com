@@ -7,7 +7,6 @@ import {
   Heading5,
   Heading6,
 } from 'components/Headings';
-import { Image } from 'components/Image';
 import { Link } from 'components/Link';
 import { MutedText } from 'components/MutedText';
 import { SyntaxHighlighter } from 'components/SyntaxHighlighter';
@@ -37,8 +36,6 @@ export function Writing({ code, frontmatter }: WritingProps) {
     return joinedTags;
   }
 
-  const css = { maxWidth: '100%', height: 'auto' };
-
   return (
     <Base>
       <article>
@@ -50,18 +47,17 @@ export function Writing({ code, frontmatter }: WritingProps) {
           </MutedText>
         </S.Heading>
 
-        {frontmatter.banner && (
+        {frontmatter.cover && (
           <div>
-            <Image
-              src={frontmatter.banner.url}
-              alt={frontmatter.banner.alt}
+            <S.Cover
+              src={frontmatter.cover.url}
+              alt={frontmatter.cover.alt}
               width={900}
               height={0}
-              style={css}
             />
-            {frontmatter.banner?.caption && (
+            {frontmatter.cover?.caption && (
               <S.Caption
-                dangerouslySetInnerHTML={{ __html: frontmatter.banner.caption }}
+                dangerouslySetInnerHTML={{ __html: frontmatter.cover.caption }}
               />
             )}
           </div>
