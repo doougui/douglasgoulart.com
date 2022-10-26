@@ -9,24 +9,6 @@ export const Container = styled.footer`
   `}
 `;
 
-export const SongPlaying = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-
-    color: ${theme.colors.text};
-    font-size: ${theme.font.sizes.medium};
-  `}
-`;
-
-export const NowPlaying = styled.span`
-  ${({ theme }) => css`
-    font-family: ${theme.font.family};
-    font-weight: ${theme.font.weights.bold};
-  `}
-`;
-
 export const Links = styled.menu`
   display: flex;
   flex-wrap: wrap;

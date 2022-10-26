@@ -1,37 +1,12 @@
-import React from 'react';
 import { Button } from 'components/Button';
-import { useData } from 'hooks/useData';
+import { NowPlayingSpotify } from 'components/NowPlayingSpotify';
 import Link from 'next/link';
-import { RiSpotifyFill } from 'react-icons/ri';
-import { useTheme } from 'styled-components';
-import { NowPlayingResponse } from 'pages/api/spotify/nowPlaying';
 import * as S from './styles';
 
 export function Footer() {
-  const theme = useTheme();
-
-  const { data: song } = useData<NowPlayingResponse>('/api/spotify/nowPlaying');
-
   return (
     <S.Container>
-      <S.SongPlaying>
-        <RiSpotifyFill size={24} color={theme.colors.text} />
-
-        <span>
-          {song?.isPlaying ? (
-            <>
-              Now playing:{' '}
-              <S.NowPlaying>
-                {song.artist} - {song.title}
-              </S.NowPlaying>
-            </>
-          ) : (
-            <>
-              Spotify: <S.NowPlaying>Nothing playing</S.NowPlaying>
-            </>
-          )}
-        </span>
-      </S.SongPlaying>
+      <NowPlayingSpotify />
 
       <S.Links>
         <section>
