@@ -1,11 +1,20 @@
+import React from 'react';
 import { Button } from 'components/Button';
+import { useData } from 'hooks/useData';
 import Link from 'next/link';
 import { RiSpotifyFill } from 'react-icons/ri';
 import { useTheme } from 'styled-components';
+import { NowPlayingResponse } from 'pages/api/spotify/nowPlaying';
 import * as S from './styles';
 
 export function Footer() {
   const theme = useTheme();
+
+  const { data: song } = useData<NowPlayingResponse>('/api/spotify/nowPlaying');
+
+  React.useEffect(() => {
+    // console.log(song);
+  }, [song]);
 
   return (
     <S.Container>

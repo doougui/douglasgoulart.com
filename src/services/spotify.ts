@@ -1,4 +1,4 @@
-import axios from 'axios';
+import qs from 'qs';
 import { Actions, Context, Item } from 'types/Spotify';
 
 const clientId = process.env.SPOTIFY_CLIENT_ID;
@@ -21,7 +21,7 @@ type TokenError = {
   error_description: string;
 };
 
-type NowPlayingResponse = {
+export type CurrentlyPlayingResponse = {
   actions: Actions;
   context: Context;
   currently_playing_type: string;
@@ -38,33 +38,35 @@ export const isTokenError = (
 };
 
 const getAccessToken = async () => {
-  const response = axios.post<TokenResponse | TokenError>(
-    TOKEN_ENDPOINT,
-    {
+  const response = fetch(TOKEN_ENDPOINT, {
+    method: 'POST',
+    headers: {
+      Authorization: `Basic ${basic}`,
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: qs.stringify({
       grant_type: 'refresh_token',
       refresh_token: refreshToken,
-    },
-    {
-      headers: {
-        Authorization: `Basic ${basic}`,
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-    },
-  );
+    }),
+  });
 
-  return response;
+  return (await response).json();
 };
 
 export const getNowPlaying = async () => {
-  const accessTokenReq = await getAccessToken();
+  const accessTokenReq: TokenResponse | TokenError = await getAccessToken();
 
-  if (isTokenError(accessTokenReq.data)) return null;
+  if (isTokenError(accessTokenReq)) return null;
 
-  const { access_token: accessToken } = accessTokenReq.data;
+  const { access_token: accessToken } = accessTokenReq;
 
-  return axios.get<NowPlayingResponse>(NOW_PLAYING_ENDPOINT, {
+  const response = await fetch(NOW_PLAYING_ENDPOINT, {
     headers: {
       Authorization: `Bearer ${accessToken}`,
     },
   });
+
+  if (response.status === 204) return null;
+
+  return response.json();
 };
