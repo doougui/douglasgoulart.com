@@ -702,11 +702,11 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
           </g>
         </svg>
         <span>
-          Now playing: 
+          Spotify: 
           <span
             class="c28"
           >
-            Holy Hell - Architects
+            Nothing playing
           </span>
         </span>
       </div>

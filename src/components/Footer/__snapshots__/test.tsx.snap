@@ -191,11 +191,11 @@ exports[`<Footer /> should render correctly 1`] = `
       </g>
     </svg>
     <span>
-      Now playing: 
+      Spotify: 
       <span
         class="c2"
       >
-        Holy Hell - Architects
+        Nothing playing
       </span>
     </span>
   </div>

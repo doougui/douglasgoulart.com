@@ -1,14 +1,23 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getNowPlaying, CurrentlyPlayingResponse } from 'services/spotify';
 
-export type NowPlayingResponse = {
-  album: string;
-  albumImageUrl: string;
-  artist: string;
-  isPlaying: boolean;
-  songUrl: string;
-  title: string;
-};
+export type NowPlayingResponse =
+  | {
+      album: string;
+      albumImageUrl: string;
+      artist: string;
+      isPlaying: boolean;
+      songUrl: string;
+      title: string;
+    }
+  | {
+      album: never;
+      albumImageUrl: never;
+      artist: never;
+      isPlaying: false;
+      songUrl: never;
+      title: never;
+    };
 
 export default async function handler(_: NextApiRequest, res: NextApiResponse) {
   const response = await getNowPlaying();

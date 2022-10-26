@@ -12,16 +12,24 @@ export function Footer() {
 
   const { data: song } = useData<NowPlayingResponse>('/api/spotify/nowPlaying');
 
-  React.useEffect(() => {
-    // console.log(song);
-  }, [song]);
-
   return (
     <S.Container>
       <S.SongPlaying>
         <RiSpotifyFill size={24} color={theme.colors.text} />
+
         <span>
-          Now playing: <S.NowPlaying>Holy Hell - Architects</S.NowPlaying>
+          {song?.isPlaying ? (
+            <>
+              Now playing:{' '}
+              <S.NowPlaying>
+                {song.artist} - {song.title}
+              </S.NowPlaying>
+            </>
+          ) : (
+            <>
+              Spotify: <S.NowPlaying>Nothing playing</S.NowPlaying>
+            </>
+          )}
         </span>
       </S.SongPlaying>
 
