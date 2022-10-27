@@ -1,8 +1,24 @@
 import React from 'react';
 import * as S from './styles';
 
-export type InputProps = React.InputHTMLAttributes<HTMLInputElement>;
+export type InputProps = {
+  initialValue?: string;
+  onInputChange?: (value: string) => void;
+} & React.InputHTMLAttributes<HTMLInputElement>;
 
-export function Input(props: InputProps) {
-  return <S.Container {...props} />;
+export function Input({
+  initialValue = '',
+  onInputChange,
+  ...props
+}: InputProps) {
+  const [value, setValue] = React.useState(initialValue);
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = e.currentTarget.value;
+    setValue(newValue);
+
+    if (onInputChange) onInputChange(newValue);
+  };
+
+  return <S.Container {...props} value={value} onChange={onChange} />;
 }

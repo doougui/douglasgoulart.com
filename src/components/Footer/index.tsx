@@ -4,18 +4,28 @@ import { NowPlayingSpotify } from 'components/NowPlayingSpotify';
 import Link from 'next/link';
 import * as S from './styles';
 
-// type NewsletterFormValues = {
-//   email: string | null;
-// };
+type NewsletterFormValues = {
+  email: string | null;
+};
 
 export function Footer() {
-  // const [values, setValues] = React.useState<NewsletterFormValues>({
-  //   email: null,
-  // });
+  const [values, setValues] = React.useState<NewsletterFormValues>({
+    email: null,
+  });
 
-  function handleSubscribeToNewsletter() {
-    //
-  }
+  const handleInput = (field: string, value: string) => {
+    setValues((s) => ({ ...s, [field]: value }));
+  };
+
+  const handleSubscribeToNewsletter = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    fetch('/api/newsletter/add', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: values.email,
+      }),
+    });
+  };
 
   return (
     <S.Container>
@@ -92,7 +102,11 @@ export function Footer() {
             </S.Description>
 
             <S.InputWrapper>
-              <S.SubscribeInput name="email" placeholder="johndoe@email.com" />
+              <S.SubscribeInput
+                name="email"
+                onInputChange={(v: string) => handleInput('email', v)}
+                placeholder="johndoe@email.com"
+              />
               <Button type="submit">Subscribe</Button>
             </S.InputWrapper>
           </form>

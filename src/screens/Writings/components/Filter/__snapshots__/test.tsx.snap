@@ -100,6 +100,7 @@ exports[`<Filter /> should render correctly 1`] = `
   <input
     class="c4 c5"
     placeholder="Search articles"
+    value=""
   />
 </div>
 `;

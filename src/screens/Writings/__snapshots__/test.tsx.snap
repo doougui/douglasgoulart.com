@@ -841,6 +841,7 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
                 class="c36 c37"
                 name="email"
                 placeholder="johndoe@email.com"
+                value=""
               />
               <button
                 class="c38"

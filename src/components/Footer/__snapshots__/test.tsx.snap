@@ -330,6 +330,7 @@ exports[`<Footer /> should render correctly 1`] = `
             class="c10 c11"
             name="email"
             placeholder="johndoe@email.com"
+            value=""
           />
           <button
             class="c12"

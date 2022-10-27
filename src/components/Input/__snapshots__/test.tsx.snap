@@ -30,5 +30,6 @@ exports[`<Input /> should render the input 1`] = `
 <input
   class="c0"
   placeholder="input"
+  value=""
 />
 `;
