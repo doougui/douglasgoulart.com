@@ -823,29 +823,33 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
         <section
           class="c33"
         >
-          <h3
-            class="c30"
-          >
-            Newsletter
-          </h3>
-          <p
-            class="c34"
-          >
-            Get new articles delivered to your inbox!
-          </p>
-          <div
-            class="c35"
-          >
-            <input
-              class="c36 c37"
-              placeholder="johndoe@email.com"
-            />
-            <button
-              class="c38"
+          <form>
+            <h3
+              class="c30"
             >
-              Subscribe
-            </button>
-          </div>
+              Newsletter
+            </h3>
+            <p
+              class="c34"
+            >
+              Get new articles delivered to your inbox!
+            </p>
+            <div
+              class="c35"
+            >
+              <input
+                class="c36 c37"
+                name="email"
+                placeholder="johndoe@email.com"
+              />
+              <button
+                class="c38"
+                type="submit"
+              >
+                Subscribe
+              </button>
+            </div>
+          </form>
         </section>
       </menu>
       <p

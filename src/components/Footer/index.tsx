@@ -1,9 +1,22 @@
+import React from 'react';
 import { Button } from 'components/Button';
 import { NowPlayingSpotify } from 'components/NowPlayingSpotify';
 import Link from 'next/link';
 import * as S from './styles';
 
+// type NewsletterFormValues = {
+//   email: string | null;
+// };
+
 export function Footer() {
+  // const [values, setValues] = React.useState<NewsletterFormValues>({
+  //   email: null,
+  // });
+
+  function handleSubscribeToNewsletter() {
+    //
+  }
+
   return (
     <S.Container>
       <NowPlayingSpotify />
@@ -72,15 +85,17 @@ export function Footer() {
         </section>
 
         <S.Newsletter>
-          <S.Title>Newsletter</S.Title>
-          <S.Description>
-            Get new articles delivered to your inbox!
-          </S.Description>
+          <form onSubmit={handleSubscribeToNewsletter}>
+            <S.Title>Newsletter</S.Title>
+            <S.Description>
+              Get new articles delivered to your inbox!
+            </S.Description>
 
-          <S.InputWrapper>
-            <S.SubscribeInput placeholder="johndoe@email.com" />
-            <Button>Subscribe</Button>
-          </S.InputWrapper>
+            <S.InputWrapper>
+              <S.SubscribeInput name="email" placeholder="johndoe@email.com" />
+              <Button type="submit">Subscribe</Button>
+            </S.InputWrapper>
+          </form>
         </S.Newsletter>
       </S.Links>
 
