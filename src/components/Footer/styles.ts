@@ -76,8 +76,27 @@ export const InputWrapper = styled.div`
   }
 `;
 
+const subscribeInputModifiers = {
+  hasError: () => css`
+    border-right: none;
+  `,
+};
+
 export const SubscribeInput = styled(Input)`
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  min-width: 10rem;
+  ${({ hasError }) => css`
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    min-width: 10rem;
+    ${hasError && subscribeInputModifiers.hasError()}
+  `}
+`;
+
+export const Error = styled.p`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    font-size: ${theme.font.sizes.small};
+    color: ${theme.colors.danger};
+  `}
 `;

@@ -59,6 +59,9 @@ declare module 'styled-components' {
 
       highlightText: string;
       text: string;
+
+      success: string;
+      danger: string;
     };
   }
 }

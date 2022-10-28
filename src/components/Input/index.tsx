@@ -2,12 +2,14 @@ import React from 'react';
 import * as S from './styles';
 
 export type InputProps = {
+  hasError?: boolean;
   initialValue?: string;
   onInputChange?: (value: string) => void;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
 export function Input({
   initialValue = '',
+  hasError = false,
   onInputChange,
   ...props
 }: InputProps) {
@@ -20,5 +22,12 @@ export function Input({
     if (onInputChange) onInputChange(newValue);
   };
 
-  return <S.Container {...props} value={value} onChange={onChange} />;
+  return (
+    <S.Container
+      {...props}
+      value={value}
+      onChange={onChange}
+      hasError={hasError}
+    />
+  );
 }

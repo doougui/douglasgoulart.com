@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css, DefaultTheme } from 'styled-components';
 import { ButtonProps } from '.';
 
 export type ContainerProps = Pick<ButtonProps, 'fullWidth'>;
@@ -7,10 +7,14 @@ const containerModifiers = {
   fullWidth: () => css`
     width: 100%;
   `,
+  disabled: (theme: DefaultTheme) => css`
+    transition: opacity ${theme.transition.default};
+    opacity: 0.5;
+  `,
 };
 
 export const Container = styled.button<ContainerProps>`
-  ${({ theme, fullWidth }) => css`
+  ${({ theme, fullWidth, disabled }) => css`
     width: fit-content;
 
     font-size: ${theme.font.sizes.medium};
@@ -30,5 +34,6 @@ export const Container = styled.button<ContainerProps>`
     text-decoration: none;
 
     ${fullWidth && containerModifiers.fullWidth()};
+    ${disabled && containerModifiers.disabled(theme)};
   `}
 `;

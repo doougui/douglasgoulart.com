@@ -1,7 +1,9 @@
-import React from 'react';
 import { Button } from 'components/Button';
+import { FormMessage } from 'components/FormMessage';
 import { NowPlayingSpotify } from 'components/NowPlayingSpotify';
+import { useForm } from 'hooks/useForm';
 import Link from 'next/link';
+import React from 'react';
 import * as S from './styles';
 
 type NewsletterFormValues = {
@@ -9,21 +11,45 @@ type NewsletterFormValues = {
 };
 
 export function Footer() {
-  const [values, setValues] = React.useState<NewsletterFormValues>({
-    email: null,
-  });
+  const { values, handleInput, message, setMessage, handleSubmit, isLoading } =
+    useForm<NewsletterFormValues>({
+      initialValues: {
+        email: null,
+      },
+    });
 
-  const handleInput = (field: string, value: string) => {
-    setValues((s) => ({ ...s, [field]: value }));
+  const messages: { [key: string]: string } = {
+    'Member Exists': 'Ops. Email already registered.',
   };
 
-  const handleSubscribeToNewsletter = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    fetch('/api/newsletter/add', {
+  const handleSubscribeToNewsletter = async () => {
+    if (!values.email) {
+      setMessage({
+        type: 'error',
+        content: 'Email is required.',
+      });
+      return;
+    }
+
+    await fetch('/api/newsletter/add', {
       method: 'POST',
       body: JSON.stringify({
         email: values.email,
       }),
+    }).then(async (response) => {
+      if (!response.ok) {
+        const apiError = (await response.json()).error as string;
+        setMessage({
+          type: 'error',
+          content: messages?.[apiError] ?? 'An error has occorred.',
+        });
+        return;
+      }
+
+      setMessage({
+        type: 'success',
+        content: 'Nice! You are in 😎.',
+      });
     });
   };
 
@@ -95,7 +121,7 @@ export function Footer() {
         </section>
 
         <S.Newsletter>
-          <form onSubmit={handleSubscribeToNewsletter}>
+          <form onSubmit={handleSubmit(handleSubscribeToNewsletter)}>
             <S.Title>Newsletter</S.Title>
             <S.Description>
               Get new articles delivered to your inbox!
@@ -106,9 +132,16 @@ export function Footer() {
                 name="email"
                 onInputChange={(v: string) => handleInput('email', v)}
                 placeholder="johndoe@email.com"
+                hasError={message?.type === 'error'}
               />
-              <Button type="submit">Subscribe</Button>
+              <Button type="submit" disabled={isLoading}>
+                Subscribe
+              </Button>
             </S.InputWrapper>
+
+            {!!message && (
+              <FormMessage type={message.type}>{message.content}</FormMessage>
+            )}
           </form>
         </S.Newsletter>
       </S.Links>

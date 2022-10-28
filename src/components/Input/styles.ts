@@ -1,7 +1,17 @@
-import styled, { css } from 'styled-components';
+import styled, { css, DefaultTheme } from 'styled-components';
 
-export const Container = styled.input`
-  ${({ theme }) => css`
+type ContainerProps = {
+  hasError: boolean;
+};
+
+const containerModifiers = {
+  hasError: (theme: DefaultTheme) => css`
+    border: 1px solid ${theme.colors.danger};
+  `,
+};
+
+export const Container = styled.input<ContainerProps>`
+  ${({ theme, hasError }) => css`
     all: unset;
     width: 100%;
     font-size: ${theme.font.sizes.medium};
@@ -13,5 +23,7 @@ export const Container = styled.input`
     &::placeholder {
       color: ${theme.colors.textDark};
     }
+
+    ${hasError && containerModifiers.hasError(theme)};
   `}
 `;

@@ -14,5 +14,8 @@ export default {
 
     highlightText: '#EDEDEF',
     text: '#1A1523',
+
+    success: '#26FF56',
+    danger: '#FF4747',
   },
 };

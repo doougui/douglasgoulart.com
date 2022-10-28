@@ -1,4 +1,4 @@
-import mailchimp from '@mailchimp/mailchimp_marketing';
+import mailchimp, { MemberErrorResponse } from '@mailchimp/mailchimp_marketing';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 mailchimp.setConfig({
@@ -37,6 +37,14 @@ export default async function handler(
 
     res.status(201).json({ error: '' });
   } catch (e) {
+    const mailchimpError = e as { response: { body: MemberErrorResponse } };
+    if (mailchimpError.response?.body) {
+      res
+        .status(mailchimpError.response.body.status)
+        .json({ error: mailchimpError.response.body.title });
+      return;
+    }
+
     let error = 'An unexpected error has occurred';
     if (e instanceof Error) error = e.message || e.toString();
     res.status(500).json({ error });
