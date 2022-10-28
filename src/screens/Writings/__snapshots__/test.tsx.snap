@@ -51,25 +51,6 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   text-decoration: none;
 }
 
-.c27 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 1.5rem;
-  color: #EDEDEF;
-  font-size: 1.6rem;
-}
-
-.c28 {
-  font-family: Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif;
-  font-weight: 600;
-}
-
 .c36 {
   all: unset;
   width: 100%;
@@ -94,6 +75,46 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
 
 .c36::placeholder {
   color: #888888;
+}
+
+.c35 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.c35 button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.c37 {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  min-width: 10rem;
+}
+
+.c27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1.5rem;
+  color: #EDEDEF;
+  font-size: 1.6rem;
+}
+
+.c28 {
+  font-family: Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif;
+  font-weight: 600;
 }
 
 .c26 {
@@ -161,27 +182,6 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-}
-
-.c35 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 1rem;
-}
-
-.c35 button {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.c37 {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  min-width: 10rem;
 }
 
 .c4 {
@@ -823,17 +823,17 @@ exports[`<Writings /> should render heading, filter and writings 1`] = `
         <section
           class="c33"
         >
+          <h3
+            class="c30"
+          >
+            Newsletter
+          </h3>
+          <p
+            class="c34"
+          >
+            Get new articles delivered to your inbox!
+          </p>
           <form>
-            <h3
-              class="c30"
-            >
-              Newsletter
-            </h3>
-            <p
-              class="c34"
-            >
-              Get new articles delivered to your inbox!
-            </p>
             <div
               class="c35"
             >
