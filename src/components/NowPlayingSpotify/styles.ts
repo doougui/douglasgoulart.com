@@ -22,7 +22,7 @@ const playingSong = keyframes`
 `;
 
 type SpotifyIconProps = {
-  isPlaying: boolean;
+  $isPlaying: boolean;
 };
 
 const spotifyIconModifiers = {
@@ -32,8 +32,8 @@ const spotifyIconModifiers = {
 };
 
 export const SpotifyIcon = styled(RiSpotifyFill)<SpotifyIconProps>`
-  ${({ isPlaying }) => css`
-    ${isPlaying && spotifyIconModifiers.isPlaying()}
+  ${({ $isPlaying }) => css`
+    ${$isPlaying && spotifyIconModifiers.isPlaying()}
   `}
 `;
 

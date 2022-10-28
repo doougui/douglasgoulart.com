@@ -32,7 +32,7 @@ export function NowPlayingSpotify() {
       <S.SpotifyIcon
         size={26}
         color={theme.colors.text}
-        isPlaying={!!song?.isPlaying}
+        $isPlaying={!!song?.isPlaying}
       />
 
       <span>{renderSongPlaying()}</span>
