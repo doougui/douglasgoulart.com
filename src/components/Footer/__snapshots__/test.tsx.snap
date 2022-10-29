@@ -320,7 +320,7 @@ exports[`<Footer /> should render correctly 1`] = `
       <p
         class="c8"
       >
-        Get new articles delivered to your inbox!
+        Get new writings delivered to your inbox!
       </p>
       <form>
         <div

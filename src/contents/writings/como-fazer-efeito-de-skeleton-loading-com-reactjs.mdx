@@ -1,0 +1,224 @@
+---
+title: 'Como fazer efeito de skeleton loading com ReactJS'
+publishedAt: '2020-03-28'
+excerpt: 'Garanta uma melhor usabilidade.'
+cover:
+  url: '/img/contents/writings/como-fazer-efeito-de-skeleton-loading-com-reactjs/cover.png'
+  alt: 'Exemplo de skeleton loading'
+  caption: 'Exemplo de skeleton loading'
+tags: 'React,JavaScript'
+---
+
+## Introdução
+
+Quando acessamos uma página na web, o que esperamos é uma resposta instantânea ou o mais rápido possível. Porém, com as abordagens tradicionais que utilizam spinners, ou até mesmo que não mostram nenhuma resposta na tela enquanto os dados são carregados, isto geralmente não ocorre. Muitas vezes ficamos esperando, recarregamos a página, e não temos nenhum feedback da aplicação até que os dados sejam carregados.
+Para resolver este problema, foi criado o **skeleton loading**. O skeleton loading é uma abordagem que visa melhorar a experiência do usuário exibindo elementos de carregamento que são similares ao conteúdo real que vai ser apresentado quando todos os dados carregarem.
+
+## Implementação no ReactJS
+
+Agora que já entendemos o conceito e o motivo de utilizar skeleton loading, vamos para a prática.
+
+Para implementar esta funcionalidade em uma aplicação ReactJS, vamos usar o pacote [react-loading-skeleton](https://github.com/dvtng/react-loading-skeleton).
+
+### Instalação
+
+Com o NPM, use o comando abaixo para instalar o pacote (dentro da pasta do projeto):
+```
+npm install react-loading-skeleton
+```
+
+Já se estiver usando o yarn, use o seguinte comando:
+```
+yarn add react-loading-skeleton
+```
+
+### Estado de loading e pegando dados da API
+
+Para checar se os dados da nossa aplicação estão sendo carregados ou não, vamos criar um estado chamado `loading` e setar o mesmo `true` por padrão. Também vamos criar um estado `data` para armazenar nossos dados
+
+```react
+import React, { useEffect, useState } from 'react';
+
+function Component() {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  return <h1>Skeleton Loading</h1>
+}
+
+export default Component;
+```
+
+Agora, utilizando o hook `useEffect`, vamos fazer a chamada a API, e, logo após isso, setar o `loading` como `false`
+
+```react
+import React, { useEffect, useState } from 'react';
+
+import api from '../../../services/api';
+
+function Component() {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      api.get('data').then(response => {
+        setData(response.data);
+      });
+      
+      setLoading(false);
+    }, 3000);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
+  return <h1>Skeleton Loading</h1>
+}
+
+export default Component;
+```
+
+Como estamos em ambiente de desenvolvimento, usamos a função `setTimeout` para que possamos ver as mudanças. É importante que você remova em produção.
+
+### Criando componente skeleton
+
+Para fazer o skeleton, vamos criar um componente separado. É neste componente que importaremos o pacote que instalamos anteriormente
+
+```react
+import React from 'react';
+import Skeleton from "react-loading-skeleton";
+
+function ComponentSkeleton() {
+  ...
+}
+
+export default ComponentSkeleton;
+```
+
+Agora vamos usar o componente `<Skeleton />` para montar nosso layout
+
+```react
+import React from 'react';
+import Skeleton from "react-loading-skeleton";
+
+import './styles.css';
+
+function ComponentSkeleton() {
+    <div className="skeleton-container">
+      <div className="skeleton-title">
+        <Skeleton height={28} width={300} />
+      </div>
+
+      <ul>
+        {Array(8)
+          .fill()
+          .map((item, index) => (
+            <li key={index}>
+              <div className="item-group">
+                <div className="skeleton-item">
+                  <Skeleton height={20} width={`100%`} />
+                </div>
+
+                <div className="skeleton-item">
+                  <Skeleton height={20} width={`100%`} />
+                </div>
+              </div>
+
+              <div className="item-group">
+                <div className="skeleton-item">
+                  <Skeleton height={20} width={`100%`} />
+                </div>
+
+                <div className="skeleton-item">
+                  <Skeleton height={20} width={`100%`} />
+                </div>
+              </div>
+
+              <div className="item-group">
+                <div className="skeleton-item">
+                  <Skeleton height={20} width={`100%`} />
+                </div>
+
+                <div className="skeleton-item">
+                  <Skeleton height={20} width={`100%`} />
+                </div>
+              </div>
+            </li>
+        ))}
+      </ul>
+    </div>
+}
+
+export default ComponentSkeleton;
+```
+Com as propriedades `width` e `height` ajustamos a largura e a altura. Você também pode utilizar outras propriedades como `count`, para a repetição automática, ou `duration`, para setar a duração da animação. Caso queira saber mais, confira a documentação do [pacote no GitHub](https://github.com/dvtng/react-loading-skeleton).
+
+Caso queira alterar coisas como o espaçamento desses elementos, você pode coloca-los dentro de divs e estilizar no CSS.
+
+### Checando se os dados já foram carregados ou não
+
+Voltando ao nosso componente principal, precisamos verificar se os dados já foram carregados ou não. Para isso vamos usar o estado `loading` que criamos anteriormente
+
+```react
+import React, { useEffect, useState } from 'react';
+import ComponentSkeleton from '../ComponentSkeleton';
+
+import api from '../../../services/api';
+
+function Component() {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      api.get('data').then(response => {
+        setData(response.data);
+      });
+      
+      setLoading(false);
+    }, 3000);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className="container">
+      {loading && <IncidentSkeleton />}
+      {!loading &&
+        <>
+          <h1>Skeleton Loading</h1>
+
+          <ul>
+            {data.map(item => (
+              <li key={item.id}>
+                <strong>TÍTULO:</strong>
+                <p>{item.title}</p>  
+
+                <strong>DESCRIÇÃO:</strong>
+                <p>{item.description}</p>  
+
+                <strong>VALOR:</strong>
+                <p>{item.value}</p>
+              </li>
+            ))}
+          </ul>
+        </>
+      }
+    </div>
+  );
+}
+
+export default Component;
+```
+Abaixo do `container` estamos dizendo que, se o `loading` for `true`, mostre o skeleton. Logo abaixo estamos dizendo o contrário, se o `loading` for `false`, mostre os dados vindos da API.
+
+## Alternativas
+
+Além do [react-loading-skeleton](https://github.com/dvtng/react-loading-skeleton), também temos outras alternativas como o [react-content-loader](https://github.com/danilowoz/react-content-loader) e o [react-loading-screen](https://github.com/dvtng/react-loading-skeleton). Caso queira saber as vantagens e desvantagens de cada um, acesse [este artigo](https://blog.logrocket.com/improve-ux-in-react-apps-by-showing-skeleton-ui/).
+
+## Conclusão
+
+Esta é uma solução que melhora muito a experiência do usuário, reduzindo a frustração que as telas de loading causam, além de ter uma implementação extremamente simples. Neste artigo usamos um pacote para facilitar o processo, mas você também pode fazer tudo com CSS se quiser.
+
+Caso queira, vocẽ pode acessar o [código completo da aplicação no GitHub](https://github.com/doougui/be-the-hero).
+

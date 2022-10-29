@@ -1,0 +1,283 @@
+---
+title: 'Deploying your Laravel + MySQL application on Heroku'
+publishedAt: '2021-04-30'
+excerpt: 'Deploy your application to the world!'
+cover:
+  url: '/img/contents/writings/deploying-your-laravel-mysql-application-on-heroku/cover.png'
+  alt: 'Deployed application'
+  caption: 'Deployed application'
+tags: 'Laravel,MySQL,Heroku'
+---
+
+## Introduction
+
+So, you've just built your beautiful Laravel application, it has authentication, localization, tests and all the fancy features that could possibly impress the recruiter and land you a job. However, it's only working on your machine. How do we solve this?
+
+In this post, we’ll be looking into hosting a Laravel application (with a MySQL or MariaDB database included) on Heroku for free.
+
+## Deploying
+
+💡 __Notice:__ Replace items within brackets (`[]`) with your desired information.
+
+### Creating Laravel application
+
+If you don't have a Laravel app yet, the first thing we got to do is create a brand new one. To do this, first you need to have [Composer](https://getcomposer.org/) installed on your machine. After installing composer you can run the following command to install the Laravel installer: 
+
+```
+composer global require laravel/installer
+```
+
+And then you can create a new Laravel app:
+
+```
+laravel new [brand-new-app]
+```
+
+> For more information about Laravel installation, check the [Laravel Installation guide](https://laravel.com/docs/8.x/installation). It’s worth a read before following the instructions in this article.
+
+### Initializing `git` 
+
+To deploy to Heroku we'll be using [Git](https://git-scm.com/). If you don't know how to use this, I recommend you watch the [Git and GitHub Crash Course](https://www.freecodecamp.org/news/git-and-github-crash-course/) on freeCodeCamp. It's a very important tool for developers and you should know it.
+
+Anyways, the first thing you gotta do is enter your project folder using the terminal and initialize a git repository:
+
+```
+git init
+```
+
+And then adding all the files and making a `commit`
+
+```
+git add .
+git commit -m "Initial commit"
+```
+
+Alright, now your git repository is set.
+
+### Using the Heroku CLI
+
+We'll use the Heroku CLI to deploy our app. You can find the installation guide [here](https://devcenter.heroku.com/articles/heroku-cli).
+
+After you've installed the Heroku CLI, [create a Heroku free account](https://id.heroku.com/login) and run `heroku login` in your terminal. Follow the instructions and after you've been successfully logged in, you can create your Heroku application (change `brand-new-app` to your desired app name):
+
+```
+heroku create [brand-new-app]
+``` 
+
+Now you need to generate the `APP_KEY` required by Laravel. You can do this by using the `heroku config:set APP_KEY=$(php artisan --no-ansi key:generate --show)` command.
+
+### Creating a Procfile
+
+By default, Heroku will launch an Apache web server together with PHP to serve applications from the root directory of the project.
+
+However, our application’s document root is the `public/` subdirectory, so we need to create a `Procfile` that configures the correct document root. We can do this by manually creating a `Procfile` file or using the terminal: 
+
+```
+echo "web: vendor/bin/heroku-php-apache2 public/" > Procfile
+```
+
+Add the untracked files and commit your changes:
+
+```
+git add .
+git commit -m "Procfile for Heroku"
+```
+
+### Pushing to Heroku
+
+Now you should be able to push your app to Heroku:
+
+```
+git push heroku master
+```
+
+To view your app, access `https://[brand-new-app].herokuapp.com` or click the `Open app` button located in the Heroku dashboard (https://dashboard.heroku.com/apps/[brand-new-app]) 
+
+### Avoiding Mixed Content error
+
+If you use the `asset()` helper function a lot, you'll probably notice that your hosted app isn't loading some assets files and is showing a `Mixed Content` error in the console.
+
+![Mixed Content Error](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/s4jrtsmeh4phtp21pe42.png)
+
+To fix this, open your applications' `AppServiceProvider` at `[brand-new-app]/app/Provider/AppServiceProvider.php` and, in the `boot()` method, add:
+
+```php
+if (config('app.env') === 'production') {
+    \URL::forceScheme('https');
+}
+``` 
+
+And now create a `APP_ENV` variable with a `production` value using the Heroku CLI or on your app's settings (https://dashboard.heroku.com/apps/[brand-new-app]/settings > Config Vars > Reveal Config Vars).
+
+```
+heroku config:set APP_ENV="production"
+```
+
+Commit and push your new changes to Heroku
+
+```
+git commit -am "Adding URL::forceScheme('https') in production environments"
+```
+
+Now your project should load properly without errors
+
+![Assets loaded with no errors](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/z91if8j2m3gd9wj4tuu1.png)
+
+If the error persist, check if there are no links using HTTP instead of HTTPS.
+
+### Setting environment variables
+
+The next thing we need to do is set our `.env` variables in Heroku. We've already set the `APP_ENV` and `APP_KEY` variables, let's set the remaining ones. Again, you can do this by using the Heroku CLI or on your app's settings (https://dashboard.heroku.com/apps/[brand-new-app]/settings > Config Vars > Reveal Config Vars).
+
+![Config vars](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/k9oh2nrnzkqzs6aym0pv.png)
+
+You can keep the database information (`DB_CONNECTION`, `DB_DATABASE`, `DB_USERNAME`, etc) the same as the local configuration for know. We'll take care of that later.
+
+### Adding and configuring database
+
+Now we have to add a database to our project.
+
+Go to your application dashboard and click on resources (https://dashboard.heroku.com/apps/[brand-new-app]/resources). In the "Add-ons" input, type MySQL and choose `ClearDB MySQL`. Select the "Ignite - Free" plan and click on "Submit Order Form".
+
+> Make sure you assigned your credit card to your Heroku account. If you didn't add it yet, click on your profile photo (top right corner) > Account settings > Billing > Add credit card. Don't worry, you won't be charged unless you choose a paid plan. As soon as you've added your card, repeat the step above.
+
+As soon as you've added the ClearDB MySQL add-on, go to your terminal and type `heroku config | grep CLEARDB_DATABASE_URL`
+
+It should display something like this:
+
+```
+CLEARDB_DATABASE_URL:  mysql://uuuuuuuuuuuuuu:pppppppp@hh-hhhh-hhhh-hh.cleardb.com/heroku_ddddddddddddddd?reconnect=true
+```
+
+Everything after the @ symbol until the / is the `DB_HOST` (hh-hhhh-hhhh-hh.cleardb.com). Everything after / until ? is `DB_DATABASE` (heroku_ddddddddddddddd). The string after the // until : is the `DB_USERNAME` (uuuuuuuuuuuuuu). The string between : and @ is the `DB_PASSWORD` (pppppppp).
+
+Don't show, tell or publish these credentials anywhere. These are your database information. That's why I censored it. In your case it should have real numbers and letters.
+
+Now it's time to change your production database environment variables with the real ones provided by ClearDB. Go to your app settings (https://dashboard.heroku.com/apps/[brand-new-app]/settings), click "Reveal Config Vars" and change the database variables. It should be like this:
+
+| key         | value                       |
+|-------------|-----------------------------|
+| DB_HOST     | hh-hhhh-hhhh-hh.cleardb.com |
+| DB_DATABASE | heroku_ddddddddddddddd      |
+| DB_USERNAME | uuuuuuuuuuuuuu              |
+| DB_PASSWORD | pppppppp                    |
+
+### Migrating database tables
+
+Now it's time to run our migrations and create our database tables.
+
+In your terminal, type `heroku run php artisan migrate:fresh`. It will ask you if you really want to run this command, type `yes`. 
+
+After running this command, there is a high chance that it will return this error:
+
+![Migrations error](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5dt14traezk2s2y0dor9.png)
+
+It happens because, by default, Laravel uses the `utf8mb4` character set. If the server is running a version of MySQL older than the 5.7.7 release or MariaDB older than the 10.2.2 release, you may need to manually configure the default string length generated by migrations. 
+
+> Learn more at: https://laravel.com/docs/8.x/migrations#index-lengths-mysql-mariadb.
+
+To fix this, add the code below to the `boot()` method located in your `app/Providers/AppServiceProvider.php`
+
+```php
+Schema::defaultStringLength(191);
+```
+
+Don't forget to import Schema at the top of the file:
+
+```php
+use Illuminate\Support\Facades\Schema;
+```
+
+Your `AppServiceProvider` should be like this at this point: 
+
+```php
+<?php
+
+namespace App\Providers;
+
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
+
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
+
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        if (config('app.env') === 'production') {
+            \URL::forceScheme('https');
+        }
+
+        Schema::defaultStringLength(191);
+    }
+}
+```
+
+Commit your changes and push to Heroku again
+
+```
+git commit -am "Setting defaultStringLength to 191"
+git push heroku master
+```
+
+Run the migrations again with `heroku run php artisan migrate:fresh` and it should work.
+
+### Seeding the database 
+
+Let's learn how you can seed your database in case you need to.
+
+In your terminal, type `heroku run php artisan db:seed`. It will also ask you if you really want to run this command, type `yes`. 
+
+💡 __Notice:__ Heroku increments tables by 10, for example id's would appear like this: `1, 11, 21, 31`. Beware when using user IDs for reference in Seeds or Factories.
+
+When you run this command, it might tell you that the `Class 'Faker\Factory'` was not found. It happens because `faker` is required as a dev dependency. To fix this, simply open your `composer.json` file and move `"fzaninotto/faker": "^1.9.1",` from `require-dev` to `require`.
+
+And then run `composer update`.
+
+![Moving faker from "require-dev" to "require"](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ym2mgnixck1wlagga26o.png)
+
+Commit your changes and push to Heroku one more time
+
+```
+git commit -am "Moving fzaninotto/faker from require-dev to require in composer.json"
+git push heroku master
+```
+
+Seed the database again with `heroku run php artisan db:seed` and it should work.
+
+## [BONUS] Storing uploaded files
+
+In case you are working with file uploads in your Laravel application, there's one caveat you should be aware of: Heroku uses [ephemeral filesystem](https://devcenter.heroku.com/articles/dynos#ephemeral-filesystem). That means that any changes to the filesystem whilst the dyno is running only last until that dyno is shut down or restarted. Each dyno boots with a clean copy of the filesystem from the most recent deploy. In addition, under normal operations dynos will restart every day in a process known as ["Cycling"](https://devcenter.heroku.com/articles/dynos#restarting).
+
+When this happens, your image or any other uploaded file will be completely deleted from your application and users will see nothing but the image `alt` text.
+
+Knowing this, it's recommended that you use a dedicated file storage service such as [AWS S3](https://aws.amazon.com/s3/).
+
+You can learn more about this approach that Heroku uses [here](https://help.heroku.com/K1PPS2WM/why-are-my-file-uploads-missing-deleted) and [here](https://devcenter.heroku.com/articles/dynos#ephemeral-filesystem).
+
+## Conclusion
+
+Congratulations! Now you have your Laravel application up and running. Now you can add it to your portfolio and show your work to people.
+
+Heroku free plan has some limitations and maybe your app stop working in some days of the month (it usually goes back online when a new month starts). If you are feeling the need to upgrade, do it.
+
+Improvements and/or corrections are welcome 😀.
+
+## Further reading
+
+- https://devcenter.heroku.com/articles/getting-started-with-laravel
+- https://betterprogramming.pub/hosting-your-laravel-app-on-heroku-198764167a85
+- https://scotch.io/@phalconVee/using-mysql-on-heroku#:~:text=In%20the%20Add%2Dons%20search,app%20uses%20our%20local%20database

@@ -71,6 +71,8 @@
       "specialLink": ["hrefLeft", "hrefRight"],
       "aspects": ["invalidHref", "preferButton"]
     }],
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"]
   }
 }

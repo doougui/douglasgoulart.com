@@ -74,7 +74,7 @@ export function Footer() {
         <S.Newsletter>
           <S.Title>Newsletter</S.Title>
           <S.Description>
-            Get new articles delivered to your inbox!
+            Get new writings delivered to your inbox!
           </S.Description>
 
           <NewsletterForm />

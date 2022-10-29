@@ -1,7 +1,29 @@
+import { useForm } from 'hooks/useForm';
+import { ParsedUrlQueryInput } from 'querystring';
+import React from 'react';
+import { SortTypes, SortTypesKeys } from 'utils/mdx/getAllFilesFrontmatter';
 import * as S from './styles';
 
-export function Filter() {
-  const orders: string[] = ['New', 'Top', 'Hot'];
+type Values = ParsedUrlQueryInput;
+
+type FilterProps = {
+  sort: SortTypesKeys;
+  sortOptions: SortTypes;
+  onFilter: (values: Values) => void;
+};
+
+export function Filter({ sort, sortOptions, onFilter }: FilterProps) {
+  const { values, handleInput } = useForm({
+    initialValues: {
+      sort,
+    },
+  });
+
+  React.useEffect(() => {
+    onFilter(values);
+    // This method comes from another template that we don't have access
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [values]);
 
   return (
     <S.Container>
@@ -9,17 +31,21 @@ export function Filter() {
         <S.OrderText>
           Order by:{' '}
           <S.SelectedOrder
+            name="sort"
             data-testid="select-order"
             aria-label="Select order"
             role="listbox"
+            onChange={(e) => handleInput('sort', e.target.value)}
           >
-            {orders.map((order, index) => (
-              <option key={`${order}-${String(index)}`}>{order}</option>
+            {Object.entries(sortOptions).map(([key, value]) => (
+              <option value={key} key={key}>
+                {value}
+              </option>
             ))}
           </S.SelectedOrder>
         </S.OrderText>
       </S.Order>
-      <S.SearchInput placeholder="Search articles" />
+      <S.SearchInput placeholder="Search writings" />
     </S.Container>
   );
 }

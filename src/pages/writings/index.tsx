@@ -1,18 +1,40 @@
-import { GetStaticProps } from 'next';
-import { Writings as WritingsScreen } from 'screens/Writings';
-import { Writing } from 'types/Writing';
-import { getAllFilesFrontmatter } from 'utils/mdx/getAllFilesFrontmatter';
+import { GetServerSideProps } from 'next';
+import { Writings as WritingsScreen, WritingsProps } from 'screens/Writings';
+import {
+  getAllFilesFrontmatter,
+  SortTypes,
+  SortTypesKeys,
+} from 'utils/mdx/getAllFilesFrontmatter';
 
-type WritingsProps = {
-  writings: Writing[];
-};
-
-export default function Writings({ writings }: WritingsProps) {
-  return <WritingsScreen writings={writings} />;
+export default function Writings({
+  writings,
+  sort,
+  sortOptions,
+}: WritingsProps) {
+  return (
+    <WritingsScreen writings={writings} sortOptions={sortOptions} sort={sort} />
+  );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const files = await getAllFilesFrontmatter('writings');
+export const getServerSideProps: GetServerSideProps = async ({ query }) => {
+  const { sort: querySort } = query;
 
-  return { props: { writings: files } };
+  const allowedSortOptions: SortTypesKeys[] = [
+    ...(Object.keys(SortTypes) as SortTypesKeys[]),
+  ];
+
+  const isValidSort = (
+    value: string | string[] | undefined,
+  ): value is SortTypesKeys => {
+    return (
+      typeof value === 'string' &&
+      allowedSortOptions.includes(value as SortTypesKeys)
+    );
+  };
+
+  const sort: SortTypesKeys = isValidSort(querySort) ? querySort : 'new';
+
+  const files = await getAllFilesFrontmatter('writings', sort);
+
+  return { props: { writings: files, sortOptions: SortTypes, sort } };
 };

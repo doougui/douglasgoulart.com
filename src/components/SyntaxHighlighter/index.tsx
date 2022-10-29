@@ -18,7 +18,7 @@ export function SyntaxHighlighter({ children }: SyntaxHighlighterProps) {
   if (!children) return null;
 
   const code = (children as CodeType).props.children.trim();
-  const language = (children as CodeType).props.className.split('-')[1];
+  const language = (children as CodeType).props.className?.split('-')?.[1];
 
   return (
     <Highlight
