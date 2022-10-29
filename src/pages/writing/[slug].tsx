@@ -1,29 +1,12 @@
-import React from 'react';
-import { Writing as WritingScreen } from 'screens/Writing';
-import { ReadTimeResults } from 'reading-time';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { getFiles } from 'utils/mdx/getFiles';
+import { Writing as WritingScreen } from 'screens/Writing';
+import { Writing as WritingType } from 'types/Writing';
 import { getFileBySlug } from 'utils/mdx/getFileBySlug';
-
-export type BlogFrontmatter = {
-  wordCount: number;
-  readingTime: ReadTimeResults;
-  slug: string;
-  title: string;
-  description: string;
-  cover?: {
-    url: string;
-    alt: string;
-    caption?: string;
-  };
-  publishedAt: string;
-  lastUpdated?: string;
-  tags: string;
-};
+import { getFiles } from 'utils/mdx/getFiles';
 
 export type WritingProps = {
   code: string;
-  frontmatter: BlogFrontmatter;
+  frontmatter: WritingType;
 };
 
 export default function Writing({ code, frontmatter }: WritingProps) {

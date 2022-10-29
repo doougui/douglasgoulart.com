@@ -23,6 +23,7 @@
     "date-fns": "^2.29.2",
     "esbuild": "^0.15.11",
     "framer-motion": "^7.2.1",
+    "gray-matter": "^4.0.3",
     "i18next": "^21.8.14",
     "isomorphic-unfetch": "^3.1.0",
     "mdx-bundler": "^9.0.1",

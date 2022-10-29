@@ -16,7 +16,5 @@ describe('<FeaturedWritings />', () => {
     ).toBeInTheDocument();
 
     expect(screen.getByRole('link', { name: 'Read all' })).toBeInTheDocument();
-
-    expect(screen.getAllByTestId('writing')).toHaveLength(3);
   });
 });

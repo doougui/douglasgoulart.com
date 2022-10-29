@@ -1,6 +1,5 @@
 import { Heading2 } from 'components/Headings';
 import { Link } from 'components/Link';
-import { Writing } from 'components/Writing';
 import NextLink from 'next/link';
 import * as S from './styles';
 
@@ -14,11 +13,7 @@ export function FeaturedWritings() {
         </NextLink>
       </S.Heading>
 
-      <S.Content spacing="1rem">
-        <Writing />
-        <Writing />
-        <Writing />
-      </S.Content>
+      <S.Content spacing="1rem" />
     </section>
   );
 }

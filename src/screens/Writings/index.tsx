@@ -2,10 +2,15 @@ import { Heading1 } from 'components/Headings';
 import { MutedText } from 'components/MutedText';
 import { Writing } from 'components/Writing';
 import { Base } from 'layouts/Base';
+import { Writing as WritingType } from 'types/Writing';
 import { Filter } from './components/Filter';
 import * as S from './styles';
 
-export function Writings() {
+type WritingsProps = {
+  writings: WritingType[];
+};
+
+export function Writings({ writings }: WritingsProps) {
   return (
     <Base>
       <Heading1>Writings</Heading1>
@@ -18,12 +23,9 @@ export function Writings() {
       <Filter />
 
       <S.Writings spacing="1rem">
-        <Writing />
-        <Writing />
-        <Writing />
-        <Writing />
-        <Writing />
-        <Writing />
+        {writings.map((writing) => (
+          <Writing {...writing} />
+        ))}
       </S.Writings>
     </Base>
   );
