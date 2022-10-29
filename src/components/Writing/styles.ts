@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.a`
   ${({ theme }) => css`
     padding: 1.5rem;
     background-color: ${theme.colors.background};
@@ -10,6 +10,8 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     gap: 1.5rem;
+
+    text-decoration: none;
 
     &:hover {
       background-color: ${theme.colors.secondary};
@@ -42,7 +44,7 @@ export const Title = styled(Text)`
   ${({ theme }) => css`
     color: ${theme.colors.text};
     font-size: ${theme.font.sizes.medium};
-    line-height: ${theme.font.heights.large};
+    line-height: ${theme.font.heights.medium};
   `}
 `;
 
@@ -50,7 +52,7 @@ export const Excerpt = styled(Text)`
   ${({ theme }) => css`
     color: ${theme.colors.textDark};
     font-size: ${theme.font.sizes.medium};
-    line-height: ${theme.font.heights.large};
+    line-height: ${theme.font.heights.medium};
   `}
 `;
 
@@ -58,6 +60,6 @@ export const Date = styled(Text)`
   ${({ theme }) => css`
     color: ${theme.colors.textDarker};
     font-size: ${theme.font.sizes.xsmall};
-    line-height: ${theme.font.heights.small};
+    line-height: ${theme.font.heights.xsmall};
   `}
 `;

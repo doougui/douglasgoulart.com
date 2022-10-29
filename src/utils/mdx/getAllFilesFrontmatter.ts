@@ -5,9 +5,11 @@ import readingTime from 'reading-time';
 import { Writing } from 'types/Writing';
 import { ContentType } from './types';
 
-export type PickFrontmatter<T extends ContentType> = T extends 'writings'
-  ? Writing
-  : never;
+type Type = {
+  writings: Writing;
+};
+
+export type PickFrontmatter<T extends ContentType> = Type[T];
 
 export async function getAllFilesFrontmatter<T extends ContentType>(type: T) {
   const files = readdirSync(join(process.cwd(), 'src', 'contents', type));

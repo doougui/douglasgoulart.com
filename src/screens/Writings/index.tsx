@@ -24,7 +24,7 @@ export function Writings({ writings }: WritingsProps) {
 
       <S.Writings spacing="1rem">
         {writings.map((writing) => (
-          <Writing {...writing} />
+          <Writing key={writing.slug} {...writing} />
         ))}
       </S.Writings>
     </Base>

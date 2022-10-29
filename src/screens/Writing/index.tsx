@@ -13,12 +13,15 @@ import { SyntaxHighlighter } from 'components/SyntaxHighlighter';
 import { Base } from 'layouts/Base';
 import { getMDXComponent } from 'mdx-bundler/client';
 import NextLink from 'next/link';
-import { WritingProps as WritingPageProps } from 'pages/writing/[slug]';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import { Writing as WritingType } from 'types/Writing';
 import * as S from './styles';
 import { Comments } from './components/Comments';
 
-type WritingProps = WritingPageProps;
+export type WritingProps = {
+  code: string;
+  frontmatter: WritingType;
+};
 
 export function Writing({ code, frontmatter }: WritingProps) {
   const Component = React.useMemo(() => getMDXComponent(code), [code]);

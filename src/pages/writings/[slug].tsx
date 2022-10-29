@@ -1,13 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { Writing as WritingScreen } from 'screens/Writing';
-import { Writing as WritingType } from 'types/Writing';
+import { Writing as WritingScreen, WritingProps } from 'screens/Writing';
 import { getFileBySlug } from 'utils/mdx/getFileBySlug';
 import { getFiles } from 'utils/mdx/getFiles';
-
-export type WritingProps = {
-  code: string;
-  frontmatter: WritingType;
-};
 
 export default function Writing({ code, frontmatter }: WritingProps) {
   return <WritingScreen code={code} frontmatter={frontmatter} />;
