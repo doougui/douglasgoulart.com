@@ -43,13 +43,16 @@ function sortBy<T extends ContentType>(
   return sortTypes[type]();
 }
 
-export async function getAllFilesFrontmatter<T extends ContentType>(
+export async function getFilesFrontmatter<T extends ContentType>(
   type: T,
   sort: SortTypesKeys,
+  max?: number,
 ) {
-  const files = readdirSync(join(process.cwd(), 'src', 'contents', type));
+  let files = readdirSync(join(process.cwd(), 'src', 'contents', type));
 
-  return files.reduce((allPosts: Array<PickFrontmatter<T>>, postSlug) => {
+  if (max) files = files.slice(0, max);
+
+  return files.reduce((allPosts: PickFrontmatter<T>[], postSlug) => {
     const source = readFileSync(
       join(process.cwd(), 'src', 'contents', type, postSlug),
       'utf8',

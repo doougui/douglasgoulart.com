@@ -1,9 +1,15 @@
 import { Heading2 } from 'components/Headings';
 import { Link } from 'components/Link';
+import { Writing } from 'components/Writing';
 import NextLink from 'next/link';
+import { Writing as WritingType } from 'types/Writing';
 import * as S from './styles';
 
-export function FeaturedWritings() {
+export type FeaturedWritingsProps = {
+  data: WritingType[];
+};
+
+export function FeaturedWritings({ data }: FeaturedWritingsProps) {
   return (
     <section>
       <S.Heading>
@@ -13,7 +19,11 @@ export function FeaturedWritings() {
         </NextLink>
       </S.Heading>
 
-      <S.Content spacing="1rem" />
+      <S.Content spacing="1rem">
+        {data.map((writing) => (
+          <Writing key={writing.slug} {...writing} />
+        ))}
+      </S.Content>
     </section>
   );
 }

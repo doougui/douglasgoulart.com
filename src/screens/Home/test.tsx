@@ -35,7 +35,7 @@ jest.mock('./components/Contact', () => ({
 
 describe('<Home />', () => {
   it('should render the sections', () => {
-    render(<Home />);
+    render(<Home featuredWritings={[]} />);
 
     expect(screen.getByTestId('header')).toBeInTheDocument();
     expect(screen.getByTestId('about')).toBeInTheDocument();

@@ -1,15 +1,19 @@
 import { render, screen } from 'utils/tests';
 
-import { FeaturedWritings } from '.';
+import { FeaturedWritings, FeaturedWritingsProps } from '.';
 
 jest.mock('components/Writing', () => ({
   __esModule: true,
   Writing: () => <div data-testid="writing" />,
 }));
 
+const props: FeaturedWritingsProps = {
+  data: [],
+};
+
 describe('<FeaturedWritings />', () => {
   it('should render correctly', () => {
-    render(<FeaturedWritings />);
+    render(<FeaturedWritings {...props} />);
 
     expect(
       screen.getByRole('heading', { name: 'Featured writings' }),

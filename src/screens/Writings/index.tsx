@@ -6,7 +6,7 @@ import { Base } from 'layouts/Base';
 import { useRouter } from 'next/router';
 import { ParsedUrlQueryInput } from 'querystring';
 import { Writing as WritingType } from 'types/Writing';
-import { SortTypes, SortTypesKeys } from 'utils/mdx/getAllFilesFrontmatter';
+import { SortTypes, SortTypesKeys } from 'utils/mdx/getFilesFrontmatter';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { useInfiniteScroll } from 'hooks/useInfiniteScroll';
 import { Filter } from './components/Filter';

@@ -6,4 +6,4 @@ export default {
   component: Home,
 } as Meta;
 
-export const Default: Story = () => <Home />;
+export const Default: Story = () => <Home featuredWritings={[]} />;

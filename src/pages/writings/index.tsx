@@ -1,10 +1,10 @@
 import { GetServerSideProps } from 'next';
 import { Writings as WritingsScreen, WritingsProps } from 'screens/Writings';
 import {
-  getAllFilesFrontmatter,
+  getFilesFrontmatter,
   SortTypes,
   SortTypesKeys,
-} from 'utils/mdx/getAllFilesFrontmatter';
+} from 'utils/mdx/getFilesFrontmatter';
 
 export default function Writings({
   writings,
@@ -34,7 +34,13 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 
   const sort: SortTypesKeys = isValidSort(querySort) ? querySort : 'new';
 
-  const files = await getAllFilesFrontmatter('writings', sort);
+  const files = await getFilesFrontmatter('writings', sort);
 
-  return { props: { writings: files, sortOptions: SortTypes, sort } };
+  return {
+    props: {
+      writings: files,
+      sortOptions: SortTypes,
+      sort,
+    },
+  };
 };
