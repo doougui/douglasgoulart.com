@@ -7,6 +7,8 @@ import { useRouter } from 'next/router';
 import { ParsedUrlQueryInput } from 'querystring';
 import { Writing as WritingType } from 'types/Writing';
 import { SortTypes, SortTypesKeys } from 'utils/mdx/getAllFilesFrontmatter';
+import InfiniteScroll from 'react-infinite-scroll-component';
+import { useInfiniteScroll } from 'hooks/useInfiniteScroll';
 import { Filter } from './components/Filter';
 import * as S from './styles';
 
@@ -16,8 +18,15 @@ export type WritingsProps = {
   sortOptions: SortTypes;
 };
 
+const WRITINGS_PER_PAGE = 10;
+
 export function Writings({ writings, ...sortProps }: WritingsProps) {
   const { push } = useRouter();
+
+  const { current, getMoreData, hasMore } = useInfiniteScroll({
+    data: writings,
+    perPage: WRITINGS_PER_PAGE,
+  });
 
   const handleFilter = React.useCallback(
     (items: ParsedUrlQueryInput) => {
@@ -41,9 +50,16 @@ export function Writings({ writings, ...sortProps }: WritingsProps) {
       <Filter {...sortProps} onFilter={handleFilter} />
 
       <S.Writings spacing="1rem">
-        {writings.map((writing) => (
-          <Writing key={writing.slug} {...writing} />
-        ))}
+        <InfiniteScroll
+          dataLength={current.length}
+          next={getMoreData}
+          hasMore={hasMore}
+          loader={<span>Loading...</span>}
+        >
+          {writings.map((writing) => (
+            <Writing key={writing.slug} {...writing} />
+          ))}
+        </InfiniteScroll>
       </S.Writings>
     </Base>
   );
