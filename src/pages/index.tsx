@@ -7,7 +7,10 @@ export default function Home(props: HomeProps) {
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const files = await getFilesFrontmatter('writings', 'new', 3);
+  const files = await getFilesFrontmatter({
+    type: 'writings',
+    max: 3,
+  });
 
   return {
     props: {

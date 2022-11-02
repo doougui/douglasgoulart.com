@@ -43,34 +43,59 @@ function sortBy<T extends ContentType>(
   return sortTypes[type]();
 }
 
-export async function getFilesFrontmatter<T extends ContentType>(
-  type: T,
-  sort: SortTypesKeys,
-  max?: number,
-) {
+type GetFilesFrontmatterData<T> = {
+  type: T;
+  sort?: SortTypesKeys;
+  max?: number;
+  search?: string;
+};
+
+export async function getFilesFrontmatter<T extends ContentType>({
+  type,
+  sort = 'new',
+  max,
+  search,
+}: GetFilesFrontmatterData<T>) {
   let files = readdirSync(join(process.cwd(), 'src', 'contents', type));
 
   if (max) files = files.slice(0, max);
 
-  return files.reduce((allPosts: PickFrontmatter<T>[], postSlug) => {
-    const source = readFileSync(
-      join(process.cwd(), 'src', 'contents', type, postSlug),
-      'utf8',
-    );
+  const frontmatterFiles = files.reduce(
+    (allPosts: PickFrontmatter<T>[], postSlug) => {
+      const source = readFileSync(
+        join(process.cwd(), 'src', 'contents', type, postSlug),
+        'utf8',
+      );
 
-    const { data } = matter(source);
+      const { data: matterData } = matter(source);
+      const data = matterData as PickFrontmatter<T>;
 
-    const res: PickFrontmatter<T>[] = [
-      {
-        ...(data as PickFrontmatter<T>),
-        slug: postSlug.replace('.mdx', ''),
-        readingTime: readingTime(source),
-      },
-      ...allPosts,
-    ];
+      if (search) {
+        const inSearch = () => {
+          return (
+            data.title.toLowerCase().includes(search.toLowerCase()) ||
+            data.excerpt.toLowerCase().includes(search.toLowerCase())
+          );
+        };
 
-    const sorted = sortBy<T>(res, sort);
+        if (!inSearch()) return allPosts;
+      }
 
-    return sorted;
-  }, []);
+      const res: PickFrontmatter<T>[] = [
+        {
+          ...(data as PickFrontmatter<T>),
+          slug: postSlug.replace('.mdx', ''),
+          readingTime: readingTime(source),
+        },
+        ...allPosts,
+      ];
+
+      return res;
+    },
+    [],
+  );
+
+  const sorted = sortBy<T>(frontmatterFiles, sort);
+
+  return sorted;
 }

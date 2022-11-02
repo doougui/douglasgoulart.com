@@ -7,15 +7,17 @@ import * as S from './styles';
 type Values = ParsedUrlQueryInput;
 
 type FilterProps = {
+  search: string | null;
   sort: SortTypesKeys;
   sortOptions: SortTypes;
   onFilter: (values: Values) => void;
 };
 
-export function Filter({ sort, sortOptions, onFilter }: FilterProps) {
-  const { values, handleInput } = useForm({
+export function Filter({ search, sort, sortOptions, onFilter }: FilterProps) {
+  const { values, handleInput } = useForm<Values>({
     initialValues: {
       sort,
+      search,
     },
   });
 
@@ -45,7 +47,12 @@ export function Filter({ sort, sortOptions, onFilter }: FilterProps) {
           </S.SelectedOrder>
         </S.OrderText>
       </S.Order>
-      <S.SearchInput placeholder="Search writings" />
+      <S.SearchInput
+        name="search"
+        placeholder="Search writings"
+        onInputChange={(v: string) => handleInput('search', v)}
+        initialValue={search ?? undefined}
+      />
     </S.Container>
   );
 }
