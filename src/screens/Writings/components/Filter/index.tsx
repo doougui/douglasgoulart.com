@@ -8,16 +8,24 @@ type Values = ParsedUrlQueryInput;
 
 type FilterProps = {
   search: string | null;
+  tag: string | null;
   sort: SortTypesKeys;
   sortOptions: SortTypes;
   onFilter: (values: Values) => void;
 };
 
-export function Filter({ search, sort, sortOptions, onFilter }: FilterProps) {
+export function Filter({
+  search,
+  sort,
+  sortOptions,
+  tag,
+  onFilter,
+}: FilterProps) {
   const { values, handleInput } = useForm<Values>({
     initialValues: {
       sort,
       search,
+      tag,
     },
   });
 

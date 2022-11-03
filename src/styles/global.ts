@@ -26,7 +26,7 @@ const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: local(''), url('/fonts/Poppins-Bold.ttf') format('truetype');
+    src: local(''), url('/fonts/Inter-Bold.ttf') format('truetype');
   }
 
   * {

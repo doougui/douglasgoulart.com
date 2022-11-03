@@ -48,6 +48,7 @@ type GetFilesFrontmatterData<T> = {
   sort?: SortTypesKeys;
   max?: number;
   search?: string;
+  tag?: string;
 };
 
 export async function getFilesFrontmatter<T extends ContentType>({
@@ -55,6 +56,7 @@ export async function getFilesFrontmatter<T extends ContentType>({
   sort = 'new',
   max,
   search,
+  tag,
 }: GetFilesFrontmatterData<T>) {
   let files = readdirSync(join(process.cwd(), 'src', 'contents', type));
 
@@ -79,6 +81,17 @@ export async function getFilesFrontmatter<T extends ContentType>({
         };
 
         if (!inSearch()) return allPosts;
+      }
+
+      if (tag) {
+        const hasTag = () => {
+          return data.tags
+            .split(',')
+            .map((tagItem) => tagItem.toLowerCase())
+            .some((tagItem) => tagItem === tag.toLowerCase());
+        };
+
+        if (!hasTag()) return allPosts;
       }
 
       const res: PickFrontmatter<T>[] = [

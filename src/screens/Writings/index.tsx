@@ -13,11 +13,12 @@ import * as S from './styles';
 export type WritingsProps = {
   writings: WritingType[];
   search: string | null;
+  tag: string | null;
   sort: SortTypesKeys;
   sortOptions: SortTypes;
 };
 
-export function Writings({ writings, ...sortProps }: WritingsProps) {
+export function Writings({ writings, ...filterProps }: WritingsProps) {
   const { push } = useRouter();
 
   const handleFilter = React.useCallback(
@@ -39,7 +40,7 @@ export function Writings({ writings, ...sortProps }: WritingsProps) {
         experience.
       </MutedText>
 
-      <Filter {...sortProps} onFilter={handleFilter} />
+      <Filter {...filterProps} onFilter={handleFilter} />
 
       <S.Writings spacing="1rem">
         {writings.map((writing) => (

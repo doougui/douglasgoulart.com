@@ -30,7 +30,7 @@ export function Writing({ code, frontmatter }: WritingProps) {
     const joinedTags = frontmatter.tags.split(',').map((tag, index) => (
       <React.Fragment key={tag}>
         {index > 0 && ', '}
-        <NextLink href={`./topics/${tag.toLowerCase()}`} passHref>
+        <NextLink href={{ pathname: '/writings', query: { tag } }} passHref>
           <Link>{tag}</Link>
         </NextLink>
       </React.Fragment>
@@ -82,9 +82,7 @@ export function Writing({ code, frontmatter }: WritingProps) {
           />
         </S.Content>
 
-        <S.RelatedTopics>
-          <>Related topics: {renderTags()}.</>
-        </S.RelatedTopics>
+        <S.RelatedTopics>Related topics: {renderTags()}.</S.RelatedTopics>
 
         <Comments />
       </article>
