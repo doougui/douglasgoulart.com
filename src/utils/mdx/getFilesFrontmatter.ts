@@ -51,6 +51,58 @@ type GetFilesFrontmatterData<T> = {
   tag?: string;
 };
 
+function inSearch<T extends ContentType>(
+  data: PickFrontmatter<T>,
+  search: string,
+) {
+  return (
+    data.title.toLowerCase().includes(search.toLowerCase()) ||
+    data.excerpt.toLowerCase().includes(search.toLowerCase())
+  );
+}
+
+function hasTag<T extends ContentType>(data: PickFrontmatter<T>, tag: string) {
+  return data.tags
+    .split(',')
+    .map((tagItem) => tagItem.toLowerCase())
+    .some((tagItem) => tagItem === tag.toLowerCase());
+}
+
+type GetFrontmatterFilesData<T extends ContentType> = {
+  files: string[];
+} & Pick<GetFilesFrontmatterData<T>, 'search' | 'tag' | 'type'>;
+
+function getFrontmatterFiles<T extends ContentType>({
+  files,
+  search,
+  tag,
+  type,
+}: GetFrontmatterFilesData<T>) {
+  return files.reduce((allPosts: PickFrontmatter<T>[], postSlug) => {
+    const source = readFileSync(
+      join(process.cwd(), 'src', 'contents', type, postSlug),
+      'utf8',
+    );
+
+    const { data: matterData } = matter(source);
+    const data = matterData as PickFrontmatter<T>;
+
+    if (search && !inSearch<T>(data, search)) return allPosts;
+    if (tag && !hasTag<T>(data, tag)) return allPosts;
+
+    const res: PickFrontmatter<T>[] = [
+      {
+        ...(data as PickFrontmatter<T>),
+        slug: postSlug.replace('.mdx', ''),
+        readingTime: readingTime(source),
+      },
+      ...allPosts,
+    ];
+
+    return res;
+  }, []);
+}
+
 export async function getFilesFrontmatter<T extends ContentType>({
   type,
   sort = 'new',
@@ -62,51 +114,7 @@ export async function getFilesFrontmatter<T extends ContentType>({
 
   if (max) files = files.slice(0, max);
 
-  const frontmatterFiles = files.reduce(
-    (allPosts: PickFrontmatter<T>[], postSlug) => {
-      const source = readFileSync(
-        join(process.cwd(), 'src', 'contents', type, postSlug),
-        'utf8',
-      );
-
-      const { data: matterData } = matter(source);
-      const data = matterData as PickFrontmatter<T>;
-
-      if (search) {
-        const inSearch = () => {
-          return (
-            data.title.toLowerCase().includes(search.toLowerCase()) ||
-            data.excerpt.toLowerCase().includes(search.toLowerCase())
-          );
-        };
-
-        if (!inSearch()) return allPosts;
-      }
-
-      if (tag) {
-        const hasTag = () => {
-          return data.tags
-            .split(',')
-            .map((tagItem) => tagItem.toLowerCase())
-            .some((tagItem) => tagItem === tag.toLowerCase());
-        };
-
-        if (!hasTag()) return allPosts;
-      }
-
-      const res: PickFrontmatter<T>[] = [
-        {
-          ...(data as PickFrontmatter<T>),
-          slug: postSlug.replace('.mdx', ''),
-          readingTime: readingTime(source),
-        },
-        ...allPosts,
-      ];
-
-      return res;
-    },
-    [],
-  );
+  const frontmatterFiles = getFrontmatterFiles({ files, search, tag, type });
 
   const sorted = sortBy<T>(frontmatterFiles, sort);
 

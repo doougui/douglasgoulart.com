@@ -42,6 +42,21 @@ export default function Writings({
   );
 }
 
+const getSort = (
+  allowedSortOptions: SortTypesKeys[],
+  querySort: string | string[] | undefined,
+): SortTypesKeys => {
+  return isValidSort(allowedSortOptions, querySort) ? querySort : 'new';
+};
+
+const getSearch = (querySearch: string | string[] | undefined) => {
+  return isValidSearch(querySearch) ? querySearch : undefined;
+};
+
+const getTag = (queryTag: string | string[] | undefined) => {
+  return isValidTag(queryTag) ? queryTag : undefined;
+};
+
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const { sort: querySort, search: querySearch, tag: queryTag } = query;
 
@@ -49,15 +64,9 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     ...(Object.keys(SortTypes) as SortTypesKeys[]),
   ];
 
-  const sort: SortTypesKeys = isValidSort(allowedSortOptions, querySort)
-    ? querySort
-    : 'new';
-
-  const search: string | undefined = isValidSearch(querySearch)
-    ? querySearch
-    : undefined;
-
-  const tag: string | undefined = isValidTag(queryTag) ? queryTag : undefined;
+  const sort = getSort(allowedSortOptions, querySort);
+  const search = getSearch(querySearch);
+  const tag = getTag(queryTag);
 
   const files = await getFilesFrontmatter({
     type: 'writings',
