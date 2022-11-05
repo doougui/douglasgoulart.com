@@ -1,39 +1,36 @@
-import React from 'react';
+import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { ThemeProvider } from 'styled-components';
-import GlobalStyles from 'styles/global';
 import NextNProgress from 'nextjs-progressbar';
-import dark from 'styles/themes/dark';
-import { useDarkMode } from 'usehooks-ts';
-import light from 'styles/themes/light';
+import GlobalStyles from 'styles/global';
 
+import { PageProvider } from 'components/PageProvider';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 function App({ Component, pageProps }: AppProps) {
-  const { isDarkMode } = useDarkMode(true);
-
   return (
-    <ThemeProvider theme={isDarkMode ? dark : light}>
-      <Head>
-        <title>Home | Douglas Pinheiro Goulart</title>
-        <link rel="icon" href="/img/icon-512.png" />
-        <link rel="apple-touch-icon" href="/img/icon-192.png" />
-        <link rel="manifest" href="/manifest.json" />
-        <meta
-          name="description"
-          content="A simple project starter to work with TypeScript, React, NextJS and Styled Components"
+    <ThemeProvider>
+      <PageProvider>
+        <Head>
+          <title>Home | Douglas Pinheiro Goulart</title>
+          <link rel="icon" href="/img/icon-512.png" />
+          <link rel="apple-touch-icon" href="/img/icon-192.png" />
+          <link rel="manifest" href="/manifest.json" />
+          <meta
+            name="description"
+            content="A simple project starter to work with TypeScript, React, NextJS and Styled Components"
+          />
+        </Head>
+        <GlobalStyles />
+        <NextNProgress
+          color="#107BEB"
+          startPosition={0.3}
+          stopDelayMs={200}
+          height={5}
+          showOnShallow={true}
         />
-      </Head>
-      <GlobalStyles />
-      <NextNProgress
-        color="#107BEB"
-        startPosition={0.3}
-        stopDelayMs={200}
-        height={5}
-        showOnShallow={true}
-      />
-      <Component {...pageProps} />
+        <Component {...pageProps} />
+      </PageProvider>
     </ThemeProvider>
   );
 }

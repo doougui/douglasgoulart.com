@@ -1,8 +1,8 @@
+import { useFlashbang } from 'components/ThemeSwitcher/contexts/flashbang-context';
+import { useTheme as useNextTheme } from 'next-themes';
 import React from 'react';
 import { RiMoonLine, RiSunLine } from 'react-icons/ri';
 import { useTheme } from 'styled-components';
-import { useFlashbang } from 'components/ThemeSwitcher/contexts/flashbang-context';
-import { useDarkMode } from 'usehooks-ts';
 import { Flashbang } from '../Flashbang';
 import * as S from './styles';
 
@@ -28,20 +28,10 @@ const bangTimes: BangTimes = {
   't_flashbang05.mp3': 2140,
 };
 
-type AvailableThemes = 'dark' | 'light';
-
 export function Themes() {
   const [canPlay, setCanPlay] = React.useState(false);
-  const [selectedTheme, setSelectedTheme] =
-    React.useState<AvailableThemes | null>(null);
 
-  const { isDarkMode, disable, enable } = useDarkMode();
-
-  React.useEffect(() => {
-    const theme = isDarkMode ? 'dark' : 'light';
-    setSelectedTheme(theme);
-  }, [isDarkMode]);
-
+  const { setTheme, resolvedTheme } = useNextTheme();
   const theme = useTheme();
 
   const { setIsOpen } = useFlashbang();
@@ -53,10 +43,10 @@ export function Themes() {
   }, []);
 
   const toggleLightMode = () => {
-    if (selectedTheme === 'light') return;
+    if (resolvedTheme === 'light') return;
 
     if (!canPlay) {
-      disable();
+      setTheme('light');
       return;
     }
 
@@ -76,7 +66,7 @@ export function Themes() {
     const time = getBangTime();
 
     setTimeout(() => {
-      disable();
+      setTheme('light');
       setIsOpen(true);
       setTimeout(() => setIsOpen(false), FADE_OUT_TIME);
     }, time);
@@ -103,15 +93,15 @@ export function Themes() {
       <Flashbang />
       <S.Toggle
         data-testid="light-toggle"
-        isActive={selectedTheme === 'light'}
+        isActive={resolvedTheme === 'light'}
         onClick={toggleLightMode}
       >
         <RiSunLine size={15} color={theme.colors.text} />
       </S.Toggle>
       <S.Toggle
         data-testid="dark-toggle"
-        isActive={selectedTheme === 'dark'}
-        onClick={enable}
+        isActive={resolvedTheme === 'dark'}
+        onClick={() => setTheme('dark')}
       >
         <RiMoonLine size={15} color={theme.colors.text} />
       </S.Toggle>

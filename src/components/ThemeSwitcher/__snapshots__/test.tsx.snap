@@ -1,33 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ThemeSwitcher /> should render correctly 1`] = `
-.c2 {
-  width: 3rem;
-  height: 3rem;
-  padding: 5px;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-radius: 0.4rem;
-  background: #2D2D2F;
-  -webkit-transition: background-color 0.1s ease-in-out;
-  transition: background-color 0.1s ease-in-out;
-}
-
-.c2:hover {
-  background: #1C1C1C;
-}
-
 .c1 {
   width: 3rem;
   height: 3rem;
@@ -49,7 +22,6 @@ exports[`<ThemeSwitcher /> should render correctly 1`] = `
   background: #2D2D2F;
   -webkit-transition: background-color 0.1s ease-in-out;
   transition: background-color 0.1s ease-in-out;
-  background: #504F57;
 }
 
 .c1:hover {
@@ -101,7 +73,7 @@ exports[`<ThemeSwitcher /> should render correctly 1`] = `
     </svg>
   </div>
   <div
-    class="c2"
+    class="c1"
     data-testid="dark-toggle"
   >
     <svg
