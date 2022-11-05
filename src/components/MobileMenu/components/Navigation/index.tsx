@@ -30,7 +30,7 @@ export function Navigation({ isOpen }: NavigationProps) {
         <Item href="/">Home</Item>
         <Item href="/about">About</Item>
         <Item href="/writings">Writings</Item>
-        <Item href="/guestbook">Guestbook</Item>
+        {/* <Item href="/guestbook">Guestbook</Item> */}
       </List>
     </S.Container>
   );

@@ -50,17 +50,17 @@ exports[`<AboutMe /> should render correctly 1`] = `
     <p
       class="c2"
     >
-      I‘m a UI developer based in Barcelona. I‘m interested in design systems, web3, user/dev experience and under engineering.
+      Hi. My name is Douglas and I'm a software developer. Nice to meet you 👋. Aside from software development, I also like to play some games and write about things I learn.
     </p>
     <p
       class="c2"
     >
-      I‘m currently doing UI/DX at Rainbow to help create the world‘s friendliest wallet.
+      One day, I went to visit a technical school. I saw some robots and decided to learn programming and here I am 😀. I've been studying software development for over 4 years now.
     </p>
     <p
       class="c2"
     >
-      Previously, I worked at Modulz. Where I co-created Radix, designed the Stitches API and led the developer community.
+      While working professionally, I managed to ship products which generated value and eased the life of thousands of users whilst improving the quality of existing software and creating new, valuable software from the beginning.
     </p>
   </div>
 </section>

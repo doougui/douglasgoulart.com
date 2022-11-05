@@ -11,7 +11,7 @@ export function Menu() {
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
     { label: 'Writings', href: '/writings' },
-    { label: 'Guestbook', href: '/guestbook' },
+    // { label: 'Guestbook', href: '/guestbook' },
   ];
 
   const router = useRouter();

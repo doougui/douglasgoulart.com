@@ -10,6 +10,7 @@ export function MyStack() {
     { color: '#F7E018', name: 'JavaScript' },
     { color: '#2D79C7', name: 'TypeScript' },
     { color: '#80D8F7', name: 'React.js' },
+    { color: '#FFFFFF', name: 'Next.js' },
     { color: '#61DAFB', name: 'React Native' },
   ];
 

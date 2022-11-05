@@ -10,16 +10,19 @@ export function About() {
   return (
     <S.Container>
       <p>
-        I&lsquo;m a UI developer based in Barcelona. I&lsquo;m interested in
-        design systems, web3, user/dev experience and under engineering.
+        Hi, my name is Douglas. I&apos;m a software developer based in Brazil
+        that likes to play some games and write about some cool stuff I learn
+        along my journey as a software dev.
       </p>
       <p>
-        I&lsquo;m currently doing UI/DX at Rainbow to help create the
-        world&lsquo;s friendliest wallet.
+        I&lsquo;m currently doing front-end and mobile development at Tecimob
+        where I managed to generate value and ease the life of more than three
+        thousand real estate agencies whilst improving the quality of existing
+        software and creating new, valuable software from the beginning.
       </p>
       <p>
-        Previously, I worked at Modulz. Where I co-created Radix, designed the
-        Stitches API and led the developer community.
+        Most of my experience comes down to working with JavaScript, TypeScript,
+        React, React Native and Next.js.
       </p>
 
       <S.Footer>

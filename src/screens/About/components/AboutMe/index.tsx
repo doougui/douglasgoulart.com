@@ -13,16 +13,20 @@ export function AboutMe() {
 
       <S.AboutText>
         <S.Paragraph>
-          I&lsquo;m a UI developer based in Barcelona. I&lsquo;m interested in
-          design systems, web3, user/dev experience and under engineering.
+          Hi. My name is Douglas and I&apos;m a software developer. Nice to meet
+          you 👋. Aside from software development, I also like to play some
+          games and write about things I learn.
         </S.Paragraph>
         <S.Paragraph>
-          I&lsquo;m currently doing UI/DX at Rainbow to help create the
-          world&lsquo;s friendliest wallet.
+          One day, I went to visit a technical school. I saw some robots and
+          decided to learn programming and here I am 😀. I&apos;ve been studying
+          software development for over 4 years now.
         </S.Paragraph>
         <S.Paragraph>
-          Previously, I worked at Modulz. Where I co-created Radix, designed the
-          Stitches API and led the developer community.
+          While working professionally, I managed to ship products which
+          generated value and eased the life of thousands of users whilst
+          improving the quality of existing software and creating new, valuable
+          software from the beginning.
         </S.Paragraph>
       </S.AboutText>
     </S.Container>

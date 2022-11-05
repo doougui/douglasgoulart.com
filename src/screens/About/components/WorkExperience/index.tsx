@@ -12,9 +12,10 @@ export function WorkExperience() {
       startDate: 'Aug 2021',
       endDate: 'Present',
       responsabilities: [
-        'Write modern, performant, maintainable code for a diverse array of client and internal projects',
-        'Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify',
-        'Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis',
+        'Write internal projects to speed up the workflow of the other members of the company',
+        'Write modern, maintainable and performant code for a diverse array of clients using primarily React.js and its ecossystem',
+        'Design the UI, defining the overall technical architecture and developing our mobile application with over 5000 users by using React Native with tools like TypeScript, Styled Components, Jest, Git, etc.',
+        'Architect, design and lead the development of a Chrome extension to integrate with WhatsApp and ease the workflow of our users',
       ],
     },
     {
@@ -23,10 +24,9 @@ export function WorkExperience() {
       startDate: 'May 2021',
       endDate: 'Aug - 2021',
       responsabilities: [
-        'Developed and shipped highly interactive web applications for Apple Music using Ember.js',
-        'Built and shipped the Apple Music Extension within Facebook Messenger leveraging third-party and internal APIs',
-        "Architected and implemented the front-end of Apple Music's embeddable web player widget, which lets users log in and listen to full songs in the browser",
-        'Contributed extensively to MusicKit.js, a JavaScript framework that allows developers to add an Apple Music player to their web apps',
+        'Maintain and evolve the enterprise management application Terravista while helping more than 253 enterprises grow',
+        'Work as a full-stack developer by making use of technologies like PHP with Zend Framework, Docker and JavaScript',
+        'Collaborate closely with team members to deliver a high quality product by making use of SCRUM as an Agile Framework',
       ],
     },
   ];

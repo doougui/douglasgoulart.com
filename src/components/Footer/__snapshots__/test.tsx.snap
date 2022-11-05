@@ -230,12 +230,6 @@ exports[`<Footer /> should render correctly 1`] = `
         >
           Writings
         </a>
-        <a
-          class="c6"
-          href="/guestbook"
-        >
-          Guestbook
-        </a>
       </nav>
     </section>
     <section>
@@ -260,13 +254,6 @@ exports[`<Footer /> should render correctly 1`] = `
           target="_blank"
         >
           Linkedin
-        </a>
-        <a
-          class="c6"
-          href="https://twitter.com/oDougui"
-          target="_blank"
-        >
-          Twitter
         </a>
         <a
           class="c6"

@@ -5,7 +5,7 @@ describe('<Header />', () => {
   it('should render the home header', () => {
     render(<Header />);
 
-    expect(screen.getByText('Hi there, I’m a...')).toBeInTheDocument();
+    expect(screen.getByText("Hi there, I'm a...")).toBeInTheDocument();
 
     expect(
       screen.getByRole('heading', {
@@ -15,7 +15,7 @@ describe('<Header />', () => {
 
     expect(
       screen.getByText(
-        'Helping developers build a faster web. Teaching about web development, serverless, and React / Next.js.',
+        "I'm a Front-end developer based in Brazil and moved by curiosity. I am currently focused on solutions for the web",
       ),
     ).toBeInTheDocument();
   });

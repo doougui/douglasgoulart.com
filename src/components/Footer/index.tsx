@@ -24,10 +24,6 @@ export function Footer() {
             <Link href="/writings" passHref>
               <S.Link>Writings</S.Link>
             </Link>
-
-            <Link href="/guestbook" passHref>
-              <S.Link>Guestbook</S.Link>
-            </Link>
           </S.Nav>
         </section>
 
@@ -41,10 +37,6 @@ export function Footer() {
 
             <Link href="https://www.linkedin.com/in/douglaspigoulart/" passHref>
               <S.Link target="_blank">Linkedin</S.Link>
-            </Link>
-
-            <Link href="https://twitter.com/oDougui" passHref>
-              <S.Link target="_blank">Twitter</S.Link>
             </Link>
 
             <Link href="mailto:douglaspigoulart@gmail.com" passHref>
