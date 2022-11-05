@@ -1,4 +1,5 @@
 import { Image } from 'components/Image';
+import { MediaMatch } from 'components/MediaMatch';
 import { Stack } from 'components/Stack';
 import NextLink from 'next/link';
 import { Writing as WritingType } from 'types/Writing';
@@ -26,10 +27,15 @@ export function Writing({
         <S.Content>
           <Stack spacing="8px">
             <S.Title>{title}</S.Title>
-            <S.Excerpt>{excerpt}</S.Excerpt>
-            <S.Date>
-              {formatDateString(publishedAt, 'yyyy-MM-dd', 'MMMM dd, yyyy')}
-            </S.Date>
+
+            <MediaMatch greaterThan="small">
+              <Stack spacing="8px">
+                <S.Excerpt>{excerpt}</S.Excerpt>
+                <S.Date>
+                  {formatDateString(publishedAt, 'yyyy-MM-dd', 'MMMM dd, yyyy')}
+                </S.Date>
+              </Stack>
+            </MediaMatch>
           </Stack>
         </S.Content>
       </S.Container>

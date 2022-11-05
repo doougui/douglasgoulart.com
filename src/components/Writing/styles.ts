@@ -22,6 +22,7 @@ export const Container = styled.a`
 export const ImageBox = styled.div`
   ${({ theme }) => css`
     width: 8rem;
+    min-width: 8rem;
     height: 8rem;
     border-radius: ${theme.border.radius};
     overflow: hidden;
