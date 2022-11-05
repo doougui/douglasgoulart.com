@@ -1,4 +1,5 @@
 import { GetServerSideProps } from 'next';
+import { NextSeo } from 'next-seo';
 import { Writings as WritingsScreen, WritingsProps } from 'screens/Writings';
 import {
   getFilesFrontmatter,
@@ -32,13 +33,19 @@ export default function Writings({
   tag,
 }: WritingsProps) {
   return (
-    <WritingsScreen
-      writings={writings}
-      search={search}
-      sortOptions={sortOptions}
-      sort={sort}
-      tag={tag}
-    />
+    <>
+      <NextSeo
+        title="Writings | Douglas Pinheiro Goulart"
+        description="Thoughts, curiosities and tutorials about software development to sharpen your skills and make you a better developer."
+      />
+      <WritingsScreen
+        writings={writings}
+        search={search}
+        sortOptions={sortOptions}
+        sort={sort}
+        tag={tag}
+      />
+    </>
   );
 }
 

@@ -11,7 +11,7 @@ export function Guestbook() {
     <Base>
       <Heading1>Guestbook</Heading1>
       <MutedText>
-        Leave a comment below. It could be anything – appreciation, information,
+        Leave a message below. It could be anything – appreciation, information,
         wisdom, or even humor. Surprise me!
       </MutedText>
 

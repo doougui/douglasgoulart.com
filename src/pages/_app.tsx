@@ -12,7 +12,7 @@ function App({ Component, pageProps }: AppProps) {
     <ThemeProvider>
       <PageProvider>
         <Head>
-          <title>Home | Douglas Pinheiro Goulart</title>
+          <title>Douglas Pinheiro Goulart</title>
           <link rel="icon" href="/img/icon-512.png" />
           <link rel="apple-touch-icon" href="/img/icon-192.png" />
           <link rel="manifest" href="/manifest.json" />
