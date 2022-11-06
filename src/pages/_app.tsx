@@ -6,6 +6,8 @@ import GlobalStyles from 'styles/global';
 
 import { PageProvider } from 'components/PageProvider';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+import { DefaultSeo } from 'next-seo';
+import { getAbsoluteUrl } from 'utils/shared/get-absolute-url';
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -18,7 +20,7 @@ function App({ Component, pageProps }: AppProps) {
           <link rel="manifest" href="/manifest.json" />
           <meta
             name="description"
-            content="A simple project starter to work with TypeScript, React, NextJS and Styled Components"
+            content="Front-end software developer based in Brazil and focused on web solutions"
           />
         </Head>
         <GlobalStyles />
@@ -28,6 +30,27 @@ function App({ Component, pageProps }: AppProps) {
           stopDelayMs={200}
           height={5}
           showOnShallow={true}
+        />
+        <DefaultSeo
+          openGraph={{
+            url: getAbsoluteUrl(),
+            title: 'Douglas Pinheiro Goulart',
+            description:
+              'Front-end software developer based in Brazil and focused on web solutions',
+            images: [
+              {
+                url: 'https://www.example.ie/og-image-01.jpg',
+                width: 800,
+                height: 600,
+                alt: 'Og Image Alt',
+                type: 'image/jpeg',
+              },
+            ],
+            siteName: 'Douglas Pinheiro Goulart',
+          }}
+          twitter={{
+            cardType: 'summary_large_image',
+          }}
         />
         <Component {...pageProps} />
       </PageProvider>

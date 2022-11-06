@@ -1,6 +1,6 @@
 {
-  "name": "Next boilerplate",
-  "short_name": "Next boilerplate",
+  "name": "Douglas Pinheiro Goulart",
+  "short_name": "Douglas Pinheiro Goulart",
   "icons": [
     {
       "src": "/img/icon-192.png",
@@ -13,9 +13,9 @@
       "sizes": "512x512"
     }
   ],
-  "background_color": "#111111",
-  "description": "A simple project starter to work with TypeScript, React, NextJS and Styled Components",
+  "background_color": "#107BEB",
+  "description": "Front-end software developer based in Brazil and focused on web solutions",
   "display": "fullscreen",
   "start_url": "/",
-  "theme_color": "#111111"
+  "theme_color": "#107BEB"
 }
