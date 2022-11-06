@@ -6,6 +6,7 @@ import {
   SortTypes,
   SortTypesKeys,
 } from 'utils/mdx/getFilesFrontmatter';
+import { getPageUrl } from 'utils/shared/get-page-url';
 
 const isValidSort = (
   allowedSortOptions: SortTypesKeys[],
@@ -37,6 +38,7 @@ export default function Writings({
       <NextSeo
         title="Writings | Douglas Pinheiro Goulart"
         description="Thoughts, curiosities and tutorials about software development to sharpen your skills and make you a better developer."
+        canonical={getPageUrl()}
       />
       <WritingsScreen
         writings={writings}

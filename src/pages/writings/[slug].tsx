@@ -1,10 +1,21 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { NextSeo } from 'next-seo';
 import { Writing as WritingScreen, WritingProps } from 'screens/Writing';
 import { getFileBySlug } from 'utils/mdx/getFileBySlug';
 import { getFiles } from 'utils/mdx/getFiles';
+import { getPageUrl } from 'utils/shared/get-page-url';
 
 export default function Writing({ code, frontmatter }: WritingProps) {
-  return <WritingScreen code={code} frontmatter={frontmatter} />;
+  return (
+    <>
+      <NextSeo
+        title={`${frontmatter.title} | Douglas Pinheiro Goulart`}
+        description={frontmatter.excerpt}
+        canonical={getPageUrl()}
+      />
+      <WritingScreen code={code} frontmatter={frontmatter} />
+    </>
+  );
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
