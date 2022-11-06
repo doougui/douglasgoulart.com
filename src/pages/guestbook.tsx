@@ -9,6 +9,10 @@ export default function Guestbook() {
         title="Guestbook | Douglas Pinheiro Goulart"
         description="Leave a message to the people of the future"
         canonical={getPageUrl()}
+        openGraph={{
+          title: 'Guestbook | Douglas Pinheiro Goulart',
+          description: 'Leave a message to the people of the future',
+        }}
       />
       <GuestbookScreen />
     </>

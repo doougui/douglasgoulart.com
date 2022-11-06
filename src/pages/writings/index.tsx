@@ -39,6 +39,11 @@ export default function Writings({
         title="Writings | Douglas Pinheiro Goulart"
         description="Thoughts, curiosities and tutorials about software development to sharpen your skills and make you a better developer."
         canonical={getPageUrl()}
+        openGraph={{
+          title: 'Writings | Douglas Pinheiro Goulart',
+          description:
+            'Thoughts, curiosities and tutorials about software development to sharpen your skills and make you a better developer.',
+        }}
       />
       <WritingsScreen
         writings={writings}

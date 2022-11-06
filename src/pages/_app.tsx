@@ -35,14 +35,16 @@ function App({ Component, pageProps }: AppProps) {
           openGraph={{
             url: getAbsoluteUrl(),
             title: 'Douglas Pinheiro Goulart',
+            type: 'website',
+            locale: 'en_US',
             description:
               'Front-end software developer based in Brazil and focused on web solutions',
             images: [
               {
-                url: 'https://www.example.ie/og-image-01.jpg',
-                width: 800,
-                height: 600,
-                alt: 'Og Image Alt',
+                url: `${getAbsoluteUrl()}/img/card.jpg`,
+                width: 1200,
+                height: 630,
+                alt: 'Front-end and Mobile developer with an eye for design.',
                 type: 'image/jpeg',
               },
             ],

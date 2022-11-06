@@ -10,6 +10,11 @@ export default function About() {
         title="About | Douglas Pinheiro Goulart"
         description="Douglas is a front-end developer who started learning software development when he was a teenager. He also likes to play some games and write articles about some cool stuff he learns throughout his career."
         canonical={getPageUrl()}
+        openGraph={{
+          title: 'About | Douglas Pinheiro Goulart',
+          description:
+            'Douglas is a front-end developer who started learning software development when he was a teenager. He also likes to play some games and write articles about some cool stuff he learns throughout his career.',
+        }}
       />
       <AboutScreen />
     </>
