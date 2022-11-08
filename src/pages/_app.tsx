@@ -53,6 +53,12 @@ function App({ Component, pageProps }: AppProps) {
           twitter={{
             cardType: 'summary_large_image',
           }}
+          additionalMetaTags={[
+            {
+              httpEquiv: 'content-type',
+              content: 'text/html; charset=utf-8',
+            },
+          ]}
         />
         <Component {...pageProps} />
       </PageProvider>
