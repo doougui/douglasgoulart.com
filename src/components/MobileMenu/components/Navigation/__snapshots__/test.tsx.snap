@@ -13,6 +13,19 @@ exports[`<Navigation /> should render closed state 1`] = `
   line-height: 1.8rem;
   -webkit-text-decoration: none;
   text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  gap: 7px;
 }
 
 .c1 {
@@ -73,6 +86,36 @@ exports[`<Navigation /> should render closed state 1`] = `
         tabindex="-1"
       >
         Writings
+      </a>
+    </li>
+    <li
+      class="c2"
+    >
+      <a
+        class="c3"
+        href="https://github.com/doougui/douglasgoulart.com"
+        tabindex="-1"
+      >
+        GitHub
+        <svg
+          fill="currentColor"
+          height="16"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 24 24"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g>
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v8h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"
+            />
+          </g>
+        </svg>
       </a>
     </li>
   </ul>

@@ -15,5 +15,9 @@ export const LinkText = styled.a`
     font-size: ${theme.font.sizes.medium};
     line-height: ${theme.font.heights.medium};
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 7px;
   `}
 `;

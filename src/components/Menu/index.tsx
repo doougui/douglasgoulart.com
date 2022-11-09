@@ -1,8 +1,10 @@
 import { Logo } from 'components/Logo';
 import { MediaMatch } from 'components/MediaMatch';
 import { ThemeSwitcher } from 'components/ThemeSwitcher';
+import { REPO_URL } from 'config/app';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { RiExternalLinkLine } from 'react-icons/ri';
 import { MobileMenu } from '../MobileMenu';
 import * as S from './styles';
 
@@ -12,6 +14,11 @@ export function Menu() {
     { label: 'About', href: '/about' },
     { label: 'Writings', href: '/writings' },
     // { label: 'Guestbook', href: '/guestbook' },
+    {
+      label: 'GitHub',
+      href: REPO_URL,
+      isExternal: true,
+    },
   ];
 
   const router = useRouter();
@@ -29,9 +36,15 @@ export function Menu() {
       </MediaMatch>
 
       <S.MenuNav data-testid="desktop-menu">
-        {items.map((item) => (
-          <Link key={item.href} href={item.href} passHref>
-            <S.MenuLink active={is(item.href)}>{item.label}</S.MenuLink>
+        {items.map(({ href, label, isExternal }) => (
+          <Link key={href} href={href} passHref>
+            <S.MenuLink
+              target={isExternal ? '_blank' : undefined}
+              active={is(href)}
+            >
+              {label}
+              {isExternal && <RiExternalLinkLine size={16} />}
+            </S.MenuLink>
           </Link>
         ))}
 

@@ -33,6 +33,10 @@ export const MenuLink = styled.a<MenuLinkProps>`
     color: ${theme.colors.text};
     padding: 0 1.5rem;
 
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
     ${active && menuLinkModifiers.active(theme)};
   `}
 `;

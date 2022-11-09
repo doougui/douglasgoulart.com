@@ -1,3 +1,5 @@
+import { REPO_URL } from 'config/app';
+import { RiExternalLinkLine } from 'react-icons/ri';
 import { Item } from '../Item';
 import { List } from '../List';
 import * as S from './styles';
@@ -24,6 +26,11 @@ export function Navigation({ isOpen }: NavigationProps) {
     { href: '/about', label: 'About' },
     { href: '/writings', label: 'Writings' },
     // { href: '/guestbook', label: 'Guestbook' },
+    {
+      label: 'GitHub',
+      href: REPO_URL,
+      isExternal: true,
+    },
   ];
 
   return (
@@ -34,9 +41,10 @@ export function Navigation({ isOpen }: NavigationProps) {
       aria-hidden={!isOpen}
     >
       <List>
-        {items.map(({ href, label }) => (
-          <Item href={href} tabIndex={!isOpen ? -1 : undefined}>
+        {items.map(({ href, label, isExternal }) => (
+          <Item href={href ?? '#'} tabIndex={!isOpen ? -1 : undefined}>
             {label}
+            {isExternal && <RiExternalLinkLine size={16} />}
           </Item>
         ))}
       </List>
