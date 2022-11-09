@@ -41,7 +41,7 @@ export function Writing({ code, frontmatter }: WritingProps) {
 
   return (
     <Base>
-      <article>
+      <article itemScope itemType="https://schema.org/Article">
         <S.Heading>
           <S.Title>{frontmatter.title}</S.Title>
           <MutedText>
