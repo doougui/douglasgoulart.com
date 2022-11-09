@@ -62,6 +62,7 @@ exports[`<About /> should render correctly 1`] = `
       class="c3"
     >
       <a
+        aria-label="Douglas' GitHub"
         data-testid="github-link"
         href="https://github.com/doougui"
         target="_blank"
@@ -89,6 +90,7 @@ exports[`<About /> should render correctly 1`] = `
         </svg>
       </a>
       <a
+        aria-label="Douglas' Linkedin"
         data-testid="linkedin-link"
         href="https://www.linkedin.com/in/douglaspigoulart/"
         target="_blank"
@@ -117,6 +119,7 @@ exports[`<About /> should render correctly 1`] = `
         </svg>
       </a>
       <a
+        aria-label="Douglas' Twitter"
         data-testid="twitter-link"
         href="https://twitter.com/oDougui"
         target="_blank"

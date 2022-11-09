@@ -6,7 +6,7 @@ type ToggleProps = {
 
 export function Toggle({ toggle }: ToggleProps) {
   return (
-    <S.Button type="button" onClick={toggle}>
+    <S.Button type="button" onClick={toggle} aria-label="Open menu">
       <S.Container>
         <S.BurgerStroke
           variants={{

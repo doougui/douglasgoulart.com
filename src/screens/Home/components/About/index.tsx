@@ -32,7 +32,11 @@ export function About() {
 
         <S.SocialMedia>
           <NextLink href="https://github.com/doougui" passHref>
-            <a target="_blank" data-testid="github-link">
+            <a
+              target="_blank"
+              data-testid="github-link"
+              aria-label="Douglas' GitHub"
+            >
               <RiGithubFill size={24} color={theme.colors.textDark} />
             </a>
           </NextLink>
@@ -41,13 +45,21 @@ export function About() {
             href="https://www.linkedin.com/in/douglaspigoulart/"
             passHref
           >
-            <a target="_blank" data-testid="linkedin-link">
+            <a
+              target="_blank"
+              data-testid="linkedin-link"
+              aria-label="Douglas' Linkedin"
+            >
               <RiLinkedinBoxFill size={24} color={theme.colors.textDark} />
             </a>
           </NextLink>
 
           <NextLink href="https://twitter.com/oDougui" passHref>
-            <a target="_blank" data-testid="twitter-link">
+            <a
+              target="_blank"
+              data-testid="twitter-link"
+              aria-label="Douglas' Twitter"
+            >
               <RiTwitterFill size={24} color={theme.colors.textDark} />
             </a>
           </NextLink>

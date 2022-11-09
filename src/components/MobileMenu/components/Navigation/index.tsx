@@ -19,6 +19,13 @@ export function Navigation({ isOpen }: NavigationProps) {
     },
   };
 
+  const items = [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/writings', label: 'Writings' },
+    // { href: '/guestbook', label: 'Guestbook' },
+  ];
+
   return (
     <S.Container
       data-testid="container"
@@ -27,10 +34,11 @@ export function Navigation({ isOpen }: NavigationProps) {
       aria-hidden={!isOpen}
     >
       <List>
-        <Item href="/">Home</Item>
-        <Item href="/about">About</Item>
-        <Item href="/writings">Writings</Item>
-        {/* <Item href="/guestbook">Guestbook</Item> */}
+        {items.map(({ href, label }) => (
+          <Item href={href} tabIndex={!isOpen ? -1 : undefined}>
+            {label}
+          </Item>
+        ))}
       </List>
     </S.Container>
   );

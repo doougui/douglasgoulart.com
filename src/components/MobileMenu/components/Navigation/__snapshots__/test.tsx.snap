@@ -48,6 +48,7 @@ exports[`<Navigation /> should render closed state 1`] = `
       <a
         class="c3"
         href="/"
+        tabindex="-1"
       >
         Home
       </a>
@@ -58,6 +59,7 @@ exports[`<Navigation /> should render closed state 1`] = `
       <a
         class="c3"
         href="/about"
+        tabindex="-1"
       >
         About
       </a>
@@ -68,6 +70,7 @@ exports[`<Navigation /> should render closed state 1`] = `
       <a
         class="c3"
         href="/writings"
+        tabindex="-1"
       >
         Writings
       </a>
