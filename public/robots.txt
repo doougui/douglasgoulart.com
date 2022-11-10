@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: http://douglasgoulart.com
+
+# Sitemaps
+Sitemap: http://douglasgoulart.com/sitemap.xml
