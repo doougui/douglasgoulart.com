@@ -1,17 +1,13 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { ArticleJsonLd, NextSeo } from 'next-seo';
-import { parse } from 'date-fns';
 import { Writing as WritingScreen, WritingProps } from 'screens/Writing';
 import { getFileBySlug } from 'utils/mdx/getFileBySlug';
 import { getFiles } from 'utils/mdx/getFiles';
 import { getAbsoluteUrl } from 'utils/shared/get-absolute-url';
 import { getPageUrl } from 'utils/shared/get-page-url';
+import { parseToDate } from 'utils/time/parseToDate';
 
 export default function Writing({ code, frontmatter }: WritingProps) {
-  const getIsoStringDate = (date: string) => {
-    return parse(date, 'yyyy-MM-dd', new Date()).toISOString();
-  };
-
   return (
     <>
       <NextSeo
@@ -35,8 +31,12 @@ export default function Writing({ code, frontmatter }: WritingProps) {
         url={getPageUrl()}
         title={frontmatter.title}
         images={[`${getAbsoluteUrl()}${frontmatter.cover?.url}`]}
-        datePublished={getIsoStringDate(frontmatter.publishedAt)}
-        dateModified={getIsoStringDate(frontmatter.publishedAt)}
+        datePublished={parseToDate(frontmatter.publishedAt).toISOString()}
+        dateModified={
+          frontmatter.modifiedAt
+            ? parseToDate(frontmatter.modifiedAt).toISOString()
+            : parseToDate(frontmatter.publishedAt).toISOString()
+        }
         authorName={[
           {
             name: 'Douglas Pinheiro Goulart',

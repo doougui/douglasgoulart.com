@@ -1,9 +1,9 @@
-import { parse } from 'date-fns';
 import { readdirSync, readFileSync } from 'fs';
 import matter from 'gray-matter';
 import { join } from 'path';
 import readingTime from 'reading-time';
 import { Writing } from 'types/Writing';
+import { parseToDate } from 'utils/time/parseToDate';
 import { ContentType } from './types';
 
 export enum SortTypes {
@@ -18,10 +18,6 @@ type ContentTypes = {
 };
 
 export type PickFrontmatter<T extends ContentType> = ContentTypes[T];
-
-function parseToDate(date: string) {
-  return parse(date, 'yyyy-MM-dd', new Date());
-}
 
 function sortBy<T extends ContentType>(
   data: PickFrontmatter<T>[],

@@ -1,4 +1,5 @@
-import { format, parse, subDays } from 'date-fns';
+import { format, subDays } from 'date-fns';
+import { parseToDate } from './parseToDate';
 
 export function formatDateString(
   date: string,
@@ -6,7 +7,7 @@ export function formatDateString(
   toFormat = 'dd/MM/yyyy',
   recentDateAsHumanReadable = false,
 ): string {
-  const newDate = format(parse(date, fromFormat, new Date()), toFormat);
+  const newDate = format(parseToDate(date, fromFormat), toFormat);
 
   if (!recentDateAsHumanReadable) return newDate;
 

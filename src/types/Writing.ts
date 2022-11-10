@@ -12,6 +12,6 @@ export type Writing = {
     caption?: string;
   };
   publishedAt: string;
-  lastUpdated?: string;
+  modifiedAt?: string;
   tags: string;
 };
