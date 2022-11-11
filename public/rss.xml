@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Douglas Pinheiro Goulart</title>
+        <link>http://localhost:3000</link>
+        <description>Thoughts, curiosities and tutorials about software development to sharpen your skills and make you a better developer.</description>
+        <lastBuildDate>Fri, 11 Nov 2022 23:33:14 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>Feed for Node.js</generator>
+        <image>
+            <title>Douglas Pinheiro Goulart</title>
+            <url>http://localhost:3000/img/icon-512.png</url>
+            <link>http://localhost:3000</link>
+        </image>
+        <copyright>© 2022 Douglas Pinheiro Goulart</copyright>
+        <item>
+            <title><![CDATA[Avoid TypeScript errors in your project by using the TypeScript compiler]]></title>
+            <link>http://localhost:3000/writings/avoid-typescript-errors-in-your-project-by-using-the-typescript-compiler</link>
+            <guid>avoid-typescript-errors-in-your-project-by-using-the-typescript-compiler</guid>
+            <pubDate>Fri, 27 May 2022 03:00:00 GMT</pubDate>
+            <description><![CDATA[No more unexpected type errors!]]></description>
+            <author>douglaspigoulart@gmail.com (Douglas Pinheiro Goulart)</author>
+            <enclosure url="http://localhost:3000/img/contents/writings/avoid-typescript-errors-in-your-project-by-using-the-typescript-compiler/cover.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Deploying your Laravel + MySQL application on Heroku]]></title>
+            <link>http://localhost:3000/writings/deploying-your-laravel-mysql-application-on-heroku</link>
+            <guid>deploying-your-laravel-mysql-application-on-heroku</guid>
+            <pubDate>Fri, 30 Apr 2021 03:00:00 GMT</pubDate>
+            <description><![CDATA[Deploy your application to the world!]]></description>
+            <author>douglaspigoulart@gmail.com (Douglas Pinheiro Goulart)</author>
+            <enclosure url="http://localhost:3000/img/contents/writings/deploying-your-laravel-mysql-application-on-heroku/cover.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Como fazer efeito de skeleton loading com ReactJS]]></title>
+            <link>http://localhost:3000/writings/como-fazer-efeito-de-skeleton-loading-com-reactjs</link>
+            <guid>como-fazer-efeito-de-skeleton-loading-com-reactjs</guid>
+            <pubDate>Sat, 28 Mar 2020 03:00:00 GMT</pubDate>
+            <description><![CDATA[Garanta uma melhor usabilidade.]]></description>
+            <author>douglaspigoulart@gmail.com (Douglas Pinheiro Goulart)</author>
+            <enclosure url="http://localhost:3000/img/contents/writings/como-fazer-efeito-de-skeleton-loading-com-reactjs/cover.png" length="0" type="image/png"/>
+        </item>
+    </channel>
+</rss>

@@ -1,6 +1,6 @@
-import { GetServerSideProps } from 'next';
+import { generateRssFeed } from 'lib/generateRssFeed';
+import { GetStaticProps } from 'next';
 import { NextSeo } from 'next-seo';
-import React from 'react';
 import { Home as HomeScreen, HomeProps } from 'screens/Home';
 import { getFilesFrontmatter } from 'utils/mdx/getFilesFrontmatter';
 import { getPageUrl } from 'utils/shared/get-page-url';
@@ -23,11 +23,15 @@ export default function Home(props: HomeProps) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const files = await getFilesFrontmatter({
     type: 'writings',
     max: 3,
   });
+
+  if (process.env.NODE_ENV !== 'development') {
+    await generateRssFeed();
+  }
 
   return {
     props: {

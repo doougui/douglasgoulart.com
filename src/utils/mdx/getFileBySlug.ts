@@ -5,15 +5,10 @@ import readingTime from 'reading-time';
 import { ContentType } from './types';
 
 export async function getFileBySlug(type: ContentType, slug: string) {
-  const source = slug
-    ? readFileSync(
-        join(process.cwd(), 'src', 'contents', type, `${slug}.mdx`),
-        'utf8',
-      )
-    : readFileSync(
-        join(process.cwd(), 'src', 'contents', `${type}.mdx`),
-        'utf8',
-      );
+  const source = readFileSync(
+    join(process.cwd(), 'src', 'contents', type, `${slug}.mdx`),
+    'utf8',
+  );
 
   const { code, frontmatter } = await bundleMDX({
     source,

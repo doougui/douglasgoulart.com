@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>http://douglasgoulart.com</loc><lastmod>2022-11-10T22:53:20.507Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://douglasgoulart.com/about</loc><lastmod>2022-11-10T22:53:20.507Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://douglasgoulart.com/guestbook</loc><lastmod>2022-11-10T22:53:20.507Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://douglasgoulart.com/writings</loc><lastmod>2022-11-10T22:53:20.507Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://douglasgoulart.com/writings/avoid-typescript-errors-in-your-project-by-using-the-typescript-compiler</loc><lastmod>2022-11-10T22:53:20.507Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://douglasgoulart.com/writings/como-fazer-efeito-de-skeleton-loading-com-reactjs</loc><lastmod>2022-11-10T22:53:20.507Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>http://douglasgoulart.com/writings/deploying-your-laravel-mysql-application-on-heroku</loc><lastmod>2022-11-10T22:53:20.507Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000</loc><lastmod>2022-11-11T23:11:23.851Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/about</loc><lastmod>2022-11-11T23:11:23.851Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/guestbook</loc><lastmod>2022-11-11T23:11:23.851Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/writings</loc><lastmod>2022-11-11T23:11:23.851Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/writings/avoid-typescript-errors-in-your-project-by-using-the-typescript-compiler</loc><lastmod>2022-11-11T23:11:23.851Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/writings/como-fazer-efeito-de-skeleton-loading-com-reactjs</loc><lastmod>2022-11-11T23:11:23.851Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>http://localhost:3000/writings/deploying-your-laravel-mysql-application-on-heroku</loc><lastmod>2022-11-11T23:11:23.851Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

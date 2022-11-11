@@ -73,7 +73,9 @@ export function Footer() {
         </S.Newsletter>
       </S.Links>
 
-      <S.Copyright>© 2022 Douglas Pinheiro Goulart</S.Copyright>
+      <S.Copyright>
+        © {new Date().getFullYear()} Douglas Pinheiro Goulart
+      </S.Copyright>
     </S.Container>
   );
 }

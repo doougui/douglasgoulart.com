@@ -1,22 +1,13 @@
-import React from 'react';
-import {
-  Heading1,
-  Heading2,
-  Heading3,
-  Heading4,
-  Heading5,
-  Heading6,
-} from 'components/Headings';
 import { Link } from 'components/Link';
 import { MutedText } from 'components/MutedText';
-import { SyntaxHighlighter } from 'components/SyntaxHighlighter';
+import { MDXComponents } from 'constants/mdx';
 import { Base } from 'layouts/Base';
 import { getMDXComponent } from 'mdx-bundler/client';
 import NextLink from 'next/link';
-import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import React from 'react';
 import { Writing as WritingType } from 'types/Writing';
-import * as S from './styles';
 import { Comments } from './components/Comments';
+import * as S from './styles';
 
 export type WritingProps = {
   code: string;
@@ -67,19 +58,7 @@ export function Writing({ code, frontmatter }: WritingProps) {
         )}
 
         <S.Content>
-          <Component
-            components={{
-              a: Link,
-              h1: Heading1,
-              h2: Heading2,
-              h3: Heading3,
-              h4: Heading4,
-              h5: Heading5,
-              h6: Heading6,
-              pre: SyntaxHighlighter,
-              LiteYouTubeEmbed,
-            }}
-          />
+          <Component components={MDXComponents} />
         </S.Content>
 
         <S.RelatedTopics>Related topics: {renderTags()}.</S.RelatedTopics>

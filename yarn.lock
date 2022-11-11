@@ -1166,6 +1166,11 @@
   resolved "https://registry.npmjs.org/@colors/colors/-/colors-1.5.0.tgz"
   integrity sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==
 
+"@corex/deepmerge@^4.0.29":
+  version "4.0.29"
+  resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-4.0.29.tgz#af9debf07d7f6b0d2a9d04a266abf2c1418ed2f6"
+  integrity sha512-q/yVUnqckA8Do+EvAfpy7RLdumnBy9ZsducMUtZTvpdbJC7azEf1hGtnYYxm0QfphYxjwggv6XtH64prvS1W+A==
+
 "@design-systems/utils@2.12.0":
   version "2.12.0"
   resolved "https://registry.npmjs.org/@design-systems/utils/-/utils-2.12.0.tgz"
@@ -7034,6 +7039,13 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "2.1.1"
 
+feed@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/feed/-/feed-4.2.2.tgz#865783ef6ed12579e2c44bbef3c9113bc4956a7e"
+  integrity sha512-u5/sxGfiMfZNtJ3OvQpXcvotFpYkL0n9u9mM2vkui2nGo8b4wvDkJ8gAkYqbA8QpGyFCv3RK0Z+Iv+9veCS9bQ==
+  dependencies:
+    xml-js "^1.6.11"
+
 fetch-blob@^3.1.2, fetch-blob@^3.1.4:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/fetch-blob/-/fetch-blob-3.2.0.tgz#f09b8d4bbd45adc6f0c20b7e787e793e309dcce9"
@@ -10644,6 +10656,14 @@ next-seo@^5.14.0:
   resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-5.14.0.tgz#961376571d50c76c3d469c607900774065f62907"
   integrity sha512-VpbVFXbDzy31qoKBH7xoxtzh+nDhEWYOBnlc18zkXmypRd3X9vxdwh7rlr3q2BQTfbfk2J/a6Y2vEb+oTcCW0w==
 
+next-sitemap@^3.1.30:
+  version "3.1.30"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-3.1.30.tgz#6f81699a3d07366bf6df0da6f9f3fe34de4e67e6"
+  integrity sha512-mZqq9xWrTp/tgUM7+Oz/qxT6x2vnJhwQ3AGke2GjypRbUo44QaTb+4Cp1uX9GwXBaiuuuXDoWyS5VxJP3pJljw==
+  dependencies:
+    "@corex/deepmerge" "^4.0.29"
+    minimist "^1.2.6"
+
 next-themes@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/next-themes/-/next-themes-0.2.1.tgz#0c9f128e847979daf6c67f70b38e6b6567856e45"
@@ -12629,6 +12649,11 @@ sane@^4.0.3:
     micromatch "^3.1.4"
     minimist "^1.1.1"
     walker "~1.0.5"
+
+sax@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
+  integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
 
 saxes@^5.0.1:
   version "5.0.1"
@@ -14740,6 +14765,13 @@ x-default-browser@^0.4.0:
   integrity sha512-7LKo7RtWfoFN/rHx1UELv/2zHGMx8MkZKDq1xENmOCTkfIqZJ0zZ26NEJX8czhnPXVcqS0ARjjfJB+eJ0/5Cvw==
   optionalDependencies:
     default-browser-id "^1.0.4"
+
+xml-js@^1.6.11:
+  version "1.6.11"
+  resolved "https://registry.yarnpkg.com/xml-js/-/xml-js-1.6.11.tgz#927d2f6947f7f1c19a316dd8eea3614e8b18f8e9"
+  integrity sha512-7rVi2KMfwfWFl+GpPg6m80IVMWXLRjO+PxTq7V2CDhoGak0wzYzFgUY2m4XJ47OGdXd8eLE8EmwfAmdjw7lC1g==
+  dependencies:
+    sax "^1.2.4"
 
 xml-name-validator@^4.0.0:
   version "4.0.0"
