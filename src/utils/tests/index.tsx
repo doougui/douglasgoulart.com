@@ -2,10 +2,14 @@ import { RenderOptions, render } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
 import theme from 'styles/themes/default';
 
+function Provider({ children }: { children: React.ReactNode }) {
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+}
+
 const customRender = (
   ui: React.ReactElement,
-  { ...renderOptions }: RenderOptions = {},
-) => render(<ThemeProvider theme={theme}>{ui}</ThemeProvider>, renderOptions);
+  { ...renderOptions }: Omit<RenderOptions, 'wrapper'> = {},
+) => render(ui, { wrapper: Provider, ...renderOptions });
 
 export * from '@testing-library/react';
 export { customRender as render };

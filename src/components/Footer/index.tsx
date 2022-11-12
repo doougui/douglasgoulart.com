@@ -1,6 +1,5 @@
 import { NewsletterForm } from 'components/NewsletterForm';
 import { NowPlayingSpotify } from 'components/NowPlayingSpotify';
-import Link from 'next/link';
 import * as S from './styles';
 
 export function Footer() {
@@ -13,17 +12,9 @@ export function Footer() {
           <S.Title>Navigation</S.Title>
 
           <S.Nav>
-            <Link href="/" passHref>
-              <S.Link>Home</S.Link>
-            </Link>
-
-            <Link href="/about" passHref>
-              <S.Link>About</S.Link>
-            </Link>
-
-            <Link href="/writings" passHref>
-              <S.Link>Writings</S.Link>
-            </Link>
+            <S.Link href="/">Home</S.Link>
+            <S.Link href="/about">About</S.Link>
+            <S.Link href="/writings">Writings</S.Link>
           </S.Nav>
         </section>
 
@@ -31,17 +22,20 @@ export function Footer() {
           <S.Title>Social</S.Title>
 
           <S.Nav>
-            <Link href="https://github.com/doougui" passHref>
-              <S.Link target="_blank">GitHub</S.Link>
-            </Link>
+            <S.Link href="https://github.com/doougui" target="_blank">
+              GitHub
+            </S.Link>
 
-            <Link href="https://www.linkedin.com/in/douglaspigoulart/" passHref>
-              <S.Link target="_blank">Linkedin</S.Link>
-            </Link>
+            <S.Link
+              href="https://www.linkedin.com/in/douglaspigoulart/"
+              target="_blank"
+            >
+              Linkedin
+            </S.Link>
 
-            <Link href="mailto:douglaspigoulart@gmail.com" passHref>
-              <S.Link target="_blank">E-mail</S.Link>
-            </Link>
+            <S.Link href="mailto:douglaspigoulart@gmail.com" target="_blank">
+              E-mail
+            </S.Link>
           </S.Nav>
         </section>
 
@@ -49,20 +43,20 @@ export function Footer() {
           <S.Title>Extras</S.Title>
 
           <S.Nav>
-            <Link
+            <S.Link
               href="https://docs.google.com/document/d/1OMPOxln39V26w3WmIqssCx_gaGmLPs2FaN34HC-Mn-Q/edit?usp=sharing"
-              passHref
+              target="_blank"
             >
-              <S.Link target="_blank">Resume</S.Link>
-            </Link>
+              Resume
+            </S.Link>
 
-            <Link href="https://gitlab.com/douglaspigoulart" passHref>
-              <S.Link target="_blank">GitLab</S.Link>
-            </Link>
+            <S.Link href="https://gitlab.com/douglaspigoulart" target="_blank">
+              GitLab
+            </S.Link>
 
-            <Link href="./rss.xml" passHref>
-              <S.Link target="_blank">RSS Feed</S.Link>
-            </Link>
+            <S.Link href="./rss.xml" target="_blank">
+              RSS Feed
+            </S.Link>
           </S.Nav>
         </section>
 

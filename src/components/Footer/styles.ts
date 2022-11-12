@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import NextLink from 'next/link';
 
 export const Container = styled.footer`
   ${({ theme }) => css`
@@ -38,7 +39,7 @@ export const Nav = styled.nav`
   margin-top: 1.5rem;
 `;
 
-export const Link = styled.a`
+export const Link = styled(NextLink)`
   ${({ theme }) => css`
     color: ${theme.colors.textDark};
     font-size: ${theme.font.sizes.medium};

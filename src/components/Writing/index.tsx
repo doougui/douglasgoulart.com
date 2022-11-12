@@ -1,7 +1,6 @@
 import { Image } from 'components/Image';
 import { MediaMatch } from 'components/MediaMatch';
 import { Stack } from 'components/Stack';
-import NextLink from 'next/link';
 import { Writing as WritingType } from 'types/Writing';
 import { formatDateString } from 'utils/time/formatDateString';
 import * as S from './styles';
@@ -16,7 +15,7 @@ export function Writing({
   publishedAt,
 }: WritingProps) {
   return (
-    <NextLink href={`/writings/${slug}`} passHref>
+    <S.Link href={`/writings/${slug}`}>
       <S.Container>
         {!!cover && (
           <S.ImageBox>
@@ -24,7 +23,7 @@ export function Writing({
           </S.ImageBox>
         )}
 
-        <S.Content>
+        <div>
           <Stack spacing="8px">
             <S.Title>{title}</S.Title>
 
@@ -37,8 +36,8 @@ export function Writing({
               </Stack>
             </MediaMatch>
           </Stack>
-        </S.Content>
+        </div>
       </S.Container>
-    </NextLink>
+    </S.Link>
   );
 }

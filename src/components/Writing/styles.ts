@@ -1,6 +1,11 @@
 import styled, { css } from 'styled-components';
+import NextLink from 'next/link';
 
-export const Container = styled.a`
+export const Link = styled(NextLink)`
+  text-decoration: none;
+`;
+
+export const Container = styled.div`
   ${({ theme }) => css`
     padding: 1.5rem;
     background-color: ${theme.colors.background};
@@ -34,8 +39,6 @@ export const ImageBox = styled.div`
     }
   `}
 `;
-
-export const Content = styled.div``;
 
 const Text = styled.span`
   display: block;

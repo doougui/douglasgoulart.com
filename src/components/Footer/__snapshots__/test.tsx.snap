@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Footer /> should render correctly 1`] = `
-.c12 {
+.c11 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -29,7 +29,7 @@ exports[`<Footer /> should render correctly 1`] = `
   text-decoration: none;
 }
 
-.c10 {
+.c9 {
   all: unset;
   width: 100%;
   font-size: 1.6rem;
@@ -39,23 +39,23 @@ exports[`<Footer /> should render correctly 1`] = `
   color: #EDEDEF;
 }
 
-.c10::-webkit-input-placeholder {
+.c9::-webkit-input-placeholder {
   color: #888888;
 }
 
-.c10::-moz-placeholder {
+.c9::-moz-placeholder {
   color: #888888;
 }
 
-.c10:-ms-input-placeholder {
+.c9:-ms-input-placeholder {
   color: #888888;
 }
 
-.c10::placeholder {
+.c9::placeholder {
   color: #888888;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -63,14 +63,14 @@ exports[`<Footer /> should render correctly 1`] = `
   margin-top: 1rem;
 }
 
-.c9 button {
+.c8 button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
-.c11 {
+.c10 {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   min-width: 10rem;
@@ -120,7 +120,7 @@ exports[`<Footer /> should render correctly 1`] = `
   font-weight: 400;
 }
 
-.c8 {
+.c7 {
   font-size: 1.6rem;
   color: #888888;
 }
@@ -137,26 +137,14 @@ exports[`<Footer /> should render correctly 1`] = `
   margin-top: 1.5rem;
 }
 
-.c6 {
-  color: #888888;
-  font-size: 1.6rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c6:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c13 {
+.c12 {
   color: #EDEDEF;
   font-size: 1.6rem;
   line-height: 2.4rem;
   margin-top: 3rem;
 }
 
-.c7 {
+.c6 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -213,19 +201,16 @@ exports[`<Footer /> should render correctly 1`] = `
         class="c5"
       >
         <a
-          class="c6"
           href="/"
         >
           Home
         </a>
         <a
-          class="c6"
           href="/about"
         >
           About
         </a>
         <a
-          class="c6"
           href="/writings"
         >
           Writings
@@ -242,23 +227,17 @@ exports[`<Footer /> should render correctly 1`] = `
         class="c5"
       >
         <a
-          class="c6"
           href="https://github.com/doougui"
-          target="_blank"
         >
           GitHub
         </a>
         <a
-          class="c6"
           href="https://www.linkedin.com/in/douglaspigoulart/"
-          target="_blank"
         >
           Linkedin
         </a>
         <a
-          class="c6"
           href="mailto:douglaspigoulart@gmail.com"
-          target="_blank"
         >
           E-mail
         </a>
@@ -274,30 +253,24 @@ exports[`<Footer /> should render correctly 1`] = `
         class="c5"
       >
         <a
-          class="c6"
           href="https://docs.google.com/document/d/1OMPOxln39V26w3WmIqssCx_gaGmLPs2FaN34HC-Mn-Q/edit?usp=sharing"
-          target="_blank"
         >
           Resume
         </a>
         <a
-          class="c6"
           href="https://gitlab.com/douglaspigoulart"
-          target="_blank"
         >
           GitLab
         </a>
         <a
-          class="c6"
-          href="/rss.xml"
-          target="_blank"
+          href="./rss.xml"
         >
           RSS Feed
         </a>
       </nav>
     </section>
     <section
-      class="c7"
+      class="c6"
     >
       <h3
         class="c4"
@@ -305,22 +278,22 @@ exports[`<Footer /> should render correctly 1`] = `
         Newsletter
       </h3>
       <p
-        class="c8"
+        class="c7"
       >
         Get new writings delivered to your inbox!
       </p>
       <form>
         <div
-          class="c9"
+          class="c8"
         >
           <input
-            class="c10 c11"
+            class="c9 c10"
             name="email"
             placeholder="johndoe@email.com"
             value=""
           />
           <button
-            class="c12"
+            class="c11"
             type="submit"
           >
             Subscribe
@@ -330,7 +303,7 @@ exports[`<Footer /> should render correctly 1`] = `
     </section>
   </menu>
   <p
-    class="c13"
+    class="c12"
   >
     © 
     2022

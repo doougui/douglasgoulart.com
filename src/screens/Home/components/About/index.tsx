@@ -26,42 +26,31 @@ export function About() {
       </p>
 
       <S.Footer>
-        <NextLink href="/about" passHref>
-          <Link>More about me</Link>
-        </NextLink>
+        <Link href="/about">More about me</Link>
 
         <S.SocialMedia>
-          <NextLink href="https://github.com/doougui" passHref>
-            <a
-              target="_blank"
-              data-testid="github-link"
-              aria-label="Douglas' GitHub"
-            >
-              <RiGithubFill size={24} color={theme.colors.textDark} />
-            </a>
+          <NextLink
+            href="https://github.com/doougui"
+            target="_blank"
+            aria-label="Douglas' GitHub"
+          >
+            <RiGithubFill size={24} color={theme.colors.textDark} />
           </NextLink>
 
           <NextLink
             href="https://www.linkedin.com/in/douglaspigoulart/"
-            passHref
+            target="_blank"
+            aria-label="Douglas' Linkedin"
           >
-            <a
-              target="_blank"
-              data-testid="linkedin-link"
-              aria-label="Douglas' Linkedin"
-            >
-              <RiLinkedinBoxFill size={24} color={theme.colors.textDark} />
-            </a>
+            <RiLinkedinBoxFill size={24} color={theme.colors.textDark} />
           </NextLink>
 
-          <NextLink href="https://twitter.com/oDougui" passHref>
-            <a
-              target="_blank"
-              data-testid="twitter-link"
-              aria-label="Douglas' Twitter"
-            >
-              <RiTwitterFill size={24} color={theme.colors.textDark} />
-            </a>
+          <NextLink
+            href="https://twitter.com/oDougui"
+            target="_blank"
+            aria-label="Douglas' Twitter"
+          >
+            <RiTwitterFill size={24} color={theme.colors.textDark} />
           </NextLink>
         </S.SocialMedia>
       </S.Footer>

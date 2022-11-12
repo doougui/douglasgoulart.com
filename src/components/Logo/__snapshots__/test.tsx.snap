@@ -1,35 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Logo /> should render correctly 1`] = `
-.c1 {
+.c0 {
   font-family: Poppins;
   font-size: 3.2rem;
   color: #EDEDEF;
 }
 
-.c2 {
+.c1 {
   color: #107BEB;
 }
 
-.c0 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<a
+<div
   class="c0"
-  href="/"
+  data-testid="logo"
 >
-  <div
+  Douglas
+  <span
     class="c1"
-    data-testid="logo"
   >
-    Douglas
-    <span
-      class="c2"
-    >
-      .
-    </span>
-  </div>
-</a>
+    .
+  </span>
+</div>
 `;

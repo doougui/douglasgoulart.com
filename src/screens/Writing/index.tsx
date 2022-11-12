@@ -3,7 +3,6 @@ import { MutedText } from 'components/MutedText';
 import { MDXComponents } from 'constants/mdx';
 import { Base } from 'layouts/Base';
 import { getMDXComponent } from 'mdx-bundler/client';
-import NextLink from 'next/link';
 import React from 'react';
 import { Writing as WritingType } from 'types/Writing';
 import { Comments } from './components/Comments';
@@ -21,9 +20,7 @@ export function Writing({ code, frontmatter }: WritingProps) {
     const joinedTags = frontmatter.tags.split(',').map((tag, index) => (
       <React.Fragment key={tag}>
         {index > 0 && ', '}
-        <NextLink href={{ pathname: '/writings', query: { tag } }} passHref>
-          <Link>{tag}</Link>
-        </NextLink>
+        <Link href={{ pathname: '/writings', query: { tag } }}>{tag}</Link>
       </React.Fragment>
     ));
 

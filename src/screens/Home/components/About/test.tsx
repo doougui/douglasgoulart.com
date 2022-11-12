@@ -1,5 +1,13 @@
+import React from 'react';
 import { render, screen } from 'utils/tests';
 import { About } from '.';
+
+jest.mock('next/link', () => ({
+  __esModule: true,
+  default: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
+    <a {...props}>{props.children}</a>
+  ),
+}));
 
 describe('<About />', () => {
   it('should render correctly', () => {
@@ -16,17 +24,17 @@ describe('<About />', () => {
       '/about',
     );
 
-    expect(screen.getByTestId('github-link')).toHaveAttribute(
+    expect(screen.getByLabelText("Douglas' GitHub")).toHaveAttribute(
       'href',
       'https://github.com/doougui',
     );
 
-    expect(screen.getByTestId('linkedin-link')).toHaveAttribute(
+    expect(screen.getByLabelText("Douglas' Linkedin")).toHaveAttribute(
       'href',
       'https://www.linkedin.com/in/douglaspigoulart/',
     );
 
-    expect(screen.getByTestId('twitter-link')).toHaveAttribute(
+    expect(screen.getByLabelText("Douglas' Twitter")).toHaveAttribute(
       'href',
       'https://twitter.com/oDougui',
     );

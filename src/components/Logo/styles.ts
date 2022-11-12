@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import NextLink from 'next/link';
 
 export const Container = styled.div`
   ${({ theme }) => css`
@@ -14,6 +15,6 @@ export const Dot = styled.span`
   `}
 `;
 
-export const Link = styled.a`
+export const Link = styled(NextLink)`
   text-decoration: none;
 `;

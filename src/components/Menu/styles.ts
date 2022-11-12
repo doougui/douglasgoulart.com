@@ -1,5 +1,6 @@
 import styled, { css, DefaultTheme } from 'styled-components';
 import media from 'styled-media-query';
+import NextLink from 'next/link';
 
 export const Container = styled.menu`
   display: flex;
@@ -17,7 +18,7 @@ export const MenuNav = styled.nav`
 `;
 
 type MenuLinkProps = {
-  active: boolean;
+  $active: boolean;
 };
 
 const menuLinkModifiers = {
@@ -26,17 +27,19 @@ const menuLinkModifiers = {
   `,
 };
 
-export const MenuLink = styled.a<MenuLinkProps>`
-  ${({ theme, active }) => css`
+export const MenuLink = styled(NextLink)<MenuLinkProps>`
+  ${({ theme, $active }) => css`
     font-size: ${theme.font.sizes.medium};
     text-decoration: none;
     color: ${theme.colors.text};
     padding: 0 1.5rem;
 
-    display: flex;
-    align-items: center;
-    gap: 7px;
-
-    ${active && menuLinkModifiers.active(theme)};
+    ${$active && menuLinkModifiers.active(theme)};
   `}
+`;
+
+export const LinkContent = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 7px;
 `;

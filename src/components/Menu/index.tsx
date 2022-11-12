@@ -2,7 +2,6 @@ import { Logo } from 'components/Logo';
 import { MediaMatch } from 'components/MediaMatch';
 import { ThemeSwitcher } from 'components/ThemeSwitcher';
 import { REPO_URL } from 'config/app';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { RiExternalLinkLine } from 'react-icons/ri';
 import { MobileMenu } from '../MobileMenu';
@@ -37,15 +36,17 @@ export function Menu() {
 
       <S.MenuNav data-testid="desktop-menu">
         {items.map(({ href, label, isExternal }) => (
-          <Link key={href} href={href} passHref>
-            <S.MenuLink
-              target={isExternal ? '_blank' : undefined}
-              active={is(href)}
-            >
+          <S.MenuLink
+            key={href}
+            href={href}
+            target={isExternal ? '_blank' : undefined}
+            $active={is(href)}
+          >
+            <S.LinkContent>
               {label}
               {isExternal && <RiExternalLinkLine size={16} />}
-            </S.MenuLink>
-          </Link>
+            </S.LinkContent>
+          </S.MenuLink>
         ))}
 
         <ThemeSwitcher />

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
+import NextLink from 'next/link';
 
 export const Container = styled(motion.li)`
   ${({ theme }) => css`
@@ -9,15 +10,18 @@ export const Container = styled(motion.li)`
   `}
 `;
 
-export const LinkText = styled.a`
+export const MenuLink = styled(NextLink)`
   ${({ theme }) => css`
     color: ${theme.colors.text};
     font-size: ${theme.font.sizes.medium};
     line-height: ${theme.font.heights.medium};
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 7px;
   `}
+`;
+
+export const LinkText = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
 `;

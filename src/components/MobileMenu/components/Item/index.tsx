@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import * as S from './styles';
 
 type ItemProps = {
@@ -25,9 +24,9 @@ export function Item({ href, children, ...props }: ItemProps) {
 
   return (
     <S.Container variants={variants}>
-      <Link href={href} passHref>
-        <S.LinkText {...props}>{children}</S.LinkText>
-      </Link>
+      <S.MenuLink href={href} {...props}>
+        <S.LinkText>{children}</S.LinkText>
+      </S.MenuLink>
     </S.Container>
   );
 }

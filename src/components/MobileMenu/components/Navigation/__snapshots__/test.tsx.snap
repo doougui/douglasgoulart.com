@@ -8,11 +8,6 @@ exports[`<Navigation /> should render closed state 1`] = `
 }
 
 .c3 {
-  color: #EDEDEF;
-  font-size: 1.6rem;
-  line-height: 1.8rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -58,43 +53,35 @@ exports[`<Navigation /> should render closed state 1`] = `
     <li
       class="c2"
     >
-      <a
+      <div
         class="c3"
-        href="/"
-        tabindex="-1"
       >
         Home
-      </a>
+      </div>
     </li>
     <li
       class="c2"
     >
-      <a
+      <div
         class="c3"
-        href="/about"
-        tabindex="-1"
       >
         About
-      </a>
+      </div>
     </li>
     <li
       class="c2"
     >
-      <a
+      <div
         class="c3"
-        href="/writings"
-        tabindex="-1"
       >
         Writings
-      </a>
+      </div>
     </li>
     <li
       class="c2"
     >
-      <a
+      <div
         class="c3"
-        href="https://github.com/doougui/douglasgoulart.com"
-        tabindex="-1"
       >
         GitHub
         <svg
@@ -116,7 +103,7 @@ exports[`<Navigation /> should render closed state 1`] = `
             />
           </g>
         </svg>
-      </a>
+      </div>
     </li>
   </ul>
 </nav>
