@@ -1,5 +1,5 @@
 import { SITE_URL } from 'config/app';
-import { Feed } from 'feed';
+import { Feed, FeedOptions } from 'feed';
 import fs from 'fs';
 import { getFilesFrontmatter } from 'utils/mdx/getFilesFrontmatter';
 import { parseToDate } from 'utils/time/parseToDate';
@@ -8,7 +8,7 @@ export async function generateRssFeed() {
   const writings = await getFilesFrontmatter({ type: 'writings' });
   const siteUrl = SITE_URL;
 
-  const feedOptions = {
+  const feedOptions: FeedOptions = {
     title: 'Douglas Pinheiro Goulart',
     description:
       'Thoughts, curiosities and tutorials about software development to sharpen your skills and make you a better developer.',

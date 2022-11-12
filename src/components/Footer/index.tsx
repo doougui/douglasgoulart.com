@@ -49,16 +49,19 @@ export function Footer() {
           <S.Title>Extras</S.Title>
 
           <S.Nav>
-            <Link href="./" passHref>
-              <S.Link target="_blank">Newsletter</S.Link>
-            </Link>
-
-            <Link href="./" passHref>
+            <Link
+              href="https://docs.google.com/document/d/1OMPOxln39V26w3WmIqssCx_gaGmLPs2FaN34HC-Mn-Q/edit?usp=sharing"
+              passHref
+            >
               <S.Link target="_blank">Resume</S.Link>
             </Link>
 
             <Link href="https://gitlab.com/douglaspigoulart" passHref>
               <S.Link target="_blank">GitLab</S.Link>
+            </Link>
+
+            <Link href="./rss.xml" passHref>
+              <S.Link target="_blank">RSS Feed</S.Link>
             </Link>
           </S.Nav>
         </section>

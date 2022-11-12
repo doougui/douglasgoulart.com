@@ -275,14 +275,7 @@ exports[`<Footer /> should render correctly 1`] = `
       >
         <a
           class="c6"
-          href="/"
-          target="_blank"
-        >
-          Newsletter
-        </a>
-        <a
-          class="c6"
-          href="/"
+          href="https://docs.google.com/document/d/1OMPOxln39V26w3WmIqssCx_gaGmLPs2FaN34HC-Mn-Q/edit?usp=sharing"
           target="_blank"
         >
           Resume
@@ -293,6 +286,13 @@ exports[`<Footer /> should render correctly 1`] = `
           target="_blank"
         >
           GitLab
+        </a>
+        <a
+          class="c6"
+          href="/rss.xml"
+          target="_blank"
+        >
+          RSS Feed
         </a>
       </nav>
     </section>
