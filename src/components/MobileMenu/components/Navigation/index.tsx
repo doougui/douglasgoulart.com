@@ -42,7 +42,11 @@ export function Navigation({ isOpen }: NavigationProps) {
     >
       <List>
         {items.map(({ href, label, isExternal }) => (
-          <Item href={href ?? '#'} tabIndex={!isOpen ? -1 : undefined}>
+          <Item
+            key={href}
+            href={href ?? '#'}
+            tabIndex={!isOpen ? -1 : undefined}
+          >
             {label}
             {isExternal && <RiExternalLinkLine size={16} />}
           </Item>
