@@ -1,11 +1,7 @@
 import { GetServerSideProps } from 'next';
 import { NextSeo } from 'next-seo';
 import { Writings as WritingsScreen, WritingsProps } from 'screens/Writings';
-import {
-  getFilesFrontmatter,
-  SortTypes,
-  SortTypesKeys,
-} from 'utils/mdx/getFilesFrontmatter';
+import { getWritings, SortTypes, SortTypesKeys } from 'utils/mdx/getWritings';
 import { getPageUrl } from 'utils/shared/get-page-url';
 
 const isValidSort = (
@@ -82,8 +78,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const search = getSearch(querySearch);
   const tag = getTag(queryTag);
 
-  const files = await getFilesFrontmatter({
-    type: 'writings',
+  const files = await getWritings({
     sort,
     search,
     tag,

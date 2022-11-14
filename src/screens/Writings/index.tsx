@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import { ParsedUrlQueryInput } from 'querystring';
 import React from 'react';
 import { Writing as WritingType } from 'types/Writing';
-import { SortTypes, SortTypesKeys } from 'utils/mdx/getFilesFrontmatter';
+import { SortTypes, SortTypesKeys } from 'utils/mdx/getWritings';
 import { Filter } from './components/Filter';
 import * as S from './styles';
 

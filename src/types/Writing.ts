@@ -13,5 +13,6 @@ export type Writing = {
   };
   publishedAt: string;
   modifiedAt?: string;
+  isDraft?: boolean;
   tags: string;
 };

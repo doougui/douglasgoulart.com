@@ -2,11 +2,10 @@ import { readFileSync } from 'fs';
 import { bundleMDX } from 'mdx-bundler';
 import { join } from 'path';
 import readingTime from 'reading-time';
-import { ContentType } from './types';
 
-export async function getFileBySlug(type: ContentType, slug: string) {
+export async function getWritingBySlug(slug: string) {
   const source = readFileSync(
-    join(process.cwd(), 'src', 'contents', type, `${slug}.mdx`),
+    join(process.cwd(), 'src', 'contents', 'writings', `${slug}.mdx`),
     'utf8',
   );
 

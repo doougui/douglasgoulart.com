@@ -1,8 +1,8 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { ArticleJsonLd, NextSeo } from 'next-seo';
 import { Writing as WritingScreen, WritingProps } from 'screens/Writing';
-import { getFileBySlug } from 'utils/mdx/getFileBySlug';
-import { getFiles } from 'utils/mdx/getFiles';
+import { getWritingBySlug } from 'utils/mdx/getWritingBySlug';
+import { getWritingFiles } from 'utils/mdx/getWritingFiles';
 import { getAbsoluteUrl } from 'utils/shared/get-absolute-url';
 import { getPageUrl } from 'utils/shared/get-page-url';
 import { parseToDate } from 'utils/time/parseToDate';
@@ -54,12 +54,12 @@ export default function Writing({ code, frontmatter }: WritingProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = await getFiles('writings');
+  const writings = await getWritingFiles();
 
   return {
-    paths: posts.map((p) => ({
+    paths: writings.map((writing) => ({
       params: {
-        slug: p.replace(/\.mdx/, ''),
+        slug: writing.replace(/\.mdx/, ''),
       },
     })),
     fallback: false,
@@ -71,9 +71,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return { notFound: true };
   }
 
-  const post = await getFileBySlug('writings', params.slug);
+  const writing = await getWritingBySlug(params.slug);
 
   return {
-    props: { ...post },
+    props: { ...writing },
   };
 };

@@ -1,11 +1,11 @@
 import { SITE_URL } from 'config/app';
 import { Feed, FeedOptions } from 'feed';
 import fs from 'fs';
-import { getFilesFrontmatter } from 'utils/mdx/getFilesFrontmatter';
+import { getWritings } from 'utils/mdx/getWritings';
 import { parseToDate } from 'utils/time/parseToDate';
 
 export async function generateRssFeed() {
-  const writings = await getFilesFrontmatter({ type: 'writings' });
+  const writings = await getWritings();
   const siteUrl = SITE_URL;
 
   const feedOptions: FeedOptions = {
