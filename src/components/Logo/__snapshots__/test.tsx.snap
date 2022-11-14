@@ -3,6 +3,7 @@
 exports[`<Logo /> should render correctly 1`] = `
 .c0 {
   font-family: Poppins;
+  font-weight: 600;
   font-size: 3.2rem;
   color: #EDEDEF;
 }

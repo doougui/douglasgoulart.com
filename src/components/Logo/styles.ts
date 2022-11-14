@@ -4,6 +4,7 @@ import NextLink from 'next/link';
 export const Container = styled.div`
   ${({ theme }) => css`
     font-family: Poppins;
+    font-weight: ${theme.font.weights.bold};
     font-size: ${theme.font.sizes.xxlarge};
     color: ${theme.colors.text};
   `}
