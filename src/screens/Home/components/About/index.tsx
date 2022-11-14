@@ -1,6 +1,6 @@
 import { Link } from 'components/Link';
 import NextLink from 'next/link';
-import { RiGithubFill, RiLinkedinBoxFill, RiTwitterFill } from 'react-icons/ri';
+import { RiGithubFill, RiLinkedinBoxFill, RiMailFill } from 'react-icons/ri';
 import { useTheme } from 'styled-components';
 import * as S from './styles';
 
@@ -46,11 +46,11 @@ export function About() {
           </NextLink>
 
           <NextLink
-            href="https://twitter.com/oDougui"
+            href="mailto:douglaspigoulart@gmail.com"
             target="_blank"
-            aria-label="Douglas' Twitter"
+            aria-label="Douglas' E-mail"
           >
-            <RiTwitterFill size={24} color={theme.colors.textDark} />
+            <RiMailFill size={24} color={theme.colors.textDark} />
           </NextLink>
         </S.SocialMedia>
       </S.Footer>

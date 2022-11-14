@@ -34,9 +34,9 @@ describe('<About />', () => {
       'https://www.linkedin.com/in/douglaspigoulart/',
     );
 
-    expect(screen.getByLabelText("Douglas' Twitter")).toHaveAttribute(
+    expect(screen.getByLabelText("Douglas' E-mail")).toHaveAttribute(
       'href',
-      'https://twitter.com/oDougui',
+      'mailto:douglaspigoulart@gmail.com',
     );
   });
 });
