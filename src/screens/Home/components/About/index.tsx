@@ -15,7 +15,7 @@ export function About() {
         along my journey as a software dev.
       </p>
       <p>
-        I&lsquo;m currently doing front-end and mobile development at Tecimob
+        I&apos;m currently doing front-end and mobile development at Tecimob
         where I managed to generate value and ease the life of more than three
         thousand real estate agencies whilst improving the quality of existing
         software and creating new, valuable software from the beginning.

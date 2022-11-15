@@ -44,7 +44,7 @@ exports[`<About /> should render correctly 1`] = `
     Hi, my name is Douglas. I'm a software developer based in Brazil that likes to play some games and write about some cool stuff I learn along my journey as a software dev.
   </p>
   <p>
-    I‘m currently doing front-end and mobile development at Tecimob where I managed to generate value and ease the life of more than three thousand real estate agencies whilst improving the quality of existing software and creating new, valuable software from the beginning.
+    I'm currently doing front-end and mobile development at Tecimob where I managed to generate value and ease the life of more than three thousand real estate agencies whilst improving the quality of existing software and creating new, valuable software from the beginning.
   </p>
   <p>
     Most of my experience comes down to working with JavaScript, TypeScript, React, React Native and Next.js.

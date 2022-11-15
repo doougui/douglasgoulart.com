@@ -1,21 +1,23 @@
 {
   "name": "Douglas Pinheiro Goulart",
-  "short_name": "Douglas Pinheiro Goulart",
+  "short_name": "Douglas.",
   "icons": [
     {
       "src": "/img/icon-192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "maskable any"
     },
     {
       "src": "/img/icon-512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "maskable any"
     }
   ],
-  "background_color": "#107BEB",
-  "description": "Front-end software developer based in Brazil and focused on web solutions",
-  "display": "fullscreen",
+  "theme_color": "#107BEB",
+  "background_color": "#151718",
   "start_url": "/",
-  "theme_color": "#107BEB"
+  "description": "Front-end software developer based in Brazil and focused on web solutions",
+  "display": "fullscreen"
 }
