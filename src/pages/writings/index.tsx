@@ -1,26 +1,14 @@
 import { GetServerSideProps } from 'next';
 import { NextSeo } from 'next-seo';
 import { Writings as WritingsScreen, WritingsProps } from 'screens/Writings';
-import { getWritings, SortTypes, SortTypesKeys } from 'utils/mdx/getWritings';
+import { getWritings } from 'utils/mdx/writings/getWritings';
+import {
+  isValidSearch,
+  isValidSort,
+  isValidTag,
+} from 'utils/mdx/writings/typeGuards';
+import { SortTypes, SortTypesKeys } from 'utils/mdx/writings/types';
 import { getPageUrl } from 'utils/shared/get-page-url';
-
-const isValidSort = (
-  allowedSortOptions: SortTypesKeys[],
-  value: unknown,
-): value is SortTypesKeys => {
-  return (
-    typeof value === 'string' &&
-    allowedSortOptions.includes(value as SortTypesKeys)
-  );
-};
-
-const isValidSearch = (value: unknown): value is string => {
-  return typeof value === 'string';
-};
-
-const isValidTag = (value: unknown): value is string => {
-  return typeof value === 'string';
-};
 
 export default function Writings({
   writings,
@@ -80,8 +68,10 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 
   const files = await getWritings({
     sort,
-    search,
-    tag,
+    filters: {
+      search,
+      tag,
+    },
   });
 
   return {

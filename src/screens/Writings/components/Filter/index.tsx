@@ -1,7 +1,7 @@
 import { useForm } from 'hooks/useForm';
 import { ParsedUrlQueryInput } from 'querystring';
 import React from 'react';
-import { SortTypes, SortTypesKeys } from 'utils/mdx/getWritings';
+import { SortTypes, SortTypesKeys } from 'utils/mdx/writings/types';
 import * as S from './styles';
 
 type Values = ParsedUrlQueryInput;

@@ -1,7 +1,7 @@
 import { SITE_URL } from 'config/app';
 import { Feed, FeedOptions } from 'feed';
 import fs from 'fs';
-import { getWritings } from 'utils/mdx/getWritings';
+import { getWritings } from 'utils/mdx/writings/getWritings';
 import { parseToDate } from 'utils/time/parseToDate';
 
 export async function generateRssFeed() {

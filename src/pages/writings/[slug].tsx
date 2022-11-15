@@ -1,8 +1,8 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { ArticleJsonLd, NextSeo } from 'next-seo';
 import { Writing as WritingScreen, WritingProps } from 'screens/Writing';
-import { getWritingBySlug } from 'utils/mdx/getWritingBySlug';
-import { getWritingFiles } from 'utils/mdx/getWritingFiles';
+import { getWritingBySlug } from 'utils/mdx/writings/getWritingBySlug';
+import { getWritingFiles } from 'utils/mdx/writings/getWritingFiles';
 import { getAbsoluteUrl } from 'utils/shared/get-absolute-url';
 import { getPageUrl } from 'utils/shared/get-page-url';
 import { parseToDate } from 'utils/time/parseToDate';
