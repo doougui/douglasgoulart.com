@@ -42,7 +42,9 @@ function applyFilters(
       ? writingFilters.hasTag(writing, filters.tag)
       : true;
 
-    return inSearch && hasTag;
+    const isDraft = !!writing.isDraft === !!filters?.isDraft;
+
+    return inSearch && hasTag && isDraft;
   });
 }
 

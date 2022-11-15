@@ -8,6 +8,7 @@ export type SortTypesKeys = keyof typeof SortTypes;
 export type Filters = {
   search?: string;
   tag?: string;
+  isDraft?: boolean;
 };
 
 export type GetWritingsData = {
