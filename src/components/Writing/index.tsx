@@ -2,7 +2,7 @@ import { Image } from 'components/Image';
 import { MediaMatch } from 'components/MediaMatch';
 import { Stack } from 'components/Stack';
 import { Writing as WritingType } from 'types/Writing';
-import { formatDateString } from 'utils/time/formatDateString';
+import { formatDateString } from 'utils/time/format-date-string';
 import * as S from './styles';
 
 type WritingProps = WritingType;

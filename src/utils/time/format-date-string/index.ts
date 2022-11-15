@@ -1,5 +1,5 @@
 import { format, subDays } from 'date-fns';
-import { parseToDate } from './parse-to-date';
+import { parseToDate } from '../parse-to-date';
 
 export function formatDateString(
   date: string,
