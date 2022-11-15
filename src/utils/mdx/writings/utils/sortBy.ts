@@ -1,5 +1,5 @@
 import { Writing } from 'types/Writing';
-import { parseToDate } from 'utils/time/parseToDate';
+import { parseToDate } from 'utils/time/parse-to-date';
 import { SortTypesKeys } from '../types';
 
 function byNew(data: Writing[]) {
