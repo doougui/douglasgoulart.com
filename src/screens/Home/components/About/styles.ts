@@ -14,10 +14,15 @@ export const Container = styled.section`
 
 export const Footer = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-between;
 `;
 
 export const SocialMedia = styled.div`
   display: flex;
   gap: 1rem;
+
+  a {
+    height: 24px;
+  }
 `;
