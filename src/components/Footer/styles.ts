@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import NextLink from 'next/link';
+import media from 'styled-media-query';
 
 export const Container = styled.footer`
   ${({ theme }) => css`
@@ -14,6 +15,10 @@ export const Links = styled.menu`
   flex-wrap: wrap;
   gap: 8rem;
   margin-top: 2.5rem;
+
+  ${media.lessThan('medium')`
+    gap: 4rem;
+  `}
 `;
 
 export const Title = styled.h3`
