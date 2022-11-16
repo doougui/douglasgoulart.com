@@ -51,6 +51,7 @@ export const Content = styled.div`
       color: ${theme.colors.text};
       margin-top: 1rem;
       margin-bottom: 2rem;
+      word-break: break-word;
     }
 
     *:not(pre) code {
