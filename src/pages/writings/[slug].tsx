@@ -21,6 +21,7 @@ export default function Writing({ code, frontmatter }: WritingProps) {
             ? [
                 {
                   url: `${getAbsoluteUrl()}${frontmatter.cover?.url}`,
+                  secureUrl: `${getAbsoluteUrl()}${frontmatter.cover?.url}`,
                   alt: frontmatter.cover?.alt,
                 },
               ]

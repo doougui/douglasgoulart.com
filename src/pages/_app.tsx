@@ -45,6 +45,7 @@ function App({ Component, pageProps }: AppProps) {
             images: [
               {
                 url: `${getAbsoluteUrl()}/img/card.jpg`,
+                secureUrl: `${getAbsoluteUrl()}/img/card.jpg`,
                 width: 1200,
                 height: 630,
                 alt: 'Front-end and Mobile developer with an eye for design.',
