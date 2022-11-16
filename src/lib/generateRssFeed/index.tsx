@@ -2,7 +2,7 @@ import { SITE_URL } from 'config/app';
 import { Feed, FeedOptions } from 'feed';
 import fs from 'fs';
 import { getWritings } from 'utils/mdx/writings/getWritings';
-import { parseToDate } from 'utils/time/parseToDate';
+import { parseToDate } from 'utils/time/parse-to-date';
 
 export async function generateRssFeed() {
   const writings = await getWritings();

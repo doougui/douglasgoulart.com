@@ -5,7 +5,7 @@ import { getWritingBySlug } from 'utils/mdx/writings/getWritingBySlug';
 import { getWritingFiles } from 'utils/mdx/writings/getWritingFiles';
 import { getAbsoluteUrl } from 'utils/shared/get-absolute-url';
 import { getPageUrl } from 'utils/shared/get-page-url';
-import { parseToDate } from 'utils/time/parseToDate';
+import { parseToDate } from 'utils/time/parse-to-date';
 
 export default function Writing({ code, frontmatter }: WritingProps) {
   return (
@@ -21,6 +21,7 @@ export default function Writing({ code, frontmatter }: WritingProps) {
             ? [
                 {
                   url: `${getAbsoluteUrl()}${frontmatter.cover?.url}`,
+                  secureUrl: `${getAbsoluteUrl()}${frontmatter.cover?.url}`,
                   alt: frontmatter.cover?.alt,
                 },
               ]

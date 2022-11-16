@@ -10,6 +10,7 @@ module.exports = {
     '!src/types/**/*.d.ts',
     '!src/**/mock.ts',
   ],
+  setupFiles: ['<rootDir>/.jest/setEnvVars.ts'],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   modulePaths: ['<rootDir>/src/', '<rootDir>/.jest'],
   moduleNameMapper: {

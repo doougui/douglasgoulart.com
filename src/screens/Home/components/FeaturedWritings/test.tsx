@@ -1,5 +1,5 @@
 import { render, screen } from 'utils/tests';
-
+import writingsMock from 'screens/Writings/mock';
 import { FeaturedWritings, FeaturedWritingsProps } from '.';
 
 jest.mock('components/Writing', () => ({
@@ -8,11 +8,11 @@ jest.mock('components/Writing', () => ({
 }));
 
 const props: FeaturedWritingsProps = {
-  data: [],
+  data: writingsMock,
 };
 
 describe('<FeaturedWritings />', () => {
-  it('should render correctly', () => {
+  it('should render heading, read all link and writings', () => {
     render(<FeaturedWritings {...props} />);
 
     expect(
@@ -20,5 +20,7 @@ describe('<FeaturedWritings />', () => {
     ).toBeInTheDocument();
 
     expect(screen.getByRole('link', { name: 'Read all' })).toBeInTheDocument();
+
+    expect(screen.getAllByTestId('writing')).toHaveLength(3);
   });
 });
