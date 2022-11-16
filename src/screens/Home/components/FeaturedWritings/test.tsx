@@ -12,7 +12,7 @@ const props: FeaturedWritingsProps = {
 };
 
 describe('<FeaturedWritings />', () => {
-  it('should render correctly', () => {
+  it('should render heading, read all link and writings', () => {
     render(<FeaturedWritings {...props} />);
 
     expect(
@@ -21,6 +21,6 @@ describe('<FeaturedWritings />', () => {
 
     expect(screen.getByRole('link', { name: 'Read all' })).toBeInTheDocument();
 
-    expect(screen.getAllByTestId('writing')).toHaveLength(2);
+    expect(screen.getAllByTestId('writing')).toHaveLength(3);
   });
 });

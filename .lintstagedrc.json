@@ -1,5 +1,5 @@
 {
-  "*.{ts,tsx}": [
+  "!(.*/**/*.{ts,tsx})*.{ts,tsx}": [
     "yarn lint --fix",
     "yarn test --findRelatedTests --passWithNoTests --bail"
   ]
