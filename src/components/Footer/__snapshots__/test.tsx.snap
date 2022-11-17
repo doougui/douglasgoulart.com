@@ -150,6 +150,12 @@ exports[`<Footer /> should render correctly 1`] = `
   flex: 1;
 }
 
+@media (max-width:768px) {
+  .c3 {
+    gap: 4rem;
+  }
+}
+
 <footer
   class="c0"
 >
