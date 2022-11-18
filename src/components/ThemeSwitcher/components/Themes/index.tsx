@@ -31,7 +31,7 @@ const bangTimes: BangTimes = {
 export function Themes() {
   const [canPlay, setCanPlay] = React.useState(false);
 
-  const { setTheme, resolvedTheme } = useNextTheme();
+  const { setTheme, theme: nextTheme } = useNextTheme();
   const theme = useTheme();
 
   const { setIsOpen } = useFlashbang();
@@ -43,7 +43,7 @@ export function Themes() {
   }, []);
 
   const toggleLightMode = () => {
-    if (resolvedTheme === 'light') return;
+    if (nextTheme === 'light') return;
 
     if (!canPlay) {
       setTheme('light');
@@ -93,14 +93,14 @@ export function Themes() {
       <Flashbang />
       <S.Toggle
         data-testid="light-toggle"
-        isActive={resolvedTheme === 'light'}
+        isActive={nextTheme === 'light'}
         onClick={toggleLightMode}
       >
         <RiSunLine size={15} color={theme.colors.text} />
       </S.Toggle>
       <S.Toggle
         data-testid="dark-toggle"
-        isActive={resolvedTheme === 'dark'}
+        isActive={nextTheme === 'dark'}
         onClick={() => setTheme('dark')}
       >
         <RiMoonLine size={15} color={theme.colors.text} />

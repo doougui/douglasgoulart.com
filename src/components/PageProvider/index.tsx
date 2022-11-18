@@ -9,22 +9,24 @@ type PageProviderProps = {
 };
 
 export function PageProvider({ children }: PageProviderProps) {
-  const [selectedTheme, setSelectedTheme] = React.useState<DefaultTheme | null>(
-    null,
-  );
-
-  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+  const { theme } = useTheme();
+  const [selectedTheme, setSelectedTheme] = React.useState<DefaultTheme>(dark);
 
   React.useEffect(() => {
-    if (resolvedTheme === 'light') {
+    setMounted(true);
+  }, []);
+
+  React.useEffect(() => {
+    if (theme === 'light') {
       setSelectedTheme(light);
       return;
     }
 
     setSelectedTheme(dark);
-  }, [resolvedTheme]);
+  }, [theme]);
 
-  if (!selectedTheme) return null;
+  if (!mounted) return null;
 
   return <ThemeProvider theme={selectedTheme}>{children}</ThemeProvider>;
 }
