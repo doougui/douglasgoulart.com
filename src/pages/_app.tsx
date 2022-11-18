@@ -13,60 +13,60 @@ import { Analytics } from '@vercel/analytics/react';
 function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider>
-      <PageProvider>
-        <Head>
-          <title>Douglas Pinheiro Goulart</title>
-          <link rel="icon" href="/img/icon-512.png" />
-          <link rel="apple-touch-icon" href="/img/icon-192.png" />
-          <meta
-            name="description"
-            content="Front-end software developer based in Brazil and focused on web solutions"
-          />
-          <link rel="manifest" href="/manifest.json" />
-          <meta name="application-name" content="Douglas Pinheiro Goulart" />
-          <meta name="theme-color" content="#107BEB" />
-        </Head>
-        <GlobalStyles />
-        <NextNProgress
-          color="#107BEB"
-          startPosition={0.3}
-          stopDelayMs={200}
-          height={5}
-          showOnShallow={true}
+      <Head>
+        <title>Douglas Pinheiro Goulart</title>
+        <link rel="icon" href="/img/icon-512.png" />
+        <link rel="apple-touch-icon" href="/img/icon-192.png" />
+        <meta
+          name="description"
+          content="Front-end software developer based in Brazil and focused on web solutions"
         />
-        <DefaultSeo
-          openGraph={{
-            url: getAbsoluteUrl(),
-            title: 'Douglas Pinheiro Goulart',
-            type: 'website',
-            locale: 'en_US',
-            description:
-              'Front-end software developer based in Brazil and focused on web solutions',
-            images: [
-              {
-                url: `${getAbsoluteUrl()}/img/card.jpg`,
-                secureUrl: `${getAbsoluteUrl()}/img/card.jpg`,
-                width: 1200,
-                height: 630,
-                alt: 'Front-end and Mobile developer with an eye for design.',
-                type: 'image/jpeg',
-              },
-            ],
-            siteName: 'Douglas Pinheiro Goulart',
-          }}
-          twitter={{
-            cardType: 'summary_large_image',
-          }}
-          additionalMetaTags={[
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="application-name" content="Douglas Pinheiro Goulart" />
+        <meta name="theme-color" content="#107BEB" />
+      </Head>
+      <DefaultSeo
+        openGraph={{
+          url: getAbsoluteUrl(),
+          title: 'Douglas Pinheiro Goulart',
+          type: 'website',
+          locale: 'en_US',
+          description:
+            'Front-end software developer based in Brazil and focused on web solutions',
+          images: [
             {
-              httpEquiv: 'content-type',
-              content: 'text/html; charset=utf-8',
+              url: `${getAbsoluteUrl()}/img/card.jpg`,
+              secureUrl: `${getAbsoluteUrl()}/img/card.jpg`,
+              width: 1200,
+              height: 630,
+              alt: 'Front-end and Mobile developer with an eye for design.',
+              type: 'image/jpeg',
             },
-          ]}
-        />
+          ],
+          siteName: 'Douglas Pinheiro Goulart',
+        }}
+        twitter={{
+          cardType: 'summary_large_image',
+        }}
+        additionalMetaTags={[
+          {
+            httpEquiv: 'content-type',
+            content: 'text/html; charset=utf-8',
+          },
+        ]}
+      />
+      <NextNProgress
+        color="#107BEB"
+        startPosition={0.3}
+        stopDelayMs={200}
+        height={5}
+        showOnShallow={true}
+      />
+      <PageProvider>
+        <GlobalStyles />
         <Component {...pageProps} />
-        <Analytics />
       </PageProvider>
+      <Analytics />
     </ThemeProvider>
   );
 }
