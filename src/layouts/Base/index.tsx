@@ -1,3 +1,4 @@
+import React from 'react';
 import { Container } from 'components/Container';
 import { Footer } from 'components/Footer';
 import { Menu } from 'components/Menu';
@@ -8,6 +9,13 @@ type BaseProps = {
 };
 
 export function Base({ children }: BaseProps) {
+  const [mounted, setMounted] = React.useState(false);
+
+  // Avoid hydration mismatch
+  React.useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
+
   return (
     <S.Container>
       <Container>

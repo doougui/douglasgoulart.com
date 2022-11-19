@@ -9,13 +9,8 @@ type PageProviderProps = {
 };
 
 export function PageProvider({ children }: PageProviderProps) {
-  const [mounted, setMounted] = React.useState(false);
   const { theme } = useTheme();
   const [selectedTheme, setSelectedTheme] = React.useState<DefaultTheme>(dark);
-
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
 
   React.useEffect(() => {
     if (theme === 'light') {
@@ -25,8 +20,6 @@ export function PageProvider({ children }: PageProviderProps) {
 
     setSelectedTheme(dark);
   }, [theme]);
-
-  if (!mounted) return null;
 
   return <ThemeProvider theme={selectedTheme}>{children}</ThemeProvider>;
 }
