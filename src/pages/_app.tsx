@@ -66,7 +66,7 @@ function App({ Component, pageProps }: AppProps) {
         <GlobalStyles />
         <Component {...pageProps} />
       </PageProvider>
-      <Analytics />
+      {process.env.NODE_ENV !== 'development' && <Analytics />}
     </ThemeProvider>
   );
 }

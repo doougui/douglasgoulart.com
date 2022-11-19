@@ -45,6 +45,7 @@ export function Writing({ code, frontmatter }: WritingProps) {
               alt={frontmatter.cover.alt}
               width={900}
               height={0}
+              priority
             />
             {frontmatter.cover?.caption && (
               <S.Caption
