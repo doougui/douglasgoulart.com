@@ -8,7 +8,7 @@ export const Heading = styled.header`
 `;
 
 export const Cover = styled(Image)`
-  max-width: 100%;
+  width: auto;
   height: auto;
 `;
 
