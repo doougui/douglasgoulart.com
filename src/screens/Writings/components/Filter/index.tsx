@@ -21,7 +21,11 @@ export function Filter({
   tag,
   onFilter,
 }: FilterProps) {
-  const { values, handleInput } = useForm<Values>({
+  const {
+    values,
+    handleInput,
+    formState: { isDirty },
+  } = useForm<Values>({
     initialValues: {
       sort,
       search,
@@ -30,7 +34,11 @@ export function Filter({
   });
 
   React.useEffect(() => {
-    onFilter(values);
+    if (!isDirty) return;
+    const filledValues = Object.fromEntries(
+      Object.entries(values).filter(([, value]) => !!value),
+    );
+    onFilter(filledValues);
     // This method comes from another template that we don't have access
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [values]);
@@ -45,6 +53,7 @@ export function Filter({
             data-testid="select-order"
             aria-label="Select order"
             role="listbox"
+            defaultValue={sort}
             onChange={(e) => handleInput('sort', e.target.value)}
           >
             {Object.entries(sortOptions).map(([key, value]) => (
