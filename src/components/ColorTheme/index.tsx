@@ -3,7 +3,10 @@ import { COLORS } from './colors';
 import { getVariableName, STORAGE_KEY } from './config';
 import { Color, Colors, Theme } from './types';
 
-export function setColorsByTheme() {
+function setColorsByTheme(
+  storageKey: string,
+  variableNameGetter: (type: string, rawName: string) => string,
+) {
   const colors: Colors | string = '🌈';
 
   function getColorMode(): Theme {
@@ -11,7 +14,7 @@ export function setColorsByTheme() {
     const prefersDarkFromMQ = mql.matches;
     const defaultOS: Theme = prefersDarkFromMQ ? 'dark' : 'light';
 
-    const storagedMode = localStorage.getItem(STORAGE_KEY) as
+    const storagedMode = localStorage.getItem(storageKey) as
       | 'dark'
       | 'light'
       | undefined;
@@ -29,7 +32,7 @@ export function setColorsByTheme() {
   if (typeof colors === 'string') return;
   Object.entries(colors).forEach(([name, colorByTheme]) => {
     root.style.setProperty(
-      getVariableName('color', name),
+      variableNameGetter('color', name),
       (colorByTheme as Color)[mode],
     );
   });
@@ -43,7 +46,7 @@ export function ColorThemeScriptTag() {
     JSON.stringify(COLORS),
   );
 
-  const calledFunction = `(${boundFn})()`;
+  const calledFunction = `(${boundFn})('${STORAGE_KEY}', ${getVariableName})`;
 
   // eslint-disable-next-line react/no-danger
   return <script dangerouslySetInnerHTML={{ __html: calledFunction }} />;
