@@ -10,6 +10,7 @@ type ColorThemeContextData = {
 };
 
 type ColorThemeProviderProps = {
+  initialTheme?: Theme;
   children: React.ReactNode;
 };
 
@@ -22,10 +23,28 @@ export const ColorThemeContext = React.createContext<ColorThemeContextData>(
   ColorThemeContextDefaultValues,
 );
 
-export function ColorThemeProvider(props: ColorThemeProviderProps) {
+export function ColorThemeProvider({
+  initialTheme,
+  ...props
+}: ColorThemeProviderProps) {
   const [colorMode, rawSetColorMode] = React.useState<Theme | undefined>(
     undefined,
   );
+
+  React.useEffect(() => {
+    if (!initialTheme) return;
+
+    rawSetColorMode(initialTheme);
+
+    const root = window.document.documentElement;
+
+    Object.entries(COLORS).forEach(([name, colorByTheme]) => {
+      root.style.setProperty(
+        getVariableName('color', name),
+        (colorByTheme as Color)[initialTheme],
+      );
+    });
+  }, [initialTheme]);
 
   React.useEffect(() => {
     const root = window.document.documentElement;

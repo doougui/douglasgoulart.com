@@ -5,7 +5,7 @@ import GlobalStyles from 'styles/global';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import { DefaultSeo } from 'next-seo';
 import { getAbsoluteUrl } from 'utils/shared/get-absolute-url';
-import defaultTheme from 'styles/themes/default';
+import theme from 'styles/theme';
 import { ThemeProvider } from 'styled-components';
 import { ColorThemeProvider } from 'contexts/ColorThemeContext';
 // eslint-disable-next-line import/no-unresolved
@@ -13,7 +13,7 @@ import { Analytics } from '@vercel/analytics/react';
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={theme}>
       <Head>
         <title>Douglas Pinheiro Goulart</title>
         <link rel="icon" href="/img/icon-512.png" />
