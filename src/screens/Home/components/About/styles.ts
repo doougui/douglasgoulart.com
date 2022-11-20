@@ -1,3 +1,4 @@
+import { IconBase } from 'react-icons';
 import styled, { css } from 'styled-components';
 
 export const Container = styled.section`
@@ -25,4 +26,8 @@ export const SocialMedia = styled.div`
   a {
     height: 24px;
   }
+`;
+
+export const SocialMediaIcon = styled(IconBase)`
+  color: var(--color-textDark);
 `;

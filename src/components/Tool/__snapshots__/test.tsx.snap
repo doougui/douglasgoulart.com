@@ -22,7 +22,7 @@ exports[`<Tool /> should render correctly 1`] = `
 
 .c2 {
   font-size: 1.6rem;
-  color: #EDEDEF;
+  color: var(--text);
 }
 
 <div

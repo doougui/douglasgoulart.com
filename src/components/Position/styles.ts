@@ -3,9 +3,7 @@ import styled, { css } from 'styled-components';
 export const Container = styled.div``;
 
 export const Company = styled.span`
-  ${({ theme }) => css`
-    color: ${theme.colors.primary};
-  `}
+  color: var(--color-primary);
 `;
 
 export const Responsabilities = styled.ul`
@@ -21,21 +19,19 @@ export const Responsabilities = styled.ul`
 `;
 
 export const Responsability = styled.li`
-  ${({ theme }) => css`
-    position: relative;
-    padding-left: 3rem;
+  position: relative;
+  padding-left: 3rem;
 
-    &::before {
-      content: '';
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      display: block;
-      background: ${theme.colors.primary};
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-  `}
+  &::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: block;
+    background: var(--color-primary);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 `;

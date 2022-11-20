@@ -49,7 +49,7 @@ const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
   ${({ theme, removeBg }) => css`
     html {
       font-size: 62.5%;
-      color: ${theme.colors.text};
+      color: var(--color-text);
     }
 
     body {
@@ -57,7 +57,7 @@ const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
 
       ${!removeBg &&
       css`
-        background-color: ${theme.colors.background};
+        background-color: var(--color-background);
       `}
     }
   `}

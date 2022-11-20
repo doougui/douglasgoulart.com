@@ -19,8 +19,8 @@ export const Container = styled.button<ContainerProps>`
 
     font-size: ${theme.font.sizes.medium};
     line-height: ${theme.font.heights.large};
-    color: ${theme.colors.highlightText};
-    background-color: ${theme.colors.primary};
+    color: var(--color-highlightText);
+    background-color: var(--color-primary);
     border-radius: ${theme.border.radius};
 
     padding: 1rem 4rem;

@@ -5,26 +5,26 @@ exports[`<Input /> should render the input 1`] = `
   all: unset;
   width: 100%;
   font-size: 1.6rem;
-  background: #2D2D2F;
+  background: var(--color-tertiary);
   padding: 1.2rem 1.5rem;
   border-radius: 0.4rem;
-  color: #EDEDEF;
+  color: var(--color-text);
 }
 
 .c0::-webkit-input-placeholder {
-  color: #888888;
+  color: var(--color-textDark);
 }
 
 .c0::-moz-placeholder {
-  color: #888888;
+  color: var(--color-textDark);
 }
 
 .c0:-ms-input-placeholder {
-  color: #888888;
+  color: var(--color-textDark);
 }
 
 .c0::placeholder {
-  color: #888888;
+  color: var(--color-textDark);
 }
 
 <input

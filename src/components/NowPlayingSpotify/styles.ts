@@ -7,7 +7,7 @@ export const Container = styled.div`
     align-items: center;
     gap: 1.5rem;
 
-    color: ${theme.colors.text};
+    color: var(--color-text);
     font-size: ${theme.font.sizes.medium};
   `}
 `;
@@ -33,6 +33,7 @@ const spotifyIconModifiers = {
 
 export const SpotifyIcon = styled(RiSpotifyFill)<SpotifyIconProps>`
   ${({ $isPlaying }) => css`
+    color: var(--color-text);
     ${$isPlaying && spotifyIconModifiers.isPlaying()}
   `}
 `;

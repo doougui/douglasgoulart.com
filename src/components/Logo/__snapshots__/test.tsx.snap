@@ -5,11 +5,11 @@ exports[`<Logo /> should render correctly 1`] = `
   font-family: Poppins;
   font-weight: 600;
   font-size: 3.2rem;
-  color: #EDEDEF;
+  color: var(--color-text);
 }
 
 .c1 {
-  color: #107BEB;
+  color: var(--color-primary);
 }
 
 <div

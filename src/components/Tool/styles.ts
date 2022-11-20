@@ -21,6 +21,6 @@ export const Dot = styled.div<DotProps>`
 export const Content = styled.span`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.medium};
-    color: ${theme.colors.text};
+    color: var(--text);
   `}
 `;

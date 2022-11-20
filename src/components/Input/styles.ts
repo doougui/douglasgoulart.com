@@ -1,12 +1,12 @@
-import styled, { css, DefaultTheme } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 type ContainerProps = {
   hasError: boolean;
 };
 
 const containerModifiers = {
-  hasError: (theme: DefaultTheme) => css`
-    border: 1px solid ${theme.colors.danger};
+  hasError: () => css`
+    border: 1px solid var(--color-danger);
   `,
 };
 
@@ -15,15 +15,15 @@ export const Container = styled.input<ContainerProps>`
     all: unset;
     width: 100%;
     font-size: ${theme.font.sizes.medium};
-    background: ${theme.colors.tertiary};
+    background: var(--color-tertiary);
     padding: 1.2rem 1.5rem;
     border-radius: ${theme.border.radius};
-    color: ${theme.colors.text};
+    color: var(--color-text);
 
     &::placeholder {
-      color: ${theme.colors.textDark};
+      color: var(--color-textDark);
     }
 
-    ${hasError && containerModifiers.hasError(theme)};
+    ${hasError && containerModifiers.hasError()};
   `}
 `;

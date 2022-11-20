@@ -27,7 +27,7 @@ exports[`<AboutMe /> should render correctly 1`] = `
 .c2 {
   font-size: 1.6rem;
   line-height: 2.4rem;
-  color: #EDEDEF;
+  color: var(--color-text);
 }
 
 @media (max-width:768px) {

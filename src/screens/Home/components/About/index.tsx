@@ -1,12 +1,9 @@
 import { Link } from 'components/Link';
 import NextLink from 'next/link';
 import { RiGithubFill, RiLinkedinBoxFill, RiMailFill } from 'react-icons/ri';
-import { useTheme } from 'styled-components';
 import * as S from './styles';
 
 export function About() {
-  const theme = useTheme();
-
   return (
     <S.Container>
       <p>
@@ -34,7 +31,7 @@ export function About() {
             target="_blank"
             aria-label="Douglas' GitHub"
           >
-            <RiGithubFill size={24} color={theme.colors.textDark} />
+            <S.SocialMediaIcon as={RiGithubFill} size={24} />
           </NextLink>
 
           <NextLink
@@ -42,7 +39,7 @@ export function About() {
             target="_blank"
             aria-label="Douglas' Linkedin"
           >
-            <RiLinkedinBoxFill size={24} color={theme.colors.textDark} />
+            <S.SocialMediaIcon as={RiLinkedinBoxFill} size={24} />
           </NextLink>
 
           <NextLink
@@ -50,7 +47,7 @@ export function About() {
             target="_blank"
             aria-label="Douglas' E-mail"
           >
-            <RiMailFill size={24} color={theme.colors.textDark} />
+            <S.SocialMediaIcon as={RiMailFill} size={24} />
           </NextLink>
         </S.SocialMedia>
       </S.Footer>

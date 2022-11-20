@@ -6,7 +6,7 @@ export const Message = styled.p`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.medium};
     line-height: ${theme.font.heights.large};
-    color: ${theme.colors.text};
+    color: var(--color-text);
   `}
 `;
 
@@ -22,13 +22,9 @@ export const Infos = styled.div`
 `;
 
 export const Author = styled.p`
-  ${({ theme }) => css`
-    color: ${theme.colors.textDark};
-  `}
+  color: var(--color-textDark);
 `;
 
 export const Date = styled.p`
-  ${({ theme }) => css`
-    color: ${theme.colors.textDarker};
-  `}
+  color: var(--color-textDarker);
 `;

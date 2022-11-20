@@ -48,7 +48,7 @@ export const Content = styled.div`
     }
 
     p {
-      color: ${theme.colors.text};
+      color: var(--color-text);
       margin-top: 1rem;
       margin-bottom: 2rem;
       word-break: break-word;
@@ -56,7 +56,7 @@ export const Content = styled.div`
 
     *:not(pre) code {
       font-size: ${theme.font.sizes.medium};
-      background: ${theme.colors.tertiary};
+      background: var(--color-tertiary);
     }
 
     ol,
@@ -71,14 +71,14 @@ export const Content = styled.div`
         word-break: break-word;
 
         &::marker {
-          color: ${theme.colors.textDark};
+          color: var(--color-textDark);
         }
       }
     }
 
     blockquote {
       padding-left: 2rem;
-      border-left: 0.6rem solid ${theme.colors.textDark};
+      border-left: 0.6rem solid var(--color-textDark);
       border-radius: ${theme.border.radius};
     }
   `}

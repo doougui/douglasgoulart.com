@@ -6,7 +6,7 @@ import { Writing } from 'types/Writing';
 import * as writingFilters from './filters';
 import { getWritingFiles } from './getWritingFiles';
 import { Filters, GetWritingsData } from './types';
-import { sortBy } from './utils/sortBy';
+import { sortBy } from './utils/sort-by';
 
 function getFrontmatterFiles(files: string[]) {
   return files.map((file: string) => {

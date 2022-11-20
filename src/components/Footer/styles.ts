@@ -3,11 +3,9 @@ import NextLink from 'next/link';
 import media from 'styled-media-query';
 
 export const Container = styled.footer`
-  ${({ theme }) => css`
-    margin-top: 5rem;
-    padding-top: 3rem;
-    border-top: 1px solid ${theme.colors.tertiary};
-  `}
+  margin-top: 5rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--color-tertiary);
 `;
 
 export const Links = styled.menu`
@@ -23,7 +21,7 @@ export const Links = styled.menu`
 
 export const Title = styled.h3`
   ${({ theme }) => css`
-    color: ${theme.colors.text};
+    color: var(--color-text);
     font-size: ${theme.font.sizes.medium};
     line-height: ${theme.font.heights.large};
     font-weight: ${theme.font.weights.normal};
@@ -33,7 +31,7 @@ export const Title = styled.h3`
 export const Description = styled.p`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.medium};
-    color: ${theme.colors.textDark};
+    color: var(--color-textDark);
   `}
 `;
 
@@ -46,7 +44,7 @@ export const Nav = styled.nav`
 
 export const Link = styled(NextLink)`
   ${({ theme }) => css`
-    color: ${theme.colors.textDark};
+    color: var(--color-textDark);
     font-size: ${theme.font.sizes.medium};
     text-decoration: none;
 
@@ -58,7 +56,7 @@ export const Link = styled(NextLink)`
 
 export const Copyright = styled.p`
   ${({ theme }) => css`
-    color: ${theme.colors.text};
+    color: var(--color-text);
     font-size: ${theme.font.sizes.medium};
     line-height: ${theme.font.heights.large};
     margin-top: 3rem;

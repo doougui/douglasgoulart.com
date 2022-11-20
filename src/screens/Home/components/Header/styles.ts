@@ -6,7 +6,7 @@ export const Introduction = styled.div`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.small};
     line-height: ${theme.font.sizes.small};
-    color: ${theme.colors.text};
+    color: var(--color-text);
   `}
 `;
 
@@ -14,7 +14,7 @@ export const Role = styled.h1`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.xxlarge};
     line-height: ${theme.font.heights.xxlarge};
-    color: ${theme.colors.text};
+    color: var(--color-text);
     font-weight: ${theme.font.weights.normal};
   `}
 `;

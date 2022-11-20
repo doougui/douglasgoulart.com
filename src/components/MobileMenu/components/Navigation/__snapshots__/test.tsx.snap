@@ -4,7 +4,7 @@ exports[`<Navigation /> should render closed state 1`] = `
 .c2 {
   padding-bottom: 2rem;
   padding-top: 2rem;
-  border-bottom: 1px solid #504F57;
+  border-bottom: 1px solid var(--color-textDarker);
 }
 
 .c3 {
@@ -33,7 +33,7 @@ exports[`<Navigation /> should render closed state 1`] = `
 .c0 {
   width: 100vw;
   height: 100vh;
-  background: #151718;
+  background: var(--color-background);
   position: fixed;
   left: 0;
   top: 0;

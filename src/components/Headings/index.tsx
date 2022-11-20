@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 const Heading = css`
   ${({ theme }) => css`
-    color: ${theme.colors.text};
+    color: var(--color-text)};
     font-weight: ${theme.font.weights.bold};
   `}
 `;

@@ -4,18 +4,18 @@ exports[`<Position /> should render title, company, period and responsabilities 
 .c0 {
   font-size: 1.8rem;
   line-height: 2.4rem;
-  color: #EDEDEF;
+  color: var(--color-text);
   font-weight: 600;
 }
 
 .c2 {
   font-size: 1.6rem;
   line-height: 2.4rem;
-  color: #888888;
+  color: var(--color-textDark);
 }
 
 .c1 {
-  color: #107BEB;
+  color: var(--color-primary);
 }
 
 .c3 {
@@ -44,7 +44,7 @@ exports[`<Position /> should render title, company, period and responsabilities 
   height: 8px;
   border-radius: 50%;
   display: block;
-  background: #107BEB;
+  background: var(--color-primary);
   position: absolute;
   left: 0;
   top: 50%;
