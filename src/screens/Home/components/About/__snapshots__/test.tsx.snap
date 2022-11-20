@@ -45,6 +45,10 @@ exports[`<About /> should render correctly 1`] = `
   height: 24px;
 }
 
+.c4 {
+  color: var(--color-textDark);
+}
+
 <section
   class="c0"
 >
@@ -75,12 +79,11 @@ exports[`<About /> should render correctly 1`] = `
         target="_blank"
       >
         <svg
-          color="#888888"
+          class="c4"
           fill="currentColor"
           height="24"
           stroke="currentColor"
           stroke-width="0"
-          style="color: rgb(136, 136, 136);"
           viewBox="0 0 24 24"
           width="24"
           xmlns="http://www.w3.org/2000/svg"
@@ -102,12 +105,11 @@ exports[`<About /> should render correctly 1`] = `
         target="_blank"
       >
         <svg
-          color="#888888"
+          class="c4"
           fill="currentColor"
           height="24"
           stroke="currentColor"
           stroke-width="0"
-          style="color: rgb(136, 136, 136);"
           viewBox="0 0 24 24"
           width="24"
           xmlns="http://www.w3.org/2000/svg"
@@ -130,12 +132,11 @@ exports[`<About /> should render correctly 1`] = `
         target="_blank"
       >
         <svg
-          color="#888888"
+          class="c4"
           fill="currentColor"
           height="24"
           stroke="currentColor"
           stroke-width="0"
-          style="color: rgb(136, 136, 136);"
           viewBox="0 0 24 24"
           width="24"
           xmlns="http://www.w3.org/2000/svg"

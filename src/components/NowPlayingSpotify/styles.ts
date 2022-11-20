@@ -33,6 +33,7 @@ const spotifyIconModifiers = {
 
 export const SpotifyIcon = styled(RiSpotifyFill)<SpotifyIconProps>`
   ${({ $isPlaying }) => css`
+    color: var(--color-text);
     ${$isPlaying && spotifyIconModifiers.isPlaying()}
   `}
 `;
