@@ -1,4 +1,5 @@
 import { Analytics } from 'components/Analytics';
+import { FallbackStyles, MagicScriptTag } from 'components/Theme';
 import Document, {
   DocumentContext,
   Head,
@@ -38,8 +39,11 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en-US">
-        <Head />
+        <Head>
+          <FallbackStyles />
+        </Head>
         <body>
+          <MagicScriptTag />
           <Main />
           <NextScript />
           <Analytics />

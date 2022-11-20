@@ -5,7 +5,7 @@ import media from 'styled-media-query';
 export const Container = styled.div`
   ${({ theme }) => css`
     padding: 3rem;
-    background-color: ${theme.colors.secondary};
+    background-color: var(--color-secondary);
     border-radius: ${theme.border.radius};
     margin-top: 2rem;
   `}
@@ -25,7 +25,7 @@ export const Actions = styled.div`
 
 export const InformationUsage = styled.p`
   ${({ theme }) => css`
-    color: ${theme.colors.textDarker};
+    color: var(--color-textDarker);
     font-size: ${theme.font.sizes.xsmall};
     margin-top: 1rem;
   `}

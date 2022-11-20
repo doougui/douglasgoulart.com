@@ -4,7 +4,7 @@ exports[`<GuestMessage /> should render message, author and date 1`] = `
 .c0 {
   font-size: 1.6rem;
   line-height: 2.4rem;
-  color: #EDEDEF;
+  color: var(--color-text);
 }
 
 .c1 {
@@ -22,11 +22,11 @@ exports[`<GuestMessage /> should render message, author and date 1`] = `
 }
 
 .c2 {
-  color: #888888;
+  color: var(--color-textDark);
 }
 
 .c3 {
-  color: #504F57;
+  color: var(--color-textDarker);
 }
 
 <div

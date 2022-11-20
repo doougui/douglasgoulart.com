@@ -8,7 +8,7 @@ export const Link = styled(NextLink)`
 export const Container = styled.div`
   ${({ theme }) => css`
     padding: 1.5rem;
-    background-color: ${theme.colors.background};
+    background-color: var(--color-background);
     border-radius: ${theme.border.radius};
     cursor: pointer;
 
@@ -19,7 +19,7 @@ export const Container = styled.div`
     text-decoration: none;
 
     &:hover {
-      background-color: ${theme.colors.secondary};
+      background-color: var(--color-secondary);
     }
   `}
 `;
@@ -46,7 +46,7 @@ const Text = styled.span`
 
 export const Title = styled(Text)`
   ${({ theme }) => css`
-    color: ${theme.colors.text};
+    color: var(--color-text);
     font-size: ${theme.font.sizes.medium};
     line-height: ${theme.font.heights.medium};
   `}
@@ -54,7 +54,7 @@ export const Title = styled(Text)`
 
 export const Excerpt = styled(Text)`
   ${({ theme }) => css`
-    color: ${theme.colors.textDark};
+    color: var(--color-textDark);
     font-size: ${theme.font.sizes.medium};
     line-height: ${theme.font.heights.medium};
   `}
@@ -62,7 +62,7 @@ export const Excerpt = styled(Text)`
 
 export const Date = styled(Text)`
   ${({ theme }) => css`
-    color: ${theme.colors.textDarker};
+    color: var(--color-textDarker);
     font-size: ${theme.font.sizes.xsmall};
     line-height: ${theme.font.heights.xsmall};
   `}

@@ -19,13 +19,41 @@ exports[`<ThemeSwitcher /> should render correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border-radius: 0.4rem;
-  background: #2D2D2F;
+  background: var(--color-tertiary);
   -webkit-transition: background-color 0.1s ease-in-out;
   transition: background-color 0.1s ease-in-out;
 }
 
 .c1:hover {
-  background: #1C1C1C;
+  background: var(--color-secondary);
+}
+
+.c2 {
+  width: 3rem;
+  height: 3rem;
+  padding: 5px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 0.4rem;
+  background: var(--color-tertiary);
+  -webkit-transition: background-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
+  background: var(--color-textDarker);
+}
+
+.c2:hover {
+  background: var(--color-secondary);
 }
 
 .c0 {
@@ -33,7 +61,7 @@ exports[`<ThemeSwitcher /> should render correctly 1`] = `
   width: -moz-max-content;
   width: max-content;
   border-radius: 0.4rem;
-  background: #2D2D2F;
+  background: var(--color-tertiary);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -50,12 +78,10 @@ exports[`<ThemeSwitcher /> should render correctly 1`] = `
     data-testid="light-toggle"
   >
     <svg
-      color="#EDEDEF"
       fill="currentColor"
       height="15"
       stroke="currentColor"
       stroke-width="0"
-      style="color: rgb(237, 237, 239);"
       viewBox="0 0 24 24"
       width="15"
       xmlns="http://www.w3.org/2000/svg"
@@ -73,16 +99,14 @@ exports[`<ThemeSwitcher /> should render correctly 1`] = `
     </svg>
   </div>
   <div
-    class="c1"
+    class="c2"
     data-testid="dark-toggle"
   >
     <svg
-      color="#EDEDEF"
       fill="currentColor"
       height="15"
       stroke="currentColor"
       stroke-width="0"
-      style="color: rgb(237, 237, 239);"
       viewBox="0 0 24 24"
       width="15"
       xmlns="http://www.w3.org/2000/svg"

@@ -1,6 +1,6 @@
-import styled, { css, DefaultTheme } from 'styled-components';
-import media from 'styled-media-query';
 import NextLink from 'next/link';
+import styled, { css } from 'styled-components';
+import media from 'styled-media-query';
 
 export const Container = styled.menu`
   display: flex;
@@ -22,8 +22,8 @@ type MenuLinkProps = {
 };
 
 const menuLinkModifiers = {
-  active: (theme: DefaultTheme) => css`
-    color: ${theme.colors.primary};
+  active: () => css`
+    color: var(--color-primary);
   `,
 };
 
@@ -31,10 +31,10 @@ export const MenuLink = styled(NextLink)<MenuLinkProps>`
   ${({ theme, $active }) => css`
     font-size: ${theme.font.sizes.medium};
     text-decoration: none;
-    color: ${theme.colors.text};
+    color: var(--color-text);
     padding: 0 1.5rem;
 
-    ${$active && menuLinkModifiers.active(theme)};
+    ${$active && menuLinkModifiers.active()};
   `}
 `;
 

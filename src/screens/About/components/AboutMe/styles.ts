@@ -28,6 +28,6 @@ export const Paragraph = styled.p`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.medium};
     line-height: ${theme.font.heights.large};
-    color: ${theme.colors.text};
+    color: var(--color-text);
   `}
 `;

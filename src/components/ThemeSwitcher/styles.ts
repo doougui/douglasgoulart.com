@@ -1,10 +1,10 @@
-import styled, { css, DefaultTheme } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   ${({ theme }) => css`
     width: max-content;
     border-radius: ${theme.border.radius};
-    background: ${theme.colors.tertiary};
+    background: var(--color-tertiary);
     display: flex;
     padding: 5px;
     gap: 5px;
@@ -16,8 +16,8 @@ type ToggleProps = {
 };
 
 const toggleModifiers = {
-  isActive: (theme: DefaultTheme) => css`
-    background: ${theme.colors.textDarker};
+  isActive: () => css`
+    background: var(--color-textDarker);
   `,
 };
 
@@ -31,13 +31,13 @@ export const Toggle = styled.div<ToggleProps>`
     justify-content: center;
     align-items: center;
     border-radius: ${theme.border.radius};
-    background: ${theme.colors.tertiary};
+    background: var(--color-tertiary);
     transition: background-color ${theme.transition.fast};
 
     &:hover {
-      background: ${theme.colors.secondary};
+      background: var(--color-secondary);
     }
 
-    ${isActive && toggleModifiers.isActive(theme)};
+    ${isActive && toggleModifiers.isActive()};
   `}
 `;

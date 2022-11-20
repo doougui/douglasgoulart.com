@@ -7,8 +7,8 @@ exports[`<Contact /> should render title and contact button 1`] = `
   width: fit-content;
   font-size: 1.6rem;
   line-height: 2.4rem;
-  color: #EDEDEF;
-  background-color: #107BEB;
+  color: var(--color-highlightText);
+  background-color: var(--color-primary);
   border-radius: 0.4rem;
   padding: 1rem 4rem;
   display: -webkit-box;
@@ -32,7 +32,7 @@ exports[`<Contact /> should render title and contact button 1`] = `
 .c1 {
   font-size: 2.4rem;
   line-height: 3rem;
-  color: #EDEDEF;
+  color: var(--color-text);
   font-weight: 600;
 }
 

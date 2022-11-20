@@ -4,11 +4,11 @@ exports[`<Item /> should render correctly 1`] = `
 .c0 {
   padding-bottom: 2rem;
   padding-top: 2rem;
-  border-bottom: 1px solid #504F57;
+  border-bottom: 1px solid var(--color-textDarker);
 }
 
 .c1 {
-  color: #EDEDEF;
+  color: var(--color-text);
   font-size: 1.6rem;
   line-height: 1.8rem;
   -webkit-text-decoration: none;

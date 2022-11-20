@@ -1,8 +1,7 @@
 import { useFlashbang } from 'components/ThemeSwitcher/contexts/flashbang-context';
-import { useTheme as useNextTheme } from 'next-themes';
+import { useColorTheme } from 'contexts/ColorThemeContext';
 import React from 'react';
 import { RiMoonLine, RiSunLine } from 'react-icons/ri';
-import { useTheme } from 'styled-components';
 import { Flashbang } from '../Flashbang';
 import * as S from './styles';
 
@@ -31,9 +30,7 @@ const bangTimes: BangTimes = {
 export function Themes() {
   const [canPlay, setCanPlay] = React.useState(false);
 
-  const { setTheme, theme: nextTheme } = useNextTheme();
-  const theme = useTheme();
-
+  const { colorMode, setColorMode } = useColorTheme();
   const { setIsOpen } = useFlashbang();
 
   const audio = React.useMemo(() => {
@@ -43,10 +40,10 @@ export function Themes() {
   }, []);
 
   const toggleLightMode = () => {
-    if (nextTheme === 'light') return;
+    if (colorMode === 'light') return;
 
     if (!canPlay) {
-      setTheme('light');
+      setColorMode('light');
       return;
     }
 
@@ -66,7 +63,7 @@ export function Themes() {
     const time = getBangTime();
 
     setTimeout(() => {
-      setTheme('light');
+      setColorMode('light');
       setIsOpen(true);
       setTimeout(() => setIsOpen(false), FADE_OUT_TIME);
     }, time);
@@ -93,17 +90,17 @@ export function Themes() {
       <Flashbang />
       <S.Toggle
         data-testid="light-toggle"
-        isActive={nextTheme === 'light'}
+        isActive={colorMode === 'light'}
         onClick={toggleLightMode}
       >
-        <RiSunLine size={15} color={theme.colors.text} />
+        <RiSunLine size={15} />
       </S.Toggle>
       <S.Toggle
         data-testid="dark-toggle"
-        isActive={nextTheme === 'dark'}
-        onClick={() => setTheme('dark')}
+        isActive={colorMode === 'dark'}
+        onClick={() => setColorMode('dark')}
       >
-        <RiMoonLine size={15} color={theme.colors.text} />
+        <RiMoonLine size={15} />
       </S.Toggle>
     </>
   );

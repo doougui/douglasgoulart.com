@@ -7,22 +7,20 @@ export const Container = styled.div`
 `;
 
 export const Order = styled.div`
-  ${({ theme }) => css`
-    background: ${theme.colors.secondary};
+  background: var(--color-secondary);
 
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 
-    padding: 0 1.5rem;
-  `}
+  padding: 0 1.5rem;
 `;
 
 export const OrderText = styled.span`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.small};
     line-height: ${theme.font.heights.small};
-    color: ${theme.colors.textDark};
+    color: var(--color-textDark);
     white-space: nowrap;
   `}
 `;

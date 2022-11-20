@@ -2,7 +2,7 @@
 
 exports[`<About /> should render correctly 1`] = `
 .c2 {
-  color: #107BEB;
+  color: var(--color-primary);
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 1.6rem;

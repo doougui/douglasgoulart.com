@@ -1,18 +1,19 @@
-import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import NextNProgress from 'nextjs-progressbar';
 import GlobalStyles from 'styles/global';
-import { PageProvider } from 'components/PageProvider';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import { DefaultSeo } from 'next-seo';
 import { getAbsoluteUrl } from 'utils/shared/get-absolute-url';
+import defaultTheme from 'styles/themes/default';
+import { ThemeProvider } from 'styled-components';
+import { ColorThemeProvider } from 'contexts/ColorThemeContext';
 // eslint-disable-next-line import/no-unresolved
 import { Analytics } from '@vercel/analytics/react';
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={defaultTheme}>
       <Head>
         <title>Douglas Pinheiro Goulart</title>
         <link rel="icon" href="/img/icon-512.png" />
@@ -62,10 +63,10 @@ function App({ Component, pageProps }: AppProps) {
         height={5}
         showOnShallow={true}
       />
-      <PageProvider>
+      <ColorThemeProvider>
         <GlobalStyles />
         <Component {...pageProps} />
-      </PageProvider>
+      </ColorThemeProvider>
       {process.env.NODE_ENV !== 'development' && <Analytics />}
     </ThemeProvider>
   );

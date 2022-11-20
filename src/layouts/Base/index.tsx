@@ -9,13 +9,6 @@ type BaseProps = {
 };
 
 export function Base({ children }: BaseProps) {
-  const [mounted, setMounted] = React.useState(false);
-
-  // Avoid hydration mismatch
-  React.useEffect(() => setMounted(true), []);
-
-  if (!mounted) return null;
-
   return (
     <S.Container>
       <Container>

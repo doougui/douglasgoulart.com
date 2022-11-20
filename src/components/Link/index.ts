@@ -3,7 +3,7 @@ import NextLink from 'next/link';
 
 export const Link = styled(NextLink)`
   ${({ theme }) => css`
-    color: ${theme.colors.primary};
+    color: var(--color-primary);
     text-decoration: none;
     font-size: ${theme.font.sizes.medium};
   `}

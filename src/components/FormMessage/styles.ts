@@ -1,14 +1,14 @@
-import styled, { css, DefaultTheme } from 'styled-components';
+import styled, { css } from 'styled-components';
 import { FormMessageProps } from '.';
 
 type ContainerProps = Pick<FormMessageProps, 'type'>;
 
 const containerTypes = {
-  success: (theme: DefaultTheme) => css`
-    color: ${theme.colors.success};
+  success: () => css`
+    color: var(--color-success);
   `,
-  error: (theme: DefaultTheme) => css`
-    color: ${theme.colors.danger};
+  error: () => css`
+    color: var(--color-danger);
   `,
 };
 
@@ -18,6 +18,6 @@ export const Container = styled.p<ContainerProps>`
     align-items: center;
     margin-top: 0.5rem;
     font-size: ${theme.font.sizes.small};
-    ${containerTypes[type](theme)};
+    ${containerTypes[type]()};
   `}
 `;
