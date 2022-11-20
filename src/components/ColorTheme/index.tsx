@@ -37,7 +37,7 @@ export function setColorsByTheme() {
 
 // This script prevents hydration mismatch and flash problems from color theme
 // More info about this method at: https://www.joshwcomeau.com/react/dark-mode
-export function MagicScriptTag() {
+export function ColorThemeScriptTag() {
   const boundFn = String(setColorsByTheme).replace(
     "'🌈'",
     JSON.stringify(COLORS),

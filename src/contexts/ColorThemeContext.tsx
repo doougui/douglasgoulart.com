@@ -1,6 +1,6 @@
-import { COLORS } from 'components/Theme/colors';
-import { getVariableName, STORAGE_KEY } from 'components/Theme/config';
-import { Color, Theme } from 'components/Theme/types';
+import { COLORS } from 'components/ColorTheme/colors';
+import { getVariableName, STORAGE_KEY } from 'components/ColorTheme/config';
+import { Color, Theme } from 'components/ColorTheme/types';
 import React from 'react';
 import { getWrongContextUsageMessage } from 'utils/shared/get-wrong-context-usage-message';
 

@@ -1,5 +1,5 @@
 import { Analytics } from 'components/Analytics';
-import { FallbackStyles, MagicScriptTag } from 'components/Theme';
+import { FallbackStyles, ColorThemeScriptTag } from 'components/ColorTheme';
 import Document, {
   DocumentContext,
   Head,
@@ -43,7 +43,7 @@ export default class MyDocument extends Document {
           <FallbackStyles />
         </Head>
         <body>
-          <MagicScriptTag />
+          <ColorThemeScriptTag />
           <Main />
           <NextScript />
           <Analytics />
