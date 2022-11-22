@@ -6,6 +6,6 @@ export default {
   title: 'Position',
   component: Position,
   args: positionMock,
-} as Meta;
+} as Meta<PositionProps>;
 
 export const Default: Story<PositionProps> = (args) => <Position {...args} />;

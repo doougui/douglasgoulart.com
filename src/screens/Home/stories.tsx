@@ -1,9 +1,12 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { Home } from '.';
+import writingsMock from 'screens/Writings/mock';
+import { Home, HomeProps } from '.';
 
 export default {
-  title: 'Home',
+  title: 'Screens/Home',
   component: Home,
-} as Meta;
+} as Meta<HomeProps>;
 
-export const Default: Story = () => <Home featuredWritings={[]} />;
+export const Default: Story<HomeProps> = () => (
+  <Home featuredWritings={writingsMock} />
+);

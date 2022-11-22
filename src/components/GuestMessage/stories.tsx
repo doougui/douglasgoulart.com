@@ -14,7 +14,7 @@ export default {
       type: 'symbol',
     },
   },
-} as Meta;
+} as Meta<GuestMessageProps>;
 
 export const Default: Story<GuestMessageProps> = (args) => (
   <GuestMessage {...args} />

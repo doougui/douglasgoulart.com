@@ -1,6 +1,6 @@
 import { RenderOptions, render } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
-import theme from 'styles/themes/default';
+import theme from 'styles/theme';
 
 function Provider({ children }: { children: React.ReactNode }) {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;

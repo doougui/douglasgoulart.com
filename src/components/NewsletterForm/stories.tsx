@@ -6,4 +6,8 @@ export default {
   component: NewsletterForm,
 } as Meta;
 
-export const Default: Story = () => <NewsletterForm />;
+export const Default: Story = () => (
+  <div style={{ width: '500px', margin: '0 auto' }}>
+    <NewsletterForm />
+  </div>
+);

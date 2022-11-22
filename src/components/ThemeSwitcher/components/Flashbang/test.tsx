@@ -4,7 +4,7 @@ import {
 } from 'components/ThemeSwitcher/contexts/flashbang-context';
 import { act } from 'react-dom/test-utils';
 import { ThemeProvider } from 'styled-components';
-import theme from 'styles/themes/default';
+import theme from 'styles/theme';
 import { renderHook } from 'utils/tests';
 import { Flashbang } from '.';
 

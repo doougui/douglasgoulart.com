@@ -1,10 +1,10 @@
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from 'styles/global';
 import * as NextImage from 'next/image';
-import dark from 'styles/themes/dark';
-import light from 'styles/themes/light';
-import { themes } from '@storybook/theming';
+import defaultTheme from 'styles/theme';
 import { RouterContext } from "next/dist/shared/lib/router-context";
+import { ColorThemeProvider } from 'contexts/ColorThemeContext';
+import { COLORS } from 'components/ColorTheme/colors';
 
 const OriginalNextImage = NextImage.default;
 
@@ -12,7 +12,15 @@ const OriginalNextImage = NextImage.default;
 /* eslint react/jsx-filename-extension: "off" */
 Object.defineProperty(NextImage, 'default', {
   configurable: true,
-  value: (props) => <OriginalNextImage {...props} unoptimized />,
+  value: (props) => (
+    <OriginalNextImage
+      {...props}
+      unoptimized
+      width={0}
+      height={0}
+      blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAADAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAbEAADAAMBAQAAAAAAAAAAAAABAgMABAURUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAECEf/aAAwDAQACEQMRAD8Anz9voy1dCI2mectSE5ioFCqia+KCwJ8HzGMZPqJb1oPEf//Z"
+    />
+  ),
 });
 
 export const parameters = {
@@ -21,17 +29,13 @@ export const parameters = {
     values: [
       {
         name: 'light',
-        value: light.colors.background,
+        value: COLORS.background.light,
       },
       {
         name: 'dark',
-        value: dark.colors.background,
+        value: COLORS.background.dark,
       },
     ],
-  },
-  darkMode: {
-    dark: { ...themes.dark, appBg: 'black' },
-    light: { ...themes.normal, appBg: 'red' }
   },
   nextRouter: {
     Provider: RouterContext.Provider,
@@ -42,30 +46,29 @@ export const globalTypes = {
   theme: {
     name: 'Theme',
     description: 'Global theme for components',
-    defaultValue: 'light',
+    defaultValue: 'dark',
     toolbar: {
-      // The icon for the toolbar item
       icon: 'circlehollow',
-      // Array of options
-      items: [
-        { value: 'light', icon: 'circlehollow', title: 'light' },
-        { value: 'dark', icon: 'circle', title: 'dark' },
-      ],
+      // Array of plain string values or MenuItem shape (see below)
+      items: ['light', 'dark'],
       // Property that specifies if the name of the item will be displayed
       showName: true,
+      // Change title based on selected value
+      dynamicTitle: true,
     },
   },
-}
+};
 
 export const decorators = [
   (Story, context) => {
     const theme = context.parameters.theme || context.globals.theme;
-    const storyTheme = theme === 'dark' ? dark : light;
 
     return (
-      <ThemeProvider theme={storyTheme}>
-        <GlobalStyles removeBg />
-        <Story />
+      <ThemeProvider theme={defaultTheme}>
+        <ColorThemeProvider initialTheme={theme || 'dark'}>
+          <GlobalStyles removeBg />
+          <Story />
+        </ColorThemeProvider>
       </ThemeProvider>
     );
   },

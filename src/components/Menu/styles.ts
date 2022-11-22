@@ -6,6 +6,7 @@ export const Container = styled.menu`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: var(--color-background);
 `;
 
 export const MenuNav = styled.nav`

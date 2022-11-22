@@ -27,7 +27,7 @@ exports[`<Toggle /> should render correctly 1`] = `
   width: 2.7rem;
   height: 3px;
   border-radius: 2px;
-  background-color: white;
+  background-color: var(--color-text);
 }
 
 <button

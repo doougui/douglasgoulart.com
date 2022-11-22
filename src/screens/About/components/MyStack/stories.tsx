@@ -1,17 +1,14 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { Container } from 'components/Container';
-import { Menu } from '.';
+import { MyStack } from '.';
 
 export default {
-  title: 'Menu',
-  component: Menu,
-  nextRouter: {
-    pathname: '/',
-  },
+  title: 'Screens/About/MyStack',
+  component: MyStack,
 } as Meta;
 
 export const Default: Story = () => (
   <Container>
-    <Menu />
+    <MyStack />
   </Container>
 );

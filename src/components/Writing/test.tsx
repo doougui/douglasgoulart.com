@@ -1,6 +1,6 @@
 import { render, screen } from 'utils/tests';
 import writingMocks from 'screens/Writings/mock';
-import { Writing } from '.';
+import { WritingProps, Writing } from 'components/Writing';
 
 jest.mock('next/link', () => ({
   __esModule: true,
@@ -9,7 +9,13 @@ jest.mock('next/link', () => ({
   ),
 }));
 
-const props = writingMocks[0];
+const props: WritingProps = {
+  slug: writingMocks[0].slug,
+  title: writingMocks[0].title,
+  cover: writingMocks[0].cover,
+  excerpt: writingMocks[0].excerpt,
+  publishedAt: writingMocks[0].publishedAt,
+};
 
 describe('<Writing />', () => {
   it('should render correctly', () => {

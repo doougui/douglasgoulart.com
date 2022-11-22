@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import { ParsedUrlQueryInput } from 'querystring';
 import React from 'react';
 import { Writing as WritingType } from 'types/Writing';
-import { SortTypes, SortTypesKeys } from 'utils/mdx/writings/types';
+import { SortTypesKeys } from 'utils/mdx/writings/types';
 import { Filter } from './components/Filter';
 import * as S from './styles';
 
@@ -15,7 +15,6 @@ export type WritingsProps = {
   search: string | null;
   tag: string | null;
   sort: SortTypesKeys;
-  sortOptions: SortTypes;
 };
 
 export function Writings({ writings, ...filterProps }: WritingsProps) {
@@ -43,8 +42,11 @@ export function Writings({ writings, ...filterProps }: WritingsProps) {
       <Filter {...filterProps} onFilter={handleFilter} />
 
       <S.Writings spacing="1rem">
-        {writings.map((writing) => (
-          <Writing key={writing.slug} {...writing} />
+        {writings.map(({ slug, title, cover, excerpt, publishedAt }) => (
+          <Writing
+            key={slug}
+            {...{ slug, title, cover, excerpt, publishedAt }}
+          />
         ))}
       </S.Writings>
     </Base>

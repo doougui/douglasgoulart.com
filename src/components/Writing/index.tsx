@@ -5,7 +5,13 @@ import { Writing as WritingType } from 'types/Writing';
 import { formatDateString } from 'utils/time/format-date-string';
 import * as S from './styles';
 
-type WritingProps = WritingType;
+export type WritingProps = {
+  slug: string;
+  title: string;
+  excerpt: string;
+  cover: WritingType['cover'];
+  publishedAt: string;
+};
 
 export function Writing({
   slug,

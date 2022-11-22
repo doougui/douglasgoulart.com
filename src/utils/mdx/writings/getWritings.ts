@@ -3,7 +3,8 @@ import matter from 'gray-matter';
 import { join } from 'path';
 import readingTime from 'reading-time';
 import { Writing } from 'types/Writing';
-import * as writingFilters from './filters';
+import { hasTag as writingHasTag } from './filters/has-tag';
+import { inSearch as writingInSearch } from './filters/in-search';
 import { getWritingFiles } from './getWritingFiles';
 import { Filters, GetWritingsData } from './types';
 import { sortBy } from './utils/sort-by';
@@ -36,11 +37,9 @@ function applyFilters(
 
   return data.filter((writing) => {
     const inSearch = filters?.search
-      ? writingFilters.inSearch(writing, filters.search)
+      ? writingHasTag(writing, filters.search)
       : true;
-    const hasTag = filters?.tag
-      ? writingFilters.hasTag(writing, filters.tag)
-      : true;
+    const hasTag = filters?.tag ? writingInSearch(writing, filters.tag) : true;
 
     const isDraft = !!writing.isDraft === !!filters?.isDraft;
 

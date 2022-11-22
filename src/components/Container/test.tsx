@@ -1,4 +1,4 @@
-import theme from 'styles/themes/default';
+import theme from 'styles/theme';
 import { render } from 'utils/tests';
 
 import { Container } from '.';
