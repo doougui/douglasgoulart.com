@@ -21,5 +21,5 @@ export const BurgerStroke = styled(motion.span)`
   width: 2.7rem;
   height: 3px;
   border-radius: 2px;
-  background-color: white;
+  background-color: var(--color-text);
 `;
