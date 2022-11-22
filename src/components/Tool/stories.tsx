@@ -6,6 +6,6 @@ export default {
   title: 'Tool',
   component: Tool,
   args: toolMock,
-} as Meta;
+} as Meta<ToolProps>;
 
 export const Default: Story<ToolProps> = (args) => <Tool {...args} />;

@@ -6,21 +6,14 @@ import * as S from './styles';
 
 type Values = ParsedUrlQueryInput;
 
-type FilterProps = {
+export type FilterProps = {
   search: string | null;
   tag: string | null;
   sort: SortTypesKeys;
-  sortOptions: SortTypes;
   onFilter: (values: Values) => void;
 };
 
-export function Filter({
-  search,
-  sort,
-  sortOptions,
-  tag,
-  onFilter,
-}: FilterProps) {
+export function Filter({ search, sort, tag, onFilter }: FilterProps) {
   const {
     values,
     handleInput,
@@ -56,7 +49,7 @@ export function Filter({
             defaultValue={sort}
             onChange={(e) => handleInput('sort', e.target.value)}
           >
-            {Object.entries(sortOptions).map(([key, value]) => (
+            {Object.entries(SortTypes).map(([key, value]) => (
               <option value={key} key={key}>
                 {value}
               </option>

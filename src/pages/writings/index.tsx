@@ -13,7 +13,6 @@ import { getPageUrl } from 'utils/shared/get-page-url';
 export default function Writings({
   writings,
   sort,
-  sortOptions,
   search,
   tag,
 }: WritingsProps) {
@@ -32,7 +31,6 @@ export default function Writings({
       <WritingsScreen
         writings={writings}
         search={search}
-        sortOptions={sortOptions}
         sort={sort}
         tag={tag}
       />
@@ -79,7 +77,6 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
       writings: files,
       search: search ?? null,
       tag: tag ?? null,
-      sortOptions: SortTypes,
       sort,
     },
   };

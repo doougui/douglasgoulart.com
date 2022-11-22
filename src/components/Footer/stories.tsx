@@ -1,4 +1,5 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
+import { Container } from 'components/Container';
 import { Footer } from '.';
 
 export default {
@@ -7,7 +8,7 @@ export default {
 } as Meta;
 
 export const Default: Story = () => (
-  <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+  <Container>
     <Footer />
-  </div>
+  </Container>
 );

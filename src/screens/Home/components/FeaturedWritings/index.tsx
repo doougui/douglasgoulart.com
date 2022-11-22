@@ -17,9 +17,14 @@ export function FeaturedWritings({ data }: FeaturedWritingsProps) {
       </S.Heading>
 
       <S.Content spacing="1rem">
-        {data.map((writing) => (
-          <Writing key={writing.slug} {...writing} />
-        ))}
+        {data.map(({ slug, title, cover, excerpt, publishedAt }) => {
+          return (
+            <Writing
+              key={slug}
+              {...{ slug, title, cover, excerpt, publishedAt }}
+            />
+          );
+        })}
       </S.Content>
     </section>
   );
