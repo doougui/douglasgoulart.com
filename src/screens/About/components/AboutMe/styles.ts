@@ -14,6 +14,8 @@ export const Container = styled.section`
 
 export const Image = styled(NextImage)`
   ${({ theme }) => css`
+    width: 20rem;
+    height: auto;
     border-radius: ${theme.border.radius};
   `}
 `;

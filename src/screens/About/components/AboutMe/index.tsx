@@ -4,12 +4,7 @@ import * as S from './styles';
 export function AboutMe() {
   return (
     <S.Container>
-      <S.Image
-        src={meImg}
-        width={200}
-        alt="Douglas Pinheiro Goulart"
-        placeholder="blur"
-      />
+      <S.Image src={meImg} alt="Douglas Pinheiro Goulart" placeholder="blur" />
 
       <S.AboutText>
         <S.Paragraph>

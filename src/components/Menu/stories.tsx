@@ -9,4 +9,8 @@ export default {
   },
 } as Meta;
 
-export const Default: Story = () => <Menu />;
+export const Default: Story = () => (
+  <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+    <Menu />
+  </div>
+);

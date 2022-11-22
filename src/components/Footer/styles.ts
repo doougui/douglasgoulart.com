@@ -6,6 +6,7 @@ export const Container = styled.footer`
   margin-top: 5rem;
   padding-top: 3rem;
   border-top: 1px solid var(--color-tertiary);
+  background: var(--color-background);
 `;
 
 export const Links = styled.menu`
