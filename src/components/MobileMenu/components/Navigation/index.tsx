@@ -2,6 +2,7 @@ import { REPO_URL } from 'config/app';
 import { RiExternalLinkLine } from 'react-icons/ri';
 import { Item } from '../Item';
 import { List } from '../List';
+import { Themes } from '../Themes';
 import * as S from './styles';
 
 export type NavigationProps = {
@@ -51,6 +52,8 @@ export function Navigation({ isOpen }: NavigationProps) {
             {isExternal && <RiExternalLinkLine size={16} />}
           </Item>
         ))}
+
+        <Themes />
       </List>
     </S.Container>
   );

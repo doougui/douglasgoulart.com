@@ -30,6 +30,36 @@ exports[`<Navigation /> should render closed state 1`] = `
   text-align: right;
 }
 
+.c4 {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  gap: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c5 {
+  display: block;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 0.4rem;
+  background: var(--color-tertiary);
+}
+
+.c6 {
+  display: block;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 0.4rem;
+  background: var(--color-tertiary);
+  background: var(--color-textDarker);
+}
+
 .c0 {
   width: 100vw;
   height: 100vh;
@@ -105,6 +135,20 @@ exports[`<Navigation /> should render closed state 1`] = `
         </svg>
       </div>
     </li>
+    <div
+      class="c4"
+    >
+      <span
+        class="c5"
+      >
+        Light
+      </span>
+      <span
+        class="c6"
+      >
+        Dark
+      </span>
+    </div>
   </ul>
 </nav>
 `;
