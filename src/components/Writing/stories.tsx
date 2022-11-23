@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
-import writingsMock from 'screens/Writings/mock';
+import writingMock from '__mocks__/writing';
 import { Writing, WritingProps } from '.';
 
 export default {
@@ -13,5 +13,5 @@ export default {
 } as Meta<WritingProps>;
 
 export const Default: Story<WritingProps> = (args) => (
-  <Writing {...writingsMock[0]} {...args} />
+  <Writing {...writingMock} {...args} />
 );

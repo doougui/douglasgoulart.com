@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
-import writingsMock from 'screens/Writings/mock';
+import writingMock from '__mocks__/writing';
 import { Writing, WritingProps } from '.';
 
 const codeMock =
@@ -10,7 +10,7 @@ export default {
   component: Writing,
   args: {
     code: codeMock,
-    frontmatter: writingsMock[0],
+    frontmatter: writingMock,
   },
   argTypes: {
     code: {
