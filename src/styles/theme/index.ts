@@ -1,7 +1,6 @@
-import { Inter, Poppins } from '@next/font/google';
+import { Inter } from '@next/font/google';
 
 const inter = Inter({ subsets: ['latin'], display: 'block' });
-const poppins = Poppins({ weight: ['600'], display: 'block' });
 
 export default {
   grid: {
@@ -23,10 +22,7 @@ export default {
     fast: '0.1s ease-in-out',
   },
   font: {
-    family: {
-      primary: inter.style.fontFamily,
-      secondary: poppins.style.fontFamily,
-    },
+    family: inter.style.fontFamily,
     weights: {
       light: 300,
       normal: 400,
