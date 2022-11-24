@@ -8,6 +8,14 @@ exports[`<Navigation /> should render closed state 1`] = `
 }
 
 .c3 {
+  color: var(--color-text);
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -30,7 +38,7 @@ exports[`<Navigation /> should render closed state 1`] = `
   text-align: right;
 }
 
-.c4 {
+.c5 {
   margin-top: 2rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -43,7 +51,7 @@ exports[`<Navigation /> should render closed state 1`] = `
   width: fit-content;
 }
 
-.c5 {
+.c6 {
   display: block;
   padding: 1rem 2rem;
   font-size: 1.2rem;
@@ -51,7 +59,7 @@ exports[`<Navigation /> should render closed state 1`] = `
   background: var(--color-tertiary);
 }
 
-.c6 {
+.c7 {
   display: block;
   padding: 1rem 2rem;
   font-size: 1.2rem;
@@ -83,68 +91,92 @@ exports[`<Navigation /> should render closed state 1`] = `
     <li
       class="c2"
     >
-      <div
+      <a
         class="c3"
+        href="/"
+        tabindex="-1"
       >
-        Home
-      </div>
-    </li>
-    <li
-      class="c2"
-    >
-      <div
-        class="c3"
-      >
-        About
-      </div>
-    </li>
-    <li
-      class="c2"
-    >
-      <div
-        class="c3"
-      >
-        Writings
-      </div>
-    </li>
-    <li
-      class="c2"
-    >
-      <div
-        class="c3"
-      >
-        GitHub
-        <svg
-          fill="currentColor"
-          height="16"
-          stroke="currentColor"
-          stroke-width="0"
-          viewBox="0 0 24 24"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          class="c4"
         >
-          <g>
-            <path
-              d="M0 0h24v24H0z"
-              fill="none"
-            />
-            <path
-              d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v8h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"
-            />
-          </g>
-        </svg>
-      </div>
+          Home
+        </div>
+      </a>
+    </li>
+    <li
+      class="c2"
+    >
+      <a
+        class="c3"
+        href="/about"
+        tabindex="-1"
+      >
+        <div
+          class="c4"
+        >
+          About
+        </div>
+      </a>
+    </li>
+    <li
+      class="c2"
+    >
+      <a
+        class="c3"
+        href="/writings"
+        tabindex="-1"
+      >
+        <div
+          class="c4"
+        >
+          Writings
+        </div>
+      </a>
+    </li>
+    <li
+      class="c2"
+    >
+      <a
+        class="c3"
+        href="https://github.com/doougui/douglasgoulart.com"
+        tabindex="-1"
+      >
+        <div
+          class="c4"
+        >
+          GitHub
+          <svg
+            fill="currentColor"
+            height="16"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v8h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"
+              />
+            </g>
+          </svg>
+        </div>
+      </a>
     </li>
     <div
-      class="c4"
+      class="c5"
     >
       <span
-        class="c5"
+        class="c6"
       >
         Light
       </span>
       <span
-        class="c6"
+        class="c7"
       >
         Dark
       </span>

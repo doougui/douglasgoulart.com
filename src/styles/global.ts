@@ -5,30 +5,6 @@ type GlobalStylesProps = {
 };
 
 const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
-  @font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-display: fallback;
-    src: local(''), url('/fonts/Poppins-Bold.ttf') format('truetype');
-  }
-
-  @font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-display: fallback;
-    src: local(''), url('/fonts/Inter-Regular.ttf') format('truetype');
-  }
-
-  @font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-display: fallback;
-    src: local(''), url('/fonts/Inter-Bold.ttf') format('truetype');
-  }
-
   * {
     margin: 0;
     padding: 0;
@@ -53,7 +29,7 @@ const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
     }
 
     body {
-      font-family: ${theme.font.family};
+      font-family: ${theme.font.family.primary};
 
       ${!removeBg &&
       css`

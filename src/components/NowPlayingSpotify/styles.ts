@@ -40,7 +40,6 @@ export const SpotifyIcon = styled(RiSpotifyFill)<SpotifyIconProps>`
 
 export const NowPlaying = styled.span`
   ${({ theme }) => css`
-    font-family: ${theme.font.family};
     font-size: ${theme.font.sizes.medium};
     line-height: ${theme.font.heights.large};
     font-weight: ${theme.font.weights.bold};

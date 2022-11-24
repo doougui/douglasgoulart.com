@@ -1,4 +1,3 @@
-import 'match-media-mock';
 import { render, screen } from 'utils/tests';
 
 import { Menu } from '.';

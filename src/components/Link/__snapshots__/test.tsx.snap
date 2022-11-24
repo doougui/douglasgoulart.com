@@ -1,7 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Link /> should render correctly 1`] = `
+.c0 {
+  color: var(--color-primary);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
 <a
+  class="c0"
   href="https://example.com"
 >
   Example

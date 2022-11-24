@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Footer /> should render correctly 1`] = `
-.c12 {
+.c13 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -29,7 +29,7 @@ exports[`<Footer /> should render correctly 1`] = `
   text-decoration: none;
 }
 
-.c10 {
+.c11 {
   all: unset;
   width: 100%;
   font-size: 1.6rem;
@@ -39,23 +39,23 @@ exports[`<Footer /> should render correctly 1`] = `
   color: var(--color-text);
 }
 
-.c10::-webkit-input-placeholder {
+.c11::-webkit-input-placeholder {
   color: var(--color-textDark);
 }
 
-.c10::-moz-placeholder {
+.c11::-moz-placeholder {
   color: var(--color-textDark);
 }
 
-.c10:-ms-input-placeholder {
+.c11:-ms-input-placeholder {
   color: var(--color-textDark);
 }
 
-.c10::placeholder {
+.c11::placeholder {
   color: var(--color-textDark);
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -63,14 +63,14 @@ exports[`<Footer /> should render correctly 1`] = `
   margin-top: 1rem;
 }
 
-.c9 button {
+.c10 button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
-.c11 {
+.c12 {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   min-width: 10rem;
@@ -95,7 +95,6 @@ exports[`<Footer /> should render correctly 1`] = `
 }
 
 .c3 {
-  font-family: Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif;
   font-size: 1.6rem;
   line-height: 2.4rem;
   font-weight: 600;
@@ -127,7 +126,7 @@ exports[`<Footer /> should render correctly 1`] = `
   font-weight: 400;
 }
 
-.c8 {
+.c9 {
   font-size: 1.6rem;
   color: var(--color-textDark);
 }
@@ -144,14 +143,26 @@ exports[`<Footer /> should render correctly 1`] = `
   margin-top: 1.5rem;
 }
 
-.c13 {
+.c7 {
+  color: var(--color-textDark);
+  font-size: 1.6rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c14 {
   color: var(--color-text);
   font-size: 1.6rem;
   line-height: 2.4rem;
   margin-top: 3rem;
 }
 
-.c7 {
+.c8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -212,16 +223,19 @@ exports[`<Footer /> should render correctly 1`] = `
         class="c6"
       >
         <a
+          class="c7"
           href="/"
         >
           Home
         </a>
         <a
+          class="c7"
           href="/about"
         >
           About
         </a>
         <a
+          class="c7"
           href="/writings"
         >
           Writings
@@ -238,17 +252,23 @@ exports[`<Footer /> should render correctly 1`] = `
         class="c6"
       >
         <a
+          class="c7"
           href="https://github.com/doougui"
+          target="_blank"
         >
           GitHub
         </a>
         <a
+          class="c7"
           href="https://www.linkedin.com/in/douglaspigoulart/"
+          target="_blank"
         >
           Linkedin
         </a>
         <a
+          class="c7"
           href="mailto:douglaspigoulart@gmail.com"
+          target="_blank"
         >
           E-mail
         </a>
@@ -264,24 +284,30 @@ exports[`<Footer /> should render correctly 1`] = `
         class="c6"
       >
         <a
+          class="c7"
           href="https://docs.google.com/document/d/1OMPOxln39V26w3WmIqssCx_gaGmLPs2FaN34HC-Mn-Q/edit?usp=sharing"
+          target="_blank"
         >
           Resume
         </a>
         <a
+          class="c7"
           href="https://gitlab.com/douglaspigoulart"
+          target="_blank"
         >
           GitLab
         </a>
         <a
+          class="c7"
           href="./rss.xml"
+          target="_blank"
         >
           RSS Feed
         </a>
       </nav>
     </section>
     <section
-      class="c7"
+      class="c8"
     >
       <h3
         class="c5"
@@ -289,22 +315,22 @@ exports[`<Footer /> should render correctly 1`] = `
         Newsletter
       </h3>
       <p
-        class="c8"
+        class="c9"
       >
         Get new writings delivered to your inbox!
       </p>
       <form>
         <div
-          class="c9"
+          class="c10"
         >
           <input
-            class="c10 c11"
+            class="c11 c12"
             name="email"
             placeholder="johndoe@email.com"
             value=""
           />
           <button
-            class="c12"
+            class="c13"
             type="submit"
           >
             Subscribe
@@ -314,7 +340,7 @@ exports[`<Footer /> should render correctly 1`] = `
     </section>
   </menu>
   <p
-    class="c13"
+    class="c14"
   >
     © 
     2022
