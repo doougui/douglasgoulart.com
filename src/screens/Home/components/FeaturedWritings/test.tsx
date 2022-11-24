@@ -1,5 +1,5 @@
 import { render, screen } from 'utils/tests';
-import writingsMock from 'screens/Writings/mock';
+import writingsMock from '__mocks__/writings';
 import { FeaturedWritings, FeaturedWritingsProps } from '.';
 
 jest.mock('components/Writing', () => ({

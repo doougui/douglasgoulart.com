@@ -7,9 +7,15 @@ export const Heading = styled.header`
   margin-bottom: 2rem;
 `;
 
+export const CoverWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 export const Cover = styled(Image)`
   width: auto;
   height: auto;
+  max-width: 100%;
 `;
 
 export const Title = styled(Heading1)``;

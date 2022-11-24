@@ -40,13 +40,15 @@ export function Writing({ code, frontmatter }: WritingProps) {
 
         {frontmatter.cover && (
           <div>
-            <S.Cover
-              src={frontmatter.cover.url}
-              alt={frontmatter.cover.alt}
-              width={900}
-              height={0}
-              priority
-            />
+            <S.CoverWrapper>
+              <S.Cover
+                src={frontmatter.cover.url}
+                alt={frontmatter.cover.alt}
+                width={900}
+                height={0}
+                priority
+              />
+            </S.CoverWrapper>
             {frontmatter.cover?.caption && (
               <S.Caption
                 dangerouslySetInnerHTML={{ __html: frontmatter.cover.caption }}

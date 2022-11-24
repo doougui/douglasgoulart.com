@@ -33,8 +33,6 @@ function applyFilters(
   data: Writing[],
   filters: Filters | undefined,
 ): Writing[] {
-  if (!filters) return data;
-
   return data.filter((writing) => {
     const inSearch = filters?.search
       ? writingHasTag(writing, filters.search)

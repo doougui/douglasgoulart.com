@@ -1,4 +1,4 @@
-import writingsMock from 'screens/Writings/mock';
+import writingsMock from '__mocks__/writings';
 import { Writing } from 'types/Writing';
 import { sortBy } from '.';
 

@@ -1,3 +1,8 @@
+import { Inter, Poppins } from '@next/font/google';
+
+const inter = Inter({ subsets: ['latin'], display: 'block' });
+const poppins = Poppins({ weight: ['600'], display: 'block' });
+
 export default {
   grid: {
     container: '94rem',
@@ -18,8 +23,10 @@ export default {
     fast: '0.1s ease-in-out',
   },
   font: {
-    family:
-      "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    family: {
+      primary: inter.style.fontFamily,
+      secondary: poppins.style.fontFamily,
+    },
     weights: {
       light: 300,
       normal: 400,

@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
-import writingsMock from 'screens/Writings/mock';
+import writingsMock from '__mocks__/writings';
 import { SortTypes } from 'utils/mdx/writings/types';
 import { Writings, WritingsProps } from '.';
 
