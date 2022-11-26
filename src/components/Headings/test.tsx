@@ -1,5 +1,5 @@
 import { render, screen } from 'utils/tests';
-import { Heading1, Heading2, Heading3 } from '.';
+import { Heading1, Heading2, Heading3, Heading4, Heading5, Heading6 } from '.';
 
 describe('Headings', () => {
   it('should render the heading 1', () => {
@@ -26,6 +26,33 @@ describe('Headings', () => {
     expect(screen.getByRole('heading', { name: /Heading 3/i })).toHaveStyle({
       fontSize: '1.8rem',
       lineHeight: '2.4rem',
+    });
+  });
+
+  it('should render the heading 4', () => {
+    render(<Heading4>Heading 4</Heading4>);
+
+    expect(screen.getByRole('heading', { name: /Heading 4/i })).toHaveStyle({
+      fontSize: '1.6rem',
+      lineHeight: '1.8rem',
+    });
+  });
+
+  it('should render the heading 5', () => {
+    render(<Heading5>Heading 5</Heading5>);
+
+    expect(screen.getByRole('heading', { name: /Heading 5/i })).toHaveStyle({
+      fontSize: '1.4rem',
+      lineHeight: '1.6rem',
+    });
+  });
+
+  it('should render the heading 6', () => {
+    render(<Heading6>Heading 6</Heading6>);
+
+    expect(screen.getByRole('heading', { name: /Heading 6/i })).toHaveStyle({
+      fontSize: '1.2rem',
+      lineHeight: '1.4rem',
     });
   });
 });
