@@ -29,7 +29,7 @@ const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
     }
 
     body {
-      font-family: ${theme.font.family.primary};
+      font-family: ${theme.font.family};
 
       ${!removeBg &&
       css`

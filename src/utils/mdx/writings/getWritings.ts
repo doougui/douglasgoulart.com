@@ -35,9 +35,9 @@ function applyFilters(
 ): Writing[] {
   return data.filter((writing) => {
     const inSearch = filters?.search
-      ? writingHasTag(writing, filters.search)
+      ? writingInSearch(writing, filters.search)
       : true;
-    const hasTag = filters?.tag ? writingInSearch(writing, filters.tag) : true;
+    const hasTag = filters?.tag ? writingHasTag(writing, filters.tag) : true;
 
     const isDraft = !!writing.isDraft === !!filters?.isDraft;
 

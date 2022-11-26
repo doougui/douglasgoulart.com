@@ -11,6 +11,9 @@ const nextConfig = {
   images: {
     domains: ['picsum.photos'],
   },
+  compiler: {
+    styledComponents: true,
+  },
   swcMinify: true,
 };
 

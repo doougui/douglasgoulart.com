@@ -1,17 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Logo /> should render correctly 1`] = `
-.c1 {
-  font-family: fontFamily;
-  font-weight: 600;
-  font-size: 3.2rem;
-  color: var(--color-text);
-}
-
-.c2 {
-  color: var(--color-primary);
-}
-
 .c0 {
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -21,16 +10,16 @@ exports[`<Logo /> should render correctly 1`] = `
   class="c0"
   href="/"
 >
-  <div
-    class="c1"
-    data-testid="logo"
-  >
-    Douglas
-    <span
-      class="c2"
-    >
-      .
-    </span>
-  </div>
+  <img
+    alt="Douglas' Logo"
+    data-nimg="1"
+    decoding="async"
+    height="40"
+    loading="lazy"
+    src="http://localhost/_next/image?url=%2Fimg.jpg&w=96&q=75"
+    srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+    style="color: transparent;"
+    width="40"
+  />
 </a>
 `;

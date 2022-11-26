@@ -1,11 +1,11 @@
+import logo from 'assets/logo.svg';
+import { Image } from 'components/Image';
 import * as S from './styles';
 
 export function Logo() {
   return (
     <S.Link href="/">
-      <S.Container data-testid="logo">
-        Douglas<S.Dot>.</S.Dot>
-      </S.Container>
+      <Image src={logo} alt="Douglas' Logo" />
     </S.Link>
   );
 }
