@@ -31,4 +31,12 @@ describe('<Button />', () => {
       '/link',
     );
   });
+
+  it('should render a disabled button', () => {
+    render(<Button disabled>Say hello</Button>);
+
+    expect(screen.getByRole('button', { name: /Say hello/i })).toHaveStyle({
+      opacity: 0.5,
+    });
+  });
 });
