@@ -15,7 +15,7 @@ export function FormMessage({ type, children }: FormMessageProps) {
   }[type];
 
   return (
-    <S.Container type={type}>
+    <S.Container type={type} data-testid="form-message">
       <Icon size={25} />
       {children}
     </S.Container>
