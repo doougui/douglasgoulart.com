@@ -1,6 +1,7 @@
 import React from 'react';
+import { getVariableName } from 'utils/css/get-variable-name';
 import { COLORS } from './colors';
-import { getVariableName, STORAGE_KEY } from './config';
+import { STORAGE_KEY } from './config';
 import { Color, Colors, Theme } from './types';
 
 function setColorsByTheme(
