@@ -1,5 +1,6 @@
 import { Analytics } from 'components/Analytics';
-import { FallbackStyles, ColorThemeScriptTag } from 'components/ColorTheme';
+import { FallbackStyles } from 'components/ColorTheme/FallbackStyles';
+import { ColorThemeScriptTag } from 'components/ColorTheme/ColorThemeScriptTag';
 import Document, {
   DocumentContext,
   Head,
