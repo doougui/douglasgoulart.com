@@ -7,7 +7,7 @@ function setColorsByTheme(
   storageKey: string,
   variableNameGetter: (type: string, rawName: string) => string,
 ) {
-  const colors: Colors | string = '🌈';
+  const colors: Colors | string = 'replaceWithColors';
 
   function getColorMode(): Theme {
     const mql = window.matchMedia('(prefers-color-scheme: dark)');
@@ -42,7 +42,7 @@ function setColorsByTheme(
 // More info about this method at: https://www.joshwcomeau.com/react/dark-mode
 export function ColorThemeScriptTag() {
   const boundFn = String(setColorsByTheme).replace(
-    "'🌈'",
+    '"replaceWithColors"',
     JSON.stringify(COLORS),
   );
 
