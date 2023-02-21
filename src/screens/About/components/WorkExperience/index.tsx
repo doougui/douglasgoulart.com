@@ -13,7 +13,7 @@ export function WorkExperience() {
       endDate: 'Present',
       responsabilities: [
         'Write internal projects to speed up the workflow of the other members of the company',
-        'Write modern, maintainable and performant code for a diverse array of clients using primarily React.js and its ecossystem',
+        'Write modern, maintainable and performant code for a diverse array of clients using primarily React.js and its ecosystem',
         'Design the UI, defining the overall technical architecture and developing our mobile application with over 5000 users by using React Native with tools like TypeScript, Styled Components, Jest, Git, etc.',
         'Architect, design and lead the development of a Chrome extension to integrate with WhatsApp and ease the workflow of our users',
       ],
