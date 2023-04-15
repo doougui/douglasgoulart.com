@@ -34,8 +34,8 @@ export function Writings({ writings, ...filterProps }: WritingsProps) {
     <Base>
       <Heading1>Writings</Heading1>
       <MutedText>
-        Brain dumps, explorations and other things. I like to write about things
-        I learn on my journey as a software dev
+        Thoughts, curiosities and tutorials about software development to
+        sharpen your skills and make you a better developer.
       </MutedText>
 
       <Filter {...filterProps} onFilter={handleFilter} />
