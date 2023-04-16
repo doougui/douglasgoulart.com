@@ -22,7 +22,7 @@ export function WorkExperience() {
       title: 'Junior Full-Stack Developer',
       company: 'QuikDev',
       startDate: 'May 2021',
-      endDate: 'Aug - 2021',
+      endDate: 'Aug 2021',
       responsabilities: [
         'Maintain and evolve the enterprise management application Terravista while helping more than 253 enterprises grow',
         'Work as a full-stack developer by making use of technologies like PHP with Zend Framework, Docker and JavaScript',
