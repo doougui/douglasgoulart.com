@@ -38,6 +38,7 @@ export default async function handler(
     res.status(201).json({ error: '' });
   } catch (e) {
     const mailchimpError = e as { response: { body: MemberErrorResponse } };
+
     if (mailchimpError.response?.body) {
       res
         .status(mailchimpError.response.body.status)
