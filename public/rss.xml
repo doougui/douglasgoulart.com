@@ -4,7 +4,7 @@
         <title>Douglas Pinheiro Goulart</title>
         <link>http://localhost:3000</link>
         <description>Thoughts, curiosities and tutorials about software development to sharpen your skills and make you a better developer.</description>
-        <lastBuildDate>Thu, 24 Nov 2022 00:58:44 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 19 Apr 2023 22:02:12 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -12,7 +12,7 @@
             <url>http://localhost:3000/img/icon-512.png</url>
             <link>http://localhost:3000</link>
         </image>
-        <copyright>© 2022 Douglas Pinheiro Goulart</copyright>
+        <copyright>© 2023 Douglas Pinheiro Goulart</copyright>
         <item>
             <title><![CDATA[Avoid TypeScript errors in your project by using the TypeScript compiler]]></title>
             <link>http://localhost:3000/writings/avoid-typescript-errors-in-your-project-by-using-the-typescript-compiler</link>
