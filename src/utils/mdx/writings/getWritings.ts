@@ -9,6 +9,22 @@ import { getWritingFiles } from './getWritingFiles';
 import { Filters, GetWritingsData } from './types';
 import { sortBy } from './utils/sort-by';
 
+function applyFilters(
+  data: Writing[],
+  filters: Filters | undefined,
+): Writing[] {
+  return data.filter((writing) => {
+    const inSearch = filters?.search
+      ? writingInSearch(writing, filters.search)
+      : true;
+    const hasTag = filters?.tag ? writingHasTag(writing, filters.tag) : true;
+
+    const isDraft = !!writing.isDraft === !!filters?.isDraft;
+
+    return inSearch && hasTag && isDraft;
+  });
+}
+
 function getFrontmatterFiles(files: string[]) {
   return files.map((file: string) => {
     const source = readFileSync(
@@ -27,22 +43,6 @@ function getFrontmatterFiles(files: string[]) {
 
     return writing;
   }, []);
-}
-
-function applyFilters(
-  data: Writing[],
-  filters: Filters | undefined,
-): Writing[] {
-  return data.filter((writing) => {
-    const inSearch = filters?.search
-      ? writingInSearch(writing, filters.search)
-      : true;
-    const hasTag = filters?.tag ? writingHasTag(writing, filters.tag) : true;
-
-    const isDraft = !!writing.isDraft === !!filters?.isDraft;
-
-    return inSearch && hasTag && isDraft;
-  });
 }
 
 export async function getWritings({

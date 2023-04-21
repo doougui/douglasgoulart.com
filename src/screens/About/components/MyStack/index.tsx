@@ -12,6 +12,8 @@ export function MyStack() {
     { color: '#80D8F7', name: 'React.js' },
     { color: '#FFFFFF', name: 'Next.js' },
     { color: '#61DAFB', name: 'React Native' },
+    { color: '#80BD00', name: 'Node.js' },
+    { color: '#333331', name: 'Express.js' },
   ];
 
   const ecosystem: ToolProps[] = [
@@ -19,6 +21,7 @@ export function MyStack() {
     { color: '#4B32C3', name: 'ESLint' },
     { color: '#F8BC45', name: 'Prettier' },
     { color: '#C21325', name: 'Jest' },
+    { color: '#709916', name: 'Vitest' },
     { color: '#FE4646', name: 'Testing Library' },
     { color: '#059DFD', name: 'Storybook' },
     { color: '#F05033', name: 'Git' },
@@ -27,7 +30,7 @@ export function MyStack() {
   ];
 
   return (
-    <Stack as="section" spacing="2rem">
+    <Stack as="section" spacing="3rem">
       <div>
         <Heading2>My stack</Heading2>
 
