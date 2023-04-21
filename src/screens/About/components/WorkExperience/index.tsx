@@ -12,10 +12,10 @@ export function WorkExperience() {
       startDate: 'Aug 2021',
       endDate: 'Present',
       responsabilities: [
-        'Write internal projects to speed up the workflow of the other members of the company',
-        'Write modern, maintainable and performant code for a diverse array of clients using primarily React.js and its ecosystem',
-        'Design the UI, defining the overall technical architecture and developing our mobile application with over 5000 users by using React Native with tools like TypeScript, Styled Components, Jest, Git, etc.',
-        'Architect, design and lead the development of a Chrome extension to integrate with WhatsApp and ease the workflow of our users',
+        'Develop internal projects to speed up the workflow of the other members of the company.',
+        'Architected, analyzed, and recreated the existing mobile application, resulting in an increased rating from 3.6 to 4.8 stars on Google Play Store and 4.9 stars on App Store.',
+        'Redesigned the UI of our mobile application from scratch on Figma, led the entire development process, and published the updated application on both Google Play Store and App Store for Android and iOS users.',
+        'Architected, designed and led the development of a Chrome extension, including UI design using Figma and code logic development with Webpack configuration. Also integrated with WhatsApp to enable realtors to send macro messages and media files, and successfully published the application on the Chrome Web Store.',
       ],
     },
     {
@@ -24,9 +24,9 @@ export function WorkExperience() {
       startDate: 'May 2021',
       endDate: 'Aug 2021',
       responsabilities: [
-        'Maintain and evolve the enterprise management application Terravista while helping more than 253 enterprises grow',
-        'Work as a full-stack developer by making use of technologies like PHP with Zend Framework, Docker and JavaScript',
-        'Collaborate closely with team members to deliver a high quality product by making use of SCRUM as an Agile Framework',
+        'Maintained and evolved the enterprise management application Terravista while helping more than 253 enterprises grow.',
+        'Worked as a full-stack developer by making use of technologies like PHP with Zend Framework, Docker and JavaScript.',
+        'Collaborated closely with team members to deliver a high quality product by making use of SCRUM as an Agile Framework.',
       ],
     },
   ];
