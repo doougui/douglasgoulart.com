@@ -285,7 +285,7 @@ exports[`<Footer /> should render correctly 1`] = `
       >
         <a
           class="c7"
-          href="https://docs.google.com/document/d/1OMPOxln39V26w3WmIqssCx_gaGmLPs2FaN34HC-Mn-Q/edit?usp=sharing"
+          href="https://github.com/doougui/resume"
           target="_blank"
         >
           Resume

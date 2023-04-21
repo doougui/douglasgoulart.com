@@ -43,10 +43,7 @@ export function Footer() {
           <S.Title>Extras</S.Title>
 
           <S.Nav>
-            <S.Link
-              href="https://docs.google.com/document/d/1OMPOxln39V26w3WmIqssCx_gaGmLPs2FaN34HC-Mn-Q/edit?usp=sharing"
-              target="_blank"
-            >
+            <S.Link href="https://github.com/doougui/resume" target="_blank">
               Resume
             </S.Link>
 

@@ -8,7 +8,6 @@ import { getAbsoluteUrl } from 'utils/shared/get-absolute-url';
 import theme from 'styles/theme';
 import { ThemeProvider } from 'styled-components';
 import { ColorThemeProvider } from 'contexts/ColorThemeContext';
-// eslint-disable-next-line import/no-unresolved
 import { Analytics } from '@vercel/analytics/react';
 
 function App({ Component, pageProps }: AppProps) {
@@ -71,17 +70,5 @@ function App({ Component, pageProps }: AppProps) {
     </ThemeProvider>
   );
 }
-
-// Only uncomment this method if you have blocking data requirements for
-// every single page in your application. This disables the ability to
-// perform automatic static optimization, causing every page in your app to
-// be server-side rendered.
-//
-// App.getInitialProps = async (appContext: AppContext) => {
-//   // calls page's `getInitialProps` and fills `appProps.pageProps`
-//   const appProps = await App.getInitialProps(appContext);
-
-//   return { ...appProps }
-// }
 
 export default App;
