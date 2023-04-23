@@ -1,4 +1,4 @@
-import mailchimp, { MemberErrorResponse } from '@mailchimp/mailchimp_marketing';
+import mailchimp, { ErrorResponse } from '@mailchimp/mailchimp_marketing';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 mailchimp.setConfig({
@@ -37,7 +37,7 @@ export default async function handler(
 
     res.status(201).json({ error: '' });
   } catch (e) {
-    const mailchimpError = e as { response: { body: MemberErrorResponse } };
+    const mailchimpError = e as { response: { body: ErrorResponse } };
 
     if (mailchimpError.response?.body) {
       res
