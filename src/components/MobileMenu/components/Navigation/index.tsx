@@ -25,6 +25,7 @@ export function Navigation({ isOpen }: NavigationProps) {
   const items = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
+    { href: '/projects', label: 'Projects' },
     { href: '/writings', label: 'Writings' },
     // { href: '/guestbook', label: 'Guestbook' },
     {
