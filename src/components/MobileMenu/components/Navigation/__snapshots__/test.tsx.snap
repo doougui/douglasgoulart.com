@@ -123,21 +123,6 @@ exports[`<Navigation /> should render closed state 1`] = `
     >
       <a
         class="c3"
-        href="/projects"
-        tabindex="-1"
-      >
-        <div
-          class="c4"
-        >
-          Projects
-        </div>
-      </a>
-    </li>
-    <li
-      class="c2"
-    >
-      <a
-        class="c3"
         href="/writings"
         tabindex="-1"
       >

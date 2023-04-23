@@ -11,7 +11,7 @@ export function Menu() {
   const items = [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
-    { label: 'Projects', href: '/projects' },
+    // { label: 'Projects', href: '/projects' },
     { label: 'Writings', href: '/writings' },
     // { label: 'Guestbook', href: '/guestbook' },
     {
