@@ -5,6 +5,7 @@ import { Base } from 'layouts/Base';
 import { getMDXComponent } from 'mdx-bundler/client';
 import React from 'react';
 import { Writing as WritingType } from 'types/Writing';
+import { formatDateString } from 'utils/time/format-date-string';
 import { Comments } from './components/Comments';
 import * as S from './styles';
 
@@ -33,8 +34,13 @@ export function Writing({ code, frontmatter }: WritingProps) {
         <S.Heading>
           <S.Title>{frontmatter.title}</S.Title>
           <MutedText>
-            Published at: {frontmatter.publishedAt} ·{' '}
-            {frontmatter.readingTime.text}.
+            Published on{' '}
+            {formatDateString(
+              frontmatter.publishedAt,
+              'yyyy-MM-dd',
+              'MMM dd, yyyy',
+            )}{' '}
+            · {frontmatter.readingTime.text}.
           </MutedText>
         </S.Heading>
 
