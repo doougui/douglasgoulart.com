@@ -2,25 +2,34 @@
 <rss version="2.0">
     <channel>
         <title>Douglas Pinheiro Goulart</title>
-        <link>http://localhost:3000</link>
+        <link>https://www.douglasgoulart.com</link>
         <description>Thoughts, curiosities and tutorials about software development to sharpen your skills and make you a better developer.</description>
-        <lastBuildDate>Wed, 19 Apr 2023 22:02:12 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 24 Apr 2023 21:07:40 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <image>
             <title>Douglas Pinheiro Goulart</title>
-            <url>http://localhost:3000/img/icon-512.png</url>
-            <link>http://localhost:3000</link>
+            <url>https://www.douglasgoulart.com/img/icon-512.png</url>
+            <link>https://www.douglasgoulart.com</link>
         </image>
         <copyright>© 2023 Douglas Pinheiro Goulart</copyright>
         <item>
+            <title><![CDATA[Creating a complete Node.js test environment with Vitest, PostgreSQL and Prisma]]></title>
+            <link>https://www.douglasgoulart.com/writings/creating-a-complete-nodejs-test-environment-with-vitest-postgresql-and-prisma</link>
+            <guid>creating-a-complete-nodejs-test-environment-with-vitest-postgresql-and-prisma</guid>
+            <pubDate>Sun, 23 Apr 2023 03:00:00 GMT</pubDate>
+            <description><![CDATA[Node.js complete test environment using TypeScript, Prisma, PostgreSQL and Vitest.]]></description>
+            <author>douglaspigoulart@gmail.com (Douglas Pinheiro Goulart)</author>
+            <enclosure url="https://www.douglasgoulart.com/img/contents/writings/creating-a-complete-nodejs-test-environment-with-vitest-postgresql-and-prisma/cover.png" length="0" type="image/png"/>
+        </item>
+        <item>
             <title><![CDATA[Avoid TypeScript errors in your project by using the TypeScript compiler]]></title>
-            <link>http://localhost:3000/writings/avoid-typescript-errors-in-your-project-by-using-the-typescript-compiler</link>
+            <link>https://www.douglasgoulart.com/writings/avoid-typescript-errors-in-your-project-by-using-the-typescript-compiler</link>
             <guid>avoid-typescript-errors-in-your-project-by-using-the-typescript-compiler</guid>
             <pubDate>Fri, 27 May 2022 03:00:00 GMT</pubDate>
             <description><![CDATA[No more unexpected type errors!]]></description>
             <author>douglaspigoulart@gmail.com (Douglas Pinheiro Goulart)</author>
-            <enclosure url="http://localhost:3000/img/contents/writings/avoid-typescript-errors-in-your-project-by-using-the-typescript-compiler/cover.png" length="0" type="image/png"/>
+            <enclosure url="https://www.douglasgoulart.com/img/contents/writings/avoid-typescript-errors-in-your-project-by-using-the-typescript-compiler/cover.png" length="0" type="image/png"/>
         </item>
     </channel>
 </rss>
