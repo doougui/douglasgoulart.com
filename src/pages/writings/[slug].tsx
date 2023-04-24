@@ -22,6 +22,8 @@ export default function Writing({ code, frontmatter }: WritingProps) {
                 {
                   url: `${getAbsoluteUrl()}${frontmatter.cover?.url}`,
                   secureUrl: `${getAbsoluteUrl()}${frontmatter.cover?.url}`,
+                  width: 1200,
+                  height: 627,
                   alt: frontmatter.cover?.alt,
                 },
               ]
