@@ -71,7 +71,7 @@ exports[`<Project /> should title, description, accomplishments and tech stack 1
   margin-top: 1.5rem;
   color: var(--color-text);
   font-size: 1.2rem;
-  line-height: 1.4rem;
+  line-height: 2.4rem;
 }
 
 <a
@@ -114,6 +114,7 @@ exports[`<Project /> should title, description, accomplishments and tech stack 1
       <strong>
         TypeScript, Node.js, Express.js, PostgreSQL, Prisma, ESLint, Prettier, Vitest, Swagger
       </strong>
+      .
     </span>
   </div>
 </a>

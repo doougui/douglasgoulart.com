@@ -2,10 +2,38 @@ import { Heading1 } from 'components/Headings';
 import { MutedText } from 'components/MutedText';
 import { Base } from 'layouts/Base';
 import { Project, ProjectProps } from 'components/Project';
+import { Stack } from 'components/Stack';
+import { Button } from 'components/Button';
 import * as S from './styles';
 
 export function Projects() {
   const projects: ProjectProps[] = [
+    {
+      title: 'This website',
+      description:
+        "Douglasgoulart.com is my personal space. This is where I like to share some cool stuff I learn along my way as a software engineer. It's also where you can find some additional information about me, including all my links.",
+      accomplishments: [
+        'Architected, created and developed the entire application;',
+        'Designed the UI from scratch on Figma;',
+        'Built all the front-end components;',
+        'Used Next.js API routes to integrate with external APIs like Spotify and Mailchimp;',
+        'Wrote unit tests using Jest and React Testing Library;',
+        'Used MDX to write customized and rich blog posts;',
+        'Used Storybook to build and display UI components in isolation;',
+      ],
+      url: 'https://github.com/doougui/douglasgoulart.com',
+      stack: [
+        'TypeScript',
+        'Next.js',
+        'React.js',
+        'Storybook',
+        'Styled-Components',
+        'Jest',
+        'React Testing Library',
+        'ESLint',
+        'Prettier',
+      ],
+    },
     {
       title: 'Appointful',
       description:
@@ -38,11 +66,19 @@ export function Projects() {
       <Heading1>Projects</Heading1>
       <MutedText>TO-DO</MutedText>
 
-      <S.Projects>
-        {projects.map((project) => (
-          <Project {...project} />
-        ))}
-      </S.Projects>
+      <Stack spacing="3rem">
+        <S.Projects>
+          <Stack spacing="3rem">
+            {projects.map((project) => (
+              <Project key={project.title} {...project} />
+            ))}
+          </Stack>
+        </S.Projects>
+
+        <Button as="a" href="https://github.com/doougui" target="_blank">
+          See all my projects
+        </Button>
+      </Stack>
     </Base>
   );
 }

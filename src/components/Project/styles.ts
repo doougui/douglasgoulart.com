@@ -56,6 +56,6 @@ export const Stack = styled.span`
     margin-top: 1.5rem;
     color: var(--color-text);
     font-size: ${theme.font.sizes.xsmall};
-    line-height: ${theme.font.heights.xsmall};
+    line-height: ${theme.font.heights.large};
   `}
 `;

@@ -32,7 +32,7 @@ export function Project({
         </S.Accomplishments>
 
         <S.Stack>
-          Tech stack: <strong>{stack.join(', ')}</strong>
+          Tech stack: <strong>{stack.join(', ')}</strong>.
         </S.Stack>
       </S.Container>
     </S.Link>
