@@ -181,42 +181,6 @@ import { someModule } from '@/custom/path/to/some-file';
 
 Much better, right?
 
-To avoid always having to import things like "test" and "expect" from Vitest, we can also add `vitest/globals` to our tsconfig configuration file:
-
-```json
-{
-  "compilerOptions": {
-    ...
-    "types": [
-      "vitest/globals"
-    ],
-    ...
-  }
-}
-```
-
-And in our `vitest.config.ts` file we specify test globals as true:
-
-```ts
-export default defineConfig({
-  ...
-  test: {
-    ...
-    globals: true,
-    ...
-  },
-  ...
-});
-```
-
-And now you can remove `vitest` imports from your test files. Our `sample.spec.ts` would be like this:
-
-```ts
-test('should execute', () => {
-  expect(1 + 1).toBe(2);
-});
-```
-
 We can also take a moment and add the required scripts to run our project. Add them in your package.json file:
 
 ```json
@@ -266,6 +230,42 @@ If you don't have any tests yet, you can begin by creating a `sample.spec.(ts|js
 ```ts
 import { test, expect } from 'vitest';
 
+test('should execute', () => {
+  expect(1 + 1).toBe(2);
+});
+```
+
+To avoid always having to import things like "test" and "expect" from Vitest, we can also add `vitest/globals` to our tsconfig configuration file:
+
+```json
+{
+  "compilerOptions": {
+    ...
+    "types": [
+      "vitest/globals"
+    ],
+    ...
+  }
+}
+```
+
+And in our `vitest.config.ts` file we specify test globals as true:
+
+```ts
+export default defineConfig({
+  ...
+  test: {
+    ...
+    globals: true,
+    ...
+  },
+  ...
+});
+```
+
+And now you can remove `vitest` imports from your test files. Our `sample.spec.ts` would be like this:
+
+```ts
 test('should execute', () => {
   expect(1 + 1).toBe(2);
 });
