@@ -59,6 +59,31 @@ export function Projects() {
         'Swagger',
       ],
     },
+    {
+      title: 'React Native Sortable Gallery',
+      description:
+        'A React Native component that allows you to sort a gallery of images. This component allows you to keep track of the order of your images and be able to organize them in an easy and performative way.',
+      accomplishments: [
+        'Developed the entire project;',
+        'Used React Native with Expo to build the application;',
+        'Used React Native Reanimated and React Native Gesture Handler to allow users to drag and drop images in a clean, performative way;',
+        'Used ESLint and Prettier to ensure code quality and enforce coding standards;',
+        'Used Husky and lint-staged to make sure that code standards are maintained before pushing to production;',
+        'Used TypeScript to ensure type-safety;',
+      ],
+      url: 'https://github.com/doougui/react-native-sortable-gallery',
+      stack: [
+        'TypeScript',
+        'React Native',
+        'Expo',
+        'React Native Reanimated',
+        'React Native Gesture Handler',
+        'ESLint',
+        'Prettier',
+        'Husky',
+        'lint-staged',
+      ],
+    },
   ];
 
   return (
