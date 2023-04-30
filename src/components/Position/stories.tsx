@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import type { Meta, StoryFn } from '@storybook/react';
 import { Position, PositionProps } from '.';
 import positionMock from './mock';
 
@@ -8,4 +8,4 @@ export default {
   args: positionMock,
 } as Meta<PositionProps>;
 
-export const Default: Story<PositionProps> = (args) => <Position {...args} />;
+export const Default: StoryFn<PositionProps> = (args) => <Position {...args} />;

@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import type { Meta, StoryFn } from '@storybook/react';
 import { NewsletterForm } from '.';
 
 export default {
@@ -6,7 +6,7 @@ export default {
   component: NewsletterForm,
 } as Meta;
 
-export const Default: Story = () => (
+export const Default: StoryFn = () => (
   <div style={{ width: '500px', margin: '0 auto' }}>
     <NewsletterForm />
   </div>

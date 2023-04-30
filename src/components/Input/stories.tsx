@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import type { Meta, StoryFn } from '@storybook/react';
 import { Input, InputProps } from '.';
 
 export default {
@@ -14,4 +14,4 @@ export default {
   component: Input,
 } as Meta<InputProps>;
 
-export const Default: Story<InputProps> = (args) => <Input {...args} />;
+export const Default: StoryFn<InputProps> = (args) => <Input {...args} />;

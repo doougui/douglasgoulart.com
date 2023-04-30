@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import type { Meta, StoryFn } from '@storybook/react';
 import { MobileMenu } from '.';
 
 export default {
@@ -6,7 +6,7 @@ export default {
   component: MobileMenu,
 } as Meta;
 
-export const Default: Story = () => (
+export const Default: StoryFn = () => (
   <div style={{ margin: '3rem 0' }}>
     <MobileMenu />
   </div>

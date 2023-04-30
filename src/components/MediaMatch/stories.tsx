@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import type { Meta, StoryFn } from '@storybook/react';
 import { MediaMatch, MediaMatchProps } from '.';
 
 export default {
@@ -6,11 +6,11 @@ export default {
   component: MediaMatch,
 } as Meta<MediaMatchProps>;
 
-export const Desktop: Story<MediaMatchProps> = () => (
+export const Desktop: StoryFn<MediaMatchProps> = () => (
   <MediaMatch greaterThan="medium">Only on Desktop</MediaMatch>
 );
 
-export const Mobile: Story<MediaMatchProps> = () => (
+export const Mobile: StoryFn<MediaMatchProps> = () => (
   <MediaMatch lessThan="medium">Only on Mobile</MediaMatch>
 );
 

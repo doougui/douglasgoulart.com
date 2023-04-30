@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import type { Meta, StoryFn } from '@storybook/react';
 import { Logo } from '.';
 
 export default {
@@ -6,4 +6,4 @@ export default {
   component: Logo,
 } as Meta;
 
-export const Default: Story = () => <Logo />;
+export const Default: StoryFn = () => <Logo />;

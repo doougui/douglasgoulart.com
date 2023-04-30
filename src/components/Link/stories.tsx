@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import type { Meta, StoryFn } from '@storybook/react';
 import { Link } from '.';
 
 export default {
@@ -6,6 +6,6 @@ export default {
   component: Link,
 } as Meta;
 
-export const Default: Story = () => (
+export const Default: StoryFn = () => (
   <Link href="https://example.com">Example</Link>
 );

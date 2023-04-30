@@ -1,0 +1,1038 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Projects /> should render heading and projects 1`] = `
+.c25 {
+  font-size: 3.2rem;
+  line-height: 4.2rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.c26 {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--color-textDark);
+}
+
+.c1 {
+  width: 100%;
+  max-width: 94rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: calc(4rem / 2);
+  padding-right: calc(4rem / 2);
+}
+
+.c29 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--color-highlightText);
+  background-color: var(--color-primary);
+  border-radius: 0.4rem;
+  padding: 1rem 4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c41 {
+  all: unset;
+  width: 100%;
+  font-size: 1.6rem;
+  background: var(--color-tertiary);
+  padding: 1.2rem 1.5rem;
+  border-radius: 0.4rem;
+  color: var(--color-text);
+}
+
+.c41::-webkit-input-placeholder {
+  color: var(--color-textDark);
+}
+
+.c41::-moz-placeholder {
+  color: var(--color-textDark);
+}
+
+.c41:-ms-input-placeholder {
+  color: var(--color-textDark);
+}
+
+.c41::placeholder {
+  color: var(--color-textDark);
+}
+
+.c40 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.c40 button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.c42 {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  min-width: 10rem;
+}
+
+.c31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1.5rem;
+  color: var(--color-text);
+  font-size: 1.6rem;
+}
+
+.c32 {
+  color: var(--color-text);
+}
+
+.c33 {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+}
+
+.c30 {
+  margin-top: 5rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--color-tertiary);
+  background: var(--color-background);
+}
+
+.c34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 8rem;
+  margin-top: 2.5rem;
+}
+
+.c35 {
+  color: var(--color-text);
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+}
+
+.c39 {
+  font-size: 1.6rem;
+  color: var(--color-textDark);
+}
+
+.c36 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.c37 {
+  color: var(--color-textDark);
+  font-size: 1.6rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c37:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c43 {
+  color: var(--color-text);
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin-top: 3rem;
+}
+
+.c38 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c3 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4 {
+  display: none;
+}
+
+.c22 {
+  width: 3rem;
+  height: 3rem;
+  padding: 5px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 0.4rem;
+  background: var(--color-tertiary);
+  -webkit-transition: background-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.c22:hover {
+  background: var(--color-secondary);
+}
+
+.c23 {
+  width: 3rem;
+  height: 3rem;
+  padding: 5px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 0.4rem;
+  background: var(--color-tertiary);
+  -webkit-transition: background-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
+  background: var(--color-textDarker);
+}
+
+.c23:hover {
+  background: var(--color-secondary);
+}
+
+.c21 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 0.4rem;
+  background: var(--color-tertiary);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  gap: 5px;
+}
+
+.c8 {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  border-bottom: 1px solid var(--color-textDarker);
+}
+
+.c9 {
+  color: var(--color-text);
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.c7 {
+  width: 100%;
+  list-style: none;
+  margin-top: 10rem;
+  text-align: right;
+}
+
+.c11 {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  gap: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.c12 {
+  display: block;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 0.4rem;
+  background: var(--color-tertiary);
+}
+
+.c13 {
+  display: block;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 0.4rem;
+  background: var(--color-tertiary);
+  background: var(--color-textDarker);
+}
+
+.c6 {
+  width: 100vw;
+  height: 100vh;
+  background: var(--color-background);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  padding: 0 calc(4rem / 2);
+  pointer-events: none;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.c14 {
+  all: unset;
+  position: fixed;
+  right: calc(4rem / 2);
+  z-index: 50;
+}
+
+.c16 {
+  width: 2.7rem;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--color-text);
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: var(--color-background);
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c18 {
+  font-size: 1.6rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: var(--color-text);
+  padding: 0 1.5rem;
+  color: var(--color-primary);
+}
+
+.c20 {
+  font-size: 1.6rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: var(--color-text);
+  padding: 0 1.5rem;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.c0 {
+  margin: 5rem 0;
+}
+
+.c24 {
+  margin-top: 10rem;
+}
+
+.c27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.c28 {
+  margin-top: 3rem;
+}
+
+@media (max-width:768px) {
+  .c34 {
+    gap: 4rem;
+  }
+}
+
+@media (max-width:768px) {
+  .c4 {
+    display: block;
+  }
+}
+
+@media (min-width:768px) {
+  .c5 {
+    display: none;
+  }
+}
+
+@media (max-width:768px) {
+  .c17 {
+    display: none;
+  }
+}
+
+@media (max-width:768px) {
+  .c0 {
+    margin: 3rem 0;
+  }
+}
+
+@media (max-width:768px) {
+  .c24 {
+    margin-top: 5rem;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <menu
+      class="c2"
+    >
+      <a
+        class="c3"
+        href="/"
+      >
+        <svg
+          fill="none"
+          height="36"
+          viewBox="0 0 145 36"
+          width="145"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.4 4.536C12.768 4.536 14.8373 5.00533 16.608 5.944C18.3787 6.88267 19.744 8.20533 20.704 9.912C21.6853 11.5973 22.176 13.5493 22.176 15.768C22.176 17.9653 21.6853 19.9173 20.704 21.624C19.744 23.3307 18.368 24.6533 16.576 25.592C14.8053 26.5307 12.7467 27 10.4 27H1.984V4.536H10.4ZM10.048 22.264C12.1173 22.264 13.728 21.6987 14.88 20.568C16.032 19.4373 16.608 17.8373 16.608 15.768C16.608 13.6987 16.032 12.088 14.88 10.936C13.728 9.784 12.1173 9.208 10.048 9.208H7.456V22.264H10.048ZM33.362 27.256C31.6127 27.256 30.034 26.8827 28.626 26.136C27.2393 25.3893 26.1407 24.3227 25.33 22.936C24.5407 21.5493 24.146 19.928 24.146 18.072C24.146 16.2373 24.5513 14.6267 25.362 13.24C26.1727 11.832 27.282 10.7547 28.69 10.008C30.098 9.26133 31.6767 8.888 33.426 8.888C35.1753 8.888 36.754 9.26133 38.162 10.008C39.57 10.7547 40.6793 11.832 41.49 13.24C42.3007 14.6267 42.706 16.2373 42.706 18.072C42.706 19.9067 42.29 21.528 41.458 22.936C40.6473 24.3227 39.5273 25.3893 38.098 26.136C36.69 26.8827 35.1113 27.256 33.362 27.256ZM33.362 22.52C34.4073 22.52 35.2927 22.136 36.018 21.368C36.7647 20.6 37.138 19.5013 37.138 18.072C37.138 16.6427 36.7753 15.544 36.05 14.776C35.346 14.008 34.4713 13.624 33.426 13.624C32.3593 13.624 31.474 14.008 30.77 14.776C30.066 15.5227 29.714 16.6213 29.714 18.072C29.714 19.5013 30.0553 20.6 30.738 21.368C31.442 22.136 32.3167 22.52 33.362 22.52ZM63.241 9.144V27H57.769V24.568C57.2143 25.3573 56.457 25.9973 55.497 26.488C54.5583 26.9573 53.513 27.192 52.361 27.192C50.9957 27.192 49.7903 26.8933 48.745 26.296C47.6997 25.6773 46.889 24.792 46.313 23.64C45.737 22.488 45.449 21.1333 45.449 19.576V9.144H50.889V18.84C50.889 20.0347 51.1983 20.9627 51.817 21.624C52.4357 22.2853 53.2677 22.616 54.313 22.616C55.3797 22.616 56.2223 22.2853 56.841 21.624C57.4597 20.9627 57.769 20.0347 57.769 18.84V9.144H63.241ZM73.9555 8.888C75.2142 8.888 76.3128 9.144 77.2515 9.656C78.2115 10.168 78.9475 10.84 79.4595 11.672V9.144H84.9315V26.968C84.9315 28.6107 84.6008 30.0933 83.9395 31.416C83.2995 32.76 82.3075 33.8267 80.9635 34.616C79.6408 35.4053 77.9875 35.8 76.0035 35.8C73.3582 35.8 71.2142 35.1707 69.5715 33.912C67.9288 32.6747 66.9902 30.9893 66.7555 28.856H72.1635C72.3342 29.5387 72.7395 30.072 73.3795 30.456C74.0195 30.8613 74.8088 31.064 75.7475 31.064C76.8782 31.064 77.7742 30.7333 78.4355 30.072C79.1182 29.432 79.4595 28.3973 79.4595 26.968V24.44C78.9262 25.272 78.1902 25.9547 77.2515 26.488C76.3128 27 75.2142 27.256 73.9555 27.256C72.4835 27.256 71.1502 26.8827 69.9555 26.136C68.7608 25.368 67.8115 24.2907 67.1075 22.904C66.4248 21.496 66.0835 19.8747 66.0835 18.04C66.0835 16.2053 66.4248 14.5947 67.1075 13.208C67.8115 11.8213 68.7608 10.7547 69.9555 10.008C71.1502 9.26133 72.4835 8.888 73.9555 8.888ZM79.4595 18.072C79.4595 16.7067 79.0755 15.6293 78.3075 14.84C77.5608 14.0507 76.6435 13.656 75.5555 13.656C74.4675 13.656 73.5395 14.0507 72.7715 14.84C72.0248 15.608 71.6515 16.6747 71.6515 18.04C71.6515 19.4053 72.0248 20.4933 72.7715 21.304C73.5395 22.0933 74.4675 22.488 75.5555 22.488C76.6435 22.488 77.5608 22.0933 78.3075 21.304C79.0755 20.5147 79.4595 19.4373 79.4595 18.072ZM94.3623 3.32V27H88.8903V3.32H94.3623ZM97.2398 18.04C97.2398 16.2053 97.5811 14.5947 98.2638 13.208C98.9678 11.8213 99.9171 10.7547 101.112 10.008C102.306 9.26133 103.64 8.888 105.112 8.888C106.37 8.888 107.469 9.144 108.408 9.656C109.368 10.168 110.104 10.84 110.616 11.672V9.144H116.088V27H110.616V24.472C110.082 25.304 109.336 25.976 108.376 26.488C107.437 27 106.338 27.256 105.08 27.256C103.629 27.256 102.306 26.8827 101.112 26.136C99.9171 25.368 98.9678 24.2907 98.2638 22.904C97.5811 21.496 97.2398 19.8747 97.2398 18.04ZM110.616 18.072C110.616 16.7067 110.232 15.6293 109.464 14.84C108.717 14.0507 107.8 13.656 106.712 13.656C105.624 13.656 104.696 14.0507 103.928 14.84C103.181 15.608 102.808 16.6747 102.808 18.04C102.808 19.4053 103.181 20.4933 103.928 21.304C104.696 22.0933 105.624 22.488 106.712 22.488C107.8 22.488 108.717 22.0933 109.464 21.304C110.232 20.5147 110.616 19.4373 110.616 18.072ZM127.311 27.256C125.753 27.256 124.367 26.9893 123.151 26.456C121.935 25.9227 120.975 25.1973 120.271 24.28C119.567 23.3413 119.172 22.296 119.087 21.144H124.495C124.559 21.7627 124.847 22.264 125.359 22.648C125.871 23.032 126.5 23.224 127.247 23.224C127.929 23.224 128.452 23.096 128.815 22.84C129.199 22.5627 129.391 22.2107 129.391 21.784C129.391 21.272 129.124 20.8987 128.591 20.664C128.057 20.408 127.193 20.1307 125.999 19.832C124.719 19.5333 123.652 19.224 122.799 18.904C121.945 18.5627 121.209 18.04 120.591 17.336C119.972 16.6107 119.663 15.64 119.663 14.424C119.663 13.4 119.94 12.472 120.495 11.64C121.071 10.7867 121.903 10.1147 122.991 9.624C124.1 9.13333 125.412 8.888 126.927 8.888C129.167 8.888 130.927 9.44267 132.207 10.552C133.508 11.6613 134.255 13.1333 134.447 14.968H129.391C129.305 14.3493 129.028 13.8587 128.559 13.496C128.111 13.1333 127.513 12.952 126.767 12.952C126.127 12.952 125.636 13.08 125.295 13.336C124.953 13.5707 124.783 13.9013 124.783 14.328C124.783 14.84 125.049 15.224 125.583 15.48C126.137 15.736 126.991 15.992 128.143 16.248C129.465 16.5893 130.543 16.9307 131.375 17.272C132.207 17.592 132.932 18.1253 133.551 18.872C134.191 19.5973 134.521 20.5787 134.543 21.816C134.543 22.8613 134.244 23.8 133.647 24.632C133.071 25.4427 132.228 26.0827 131.119 26.552C130.031 27.0213 128.761 27.256 127.311 27.256Z"
+            data-testid="name"
+            fill="#EDEDEF"
+            id="name"
+          />
+          <path
+            d="M140.45 27.256C139.49 27.256 138.701 26.9787 138.082 26.424C137.485 25.848 137.186 25.144 137.186 24.312C137.186 23.4587 137.485 22.744 138.082 22.168C138.701 21.592 139.49 21.304 140.45 21.304C141.389 21.304 142.157 21.592 142.754 22.168C143.373 22.744 143.682 23.4587 143.682 24.312C143.682 25.144 143.373 25.848 142.754 26.424C142.157 26.9787 141.389 27.256 140.45 27.256Z"
+            data-testid="dot"
+            fill="#107BEB"
+            id="dot"
+          />
+        </svg>
+      </a>
+      <div
+        class="c4"
+        data-testid="mobile-menu"
+      >
+        <div
+          class="c5"
+        >
+          <nav
+            aria-hidden="true"
+            class="c6"
+            data-testid="container"
+            style="opacity: 0;"
+          >
+            <ul
+              class="c7"
+            >
+              <li
+                class="c8"
+                style="opacity: 0; transform: translateX(200px) translateZ(0);"
+              >
+                <a
+                  class="c9"
+                  href="/"
+                  tabindex="-1"
+                >
+                  <div
+                    class="c10"
+                  >
+                    Home
+                  </div>
+                </a>
+              </li>
+              <li
+                class="c8"
+                style="opacity: 0; transform: translateX(200px) translateZ(0);"
+              >
+                <a
+                  class="c9"
+                  href="/about"
+                  tabindex="-1"
+                >
+                  <div
+                    class="c10"
+                  >
+                    About
+                  </div>
+                </a>
+              </li>
+              <li
+                class="c8"
+                style="opacity: 0; transform: translateX(200px) translateZ(0);"
+              >
+                <a
+                  class="c9"
+                  href="/projects"
+                  tabindex="-1"
+                >
+                  <div
+                    class="c10"
+                  >
+                    Projects
+                  </div>
+                </a>
+              </li>
+              <li
+                class="c8"
+                style="opacity: 0; transform: translateX(200px) translateZ(0);"
+              >
+                <a
+                  class="c9"
+                  href="/writings"
+                  tabindex="-1"
+                >
+                  <div
+                    class="c10"
+                  >
+                    Writings
+                  </div>
+                </a>
+              </li>
+              <li
+                class="c8"
+                style="opacity: 0; transform: translateX(200px) translateZ(0);"
+              >
+                <a
+                  class="c9"
+                  href="https://github.com/doougui/douglasgoulart.com"
+                  tabindex="-1"
+                >
+                  <div
+                    class="c10"
+                  >
+                    GitHub
+                    <svg
+                      fill="currentColor"
+                      height="16"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g>
+                        <path
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                        />
+                        <path
+                          d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v8h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </a>
+              </li>
+              <div
+                class="c11"
+                style="opacity: 0; transform: translateX(200px) translateZ(0);"
+              >
+                <span
+                  class="c12"
+                >
+                  Light
+                </span>
+                <span
+                  class="c13"
+                >
+                  Dark
+                </span>
+              </div>
+            </ul>
+          </nav>
+          <button
+            aria-label="Open menu"
+            class="c14"
+            type="button"
+          >
+            <div
+              class="c15"
+            >
+              <span
+                class="c16"
+              />
+              <span
+                class="c16"
+              />
+            </div>
+          </button>
+        </div>
+      </div>
+      <nav
+        class="c17"
+        data-testid="desktop-menu"
+      >
+        <a
+          class="c18"
+          href="/"
+        >
+          <div
+            class="c19"
+          >
+            Home
+          </div>
+        </a>
+        <a
+          class="c20"
+          href="/about"
+        >
+          <div
+            class="c19"
+          >
+            About
+          </div>
+        </a>
+        <a
+          class="c20"
+          href="/projects"
+        >
+          <div
+            class="c19"
+          >
+            Projects
+          </div>
+        </a>
+        <a
+          class="c20"
+          href="/writings"
+        >
+          <div
+            class="c19"
+          >
+            Writings
+          </div>
+        </a>
+        <a
+          class="c20"
+          href="https://github.com/doougui/douglasgoulart.com"
+          target="_blank"
+        >
+          <div
+            class="c19"
+          >
+            GitHub
+            <svg
+              fill="currentColor"
+              height="16"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v8h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"
+                />
+              </g>
+            </svg>
+          </div>
+        </a>
+        <div
+          class="c21"
+        >
+          <div
+            class="c22"
+            data-testid="light-toggle"
+          >
+            <svg
+              fill="currentColor"
+              height="15"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"
+                  fill-rule="nonzero"
+                />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="c23"
+            data-testid="dark-toggle"
+          >
+            <svg
+              fill="currentColor"
+              height="15"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"
+                  fill-rule="nonzero"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </nav>
+    </menu>
+    <main
+      class="c24"
+    >
+      <h1
+        class="c25"
+      >
+        Projects
+      </h1>
+      <p
+        class="c26"
+      >
+        Throughout my journey as a Software Engineer, I have had the opportunity to create and contribute to various projects. Some of these include:
+      </p>
+      <div
+        class="c27"
+        spacing="3rem"
+      >
+        <div
+          class="c28"
+        >
+          <div
+            class="c27"
+            spacing="3rem"
+          >
+            <div
+              data-testid="project"
+            />
+            <div
+              data-testid="project"
+            />
+            <div
+              data-testid="project"
+            />
+          </div>
+        </div>
+        <a
+          class="c29"
+          href="https://github.com/doougui"
+          target="_blank"
+        >
+          See all my projects
+        </a>
+      </div>
+    </main>
+    <footer
+      class="c30"
+    >
+      <div
+        class="c31"
+      >
+        <svg
+          class="c32"
+          fill="currentColor"
+          height="26"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 24 24"
+          width="26"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g>
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.55 2 12 2zm3.75 14.65c-2.35-1.45-5.3-1.75-8.8-.95-.35.1-.65-.15-.75-.45-.1-.35.15-.65.45-.75 3.8-.85 7.1-.5 9.7 1.1.35.15.4.55.25.85-.2.3-.55.4-.85.2zm1-2.7c-2.7-1.65-6.8-2.15-9.95-1.15-.4.1-.85-.1-.95-.5-.1-.4.1-.85.5-.95 3.65-1.1 8.15-.55 11.25 1.35.3.15.45.65.2 1s-.7.5-1.05.25zM6.3 9.75c-.5.15-1-.15-1.15-.6-.15-.5.15-1 .6-1.15 3.55-1.05 9.4-.85 13.1 1.35.45.25.6.85.35 1.3-.25.35-.85.5-1.3.25C14.7 9 9.35 8.8 6.3 9.75z"
+              fill-rule="nonzero"
+            />
+          </g>
+        </svg>
+        <span>
+          Spotify: 
+          <span
+            class="c33"
+          >
+            Not Playing
+          </span>
+        </span>
+      </div>
+      <menu
+        class="c34"
+      >
+        <section>
+          <h3
+            class="c35"
+          >
+            Navigation
+          </h3>
+          <nav
+            class="c36"
+          >
+            <a
+              class="c37"
+              href="/"
+            >
+              Home
+            </a>
+            <a
+              class="c37"
+              href="/about"
+            >
+              About
+            </a>
+            <a
+              class="c37"
+              href="/writings"
+            >
+              Writings
+            </a>
+          </nav>
+        </section>
+        <section>
+          <h3
+            class="c35"
+          >
+            Social
+          </h3>
+          <nav
+            class="c36"
+          >
+            <a
+              class="c37"
+              href="https://github.com/doougui"
+              target="_blank"
+            >
+              GitHub
+            </a>
+            <a
+              class="c37"
+              href="https://www.linkedin.com/in/douglaspigoulart/"
+              target="_blank"
+            >
+              Linkedin
+            </a>
+            <a
+              class="c37"
+              href="mailto:douglaspigoulart@gmail.com"
+              target="_blank"
+            >
+              E-mail
+            </a>
+          </nav>
+        </section>
+        <section>
+          <h3
+            class="c35"
+          >
+            Extras
+          </h3>
+          <nav
+            class="c36"
+          >
+            <a
+              class="c37"
+              href="https://github.com/doougui/resume"
+              target="_blank"
+            >
+              Resume
+            </a>
+            <a
+              class="c37"
+              href="https://gitlab.com/douglaspigoulart"
+              target="_blank"
+            >
+              GitLab
+            </a>
+            <a
+              class="c37"
+              href="./rss.xml"
+              target="_blank"
+            >
+              RSS Feed
+            </a>
+          </nav>
+        </section>
+        <section
+          class="c38"
+        >
+          <h3
+            class="c35"
+          >
+            Newsletter
+          </h3>
+          <p
+            class="c39"
+          >
+            Get new writings delivered to your inbox!
+          </p>
+          <form>
+            <div
+              class="c40"
+            >
+              <input
+                class="c41 c42"
+                name="email"
+                placeholder="johndoe@email.com"
+                value=""
+              />
+              <button
+                class="c29"
+                type="submit"
+              >
+                Subscribe
+              </button>
+            </div>
+          </form>
+        </section>
+      </menu>
+      <p
+        class="c43"
+      >
+        © 
+        2023
+         Douglas Pinheiro Goulart
+      </p>
+    </footer>
+  </div>
+</div>
+`;

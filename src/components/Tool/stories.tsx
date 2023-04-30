@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import type { Meta, StoryFn } from '@storybook/react';
 import { Tool, ToolProps } from '.';
 import toolMock from './mock';
 
@@ -8,4 +8,4 @@ export default {
   args: toolMock,
 } as Meta<ToolProps>;
 
-export const Default: Story<ToolProps> = (args) => <Tool {...args} />;
+export const Default: StoryFn<ToolProps> = (args) => <Tool {...args} />;
