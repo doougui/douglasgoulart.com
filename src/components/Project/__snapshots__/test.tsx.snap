@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Project /> should title, description, accomplishments and tech stack 1`] = `
+.c2 {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.c3 {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--color-textDark);
+}
+
+.c0 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1 {
+  padding: 1.5rem;
+  background-color: var(--color-background);
+  border-radius: 0.4rem;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+.c1:hover {
+  background-color: var(--color-secondary);
+}
+
+.c4 {
+  list-style: none;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.c5 {
+  position: relative;
+  padding-left: 3rem;
+}
+
+.c5::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: block;
+  background: var(--color-primary);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c6 {
+  display: block;
+  margin-top: 1.5rem;
+  color: var(--color-text);
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+<a
+  aria-label="Appointful"
+  class="c0"
+  href="https://example.com"
+  target="_blank"
+>
+  <div
+    class="c1"
+  >
+    <h2
+      class="c2"
+    >
+      Appointful
+    </h2>
+    <p
+      class="c3"
+    >
+      Appointful is an API made in Node.js to manage dentist appointments. There you can list dentists and appointments, schedule appointments, cancel appointments and much more.
+    </p>
+    <ul
+      class="c4"
+    >
+      <li
+        class="c5"
+      >
+        Appled design patterns such as Factory, Adapter, Composite and maniy more;
+      </li>
+      <li
+        class="c5"
+      >
+        Applied SOLID principles;
+      </li>
+    </ul>
+    <span
+      class="c6"
+    >
+      Tech stack: 
+      <strong>
+        TypeScript, Node.js, Express.js, PostgreSQL, Prisma, ESLint, Prettier, Vitest, Swagger
+      </strong>
+    </span>
+  </div>
+</a>
+`;

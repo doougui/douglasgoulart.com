@@ -3,14 +3,10 @@ export default {
   description:
     'Appointful is an API made in Node.js to manage dentist appointments. There you can list dentists and appointments, schedule appointments, cancel appointments and much more.',
   accomplishments: [
-    'Applied design patterns such as Factory, Adapter, Composite and many more;',
+    'Appled design patterns such as Factory, Adapter, Composite and maniy more;',
     'Applied SOLID principles;',
-    'Wrote unit and end-to-end tests with Vitest to assert that everything works flawlessly;',
-    'Documented API routes with Swagger;',
-    'Used Prisma with PostgreSQL to persist and retrieve data;',
-    'Deployed both database and application to production with Render.com;',
   ],
-  url: 'https://github.com/doougui/appointful',
+  url: 'https://example.com',
   stack: [
     'TypeScript',
     'Node.js',
