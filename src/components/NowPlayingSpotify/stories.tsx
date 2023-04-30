@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import type { Meta, StoryFn } from '@storybook/react';
 import { NowPlayingSpotify } from '.';
 
 export default {
@@ -6,4 +6,4 @@ export default {
   component: NowPlayingSpotify,
 } as Meta;
 
-export const Default: Story = () => <NowPlayingSpotify />;
+export const Default: StoryFn = () => <NowPlayingSpotify />;

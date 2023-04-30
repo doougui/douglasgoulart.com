@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import type { Meta, StoryFn } from '@storybook/react';
 import { Container } from 'components/Container';
 import { MyStack } from '.';
 
@@ -7,7 +7,7 @@ export default {
   component: MyStack,
 } as Meta;
 
-export const Default: Story = () => (
+export const Default: StoryFn = () => (
   <Container>
     <MyStack />
   </Container>

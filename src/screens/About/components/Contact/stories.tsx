@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import type { Meta, StoryFn } from '@storybook/react';
 import { Contact } from '.';
 
 export default {
@@ -6,4 +6,4 @@ export default {
   component: Contact,
 } as Meta;
 
-export const Default: Story = () => <Contact />;
+export const Default: StoryFn = () => <Contact />;

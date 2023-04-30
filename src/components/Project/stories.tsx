@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import type { Meta, StoryFn } from '@storybook/react';
 import { Project, ProjectProps } from '.';
 import projectMock from './mock';
 
@@ -8,4 +8,4 @@ export default {
   args: projectMock,
 } as Meta;
 
-export const Default: Story<ProjectProps> = (args) => <Project {...args} />;
+export const Default: StoryFn<ProjectProps> = (args) => <Project {...args} />;

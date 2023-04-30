@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import type { Meta, StoryFn } from '@storybook/react';
 import writingsMock from '__mocks__/writings';
 import { FeaturedWritings, FeaturedWritingsProps } from '.';
 
@@ -7,6 +7,6 @@ export default {
   component: FeaturedWritings,
 } as Meta<FeaturedWritingsProps>;
 
-export const Default: Story<FeaturedWritingsProps> = () => (
+export const Default: StoryFn<FeaturedWritingsProps> = () => (
   <FeaturedWritings data={writingsMock} />
 );

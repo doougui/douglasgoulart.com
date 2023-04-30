@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import type { Meta, StoryFn } from '@storybook/react';
 import { Filter, FilterProps } from '.';
 
 export default {
@@ -12,4 +12,4 @@ export default {
   },
 } as Meta<FilterProps>;
 
-export const Default: Story<FilterProps> = (args) => <Filter {...args} />;
+export const Default: StoryFn<FilterProps> = (args) => <Filter {...args} />;

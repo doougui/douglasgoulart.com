@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import type { Meta, StoryFn } from '@storybook/react';
 import writingsMock from '__mocks__/writings';
 import { SortTypes } from 'utils/mdx/writings/types';
 import { Writings, WritingsProps } from '.';
@@ -14,6 +14,6 @@ export default {
   },
 } as Meta<WritingsProps>;
 
-export const Default: Story<WritingsProps> = (args) => (
+export const Default: StoryFn<WritingsProps> = (args) => (
   <Writings {...args} writings={writingsMock} />
 );
