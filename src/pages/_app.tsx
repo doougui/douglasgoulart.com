@@ -19,7 +19,7 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="apple-touch-icon" href="/img/icon-192.png" />
         <meta
           name="description"
-          content="Front-end software developer based in Brazil and focused on web solutions"
+          content="Full-stack software developer based in Brazil and focused on web solutions"
         />
         <link rel="manifest" href="/manifest.json" />
         <meta name="application-name" content="Douglas Pinheiro Goulart" />
@@ -32,14 +32,14 @@ function App({ Component, pageProps }: AppProps) {
           type: 'website',
           locale: 'en_US',
           description:
-            'Front-end software developer based in Brazil and focused on web solutions',
+            'Full-stack software developer based in Brazil and focused on web solutions',
           images: [
             {
               url: `${getAbsoluteUrl()}/img/card.jpg`,
               secureUrl: `${getAbsoluteUrl()}/img/card.jpg`,
               width: 1200,
               height: 630,
-              alt: 'Front-end and Mobile developer with an eye for design.',
+              alt: 'Full-stack and Mobile developer with an eye for design.',
               type: 'image/jpeg',
             },
           ],
