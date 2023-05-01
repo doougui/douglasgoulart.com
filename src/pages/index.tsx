@@ -10,12 +10,12 @@ export default function Home(props: HomeProps) {
     <>
       <NextSeo
         title="Home | Douglas Pinheiro Goulart"
-        description="Front-end software developer based in Brazil and focused on web solutions"
+        description="Full-stack software developer based in Brazil and focused on web solutions"
         canonical={getPageUrl()}
         openGraph={{
           title: 'Home | Douglas Pinheiro Goulart',
           description:
-            'Front-end software developer based in Brazil and focused on web solutions',
+            'Full-stack software developer based in Brazil and focused on web solutions',
         }}
       />
       <HomeScreen {...props} />
