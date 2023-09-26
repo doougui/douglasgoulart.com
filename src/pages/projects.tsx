@@ -1,4 +1,4 @@
-import { ProjectProps } from 'components/Project';
+import { ProjectProps } from 'screens/Projects/components/Project';
 import { Projects as ProjectsScreen } from 'screens/Projects';
 
 export default function Projects() {

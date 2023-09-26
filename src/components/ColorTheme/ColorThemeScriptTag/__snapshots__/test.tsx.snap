@@ -4,76 +4,76 @@ exports[`<ColorThemeScriptTag /> should render correctly 1`] = `
 <script>
   (function setColorsByTheme(storageKey, variableNameGetter) {
   /* istanbul ignore next */
-  cov_d6phap09z().f[1]++;
+  cov_1lj53hr8wg().f[1]++;
   const colors =
   /* istanbul ignore next */
-  (cov_d6phap09z().s[7]++, {"primary":{"light":"#107BEB","dark":"#107BEB"},"secondary":{"light":"#FDF9FC","dark":"#1C1C1C"},"tertiary":{"light":"#F3F2F3","dark":"#2D2D2F"},"background":{"light":"#FEFEFE","dark":"#151718"},"textDarker":{"light":"#C8C7CB","dark":"#504F57"},"textDark":{"light":"#858585","dark":"#888888"},"highlightText":{"light":"#EDEDEF","dark":"#EDEDEF"},"text":{"light":"#1A1523","dark":"#EDEDEF"},"success":{"light":"#26FF56","dark":"#26FF56"},"danger":{"light":"#FF4747","dark":"#FF4747"}});
+  (cov_1lj53hr8wg().s[7]++, {"primary":{"light":"#107BEB","dark":"#107BEB"},"secondary":{"light":"#FDF9FC","dark":"#1C1C1C"},"tertiary":{"light":"#F3F2F3","dark":"#2D2D2F"},"background":{"light":"#FEFEFE","dark":"#151718"},"textDarker":{"light":"#C8C7CB","dark":"#504F57"},"textDark":{"light":"#858585","dark":"#888888"},"highlightText":{"light":"#EDEDEF","dark":"#EDEDEF"},"text":{"light":"#1A1523","dark":"#EDEDEF"},"success":{"light":"#26FF56","dark":"#26FF56"},"danger":{"light":"#FF4747","dark":"#FF4747"}});
   function getColorMode() {
     /* istanbul ignore next */
-    cov_d6phap09z().f[2]++;
+    cov_1lj53hr8wg().f[2]++;
     const mql =
     /* istanbul ignore next */
-    (cov_d6phap09z().s[8]++, window.matchMedia("(prefers-color-scheme: dark)"));
+    (cov_1lj53hr8wg().s[8]++, window.matchMedia("(prefers-color-scheme: dark)"));
     const prefersDarkFromMQ =
     /* istanbul ignore next */
-    (cov_d6phap09z().s[9]++, mql.matches);
+    (cov_1lj53hr8wg().s[9]++, mql.matches);
     const defaultOS =
     /* istanbul ignore next */
-    (cov_d6phap09z().s[10]++, prefersDarkFromMQ ?
+    (cov_1lj53hr8wg().s[10]++, prefersDarkFromMQ ?
     /* istanbul ignore next */
-    (cov_d6phap09z().b[0][0]++, "dark") :
+    (cov_1lj53hr8wg().b[0][0]++, "dark") :
     /* istanbul ignore next */
-    (cov_d6phap09z().b[0][1]++, "light"));
+    (cov_1lj53hr8wg().b[0][1]++, "light"));
     const storagedMode =
     /* istanbul ignore next */
-    (cov_d6phap09z().s[11]++, localStorage.getItem(storageKey));
+    (cov_1lj53hr8wg().s[11]++, localStorage.getItem(storageKey));
     /* istanbul ignore next */
-    cov_d6phap09z().s[12]++;
+    cov_1lj53hr8wg().s[12]++;
     if (!storagedMode) {
       /* istanbul ignore next */
-      cov_d6phap09z().b[1][0]++;
-      cov_d6phap09z().s[13]++;
+      cov_1lj53hr8wg().b[1][0]++;
+      cov_1lj53hr8wg().s[13]++;
       return defaultOS;
     } else
     /* istanbul ignore next */
     {
-      cov_d6phap09z().b[1][1]++;
+      cov_1lj53hr8wg().b[1][1]++;
     }
-    cov_d6phap09z().s[14]++;
+    cov_1lj53hr8wg().s[14]++;
     return storagedMode;
   }
   const root =
   /* istanbul ignore next */
-  (cov_d6phap09z().s[15]++, document.documentElement);
+  (cov_1lj53hr8wg().s[15]++, document.documentElement);
   const mode =
   /* istanbul ignore next */
-  (cov_d6phap09z().s[16]++, getColorMode());
+  (cov_1lj53hr8wg().s[16]++, getColorMode());
   /* istanbul ignore next */
-  cov_d6phap09z().s[17]++;
+  cov_1lj53hr8wg().s[17]++;
   root.style.setProperty("--initial-color-mode", mode);
   /* istanbul ignore next */
-  cov_d6phap09z().s[18]++;
+  cov_1lj53hr8wg().s[18]++;
   if (typeof colors === "string") {
     /* istanbul ignore next */
-    cov_d6phap09z().b[2][0]++;
-    cov_d6phap09z().s[19]++;
+    cov_1lj53hr8wg().b[2][0]++;
+    cov_1lj53hr8wg().s[19]++;
     return;
   } else
   /* istanbul ignore next */
   {
-    cov_d6phap09z().b[2][1]++;
+    cov_1lj53hr8wg().b[2][1]++;
   }
-  cov_d6phap09z().s[20]++;
+  cov_1lj53hr8wg().s[20]++;
   Object.entries(colors).forEach(([name, colorByTheme]) =&gt; {
     /* istanbul ignore next */
-    cov_d6phap09z().f[3]++;
-    cov_d6phap09z().s[21]++;
+    cov_1lj53hr8wg().f[3]++;
+    cov_1lj53hr8wg().s[21]++;
     root.style.setProperty(variableNameGetter("color", name), colorByTheme[mode]);
   });
 })('colorMode', (type, rawName) =&gt; {
   /* istanbul ignore next */
-  cov_42pjkn0hx().f[1]++;
-  cov_42pjkn0hx().s[4]++;
+  cov_1i1dk8jd83().f[1]++;
+  cov_1i1dk8jd83().s[4]++;
   return \`--\${type}-\${rawName}\`;
 })
 </script>

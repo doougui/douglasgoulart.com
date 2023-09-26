@@ -1,7 +1,7 @@
 import { Heading1 } from 'components/Headings';
 import { MutedText } from 'components/MutedText';
 import { Base } from 'layouts/Base';
-import { Project, ProjectProps } from 'components/Project';
+import { Project, ProjectProps } from 'screens/Projects/components/Project';
 import { Stack } from 'components/Stack';
 import { Button } from 'components/Button';
 import * as S from './styles';

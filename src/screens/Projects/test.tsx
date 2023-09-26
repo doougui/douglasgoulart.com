@@ -13,7 +13,7 @@ useRouter.mockImplementation(() => ({
   route: '/',
 }));
 
-jest.mock('components/Project', () => ({
+jest.mock('./components/Project', () => ({
   __esModule: true,
   Project: () => <div data-testid="project" />,
 }));

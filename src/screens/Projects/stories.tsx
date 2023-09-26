@@ -3,7 +3,7 @@ import { Projects } from '.';
 import projectsMock from './mock';
 
 export default {
-  title: 'Projects',
+  title: 'Screens/Projects',
   component: Projects,
 } as Meta;
 
