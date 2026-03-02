@@ -7,19 +7,22 @@ export function About() {
   return (
     <S.Container>
       <p>
-        Hi, my name is Douglas. I&apos;m a software developer based in Brazil
-        that likes to play some games and write about some cool stuff I learn
-        along my journey as a software dev.
+        Hi, I&apos;m Douglas — a software engineer based in Brazil who enjoys
+        building impactful products and writing about things I learn along my
+        journey in tech.
       </p>
       <p>
-        I&apos;m currently doing front-end and mobile development at Tecimob
-        where I managed to generate value and ease the life of more than three
-        thousand real estate agencies whilst improving the quality of existing
-        software and creating new, valuable software from the beginning.
+        I currently work on an enterprise Health & Safety platform serving the
+        New Zealand and Australia markets, where I collaborate closely with
+        product and design teams to deliver scalable, user-centered solutions.
+        I&apos;ve contributed to modernizing the frontend architecture, leading
+        feature development, and continuously improving code quality and team
+        processes.
       </p>
       <p>
-        Most of my experience comes down to working with JavaScript, TypeScript,
-        React, React Native and Next.js.
+        Most of my experience revolves around TypeScript, React, Next.js, and
+        modern frontend architecture, with a strong focus on building
+        maintainable and high-performing applications.
       </p>
 
       <S.Footer>

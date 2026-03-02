@@ -6,13 +6,16 @@ import * as S from './styles';
 
 const positions: PositionProps[] = [
   {
-    title: 'Frontend Developer',
+    title: 'Frontend Engineer',
     company: 'ecoPortal',
     startDate: 'Jul 2023',
     endDate: 'Present',
     responsabilities: [
-      'Developed a range of highly scalable components utilizing Figma Designs, meticulously documented within Storybook and Chromatic.',
-      'Helped to migrated from the legacy AngularJS tech stack to React.js to use newer and more modern technologies.',
+      'Collaborated closely with Product and Design teams to ensure successful delivery of solutions that solve genuine user problems.',
+      'Contributed to the migration from the existing Angular.js tech stack to a more modern and robust React.js and Next.js tech stack with bleeding edge technologies.',
+      'Developed new features, contributed to technical architecture decisions, and maintained core application functionality.',
+      'Partnered with Product to refine scope, balance technical trade-offs, and align delivery with strategic product vision.',
+      'Contributed to continuous improvement of Agile processes, increasing team efficiency and delivery predictability.',
     ],
   },
   {

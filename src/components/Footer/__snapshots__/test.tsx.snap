@@ -343,7 +343,7 @@ exports[`<Footer /> should render correctly 1`] = `
     class="c14"
   >
     © 
-    2023
+    2026
      Douglas Pinheiro Goulart
   </p>
 </footer>

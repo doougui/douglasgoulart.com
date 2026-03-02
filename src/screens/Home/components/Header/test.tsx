@@ -9,13 +9,13 @@ describe('<Header />', () => {
 
     expect(
       screen.getByRole('heading', {
-        name: 'Full-stack and Mobile developer with an eye for design.',
+        name: 'Full-stack software engineer with an eye for design.',
       }),
     ).toBeInTheDocument();
 
     expect(
       screen.getByText(
-        "I'm a Full-stack developer based in Brazil and moved by curiosity. I am currently focused on solutions for the web",
+        "I'm a Full-stack software engineer based in Brazil and moved by curiosity. I am currently focused on solutions for the web",
       ),
     ).toBeInTheDocument();
   });
